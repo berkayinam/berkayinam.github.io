@@ -668,6 +668,76 @@ a { color: inherit; text-decoration: none; }
   color: var(--border);
 }
 
+/* ── Language filter (index) ────────────────── */
+.posts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lang-filter {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.lang-filter-btn {
+  padding: 0.2rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.15s;
+  letter-spacing: 0.03em;
+}
+
+.lang-filter-btn:hover {
+  border-color: var(--violet-border);
+  color: var(--violet);
+}
+
+.lang-filter-btn.active {
+  background: var(--violet-bg);
+  border-color: var(--violet-border);
+  color: var(--violet-text);
+}
+
+/* ── Language switcher (post) ───────────────── */
+.lang-switch {
+  display: contents;
+}
+
+.lang-switch-current {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  background: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.lang-switch-link {
+  background: var(--violet-bg) !important;
+  border-color: var(--violet-border) !important;
+  color: var(--violet-text) !important;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.lang-switch-link:hover {
+  background: var(--violet) !important;
+  border-color: var(--violet) !important;
+  color: white !important;
+}
+
 /* ── Responsive ─────────────────────────────── */
 @media (max-width: 640px) {
   .hero-title { font-size: 1.4rem; }
