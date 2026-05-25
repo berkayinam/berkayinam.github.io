@@ -22,9 +22,15 @@
   --border:             hsl(240 5.9% 90%);
   --input:              hsl(240 5.9% 90%);
 
-  /* Primary (used for buttons) */
-  --primary:            hsl(240 5.9% 10%);
+  /* Primary — menekşe/violet */
+  --primary:            hsl(263 78% 58%);
   --primary-foreground: hsl(0 0% 98%);
+
+  /* Violet token family */
+  --violet:             hsl(263 78% 58%);
+  --violet-bg:          hsl(263 100% 97%);
+  --violet-border:      hsl(263 55% 82%);
+  --violet-text:        hsl(263 65% 38%);
 
   /* Secondary */
   --secondary:          hsl(240 4.8% 95.9%);
@@ -102,18 +108,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .logo-mark {
-  width: 28px;
-  height: 28px;
-  background: var(--primary);
-  color: var(--primary-foreground);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
   flex-shrink: 0;
+  display: block;
 }
 
 .logo-text {
@@ -136,37 +132,47 @@ a { color: inherit; text-decoration: none; }
 }
 
 .site-nav a:hover {
-  color: var(--foreground);
+  color: var(--violet);
 }
 
 .btn-outline {
   padding: 0.35rem 0.85rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--violet-border);
   border-radius: var(--radius-sm);
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--foreground) !important;
-  background: var(--background);
-  transition: background 0.15s, border-color 0.15s;
+  color: var(--violet-text) !important;
+  background: var(--violet-bg);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
 .btn-outline:hover {
-  background: var(--muted);
-  border-color: var(--muted-foreground);
+  background: var(--violet);
+  border-color: var(--violet);
+  color: white !important;
 }
 
 /* ── Hero (index page) ──────────────────────── */
 .page-hero {
-  padding: 3.5rem 0 2.5rem;
+  padding: 4rem 0 3rem;
   border-bottom: 1px solid var(--border);
 }
 
+.hero-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent-text);
+  margin-bottom: 0.85rem;
+}
+
 .hero-title {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.2;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.75rem;
   color: var(--foreground);
 }
 
@@ -175,6 +181,40 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted-foreground);
   max-width: 520px;
   line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.hero-stat-number {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.02em;
+}
+
+.hero-stat-label {
+  font-size: 0.72rem;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+.hero-stat-sep {
+  width: 1px;
+  height: 2rem;
+  background: var(--border);
 }
 
 /* ── Post list ──────────────────────────────── */
@@ -191,7 +231,8 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 0;
 }
 
-.posts-count {
+.posts-count,
+.posts-label {
   font-size: 0.78rem;
   color: var(--muted-foreground);
   font-weight: 500;
@@ -240,9 +281,9 @@ a { color: inherit; text-decoration: none; }
   display: inline-block;
   font-size: 0.7rem;
   font-weight: 500;
-  color: var(--muted-foreground);
-  background: var(--muted);
-  border: 1px solid var(--border);
+  color: var(--violet-text);
+  background: var(--violet-bg);
+  border: 1px solid var(--violet-border);
   padding: 0.1rem 0.5rem;
   border-radius: 999px;
   text-transform: uppercase;
@@ -262,7 +303,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .post-row-title a:hover {
-  color: var(--accent-text);
+  color: var(--violet);
 }
 
 .post-row-excerpt {
@@ -332,7 +373,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .breadcrumb a:hover {
-  color: var(--foreground);
+  color: var(--violet);
 }
 
 .post-header-tags {
@@ -396,15 +437,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 .action-btn--support {
-  background: var(--primary);
-  color: var(--primary-foreground);
-  border-color: var(--primary);
+  background: var(--violet);
+  color: white;
+  border-color: var(--violet);
 }
 
 .action-btn--support:hover {
-  background: hsl(240 5.9% 20%);
-  border-color: hsl(240 5.9% 20%);
-  color: var(--primary-foreground);
+  background: var(--violet-text);
+  border-color: var(--violet-text);
+  color: white;
 }
 
 /* ── Post content ───────────────────────────── */
