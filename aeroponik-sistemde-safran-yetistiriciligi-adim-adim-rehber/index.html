@@ -262,14 +262,12 @@ window.LANG_MAP = {
                 if (!slug) slug = window.location.pathname.replace(/^\/|\/$/g, '');
                 var info = window.LANG_MAP && window.LANG_MAP[slug];
                 if (!info) return;
-                var base = window.location.origin + '/';
                 var sw = document.getElementById('langSwitch');
                 if (!sw) return;
                 var cur = info.lang.toUpperCase();
                 var other = cur === 'EN' ? 'TR' : 'EN';
-                sw.innerHTML =
-                    '<span class="lang-switch-current">' + cur + '</span>' +
-                    '<a class="action-btn lang-switch-link" href="/'&#32;+&#32;info.pair&#32;+&#32;'/">' + other + ' →</a>';
+                var href = '/' + info.pair + '/';
+                sw.innerHTML = '<span class="lang-switch-current">' + cur + '</span><a class="action-btn lang-switch-link" href="' + href + '">' + other + ' →</a>';
             })();
             </script>
         </div>
