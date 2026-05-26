@@ -266,8 +266,8 @@ window.LANG_MAP = {
             </div>
             <script>
             (function() {
-                var slug = window.location.pathname.replace(/^\/|\/$/g, '').split('/').pop();
-                if (!slug) slug = window.location.pathname.replace(/^\/|\/$/g, '');
+                var _parts = window.location.pathname.replace(/^\/|\/$/g, '').split('/').filter(function(p){ return p && p !== 'index.html'; });
+                var slug = _parts[_parts.length - 1] || '';
                 var info = window.LANG_MAP && window.LANG_MAP[slug];
                 if (!info) return;
                 var sw = document.getElementById('langSwitch');
