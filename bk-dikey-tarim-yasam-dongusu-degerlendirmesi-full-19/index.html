@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BK Dikey Tarım Yaşam Döngüsü Değerlendirmesi (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.5em; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; border-radius: 0 6px 6px 0; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-size: 0.88rem; }
+        th { background: #f5f0e8; color: #1a1a2e; font-weight: 700; padding: 8px 12px; text-align: left; border: 1px solid #e0d8c8; }
+        td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        tr:nth-child(even) td { background: #fafaf8; }
+        .key-finding { background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 8px; padding: 14px 18px; margin: 1.5em 0; font-size: 0.92rem; }
+        .key-finding strong { color: #0369a1; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+  'cradle-to-customer-lca-uk-vertical-farming-19':                             {lang:'en', pair:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19', pairFull:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-full-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19':                           {lang:'tr', pair:'cradle-to-customer-lca-uk-vertical-farming-19', pairFull:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-full-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-full-19':                      {lang:'tr-full', pair:'cradle-to-customer-lca-uk-vertical-farming-19', pairBase:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19'},
+};
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a class="site-logo" href="/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 7 7 13a5 5 0 0010 0C17 7 12 2 12 2z" fill="#D97706"/><path d="M12 8v8M9 13l3 3 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Safran Topluluğu
+        </a>
+        <nav class="site-nav">
+            <a href="/">Araştırmalar</a>
+            <a href="/protokol.html">Protokol</a>
+            <a href="/hakkinda.html">Hakkında</a>
+            <a href="https://buymeacoffee.com/berkayinam" class="btn-outline" target="_blank" rel="noopener">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="post-header">
+        <div class="breadcrumb">
+            <a href="/">Araştırmalar</a> / BK Dikey Tarım Yaşam Döngüsü Değerlendirmesi
+        </div>
+        <div class="full-badge">TR Full — Tam Çeviri</div>
+        <h1 class="post-title">Üretimden Müşteriye: BK'da Dikey Tarımın Kapsamlı Yaşam Döngüsü Değerlendirmesi</h1>
+        <div class="post-actions">
+            <a class="action-btn" href="/bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19/">TR Özet →</a>
+            <a class="action-btn" href="/cradle-to-customer-lca-uk-vertical-farming-19/">EN →</a>
+            <span class="lang-switch-current lang-switch-full">TR Full</span>
+        </div>
+    </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+
+    <p><strong>Yazarlar:</strong> Michael Gargaro, Astley Hastings, Richard J. Murphy, Zoe M. Harris<br>
+    <strong>Kurumlar:</strong> Surrey Üniversitesi, Çevre ve Sürdürülebilirlik Merkezi; Aberdeen Üniversitesi, King's College — BK<br>
+    <strong>Dergi:</strong> Journal of Cleaner Production, Cilt 470 (2024), 143324<br>
+    <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.jclepro.2024.143324" target="_blank" rel="noopener" style="color:#D97706">10.1016/j.jclepro.2024.143324</a></p>
+
+    <hr>
+
+    <h2>Özet</h2>
+
+    <p>Küresel nüfus artışı, kırdan kente göç, iklim değişikliği ve çatışmalar küresel ticaret ile gıda tedarik zincirleri üzerinde ciddi baskılar oluşturmaktadır. Dikey tarım (DT), taze meyve ve sebzelerin yetiştirilmesine yönelik görece yeni bir yöntemdir ve çoğunlukla tarla tarımına kıyasla daha düşük çevresel etkilere sahip olduğu iddia edilmektedir. Ancak birincil verilerle DT'nin çevresel etkisini değerlendiren çalışmalar bugüne dek oldukça sınırlı kalmıştır.</p>
+
+    <p>Bu çalışma, BK'daki ticari bir dikey çiftlikte marul üretiminin çevresel etkisini değerlendirmek amacıyla Yaşam Döngüsü Değerlendirmesi (YDÖ) yöntemini uygulamıştır. Sonuçlar, tarla tarımında marul üretimine ilişkin literatür verileriyle karşılaştırılmıştır. Ayrıca farklı elektrik kaynakları ile atık, su ve besin yönetimi seçeneklerine sahip DT sistemlerinin etkilerini değerlendirmek amacıyla çeşitli senaryolar incelenmiştir.</p>
+
+    <p>Kullanılan enerji kaynağına bağlı olarak DT, tarla tarımına benzer veya daha düşük iklim değişikliği etkisine sahiptir. Tatlı su ötrofikasyonu ve asitlenme potansiyeli gibi bazı diğer çevresel etki kategorilerinde DT, tarla tarımından hafifçe daha yüksek çevresel etki göstermiştir. Elektrik talebi ve DT'de fidelerin yetiştirildiği ortam (jüt lifli fide tüpleri) sistemin başlıca sıcak noktaları olarak belirlenmiştir.</p>
+
+    <hr>
+
+    <h2>1. Giriş</h2>
+
+    <h3>1.1 Mevcut Gıda Sistemlerini Dönüştürme Gerekliliği</h3>
+
+    <p>Dünya nüfusunun 2050 yılına kadar iki milyar artarak 7,7 milyardan 9,7 milyara ulaşacağı ve 2100'de yaklaşık 11 milyarda zirve yapacağı öngörülmektedir. Bu büyüme hızı, 2010 düzeyine kıyasla 2050'ye kadar %56 daha fazla gıdaya ihtiyaç duyulacağını ortaya koymakta ve küresel üretim sistemlerini daha fazla insana yetecek şekilde uyarlamayı kaçınılmaz kılmaktadır.</p>
+
+    <p>Kırdan kente göç de güvenlik açıklarını beraberinde getirmektedir. İklim değişikliğine bağlı kuraklık ve arazi bozulması, Rusya-Ukrayna savaşı ve Covid-19 pandemisi gibi çatışmalar küresel ticaret ile gıda tedarik zincirlerini zayıflatmıştır. BK, yüksek oranda gıda ithalatına bağımlı olup tüketilen gıdanın ekonomik değer bazında %46'sını ithal etmekte; sebzelerin %47'sini ve meyvelerin %84'ünü yurt dışından temin etmektedir.</p>
+
+    <p>Gıda sektöründeki antropojenik sera gazı (SHG) emisyonları, toplam küresel SHG emisyonlarının <strong>%21–37'sini</strong> oluşturmaktadır. Gıda kaybı ve israfının azaltılması zorunludur; DT, tedarik zincirini kısaltma kapasitesiyle bu konuda değerli bir araç olabilir.</p>
+
+    <h3>1.2 Dikey Tarıma Kısa Bir Bakış</h3>
+
+    <p>DT, Kontrollü Ortam Tarımı'nın (KOT) bir alt dalıdır; su, enerji ve alan gibi kaynakların kullanımını optimize etmek amacıyla hidroponik, aeroponik, akvaporik gibi çeşitli besin iletim sistemlerinden yararlanan teknoloji temelli ürün yetiştirme sistemlerini kapsar. KOT'ta ürünler optimize edilmiş büyüme koşullarında yetiştirilir ve dış faktörlerin etkisi minimize edilir.</p>
+
+    <hr>
+
+    <h2>2. Metodoloji</h2>
+
+    <h3>2.1 Sistem Sınırları ve İşlevsel Birim</h3>
+
+    <p>Bu çalışmada uygulanan YDÖ, birincil verilere dayanan bir ticari DT vaka çalışmasına odaklanmaktadır. İşlevsel birim olarak <strong>1 kg taze ağırlık marul</strong> seçilmiştir. Sistem sınırları, üretimin tüm aşamalarını — çimlenme, yetiştirme, hasat, paketleme ve müşteriye dağıtım — kapsamaktadır.</p>
+
+    <h3>2.2 Vaka Çalışması Dikey Çiftliği</h3>
+
+    <p>İncelenen ticari DT tesisi BK'da yer almakta ve <strong>%100 yenilenebilir elektrik</strong> kullanmaktadır. Toplam üretim alanı <strong>150 m²</strong>, tesisin toplam arazi alanı ise <strong>238 m²</strong>'dir. Birim büyüme alanı başına yıllık verim <strong>97,33 kg m⁻² yıl⁻¹</strong> olup bu değer, FAO verilerine göre tarla koşullarında marul verimliliğinin (1,88 kg m⁻² yıl⁻¹) çok üzerindedir.</p>
+
+    <h3>2.3 Çevresel Etki Kategorileri</h3>
+
+    <p>Değerlendirme, Avrupa Komisyonu'nun EF 3.0 metodolojisi çerçevesinde altı ana etki kategorisinde gerçekleştirilmiştir: İklim Değişikliği, Asitlenme, Tatlı Su Ötrofikasyonu, Arazi Kullanımı, Fosil Kaynak Kullanımı ve Su Kullanımı.</p>
+
+    <h3>2.4 Senaryolar</h3>
+
+    <table>
+        <thead>
+            <tr><th>Senaryo Türü</th><th>Açıklama</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Mevcut uygulama</td><td>%100 yenilenebilir elektrik, jüt lifli fide tüpleri, atık yakma</td></tr>
+            <tr><td>BK elektrik şebekesi (2022)</td><td>Mevcut ortalama BK elektrik karması</td></tr>
+            <tr><td>BK 2030 projeksiyonu</td><td>Öngörülen daha temiz şebeke karması</td></tr>
+            <tr><td>BK 2040 projeksiyonu</td><td>Daha fazla yenilenebilir enerji</td></tr>
+            <tr><td>BK 2050 projeksiyonu</td><td>Neredeyse tamamen yenilenebilir</td></tr>
+            <tr><td>Su ve besin geri dönüşümü</td><td>Kaçak yerine kapalı devre sistemi</td></tr>
+            <tr><td>Anaerobik bozunma atık yönetimi</td><td>Yakma yerine biyogaz üretimi</td></tr>
+            <tr><td>Endüstriyel kompostlama</td><td>Organik atık kompostlama</td></tr>
+            <tr><td>Tek kullanımlık ambalaj</td><td>Restoran yerine genel perakende ambalajı</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>3. Sonuçlar</h2>
+
+    <h3>3.1 Mevcut DT Uygulaması</h3>
+
+    <p>İklim Değişikliği etkisi açısından mevcut ticari DT sistemi <strong>0,74 kg CO₂e kg⁻¹</strong> marul değeri elde etmiştir. Sistemin iklim değişikliği ile ilgili toplam etkisinin <strong>%40'ından</strong> elektrik talebi sorumludur. İkinci büyük katkı kaynağı olan jüt lifli fide tüpleri ise toplam iklim değişikliği etkisinin <strong>%18'ini</strong> oluşturmaktadır. Diğer katkı unsurları: atık yakma (%7) ve plastik girdiler (%14).</p>
+
+    <table>
+        <thead>
+            <tr><th>Etki Kategorisi</th><th>Jüt Lif</th><th>Elektrik</th><th>Plastik</th><th>Atık Yakma</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>İklim Değişikliği</td><td>18%</td><td>40%</td><td>14%</td><td>7%</td></tr>
+            <tr><td>Asitlenme</td><td>57%</td><td>5%</td><td>—</td><td>—</td></tr>
+            <tr><td>Tatlı Su Ötrofikasyonu</td><td>82%</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td>Arazi Kullanımı</td><td>93%</td><td>—</td><td>—</td><td>—</td></tr>
+            <tr><td>Fosil Kaynak Kullanımı</td><td>—</td><td>32%</td><td>31%</td><td>—</td></tr>
+            <tr><td>Su Kullanımı</td><td>14%</td><td>—</td><td>—</td><td>—</td></tr>
+        </tbody>
+    </table>
+
+    <h3>3.2 Senaryo Karşılaştırmaları</h3>
+
+    <p><strong>Elektrik Kaynağı Etkisi:</strong> DT sistemi, mevcut %100 yenilenebilir elektrik yerine 2022 BK ortalama şebeke karmasıyla çalıştırılsaydı iklim değişikliği etkisi yaklaşık <strong>6 kat artarak</strong> 4,32 kg CO₂e kg⁻¹ marula yükselecekti. Bu sonuç, elektrik kaynağının kritik önemini çarpıcı biçimde ortaya koymaktadır. 2030, 2040 ve 2050 öngörülü şebeke karmaları etki değerini kademeli olarak azaltmaktadır.</p>
+
+    <p><strong>Su ve Besin Geri Dönüşümü:</strong> Ölçülü besin konsantrasyonları kullanıldığında tüketilen suyun <strong>%37'sine</strong> indirilmesi mümkündür. Bu senaryo, mevcut iklim değişikliği etkisini 0,74 kg CO₂e kg⁻¹'dan <strong>0,68 kg CO₂e kg⁻¹'a</strong> indirerek yaklaşık %8 azalma sağlamaktadır.</p>
+
+    <p><strong>Ambalaj Etkisi:</strong> Tek kullanımlık ambalaja geçilmesi iklim değişikliği etkisini <strong>%24 artırarak</strong> 0,92 kg CO₂e kg⁻¹'a yükseltmektedir. Arazi kullanımı ise %30 artmaktadır.</p>
+
+    <h3>3.3 Arazi Tasarrufu</h3>
+
+    <p>Bu çalışmadaki DT ve tarla tarımı karşılaştırıldığında arazi tasarrufu potansiyelinin son derece önemli olduğu görülmektedir. DT tesisinin toplam arazi alanı 238 m² iken birim büyüme alanı başına yıllık verim <strong>97,33 kg m⁻² yıl⁻¹</strong>'dır; bu değer tarla koşullarındaki FAO ortalama değerinin (1,88 kg m⁻² yıl⁻¹) <strong>51 katıdır</strong>.</p>
+
+    <p>BK'nın yıllık marul tüketimi için kullanılan 8.577 hektarlık tarla alanı yerine DT sistemlerine tamamen geçilmesi halinde bu alanın yalnızca <strong>310 hektarı</strong> yeterli olacaktır; bu, mevcut arazi ihtiyacının <strong>%3,6'sına</strong> karşılık gelmektedir. Jüt lifli fide tüpleri arazi kullanım talebinin %93'ünden sorumludur; dolayısıyla alternatif fide malzeme kullanımı bu tasarrufu daha da artırabilir.</p>
+
+    <div class="key-finding">
+        <strong>Temel Bulgular Özeti:</strong>
+        <ul style="margin:8px 0 0; padding-left:20px;">
+            <li>Mevcut iklim değişikliği etkisi: <strong>0,74 kg CO₂e kg⁻¹</strong> marul (%100 yenilenebilir elektrikle)</li>
+            <li>2022 BK şebeke karmasıyla aynı değer: <strong>4,32 kg CO₂e kg⁻¹</strong> (≈6 kat artış)</li>
+            <li>Aydınlatma ve HVAC toplam elektrik talebinin sırasıyla <strong>%49 ve %28</strong>'ini oluşturmaktadır</li>
+            <li>Jüt lifli fide tüpleri; tatlı su ötrofikasyonu, asitlenme, arazi kullanımı ve su kullanımındaki en büyük etken</li>
+            <li>Su ve besin geri dönüşümü ile su tüketimi <strong>%63 azaltılabilir</strong></li>
+            <li>DT, tüm BK marul üretimine uygulanırsa mevcut arazi kullanımının yalnızca <strong>%3,6'sını</strong> gerektirir (~28 kat tasarruf)</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>4. Tartışma</h2>
+
+    <h3>4.1 İklim Değişikliği ve Elektrik Talebi</h3>
+
+    <p>Bu çalışmadaki ticari DT sisteminin 0,74 kg CO₂e kg⁻¹ iklim değişikliği sonucu, yenilenebilir enerji kullanan DT sistemlerine ilişkin önceki değerlerle örtüşmektedir: Casey ve ark. (2022) 0,89; Martin ve ark. (2023) 0,75; Sandison ve ark. (2023) 0,48 kg CO₂e kg⁻¹ bildirmiştir.</p>
+
+    <p>Tarla tarımıyla karşılaştırıldığında yenilenebilir elektrik kullanıldığında DT benzer ya da daha iyi iklim performansı sergilemektedir. BK'da tarla marulunun karbon ayak izi literatürde yaklaşık 0,3–0,5 kg CO₂e kg⁻¹ olarak raporlanmıştır. İklim değişikliği açısından DT'nin rekabetçi olabilmesi için yenilenebilir elektrik kullanımı kritik öneme sahiptir.</p>
+
+    <h3>4.2 Jüt Lifli Fide Tüpleri Sorunu</h3>
+
+    <p>Jüt lifli fide tüpleri, tatlı su ötrofikasyonu (%82), asitlenme (%57) ve arazi kullanımı (%93) kategorilerinde başlıca sıcak nokta olarak öne çıkmaktadır. Bu materyalin DT'ye özgü girdisi olarak kapalı bir ortamda kullanılması gereklilik taşımaktadır. Araştırmacılar; taşlı yün, hindistan cevizi lifi veya tamamen plastikten yapılmış alternatif fide tüpü malzemelerinin kullanımını değerlendirmeyi önermektedir.</p>
+
+    <h3>4.3 Su ve Besin Yönetimi</h3>
+
+    <p>Su ve besin düzeylerinin düzenli ölçümü ve kapalı devre sistemler, DT'de kaynak kullanım etkinliğini önemli ölçüde artırabilir. Mevcut sistemde besinlerin ve suyun %60'tan fazlasının gereksiz yere tüketildiği görülmektedir. Kapalı döngü sistemlere geçiş hem çevresel hem de ekonomik açıdan önemli tasarruflar sunmaktadır.</p>
+
+    <h3>4.4 Ölçeklenebilirlik ve Politika Etkileri</h3>
+
+    <p>Bu çalışmanın bulguları, DT'nin geniş ölçekli dağıtımına ilişkin önemli çıkarımlar sunmaktadır. Birincil veriler kullanılarak yapılan bu değerlendirme, ticari DT sistemlerinin yenilenebilir enerjiyle tutarlı bir şekilde işletildiğinde konvansiyonel tarımla rekabet edebilir ya da onu geçebilir düzeyde iklim performansı sunduğunu teyit etmektedir.</p>
+
+    <hr>
+
+    <h2>5. Sonuç</h2>
+
+    <p>Bu çalışma, BK'daki ticari bir dikey çiftlikte marul üretiminin kapsamlı çevresel değerlendirmesini sunmaktadır. Temel bulgular şöyle özetlenebilir: yenilenebilir elektrik kullanımı iklim değişikliği etkisini minimize etmede belirleyici rol oynamakta, jüt lifli fide tüpleri başta su ve arazi kullanımı olmak üzere birçok kategoride en kritik sıcak nokta olmaya devam etmekte ve kapalı devre su-besin sistemlerinin benimsenmesi çevresel etkiyi anlamlı ölçüde azaltabilmektedir. DT, gıda üretimi için gereken arazi miktarını dramatik biçimde azaltma potansiyeliyle sürdürülebilir kentsel gıda sistemleri açısından stratejik bir seçenek sunmaktadır.</p>
+
+    <hr>
+
+    <h2>Kaynaklar (Seçilmiş)</h2>
+    <ol>
+        <li>Gargaro, M. vd. (2024). A cradle-to-customer life cycle assessment case study of UK vertical farming. <em>Journal of Cleaner Production</em>, 470, 143324.</li>
+        <li>Casey, S. vd. (2022). Life cycle assessment of vertical farming lettuce. <em>Environ. Sci. Technol.</em></li>
+        <li>Martin, M. vd. (2023). Environmental performance of vertical farms. <em>Resources, Conservation and Recycling</em>.</li>
+        <li>IPCC (2022). Climate Change 2022: Mitigation of Climate Change. Cambridge University Press.</li>
+        <li>FAOSTAT (2022). FAO Statistical Database. Food and Agriculture Organization of the United Nations.</li>
+    </ol>
+
+  </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Safran Topluluğu · <a href="/" style="color:#D97706">Araştırmalar</a></p>
+    </div>
+</footer>
+</body>
+</html>
