@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kent İçi Dikey Çiftlik: İnşaattan Geri Dönüşüme LCA (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.5em; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-size: 0.88rem; }
+        th { background: #f5f0e8; color: #1a1a2e; font-weight: 700; padding: 8px 12px; text-align: left; border: 1px solid #e0d8c8; }
+        td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        tr:nth-child(even) td { background: #fafaf8; }
+        .stat-highlight { background: #fef3c7; border-left: 4px solid #D97706; padding: 10px 16px; border-radius: 0 6px 6px 0; margin: 1.2em 0; font-size: 0.95rem; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+  'lca-urban-vertical-farm-construction-dismantling-20':                        {lang:'en', pair:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20', pairFull:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-full-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20':                    {lang:'tr', pair:'lca-urban-vertical-farm-construction-dismantling-20', pairFull:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-full-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-full-20':               {lang:'tr-full', pair:'lca-urban-vertical-farm-construction-dismantling-20', pairBase:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20'},
+};
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a class="site-logo" href="/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 7 7 13a5 5 0 0010 0C17 7 12 2 12 2z" fill="#D97706"/><path d="M12 8v8M9 13l3 3 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Safran Topluluğu
+        </a>
+        <nav class="site-nav">
+            <a href="/">Araştırmalar</a>
+            <a href="/protokol.html">Protokol</a>
+            <a href="/hakkinda.html">Hakkında</a>
+            <a href="https://buymeacoffee.com/berkayinam" class="btn-outline" target="_blank" rel="noopener">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="post-header">
+        <div class="breadcrumb">
+            <a href="/">Araştırmalar</a> / Kent İçi Dikey Çiftlik Yaşam Döngüsü Değerlendirmesi
+        </div>
+        <div class="full-badge">TR Full — Tam Çeviri</div>
+        <h1 class="post-title">Kent İçi Dikey Çiftlik: İnşaattan Yıkım ve Geri Dönüşüme Yaşam Döngüsü Değerlendirmesi</h1>
+        <div class="post-actions">
+            <a class="action-btn" href="/kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20/">TR Özet →</a>
+            <a class="action-btn" href="/lca-urban-vertical-farm-construction-dismantling-20/">EN →</a>
+            <span class="lang-switch-current lang-switch-full">TR Full</span>
+        </div>
+    </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+
+    <p><strong>Yazarlar:</strong> Simeng Xie, Pedro Martinez-Vazquez, Charalampos Baniotopoulos<br>
+    <strong>Kurum:</strong> Birmingham Üniversitesi, Mühendislik Fakültesi, İnşaat Mühendisliği Bölümü — BK<br>
+    <strong>Dergi:</strong> Building and Environment, Cilt 286 (2025), 113729<br>
+    <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.buildenv.2025.113729" target="_blank" rel="noopener" style="color:#D97706">10.1016/j.buildenv.2025.113729</a></p>
+
+    <hr>
+
+    <h2>Özet</h2>
+
+    <p>Kent içi dikey tarım, istikrarsız arazi ve iklim koşulları nedeniyle mahsul büyümesinin sınırlı kaldığı durumlarla ilişkili sorunların hafifletilmesine katkı sağlamaktadır. Topraksız teknoloji, çevresel kontrol sistemleri ve otomatik yönetim gibi temel işletme ilkeleri sayesinde gıda mahsullerinin mevsimsel değişimlerden etkilenmeksizin sürekli olarak yetiştirilebildiği beklenmektedir. Bununla birlikte, optimum yetiştirme koşullarının oluşturulması için gereken yüksek enerji miktarı, özellikle Avrupa'da yüksek işletme maliyetleri ve diğer çevresel etkilere yol açmaktadır.</p>
+
+    <p>Bu çalışmada Birmingham, BK'daki bir kent içi dikey çiftlik prototipi üzerinden söz konusu sorunlar, yaşam döngüsü analizleri aracılığıyla ele alınmaktadır. SimaPro yazılımıyla yürütülen çalışma; yapı malzemelerinin tedariki, yapının tasarım ömrü ve ürünlerin taşıma mesafesini birleştiren senaryoları incelemekte ve rüzgâr enerjisi hasadı yoluyla karbon emisyonlarını azaltmanın yollarını araştırmaktadır.</p>
+
+    <div class="stat-highlight">
+        Mevcut şebeke yapısı altında kentsel dikey çiftliğin küresel ısınma potansiyeli (KIP): <strong>1 kg marul başına 5,43 kg CO₂e</strong> — bu değer geleneksel açık alan tarımının <strong>9–14 katıdır</strong>.
+    </div>
+
+    <p>İnşaat atıklarının geri dönüştürülmesi ile yaşam döngüsü boyunca %3,61 oranında karbon tasarrufu sağlanabilmektedir. Yıkım ve geri dönüşüm aşaması, yaşam döngüsü karbon emisyonlarının %4,06'sını telafi etmektedir. Rüzgâr türbinlerinin ürettiği temiz enerji ise karbon emisyonlarını %2,39'a kadar azaltabilmektedir.</p>
+
+    <hr>
+
+    <h2>1. Giriş</h2>
+
+    <p>Dikey tarım, dikey istifleme ve katmanlama sisteminden tam anlamıyla yararlanan bir kapalı ortam gıda üretim biçimidir. Bu sistem; kentleşme sürecindeki küresel arazi kaynaklarını daha verimli kullanmaya, mevcut verimli tarım arazilerinin korunmasına ve kentsel ısı adası etkisinin azaltılmasına katkı sağlamaktadır.</p>
+
+    <p>Mevcut araştırmalar, dünyanın farklı bölgelerindeki çeşitli dikey çiftlik projelerinde enerji tüketimi ve karbon emisyonları gibi çevresel etkiler üzerine yoğunlaşmaktadır. Bu bağlamda dikey çiftliklerin hem fırsatlarını hem de zorluklarını tam anlamıyla ortaya koyabilmek için kapsamlı bir yaşam döngüsü değerlendirmesine, özellikle de inşaat ve yıkım aşamalarının dahil edildiği analize gereksinim duyulmaktadır. Bu çalışmanın özgünlüğü, söz konusu boşluğu tüm yaşam döngüsü aşamalarını kapsayan nicel analizlerle doldurmaktır.</p>
+
+    <hr>
+
+    <h2>2. Metodoloji</h2>
+
+    <h3>2.1 Bina YDÖ Yaklaşımı</h3>
+
+    <p>Bu çalışmada SimaPro v9.5.0.0 (PRé Sustainability B.V., 2023) yazılımı benimsenmiştir. Uygulanan Çevresel Ayak İzi 3.0 (EF 3.0) Yaşam Döngüsü Etki Değerlendirmesi (YDEÖ) metodolojisi, Avrupa bağlamında güvenilir bir etki kategorilendirmesi sunmaktadır. Duyarlılık analizi için üç senaryo ve on iki alt tip belirlenmiştir: yapı malzemeleri taşıma mesafesi (50–200 km), tasarım ömrü (50–125 yıl) ve ürün taşıma mesafesi (20–80 km).</p>
+
+    <h3>2.2 Kentsel Dikey Çiftlik Binası Özellikleri</h3>
+
+    <table>
+        <thead><tr><th>Parametre</th><th>Değer</th></tr></thead>
+        <tbody>
+            <tr><td>Bina yüksekliği</td><td>108 m</td></tr>
+            <tr><td>Bina genişliği</td><td>80 m × 60 m</td></tr>
+            <tr><td>Toplam kat alanı</td><td>75.360 m²</td></tr>
+            <tr><td>Dikey ekim alanı</td><td>17.100 m² (toplam alanın %30'u)</td></tr>
+            <tr><td>Ofis ve perakende alanı</td><td>%52</td></tr>
+            <tr><td>Paketleme ve depolama</td><td>%10,16</td></tr>
+            <tr><td>Yapı sistemi</td><td>Yerinde dökme beton (betonarme)</td></tr>
+            <tr><td>Tasarım ömrü (baz senaryo)</td><td>50 yıl</td></tr>
+            <tr><td>Yapı alanı</td><td>3.768 m²</td></tr>
+        </tbody>
+    </table>
+
+    <h3>2.3 Sistem Sınırları</h3>
+
+    <p>Çalışma, beşikten mezara (cradle-to-grave) kapsamında inşaat aşamasından başlayarak kullanım ve işletme aşamasını, ardından da tesisin tamamının yıkılması ve geri dönüştürülmesini kapsamaktadır. Analiz; ham madde edinimi, taşıma ve enerji tüketimini içeren inşaat aşamasının çevresel etkilerini, tarımsal ürünlerin üretimi ve yetiştirilmesi, ofis işlemleri ve ürünlerin paketlenip satılması için enerji tüketimini ve son olarak yerinde yıkım, geri dönüşüm ve bertaraftan kaynaklanan enerji tüketimini kapsamaktadır.</p>
+
+    <hr>
+
+    <h2>3. Sonuçlar</h2>
+
+    <h3>3.1 Genel YDÖ Sonuçları</h3>
+
+    <p>Tüm etki kategorilerinde işletme ve kullanım aşaması, üç aşama arasında en yüksek emisyona sahip aşama olarak öne çıkmaktadır. Baz senaryo olan 50 yıllık tasarım ömrü boyunca toplam yaşam döngüsü KIP değeri <strong>5,13 × 10⁸ kg CO₂e</strong> olarak hesaplanmıştır. Bu değer, metrekare başına <strong>6.807,33 kg CO₂e/m²</strong>'ye ve yetiştirme aşaması için marul başına <strong>5,43 kg CO₂e kg⁻¹</strong>'a karşılık gelmektedir.</p>
+
+    <p>İklim değişikliği açısından elektrik talebi, iklim değişikliğiyle ilişkili toplam etkinin <strong>%98,7'sinden</strong> tek başına sorumludur. İkinci büyük katkı kaynağı olan kalsiyum besin maddesi ise toplam iklim değişikliği etkisinin %2,26'sını oluşturmaktadır.</p>
+
+    <table>
+        <thead><tr><th>Aşama</th><th>Yaşam Döngüsüne Katkı</th><th>Toplam Emisyonlar</th></tr></thead>
+        <tbody>
+            <tr><td>İnşaat aşaması</td><td>%5,14</td><td>%4,94</td></tr>
+            <tr><td>Kullanım ve işletme aşaması</td><td>%98,9</td><td>%95,06</td></tr>
+            <tr><td>Yıkım ve geri dönüşüm aşaması</td><td>Negatif (−%4,06)</td><td>Karbon telafisi</td></tr>
+        </tbody>
+    </table>
+
+    <h3>3.2 İnşaat Aşamasının Analizi</h3>
+
+    <p>İnşaat aşamasındaki küresel ısınma etkisinin dağılımı incelendiğinde yapısal işlerin toplam KIP'in <strong>%78,9'undan</strong> sorumlu olduğu görülmektedir. Bunun temel nedeni, binanın taşıyıcı sistem ve temel için yüksek hacimli yerinde dökme beton gerektirmesidir. Daha ayrıntılı bir analiz yapıldığında, en yüksek KIP'in temel ve iskelet yapısı için kullanılan betondan kaynaklandığı ve toplam malzeme emisyonlarının <strong>%37,22'sine</strong> karşılık geldiği ortaya çıkmaktadır. İkinci sırayı bakım yapıları için kullanılan beton bloklar almakta ve toplam malzeme emisyonlarının %14,61'ini oluşturmaktadır.</p>
+
+    <h3>3.3 Kullanım ve İşletme Aşamasının Analizi</h3>
+
+    <p>Kullanım ve işletme aşaması, kentsel dikey çiftliğin yaşam döngüsü boyunca en yüksek KIP katkısını sağlamaktadır. Bu aşamadan kaynaklanan emisyonlar, yetiştirme aşamasından gelen <strong>%65,9</strong> ile ofis işlemleri, depolama ve perakendeden gelen <strong>%34,1</strong>'den oluşmaktadır.</p>
+
+    <p>Satılmayan marulların ve artık yaprakların geri dönüştürülerek yeniden kullanıma hazırlandığı varsayıldığında, karbon emisyonları bu aşamada yaklaşık <strong>%3,65</strong>, toplam yaşam döngüsü boyunca ise <strong>%3,61</strong> azalmaktadır.</p>
+
+    <h3>3.4 Rüzgâr Türbini Entegrasyonu</h3>
+
+    <p>Rüzgâr tüneli deneyleri ve CFD hesaplamaları, 1 ila 5 rüzgâr türbininin yerleştirilmesinin karbon emisyonlarını azaltabileceğini ortaya koymaktadır. Temiz enerji üretiminin karbon emisyonlarını <strong>%2,39'a kadar</strong> azaltabileceği hesaplanmıştır. Her ne kadar bu oran mütevazı görünse de giderek güçlenen elektrik şebekesi politikalarıyla birleştiğinde toplam etki artacaktır.</p>
+
+    <h3>3.5 Literatür Karşılaştırması</h3>
+
+    <table>
+        <thead><tr><th>Çalışma / Senaryo</th><th>Marul KIP (kg CO₂e kg⁻¹)</th></tr></thead>
+        <tbody>
+            <tr><td>Bu çalışma (yetiştirme aşaması)</td><td>5,43</td></tr>
+            <tr><td>Kıtalararası hava yoluyla taşınan tarım ürünleri</td><td>10</td></tr>
+            <tr><td>Yapay ışıklı bitki fabrikaları</td><td>10–25</td></tr>
+            <tr><td>Sera üretimi</td><td>0,21–3,15</td></tr>
+            <tr><td>BK elektrik karmasıyla (2022) ticari DT</td><td>3,85</td></tr>
+            <tr><td>%100 yenilenebilir elektrikle ticari DT</td><td>0,74</td></tr>
+            <tr><td>İspanya ve Hollanda'dan ithal tarla marulu</td><td>0,18–1,44</td></tr>
+            <tr><td>Ljusgårda dikey çiftliği (rüzgâr/hidroenerji)</td><td>0,75</td></tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>4. Duyarlılık Analizi</h2>
+
+    <h3>4.1 Yapı Malzemeleri Taşıma Mesafesinin Etkisi</h3>
+
+    <p>Beklentilere paralel olarak, taşıma mesafesi arttıkça tüm çevresel etki kategorilerindeki değerler yükselmektedir. Ozon Tabakası İncelmesi (OTİ) bu değişime en duyarlı etki kategorisi olurken bunu fotokimyasal oksidasyon ve asitlenme izlemektedir.</p>
+
+    <h3>4.2 Tasarım Ömrünün Etkisi</h3>
+
+    <p>Temel senaryo olan 50 yıla ek olarak 75, 100 ve 125 yıllık kullanım süreleri de incelenmiştir. Tasarım ömründeki uzama her etki kategorisinde doğrusal ve benzer oranlarda artışa yol açmaktadır. Tasarım ömrünün uzatılması ekonomik faydalar ve sürdürülebilirlik açısından avantajlı olsa da çevresel etkiler üzerindeki belirsizlik derecesini de artırmaktadır.</p>
+
+    <h3>4.3 Ürün Taşıma Mesafesinin Etkisi</h3>
+
+    <p>Temel senaryoda ürünlerin %5'i dikey çiftlik bünyesindeki perakende mağazalarında, kalan %95'i ise 20 km mesafedeki süpermarket veya perakendecilere karayoluyla nakledilmektedir. Karşılaştırmalar, yapı malzemeleri taşıma mesafesindeki değişikliklerin çevresel etkileri, ürün taşıma mesafesindeki değişikliklerin neden olduğu etkilerden daha belirgin biçimde artırdığını göstermektedir.</p>
+
+    <hr>
+
+    <h2>5. Sonuç</h2>
+
+    <p>Bu çalışma, beşikten mezara kapsamlı yaşam döngüsü değerlendirmesiyle kentsel dikey çiftliklerin çevresel etkilerine ilişkin nicel analiz eksikliğini gidermeyi amaçlamaktadır. Başlıca bulgular şöyle özetlenebilir:</p>
+
+    <ul>
+        <li>Mevcut şebeke yapısında marul başına KIP değeri <strong>5,43 kg CO₂e</strong>'dir; bu değer açık alan tarımının 9–14 katına karşılık gelmektedir.</li>
+        <li>İşletme ve kullanım aşaması, toplam yaşam döngüsü karbon emisyonlarının <strong>%95,06'sından</strong> sorumludur; elektrik tüketimi bu etkinin %98,7'sini oluşturmaktadır.</li>
+        <li>Yıkım ve geri dönüşüm aşaması yaşam döngüsü karbon emisyonlarının <strong>%4,06'sını</strong> telafi etmektedir.</li>
+        <li>Atık marul geri dönüşümü ek <strong>%3,61</strong> karbon tasarrufu sağlamaktadır.</li>
+        <li>Rüzgâr türbini entegrasyonu karbon emisyonlarını <strong>%2,39'a kadar</strong> azaltabilmektedir.</li>
+        <li>Yenilenebilir enerji ve fosil yakıtlar, dikey çiftliklerin toplam karbon emisyonlarını belirleyen temel faktörlerdir.</li>
+    </ul>
+
+    <p>Tasarım ömrünün uzatılması ekonomik açıdan avantajlı olmakla birlikte çevresel etkileri de orantılı biçimde artırmaktadır. Kentsel dikey çiftliklerin ekonomik faydaları ile çevresel faydaları arasında etkin bir denge kurulması, gelecekteki kentsel planlamanın temel önceliklerinden biri olmalıdır.</p>
+
+    <hr>
+
+    <h2>Kaynaklar (Seçilmiş)</h2>
+    <ol>
+        <li>Xie, S., Martinez-Vazquez, P. &amp; Baniotopoulos, C. (2025). Life cycle assessment of an urban vertical farm benchmark from construction to dismantling and recycling. <em>Building and Environment</em>, 286, 113729.</li>
+        <li>Gargaro, M. vd. (2024). A cradle-to-customer LCA case study of UK vertical farming. <em>Journal of Cleaner Production</em>, 470, 143324.</li>
+        <li>Martin, M. vd. (2023). Environmental performance of vertical farms. <em>Resources, Conservation and Recycling</em>.</li>
+        <li>PRé Sustainability B.V. (2023). SimaPro v9.5.0.0. Amersfoort, Hollanda.</li>
+    </ol>
+
+  </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Safran Topluluğu · <a href="/" style="color:#D97706">Araştırmalar</a></p>
+    </div>
+</footer>
+</body>
+</html>
