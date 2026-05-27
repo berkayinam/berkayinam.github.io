@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kokopit Substrat, Nitrat ve Demir — Korm Optimizasyonu (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-full { border-color: #D97706; color: #D97706; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h1 { font-size: 1.5rem; margin-top: 2.5em; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.88rem; overflow-x: auto; display: block; }
+        .post-content th { background: #f7f7f7; font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #ddd; }
+        .post-content td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        .post-content tr:nth-child(even) td { background: #fafafa; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; }
+        .post-content code { font-family: monospace; background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.3em; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+
+  'indoor-saffron-production-profitability-blueprint':                          {lang:'en', pair:'i-c-mekanda-safran-uretimi-karlilik-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint':                              {lang:'tr', pair:'indoor-saffron-production-profitability-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'iot-based-smart-aeroponic-system-for-saffron-cultivation-2':                 {lang:'en', pair:'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2'},
+  'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2':           {lang:'tr', pair:'iot-based-smart-aeroponic-system-for-saffron-cultivation-2'},
+  'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3':         {lang:'en', pair:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3':          {lang:'tr', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4':           {lang:'en', pair:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4':                  {lang:'tr', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5':           {lang:'en', pair:'tetikleyici-hava-kosullari-safran-fenolojisi-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-5':                             {lang:'tr', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'saffron-aeroponic-cultivation-step-by-step-visual-guide':                    {lang:'en', pair:'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber'},
+  'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber':                 {lang:'tr', pair:'saffron-aeroponic-cultivation-step-by-step-visual-guide'},
+  'saffron-hydroponic-vertical-farming-concept-and-design-7':                   {lang:'en', pair:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7':                         {lang:'tr', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'saffron-production-life-cycle-biology-dormancy-and-flowering-8':             {lang:'en', pair:'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8'},
+  'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8':                   {lang:'tr', pair:'saffron-production-life-cycle-biology-dormancy-and-flowering-8'},
+  'smart-hydroponic-framework-for-saffron-precision-agriculture-9':             {lang:'en', pair:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-9':                          {lang:'tr', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'growth-medium-vegetative-productivity-and-corm-quality-10':                  {lang:'en', pair:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10':                    {lang:'tr', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11':         {lang:'en', pair:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11':              {lang:'tr', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12':      {lang:'en', pair:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12':                     {lang:'tr', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13':     {lang:'en', pair:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13':                  {lang:'tr', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'saffron-cultivation-using-aeroponics-viable-approach-2026-14':               {lang:'en', pair:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14':                {lang:'tr', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15':              {lang:'en', pair:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15':                     {lang:'tr', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'benchmarking-energy-efficiency-vertical-farming-18':                         {lang:'en', pair:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18':                      {lang:'tr', pair:'benchmarking-energy-efficiency-vertical-farming-18'},
+  'cradle-to-customer-lca-uk-vertical-farming-19':                              {lang:'en', pair:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19':                            {lang:'tr', pair:'cradle-to-customer-lca-uk-vertical-farming-19'},
+  'lca-urban-vertical-farm-construction-dismantling-20':                        {lang:'en', pair:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20':                    {lang:'tr', pair:'lca-urban-vertical-farm-construction-dismantling-20'},
+  'towards-sustainable-vertical-farming-eroi-review-21':                        {lang:'en', pair:'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21'},
+  'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21':                      {lang:'tr', pair:'towards-sustainable-vertical-farming-eroi-review-21'},
+  'innovation-vertical-farming-adaptive-vs-standard-22':                        {lang:'en', pair:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22':                        {lang:'tr', pair:'innovation-vertical-farming-adaptive-vs-standard-22'},
+  'sustainable-vf-machine-learning-iot-energy-23':                              {lang:'en', pair:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23':                         {lang:'tr', pair:'sustainable-vf-machine-learning-iot-energy-23'},
+  'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r': {lang:'en', pair:'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal'},
+  'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal':  {lang:'tr', pair:'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r'}
+
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint-full': {lang:'tr-full', pair:'indoor-saffron-production-profitability-blueprint', pairOzet:'i-c-mekanda-safran-uretimi-karlilik-blueprint'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3': {lang:'tr-full', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairOzet:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4': {lang:'tr-full', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairOzet:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-full-5': {lang:'tr-full', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairOzet:'tetikleyici-hava-kosullari-safran-fenolojisi-5'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7': {lang:'tr-full', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairOzet:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9': {lang:'tr-full', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairOzet:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10': {lang:'tr-full', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairOzet:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11': {lang:'tr-full', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairOzet:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12': {lang:'tr-full', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairOzet:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13': {lang:'tr-full', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairOzet:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14': {lang:'tr-full', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairOzet:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15': {lang:'tr-full', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairOzet:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15'},
+};
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a href="../index.html" class="site-logo">
+            <svg viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span>Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="https://ko-fi.com/safrantoplulugu" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="post-header">
+  <div class="container">
+    <div class="breadcrumb">
+        <a href="../index.html">Araştırmalar</a>
+        <span> / </span>
+        <span>Kokopit Substrat, Nitrat ve Demir — Korm Optimizasyonu</span>
+    </div>
+    <div class="full-badge">TR Full — Tam Çeviri</div>
+    <h1 class="post-title">Kokopit Substrat, Nitrat ve Demir — Korm Optimizasyonu</h1>
+    <div class="post-actions" id="langSwitchArea">
+        <div class="lang-switch" id="langSwitch"></div>
+    </div>
+    <script>
+    (function() {
+        var _parts = window.location.pathname.replace(/^\/|\/$/g, '').split('/').filter(function(p){ return p && p !== 'index.html'; });
+        var slug = _parts[_parts.length - 1] || '';
+        var info = window.LANG_MAP && window.LANG_MAP[slug];
+        if (!info) return;
+        var sw = document.getElementById('langSwitch');
+        if (!sw) return;
+        var html = '';
+        if (info.lang === 'tr-full') {
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pair + '/">EN →</a>';
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pairOzet + '/">TR Özet →</a>';
+            html += '<span class="lang-switch-current lang-switch-full">TR Full</span>';
+        }
+        sw.innerHTML = html;
+    })();
+    </script>
+  </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+    <h1>Topraksız Yetiştiricilikte Substrat Bileşimi, Besin Konsantrasyonu ve Sulama Yönetimi ile Safran Soğancık Üretiminin Optimizasyonu</h1>
+<p><strong>Kaynak:</strong> Scientific Reports (2025) 15:36<br />
+<strong>DOI:</strong> https://doi.org/10.1038/s41598-024-81282-5<br />
+<strong>Yazarlar:</strong> Elham Naseri¹, Neda Dalir¹, Ali Mokhtassi-Bidgoli², Mohammad-Taghi Ebadi³ ve Rasoul Rahnemaie¹</p>
+<p>¹ Toprak Bilimi Bölümü, Tarbiat Modares Üniversitesi, Tahran 14115-336, İran<br />
+² Tarla Bitkileri Bölümü, Tarbiat Modares Üniversitesi, Tahran, İran<br />
+³ Bahçe Bitkileri Bölümü, Tarbiat Modares Üniversitesi, Tahran, İran  </p>
+<p><em>Yazışma adresi: rahnemaie@modares.ac.ir</em></p>
+<hr />
+<h2>Özet</h2>
+<p>Topraksız yetiştiricilik sisteminde safran soğancık üretimini optimize etmek amacıyla iki yıllık bir çalışma yürütülmüştür. Birinci yılda fosfat, bor ve sulama olaylarındaki değişimlerin etkileri incelenmiştir. Ardından substrat bileşiminin optimize edilmesinin ardından, ikinci yılda besin çözeltisi hacmi ile nitrat, demir ve bor konsantrasyonlarının soğancık ve yaprak verimi ile ağırlığı, fotosentetik aktiviteler ve besin çözeltisi verimliliği üzerindeki etkileri araştırılmıştır. Birinci yılda sulama olayları soğancık büyümesini önemli ölçüde etkilemiş; fosfat ve bor ise kayda değer bir etki göstermemiştir. Nem özellikleri; optimal substrat bileşiminin %15 kokopit, %15 koko-yonga ve %70 perlit olduğuna işaret etmiştir. İkinci yılda artan besin çözeltisi hacmi (225 mL/saksı/hafta) ve nitrat konsantrasyonunun 9800 µM'a çıkarılması; yaprak ağırlığını, toplam fotosentez hızını ve büyük boyutlu soğancıkların (&gt;8 g) ağırlığını toplam soğancıkların yaklaşık %50'sine ulaşacak şekilde önemli ölçüde artırmıştır. Buna karşın artan demir konsantrasyonu, hem toplam hem de büyük soğancıkların ağırlığını belirgin biçimde azaltmıştır. Bor konsantrasyonu ise parametreler üzerinde yine de anlamlı bir etki göstermemiştir. En yüksek besin çözeltisi verimliliği, 9800 µM azot ve 25 µM demir içeren 150 mL/saksı/hafta'lık besin çözeltisiyle elde edilmiştir. Bu bulgular; etkili sulama ve beslenme yönetiminin soğancık üretiminin miktar ve kalitesini artırmadaki önemini vurgularken, ilerleyen yıllarda çok yıllık safran verimini de artırma potansiyeli taşımaktadır.</p>
+<p><strong>Anahtar Kelimeler:</strong> Safran soğancığı; topraksız; fotosentez; sulama; nitrat; demir</p>
+<hr />
+<h2>Giriş</h2>
+<p>Safran (<em>Crocus sativus</em> L.), kurutulmuş stigmasının dünyanın en değerli tıbbi baharatlarından biri olduğu, düşük hacimli yüksek değerli bir kültür bitkisidir [1]. Gıda endüstrisinde doğal renklendirici ve aroma maddesi olarak; parfümeride koku ve boyama ajanı olarak; ayrıca pek çok antikanser, anti-Alzheimer ve antidepresan ilacın üretiminde kullanılmaktadır [2].</p>
+<p>Safran; büyüme döneminde gün içi ve mevsimsel ağır sıcaklık dalgalanmaları ile sınırlı su erişimi gibi zorlu çevre koşullarına belirli ölçüde tolerans gösterebilir. Yıllık yaklaşık 100–300 mm yağış alan kurak ve yarı kurak bölgelerde, zaman zaman kuyu suyu ile sulama (yıllık ortalama 3.000–3.600 m³/ha) gerçekleştirilerek başarılı şekilde yetiştirilmektedir [3]. Bununla birlikte, son birkaç on yıldaki küresel iklim değişikliği geleneksel safran yetiştiriciliğinin önündeki zorlukları daha da artırmıştır. Bu değişimler, söz konusu dönemde safran stigma veriminde yaklaşık %35'lik bir düşüşe yol açmıştır [4,5]. Bu gerileme; doğrudan safran büyümesi ve gelişimini etkileyen artan sıcaklıklara ve eş zamanlı yıllık ortalama yağış azalmasına bağlıdır; bunların yanı sıra toprak organik maddesi ve verimliliğini dolaylı olarak da olumsuz etkilemektedir.</p>
+<p>Agronomik açıdan çok yıllık bir geofit olan safran, steril bir triploid bitkidir ve tohum üretmemektedir; bunun yerine soğanlarla her yıl çoğaltılır [6]. Geofitlerde soğancık (yavru soğan) üretimi, ana soğanların kalitesiyle [7] ilişkilidir; bu kalite ise bitkinin büyüme ve gelişme aşamalarında besin maddesi kullanılabilirliğine bir ölçüde bağlıdır [8]. Safran, yapraklar ortaya çıkmadan önce çiçek açar. Çiçeklenme döneminde safran soğanlarında depolanan besin bileşikleri çiçeklenme ile yaprak ve kök gelişiminde kullanılır; (ana) soğanlarda kalan besinler ise yeni oluşan soğancıklara aktarılır. Dolayısıyla daha ağır soğanlar daha yüksek üretkenliğe yol açar [9]. Yaprak gelişiminin ardından fotosentez süreci, soğancıkların kış başından ilkbahara kadar büyümesini destekler [10]. Fotosentez hızı, daha büyük boyutlu soğancıkların, daha fazla çiçek ve stigma üretimini belirleyen kilit bir faktördür. Işık, sıcaklık, karbondioksit, su ve besin maddelerinin kullanılabilirliği fotosentez hızını etkiler [11]. Soğan ağırlığı da çiçek ve stigma boyutunu etkiler [12]; soğan ne kadar ağır olursa verimlilik de o kadar yüksek olur.</p>
+<p>Safran üretiminde sulama yönetimi; besin alımı, bunu izleyen fotosentez hızı ve soğancık oluşumunda kilit bir rol oynamaktadır [13]. Su açığı ve/veya uygunsuz sulama yönetimi, safran verim kaybının başlıca nedenleri arasındadır [14]. Bu nedenle çevre koşullarının optimal denetimi, özellikle zorlu çevre koşullarında ürün verimini artırmak veya sürdürmek açısından en etkili stratejidir. Hidroponik yetiştiricilik, seralarla birleştirildiğinde su ve besin kullanımı üzerinde maksimum kontrol sağlayan en etkin sistem olarak kabul görmektedir [15]. Bu sistemin daha yüksek safran verimi sağlaması [16] ve aynı zamanda safran kalitesinin göstergeleri olan başlıca krosini, pikrokrosini ve safranali artırması beklenmektedir [17].</p>
+<p>Hidroponik sistemi başarıyla işletmek için substrat bileşimi ve sulama olayları gibi büyümeyi etkileyen faktörlerin optimize edilmesi, bitki stresini önlemek açısından kritik önem taşımaktadır [18]. Substrat bileşimi, kök bölgesindeki su, besin ve oksijen kullanılabilirliğini doğrudan etkiler [19]. Ticari substratlar, safran üretimi için kullanılabilecek iyi aday malzemelerdir [17]. Örneğin vermikülit ve perlitte safran yetiştiriciliğinin verimi ve üretilen soğancık sayısını olumlu yönde etkilediği [20]; kokopit ve perlitte yetiştiriciliğin ise soğancıkların kuru ağırlığını artırdığı gösterilmiştir [21].</p>
+<p>Substrat maddesi olarak yaygın biçimde kullanılan kokopit, yüksek su tutma kapasitesine sahiptir ve bu özelliği kök bölgesinde sınırlı havalanmaya yol açar. Hazırlama sürecine bağlı olarak hava geçirgenliği sırasıyla %11–53, su tutma kapasitesi ise %50–81 arasında değişebilir [22]. Kök bölgesinde havalanmayı iyileştirmek ve su ile besin alımı için uygun kapasite sağlamak amacıyla kokopit'e daha kaba malzemelerin eklenmesi etkili bir çözüm olabilir [23].</p>
+<p><strong>Azot (N):</strong> Fotosentez sürecinde kilit rol oynayan en önemli makro besin elementidir [24]. Kimyasal ve/veya organik kaynaklı azotun safran çiçeklenmesi ve stigma verimine etkisi son kırk yılda özellikle vurgulanmıştır [25]. Yetersiz azot, safranın yaprak büyümesini azaltabilir ve daha küçük soğanlar oluşumuna neden olabilir [26].</p>
+<p><strong>Demir (Fe):</strong> Fotosentez, solunum, azot fiksasyonu ve kloroplast bakımı gibi çeşitli bitki metabolizma süreçlerinde temel rol oynayan başka bir önemli besin elementidir. Bitkilerin Fe içeriğinin yaklaşık %80'i fotosentetik hücrelerde bulunur [27]; Fotosistem I'de 12, PSII'de 2–3, sitokrom komplekslerinde 5 ve ferredoksin moleküllerinde 2 Fe atomu yer almaktadır. Fe, fotosentez sürecindeki elektron taşıma zincirinde [28] ve kloroplastların Fe-S kümelerinde [29] de belirleyici bir rol üstlenir. Demirin kullanılabilirliği bitkilerin fotosentezi ve verimliliği üzerinde önemli bir etki yapabilse de [30] yüksek demir konsantrasyonları bitki büyümesini önemli ölçüde azaltabilir [31].</p>
+<p>Bu çalışmanın birinci amacı; kullanılan substratta uygun sulama suyu hacminin belirlenmesiydi. İkinci amaç ise nitrat, demir, bor ve fosfat konsantrasyonlarının safran soğancığı üretimi üzerindeki etkilerini ayrı ayrı araştırmaktı. Bu bilgiler, artan ekilebilir arazi kıtlığı ve su yetersizliği nedeniyle giderek daha fazla önem kazanan topraksız safran üretimi için temel bilgi sağlarken, daha uygun bir besin çözeltisinin iyonik bileşiminin manipülasyonuna ilişkin içgörüler sunacaktır.</p>
+<hr />
+<h2>Bulgular</h2>
+<h3>Birinci Yıl Deneyi</h3>
+<h4>Sulama Olaylarının Etkisi</h4>
+<p>Tablo 1, farklı sulama olaylarının (günlük, haftada iki kez ve haftalık) üretilen soğancıkların ağırlığı üzerindeki etkilerini göstermektedir. Haftada iki kez sulama, hem toplam hem de büyük boyutlu (5–9 g) soğancıkların verimini önemli ölçüde artırmıştır. Buna karşın günlük sulama, en yüksek soğancık kayıp yüzdesine yol açmış (%44); her iki kategori için de soğancık verimi düşmüştür. Haftalık sulama soğancık kaybını azaltmış olmakla birlikte, soğancık veriminde %50'yi aşan belirgin bir azalmaya neden olmuştur. Ayrıca tüm uygulamalarda saffron kökleri odunsu bir görünüm kazanmış ve soğan-kök oranı düşmüştür; bu durum muhtemelen kullanılan substrat bileşimine (%70 kokopit:%30 perlit) bağlıdır.</p>
+<h4>Tablo 1. Farklı Sulama Olaylarının Soğancık Ağırlığına Etkisi</h4>
+<table>
+<thead>
+<tr>
+<th>Uygulama</th>
+<th>Toplam Soğancık Ağırlığı (g/soğan)</th>
+<th>Büyük Soğancık Ağırlığı (g/soğan)</th>
+<th>Kayıp Soğancık (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Günlük</td>
+<td>2,40 ± 0,28 b</td>
+<td>1,37 ± 0,43 b</td>
+<td>44</td>
+</tr>
+<tr>
+<td>Haftada 2 kez</td>
+<td><strong>4,25 ± 0,14 a</strong></td>
+<td><strong>2,30 ± 0,45 a</strong></td>
+<td>15</td>
+</tr>
+<tr>
+<td>Haftalık</td>
+<td>2,28 ± 0,12 b</td>
+<td>1,09 ± 0,54 b</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p><em>Değerler 6 tekrarın ortalamasıdır (iki saksı, her birinde üç soğan). Ortak harfle gösterilen ortalamalar %5 olasılık düzeyinde birbirinden anlamlı farklı değildir.</em></p>
+<p>Sulama olayının fizyolojik etkisi de gözlemlenmiştir. Günlük sulamadan haftalık sulamaya geçilmesi; saffron yapraklarının fizyolojik olarak beklenen zamanın (Nisan) çok öncesinde (Şubat ortası) sararmasını hızlandırmış ve büyümeyi durdurmuştur. Haftada iki kez sulanan bitkiler Mart'ın ikinci yarısında; günlük sulananlar ise Nisan'ın ikinci yarısında sararma göstermiştir.</p>
+<h4>Nem Özelliklerine Göre Substrat Bileşiminin Optimizasyonu</h4>
+<p>Birinci yılın deneysel sonuçları doğrultusunda, kokopit ve perlit karışımından oluşan çeşitli substratların nem özellikleri değerlendirilmiştir.</p>
+<h4>Tablo 2. Substrat Bileşimi ve Nem Özellikleri</h4>
+<table>
+<thead>
+<tr>
+<th>Substrat</th>
+<th>Kokopit</th>
+<th>Koko-yonga</th>
+<th>Perlit 1–3 mm</th>
+<th>Perlit 3–5 mm</th>
+<th>Perlit 7–10 mm</th>
+<th>Doyma Nemi (%)</th>
+<th>Su Tutma Kapasitesi-WHC (%)</th>
+<th>Gözeneklilik (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100</td>
+<td>0</td>
+<td>64</td>
+<td>21</td>
+<td>43</td>
+</tr>
+<tr>
+<td>2</td>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>90</td>
+<td>0</td>
+<td>64</td>
+<td>35</td>
+<td>29</td>
+</tr>
+<tr>
+<td>3</td>
+<td>10</td>
+<td>0</td>
+<td>90</td>
+<td>0</td>
+<td>0</td>
+<td>63</td>
+<td>32</td>
+<td>31</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10</td>
+<td>0</td>
+<td>30</td>
+<td>0</td>
+<td>70</td>
+<td>78</td>
+<td>23</td>
+<td>54</td>
+</tr>
+<tr>
+<td><strong>5 (1. yıl)</strong></td>
+<td><strong>70</strong></td>
+<td><strong>0</strong></td>
+<td><strong>0</strong></td>
+<td><strong>30</strong></td>
+<td><strong>0</strong></td>
+<td><strong>70</strong></td>
+<td><strong>39</strong></td>
+<td><strong>31</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>30</td>
+<td>0</td>
+<td>0</td>
+<td>70</td>
+<td>0</td>
+<td>63</td>
+<td>24</td>
+<td>39</td>
+</tr>
+<tr>
+<td><strong>7 (optimal)</strong></td>
+<td><strong>15</strong></td>
+<td><strong>15</strong></td>
+<td><strong>0</strong></td>
+<td><strong>70</strong></td>
+<td><strong>0</strong></td>
+<td><strong>78</strong></td>
+<td><strong>43</strong></td>
+<td><strong>35</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Birinci yılda kullanılan substrat 5 (%70 kokopit + %30 perlit): Doyma sınırı %70, WHC %39, gaz fazı %31. Bu koşullar soğan ve köklerde çürümeye ve mikrobiyal kontaminasyona neden olmuştur; su içeriği safranın ihtiyacının üzerinde kalmıştır. Substrat 7 (%15 kokopit + %15 koko-yonga + %70 perlit): WHC %43, doyma %78, gözeneklilik %35. Koko-yonga eklenmesi toplam gözenekliliği ve gaz sirkülasyonunu artırmış; nem dağılımını daha homojen hale getirmiştir. <strong>Kokopit nemi doğrudan köklere ulaşabilirken, perlitin ince gözeneklerindeki nem köklere daha az erişilebilirdir.</strong></p>
+<h3>İkinci Yıl Deneyi</h3>
+<h4>Yaprak ve Soğancık Sayısı ile Ağırlığı</h4>
+<h4>Tablo 3. Nitrat, Demir, Bor Konsantrasyonu ve Besin Hacminin Yaprak ve Soğancık Parametrelerine Etkileri</h4>
+<table>
+<thead>
+<tr>
+<th>Uygulama</th>
+<th>Yaprak Sayısı (adet/soğan)</th>
+<th>Yaprak Ağırlığı (g/soğan)</th>
+<th>Yaprak Alanı (cm²/soğan)</th>
+<th>Soğancık Sayısı (adet/soğan)</th>
+<th>Soğancık Ağırlığı (g/soğan)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>N1 (8100 µM)</td>
+<td>5,86 ± 0,77 a</td>
+<td>0,27 ± 0,06 c</td>
+<td>26,94 ± 1,24 b</td>
+<td>5,17 ± 0,75 a</td>
+<td>12,84 ± 1,55 b</td>
+</tr>
+<tr>
+<td>N2 (9300 µM)</td>
+<td>6,51 ± 0,29 a</td>
+<td>0,31 ± 0,03 b</td>
+<td>28,96 ± 1,96 b</td>
+<td>4,51 ± 0,44 ab</td>
+<td>13,57 ± 1,08 b</td>
+</tr>
+<tr>
+<td><strong>N3 (9800 µM)</strong></td>
+<td><strong>5,86 ± 0,81 a</strong></td>
+<td><strong>0,34 ± 0,05 a</strong></td>
+<td><strong>43,95 ± 0,65 a</strong></td>
+<td><strong>3,47 ± 0,93 b</strong></td>
+<td><strong>16,36 ± 1,66 a</strong></td>
+</tr>
+<tr>
+<td>N4 (10100 µM)</td>
+<td>5,82 ± 0,28 a</td>
+<td>0,25 ± 0,03 c</td>
+<td>22,04 ± 0,91 c</td>
+<td>4,59 ± 0,79 a</td>
+<td>12,98 ± 1,98 b</td>
+</tr>
+<tr>
+<td>Fe1 (20 µM)</td>
+<td>5,74 ± 1,19 a</td>
+<td>0,29 ± 0,07 b</td>
+<td>41,07 ± 0,51 a</td>
+<td>5,07 ± 1,20 a</td>
+<td><strong>15,10 ± 0,71 a</strong></td>
+</tr>
+<tr>
+<td>Fe2 (25 µM)</td>
+<td>6,51 ± 0,29 a</td>
+<td>0,31 ± 0,03 ab</td>
+<td>28,96 ± 1,96 c</td>
+<td>4,51 ± 0,44 a</td>
+<td>13,57 ± 1,08 b</td>
+</tr>
+<tr>
+<td>Fe3 (30 µM)</td>
+<td>6,43 ± 0,73 a</td>
+<td>0,34 ± 0,07 a</td>
+<td>36,02 ± 1,02 b</td>
+<td>4,40 ± 1,07 a</td>
+<td>9,76 ± 0,90 b</td>
+</tr>
+<tr>
+<td>B1 (18 µM)</td>
+<td>6,49 ± 0,73 a</td>
+<td>0,35 ± 0,04 a</td>
+<td>29,54 ± 2,18 a</td>
+<td>4,35 ± 0,58 a</td>
+<td>14,25 ± 0,86 a</td>
+</tr>
+<tr>
+<td>B2 (25 µM)</td>
+<td>6,51 ± 0,29 a</td>
+<td>0,31 ± 0,03 a</td>
+<td>28,96 ± 1,96 a</td>
+<td>4,51 ± 0,44 a</td>
+<td>13,57 ± 1,08 a</td>
+</tr>
+<tr>
+<td>B3 (32 µM)</td>
+<td>5,27 ± 0,16 a</td>
+<td>0,26 ± 0,02 a</td>
+<td>26,13 ± 0,86 b</td>
+<td>4,67 ± 0,88 a</td>
+<td>12,28 ± 0,62 a</td>
+</tr>
+<tr>
+<td>B4 (46 µM)</td>
+<td>6,18 ± 0,80 a</td>
+<td>0,30 ± 0,04 a</td>
+<td>28,51 ± 2,47 a</td>
+<td>4,07 ± 0,45 a</td>
+<td>11,85 ± 1,11 a</td>
+</tr>
+<tr>
+<td>V1 (75 mL/hafta)</td>
+<td>5,67 ± 1,92 a</td>
+<td>0,30 ± 0,12 b</td>
+<td>24,41 ± 1,04 b</td>
+<td>3,60 ± 1,44 a</td>
+<td>9,70 ± 2,89 b</td>
+</tr>
+<tr>
+<td>V2 (150 mL/hafta)</td>
+<td>6,51 ± 0,29 a</td>
+<td>0,31 ± 0,03 b</td>
+<td>28,96 ± 1,96 b</td>
+<td>4,51 ± 0,44 a</td>
+<td>13,57 ± 1,08 ab</td>
+</tr>
+<tr>
+<td><strong>V3 (225 mL/hafta)</strong></td>
+<td><strong>6,44 ± 1,00 a</strong></td>
+<td><strong>0,39 ± 0,09 a</strong></td>
+<td><strong>48,35 ± 1,16 a</strong></td>
+<td><strong>4,57 ± 1,05 a</strong></td>
+<td><strong>16,11 ± 1,82 a</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Değerler 15 tekrarın ortalamasıdır (beş saksı, her birinde üç soğan). %5 düzeyinde anlamlı farklar gösterilmiştir.</em></p>
+<p><strong>Temel bulgular:</strong>
+- En yüksek besin hacmi (V3 = 225 mL/saksı/hafta): V1'e kıyasla yaprak ağırlığında %29 artış; büyük boyutlu soğancık ağırlığında 3,2 kat artış sağlamıştır.
+- En yüksek demir konsantrasyonu (Fe3 = 30 µM): Yaprak ağırlığını belirgin biçimde artırmıştır.
+- Nitrat N3 = 9800 µM: Hem toplam hem büyük soğancık ağırlığında önemli artış; N1=8100 µM'a kıyasla soğancık ağırlığında %23 artış.
+- Nitrat N4 = 10100 µM: N3'e kıyasla toplam ağırlıkta %25, büyük soğancık ağırlığında %52 azalış.
+- Fe konsantrasyonu Fe1 → Fe3: Toplam soğancık ağırlığında %35 azalış.
+- Soğancık ağırlığı ile kuru yaprak ağırlığı arasında güçlü pozitif korelasyon gözlenmiştir (R = 0,88, p ≤ 0,001); bu ilişki besin hacmi ve nitrat uygulamalarında geçerliyken demir uygulamalarında tersine dönmüştür.</p>
+<h4>Net ve Toplam Fotosentez Hızı</h4>
+<p>Uygulamalar net ve toplam fotosentez hızını önemli ölçüde etkilemiştir:</p>
+<ul>
+<li><strong>Besin hacmi:</strong> V1=75'ten V3=225 mL'ye çıkılması; hem net hem toplam fotosentez hızında 2,7 katlık artış sağlamıştır. En yüksek toplam fotosentez hızı (64 µmol CO₂/m²/s) V3=225 mL uygulamasında elde edilmiştir.</li>
+<li><strong>Nitrat:</strong> N1=8100'den N4=10100 µM'a artış, net fotosentez hızında %59 artışa neden olmuştur. Toplam fotosentez hızı N1=8100'den N3=9800 µM'a 2,39 kat artmış; N4=10100 µM'a yükseltildiğinde ise keskin düşüş yaşanmıştır.</li>
+<li><strong>Demir:</strong> Fe1=20'den Fe2=25 µM'a artış, hem net hem toplam fotosentez hızını yükseltmiştir. Ancak Fe3=30 µM'a geçildiğinde net fotosentez hızı %30 azalmıştır.</li>
+</ul>
+<h4>Transpirayon Hızı ve Su Kullanım Etkinliği (WUE)</h4>
+<ul>
+<li>V1=75'ten V3=225 mL'ye çıkılması; transpirayon hızında 2,16 kat artışa, WUE'de %12 artışa yol açmıştır.</li>
+<li>Nitrat konsantrasyonu transpirayon hızını artırmış; WUE üzerinde ise istatistiksel olarak anlamlı bir etki göstermemiştir.</li>
+<li>Artan demir konsantrasyonu transpirayon hızını artırırken WUE'yi azaltmıştır.</li>
+</ul>
+<h4>Besin Çözeltisi Verimliliği (NSP)</h4>
+<p>Büyük boyutlu soğancıkların (&gt;8 g) safran çiçeklenmesindeki ekonomik önemi göz önünde bulundurularak NSP; uygulanan besin çözeltisi birimi (L) başına üretilen büyük soğancık ağırlığı (g) olarak hesaplanmıştır.</p>
+<ul>
+<li><strong>Hacim:</strong> V1=75'ten V2=150 mL'ye artış, NSP'yi %47 azaltmıştır. V1 ile V3 arasında anlamlı fark yoktur.</li>
+<li><strong>Nitrat:</strong> N3=9800 µM uygulamasında NSP, N1=8100 µM'a kıyasla 1,66 kat yüksek bulunmuştur. N4=10100 µM'a yükseltilince NSP'de %63 azalış yaşanmıştır.</li>
+<li><strong>Demir:</strong> Konsantrasyon artışı NSP'yi olumsuz etkilemiş; Fe konsantrasyonu yükseldikçe büyük soğancık üretiminde birim başına %50 azalış görülmüştür.</li>
+</ul>
+<p><strong>En yüksek NSP:</strong> V2=150 mL/saksı/hafta + N3=9800 µM + Fe1=20 µM kombinasyonunda elde edilmiştir.</p>
+<h4>Soğancıklarda Azot ve Demir Birikimi</h4>
+<p>Besin çözeltisinde nitrat konsantrasyonu N3=9800 µM'a yükseltildiğinde, üretilen soğancıklardaki azot ve demir konsantrasyonları önemli ölçüde artmıştır (p ≤ 0,05). N3 uygulamasında soğancıklardaki en yüksek azot (26,6 mg/g soğan) ve demir (44,6 µg/g soğan) konsantrasyonları elde edilmiş; bu değerler N1=8100 µM uygulamasına kıyasla sırasıyla 1,54 ve 19,3 kat yüksek çıkmıştır. Ancak N4=10100 µM'a yükseltilmesi soğancıklardaki nitrojen ve demir konsantrasyonlarını azaltmıştır. Fe1=20 µM uygulamasındaki azot ve demir konsantrasyonları, Fe3=30 µM uygulamasına kıyasla sırasıyla 1,5 ve 1,36 kat daha yüksek bulunmuştur.</p>
+<hr />
+<h2>Tartışma</h2>
+<p>Birinci yılın bulguları; safran için sulama ve beslenme sistemini ayarlamada kök bölgesindeki nem ve hava düzeylerinin düzenlenmesinin kritik bir rol oynadığını ortaya koymuştur. Bu bulgu, soğan ve köklerle birleştiğinde substrat bileşimine uyum sağlamanın önemini de vurgulamaktadır. Kokopit ile perlit karışımında uygun bir kokopit/perlit oranı seçmek, substratın gözenekliliğini, doygun nemini ve su tutma kapasitesini (WHC) doğrudan belirler.</p>
+<p>İkinci yılda fotosentez hızının soğancık üretiminin belirleyicisi olduğu açıkça görülmüştür; toplam soğan oluşumunun %87–91'i fotosinteze bağlıdır [10]. Safranın optimal nitrat beslenmesi N3=9800 µM olarak saptanmıştır. N3=9800 µM'ı aşan nitrat konsantrasyonları bitki büyümesinde belirgin düşüşe neden olmuştur. Aşırı nitrat birikiminin nitriti, ardından bitkilerde nitrik oksite (NO) dönüştürdüğü bilinmektedir; nitrat redüktaz (NR) ise peroksinitrit (ONOO⁻) oluşturmak için NO ve O₂⁻'yi katalize eder; bu bileşik bitkiler için oldukça toksik bir maddedir [38].</p>
+<p>Demir söz konusu olduğunda; Fe2=25 µM ile en yüksek transpirayon ve net fotosentez değerleri elde edilmiştir. Fe3=30 µM konsantrasyonu soğancıklarda görünür toksisite belirtisi oluşturmadan toplam ve büyük soğancık ağırlığını azaltmıştır. Yüksek Fe²⁺ iyonu konsantrasyonları; protein, lipid, karbonhidrat ve DNA'yı okside edip parçalayan reaktif serbest radikallerin oluşumuna yol açarak kök hücresi tahribatına ve nihayetinde hücre ölümüne neden olabilir. Bitkiler için normal Fe içeriği, türe ve koşullara bağlı olarak 30–300 µg/g kuru ağırlık arasında değişmektedir [45].</p>
+<p><strong>Büyük boyutlu soğan (&gt;8 g) üretiminin önemi:</strong> Büyük soğanlar; daha erken hücre bölünmesi ve yaprak büyümesine sahip olmakta, daha uzun yapraklarla daha yüksek fotosentetik ürün sunmakta ve gelecek sezon daha fazla çiçek ile stigma üretmektedir. 8 g'ın üzerindeki soğanlar, safranın nicel ve nitel özellikleri bakımından optimal kabul edilmektedir [60].</p>
+<p><strong>Bulguların özeti ve öneriler:</strong>
+- Safran düşük su gereksinimine sahip olduğundan çevre koşullarına iyi uyum sağlar; ancak yeterli sulama gelecek nesil soğancıkların kalitesini artırır.
+- Ekonomik değeri en yüksek düzeye çıkarmak için N3=9800 µM nitrat + Fe1=20 µM demir + V3=225 mL/saksı/hafta besin hacmi kombinasyonunun optimize edilmesi şiddetle tavsiye edilmektedir.</p>
+<hr />
+<h2>Sonuçlar</h2>
+<p>Bu çalışmanın bulguları; substrat bileşimi ve sulama olaylarının safranın büyümesi ile üretilen soğancıkların miktar ve kalitesi üzerindeki kritik rolünü bir kez daha vurgulamaktadır.</p>
+<p><strong>%15 kokopit + %15 koko-yonga + %70 perlit</strong> içeren bir substrat, kök bölgesinde optimal su-hava dengesini sağlayabilmektedir.</p>
+<p><strong>Besin çözeltisi hacminin artırılması ve nitrat konsantrasyonunun 9800 µM'a çıkarılması;</strong> soğancıkların ağırlığını, özellikle büyük boyutlu soğancıkları önemli ölçüde artırmaktadır. Buna karşın <strong>artan demir konsantrasyonu</strong> safran performansını olumsuz etkileyerek hem toplam hem de büyük soğancık ağırlığını azaltmaktadır. <strong>Bor konsantrasyonu</strong> soğancık üretimini etkilememiştir.</p>
+<p>Deneysel uygulamalar, safran yapraklarının sayısını etkilememiş; ancak ağırlıklarını önemli ölçüde değiştirmiştir. Yaprak ağırlığı; besin hacmi ve nitrat konsantrasyonu denemelerinde toplam ve büyük soğancık ağırlıklarıyla pozitif korelasyon sergilerken, demir konsantrasyonu uygulamalarında negatif korelasyon göstermiştir.</p>
+<p>Sonuç olarak çalışmanın bulguları; besin çözeltisi hacminin ve nitrat konsantrasyonunun optimize edilmesi ile demir düzeylerinin gözetilmesinin, ilerleyen yıllarda safran üretimini kayda değer biçimde artırma potansiyeline sahip olduğunu kanıtlamaktadır.</p>
+<hr />
+<h2>Materyal ve Metot</h2>
+<h3>Deneysel Koşullar ve Bitki Materyali</h3>
+<p>Deneyler, 2018–2020 yılları arasında iki büyüme mevsiminde bir hidroponik serada yürütülmüştür. Safran soğanları, dünyanın baskın safran üreticisi konumundaki geleneksel bir safran üretim bölgesinden (İran, Horasan İli) temin edilmiştir. Ortalama ağırlığı 12–15 g olan görsel olarak sağlıklı soğanlar seçilmiştir. Ekim öncesinde soğanlar, %1'lik Revoral fungisit çözeltisinde 20 dakika bekletilmiş; ardından hava ile kurutulmuştur.</p>
+<h3>Çalışma Tasarımı ve Uygulamalar</h3>
+<h4>Birinci Yıl</h4>
+<p>Tamamen randomize deneme tasarımıyla (TRD) serada saksı deneyi kurulmuştur. Uygulamalar:
+- Fosfor (P): P1 = 620, P2 = 800, P3 = 980 µM
+- Bor (B): B1 = 20, B2 = 25, B3 = 30 µM
+- Sulama: günlük, haftada 2 kez, haftalık (toplam 18 uygulama, 90 saksı)</p>
+<p>Saksı boyutu: 20×25 cm. Substrat: %70 kokopit + %30 perlit. Saksı başına 3 soğan, 15 cm derinliğe dikilmiştir. Besin çözeltileri pH 5,8 ± 0,2, EC 1,1 dS/m olacak şekilde hazırlanmıştır; çiçeklenme sonundan yaprak sararmasına kadar uygulanmıştır.</p>
+<h4>İkinci Yıl</h4>
+<p>Birinci yıl sonuçlarına dayanılarak bazı değişiklikler yapılmıştır:
+- Saksı boyutu: 20×40 cm (daha derin kök gelişimi için)
+- Substrat: %15 koko-yonga + %15 kokopit + %70 perlit
+- Sulama: haftalık
+- Uygulamalar: dört nitrat (N1=8100, N2=9300, N3=9800, N4=10100 µM), üç demir (Fe1=20, Fe2=25, Fe3=30 µM), dört bor (B1=18, B2=25, B3=32, B4=46 µM) konsantrasyonu ve üç besin çözeltisi hacmi (V1=75, V2=150, V3=225 mL/saksı/hafta)</p>
+<p>Her uygulamaya 5 tekrar, saksı başına 150 mL haftalık uygulama (V1 ve V3 hariç). Besin çözeltileri otomatik damla sulama sistemiyle uygulanmıştır. EC = 1,5 dS/m olarak ayarlanmıştır.</p>
+<h3>Substrat Nem Özellikleri</h3>
+<p>Substrat bileşimini optimize etmek amacıyla çeşitli kokopit-perlit oranlarındaki substratların nem özellikleri ağırlık yöntemiyle belirlenmiştir. Doyma nemi ile su tutma kapasitesi (WHC), birinci ve ikinci ile birinci ve üçüncü tartım değerleri arasındaki fark olarak hesaplanmıştır.</p>
+<h3>Gaz Değişimi Parametreleri</h3>
+<p>Fotosentez hızı; yaprak ve kök gelişiminin durduğu, soğancıkların büyüme aşamasında olduğu Mart ayında ölçülmüştür. Mavi ve kırmızı ışık karışımı yayan ışık kaynağıyla donatılmış taşınabilir LICOR-6400 cihazı kullanılmıştır. Ölçümler; CO₂ konsantrasyonu ~350 µmol/mol ve yaprak sıcaklığı 27 ± 2°C koşullarında gerçekleştirilmiştir. Su kullanım etkinliği: <strong>WUE = Pn / Tr</strong> formülüyle hesaplanmıştır.</p>
+<h3>Hasat ve Analiz</h3>
+<p>Yaklaşık beş aylık uygulama sonucunda safran bitkileri Nisan 2019 ve Nisan 2020'de hasat edilmiştir. Soğancık sayısı, toplam ağırlık ve büyük soğancık ağırlığı (soğan başına) ölçülmüştür. Soğancıklar kurutma kağıdıyla kurutulmuş; ardından 70°C'de 48 saatte sabit ağırlığa ulaşana dek fırınlanmıştır. Üretkenlik, her büyüme aşamasında uygulanan besin çözeltisi birimi başına üretilen büyük soğancıkların taze ağırlığı (g/L) olarak hesaplanmıştır.</p>
+<h3>Doku İyon Konsantrasyonu</h3>
+<p>İkinci yılda elde edilen kurutulmuş toz örnekleri, sülfürik asit ve salisilik asit karışımıyla parçalanmıştır. Demir (Fe) ve azot (N) konsantrasyonları sırasıyla alev atomik absorpsiyon spektroskopisi (FAAS) ve mikro-Kjeldahl yöntemiyle ölçülmüştür.</p>
+<h3>İstatistiksel Analiz</h3>
+<p>ANOVA öncesinde artıklar SAS 9.3'te Proc UNIVARIATE ile normallik testine tabi tutulmuştur. ANOVA, Proc GLM (genel doğrusal model) ile yapılmış; post hoc olarak LSD (en küçük anlamlı fark) testi uygulanmıştır (p ≤ 0,05).</p>
+<hr />
+<h2>Teşekkür</h2>
+<p>Yazarlar; Tarbiat Modares Üniversitesi araştırma konseyine mali destek için teşekkür eder.</p>
+<hr />
+<h2>Kaynaklar</h2>
+<ol>
+<li>Winterhalter, P. &amp; Straubinger, M. Saffron — Renewed interest in an ancient spice. <em>Food Rev. Int.</em> 16, 39–59 (2000).</li>
+<li>Negbi, M. Saffron Cultivation: Past, Present and Future Prospects. CRC, 1999.</li>
+<li>Gresta, F. ve ark. Saffron, an alternative crop for sustainable agricultural systems. <em>Sustain. Agric.</em> 355–376 (2009).</li>
+<li>Sepaskhah, A. &amp; Yarami, N. Interaction effects of irrigation regime and salinity on flower yield and growth of saffron. <em>J. Hortic. Sci. Biotechnol.</em> 84, 216–222 (2009).</li>
+<li>Tarım Bakanlığı, İran. Tarımsal İstatistikler: Bahçe Ürünleri (2022).</li>
+<li>Fernández, J.A. Biology, biotechnology and biomedicine of saffron. <em>Recent Res. Dev. Plant Sci.</em> 2, 127–159 (2004).</li>
+<li>Ali, M. ve ark. Mechanization status of saffron production in Jammu &amp; Kashmir. <em>Agric. Mech. Asia Afr. Latin Am.</em> 45, 69–75 (2014).</li>
+<li>Rezvani-Moghaddam, P. ve ark. Effects of nutrient management on flower yield and corm characteristics of saffron. <em>J. Hortic. Sci.</em> 28, 427–434 (2014).</li>
+<li>Ebrahimi, M. ve ark. Effects of organic fertilisers and mother corm weight on yield of saffron. <em>Biol. Agric. Hortic.</em> 38, 73–93 (2021).</li>
+<li>Renau-Morata, B. ve ark. Effect of corm size, water stress on photosynthesis and biomass partitioning in saffron. <em>Ind. Crops Prod.</em> 39, 40–46 (2012).</li>
+<li>De Souza, A.P. ve ark. Elevated CO₂ increases photosynthesis in sugarcane. <em>Plant Cell Environ.</em> 31, 1116–1127 (2008).</li>
+<li>de Juan, J.A. ve ark. Yield and yield components of saffron under different cropping systems. <em>Ind. Crops Prod.</em> 30, 212–219 (2009).</li>
+<li>Koocheki, A. ve ark. Effects of planting dates, irrigation management on growth of saffron. <em>Agroecology</em> 8, 435–451 (2016).</li>
+<li>Koocheki, A. ve ark. Some reasons for saffron yield loss. <em>Saffron Agron. Technol.</em> 5, 107–122 (2017).</li>
+<li>Mousavi, S.A. ve ark. Phosphate concentrations and methionine application affect valerian. <em>Ind. Crops Prod.</em> 171, 113821 (2021).</li>
+<li>Aghhavani-Shajari, M. ve ark. Production systems and methods affect quality and quantity of saffron. <em>Span. J. Agric. Res.</em> 19, e0901 (2021).</li>
+<li>Mollafilabi, A. Effect of New Cropping Technologies on Saffron. Doktora Tezi, Ferdowsi Üniversitesi, 2014.</li>
+<li>Bar-Yosef, B. Advances in fertigation. <em>Adv. Agron.</em> 65, 1–77 (1999).</li>
+<li>Schwarz, M. Soilless Culture Management. Springer, 2012.</li>
+<li>Maggio, A. ve ark. Soilless Cultivation of Saffron. <em>Acta Hortic.</em> 718, 515–522 (2006).</li>
+<li>Helalbeigi, Y. ve ark. Proceedings of 1st Congress of Hydroponic in Greenhouse Production. Isfahan, İran.</li>
+<li>Abad, M. ve ark. Physico-chemical properties of coconut coir dusts. <em>Bioresour. Technol.</em> 82, 241–245 (2002).</li>
+<li>Awang, Y. ve ark. Chemical and physical characteristics of cocopeat-based media. <em>Am. J. Agric. Biol. Sci.</em> 4, 63–71 (2009).</li>
+<li>Mu, X. &amp; Chen, Y. The physiological response of photosynthesis to nitrogen deficiency. <em>Plant Physiol. Biochem.</em> 158, 76–82 (2021).</li>
+<li>Kafi, M. ve ark. <em>Saffron (Crocus sativus): Production and Processing</em>. Science, 2006.</li>
+<li>Zabihi, H. &amp; Pishbin, M. Management of basic nutrients in saffron. <em>Extensional J. Saffron</em> 1, 1–9 (2018).</li>
+<li>Hänsch, R. &amp; Mendel, R.R. Physiological functions of mineral micronutrients. <em>Curr. Opin. Plant Biol.</em> 12, 259–266 (2009).</li>
+<li>Mitra, G.N. Iron (Fe) Uptake. Springer India, 2015.</li>
+<li>Abdel-Ghany, S.E. ve ark. Iron-sulfur cluster biogenesis in chloroplasts. <em>Plant Physiol.</em> 138, 161–172 (2005).</li>
+<li>Briat, J.F. ve ark. Iron utilization and metabolism in plants. <em>Curr. Opin. Plant Biol.</em> 10, 276–282 (2007).</li>
+<li>Adamski, J.M. ve ark. Responses to excess iron in sweet potato. <em>Acta Physiol. Plant.</em> 34, 1827–1836 (2012).</li>
+<li>Zamani, E. ve ark. Effects of foliar iron chelated application on saffron. <em>Saffron Agron. Technol.</em> 9, 343–356 (2021).</li>
+<li>Maleki Farahani, S. &amp; Aghighi Shahverdi, M. Evaluation of nano-iron fertilizer on saffron. <em>J. Crops Improv.</em> 17, 155–168 (2015).</li>
+<li>Koocheki, A. ve ark. Irrigation levels and dense planting affect saffron. <em>Sci. Hort.</em> 180, 147–155 (2014).</li>
+<li>Salas, M.C. ve ark. Defining optimal nutrient solution for soilless saffron. <em>Agronomy</em> 10, 1311 (2020).</li>
+<li>Chourak, Y. ve ark. Fertigation temperature adjustment enhances saffron in soilless culture. <em>HortScience</em> 56, 1191–1194 (2021).</li>
+<li>Sage, R.F. &amp; Pearcy, R.W. The nitrogen use efficiency of C3 and C4 plants. <em>Plant Physiol.</em> 84, 959–963 (1987).</li>
+<li>Lamattina, L. ve ark. Nitric oxide: The versatility of an extensive Signal Molecule. <em>Annu. Rev. Plant Biol.</em> 54, 109–136 (2003).</li>
+<li>Mitra, G.N. Nitrogen (N) Uptake. Springer India, 2015.</li>
+<li>Reich, P.B. ve ark. Response of <em>Ulmus americana</em> seedlings to varying nitrogen and water status. <em>Tree Physiol.</em> 5, 173–184 (1989).</li>
+<li>Drapal, M. ve ark. Identification of metabolites associated with water stress in potato. <em>Phytochemistry</em> 135, 24–33 (2017).</li>
+<li>Wang, Y. ve ark. Fe deficiency induced changes in rice thylakoids. <em>Environ. Sci. Pollut. Res.</em> 24, 1380–1388 (2017).</li>
+<li>Issa, M. ve ark. Seasonal and diurnal photosynthetic responses of gerbera. <em>Sci. Hort.</em> 88, 215–234 (2001).</li>
+<li>Adamski, J.M. ve ark. Excess iron-induced changes in photosynthetic characteristics of sweet potato. <em>J. Plant Physiol.</em> 168, 2056–2062 (2011).</li>
+<li>Pugh, R.E. ve ark. Heavy metal contents of plant foliage near Anvil Range lead/zinc mine. <em>Ecotoxicol. Environ. Saf.</em> 52, 273–279 (2002).</li>
+<li>Chatterjee, C. ve ark. Impact of iron stress on biomass, yield, metabolism of potato. <em>Sci. Hort.</em> 108, 1–6 (2006).</li>
+<li>Nasar, J. ve ark. Nitrogen fertilization coupled with iron foliar application improves photosynthesis in maize. <em>Front. Plant Sci.</em> 13 (2022).</li>
+<li>Borlotti, A. ve ark. Iron deficiency affects nitrogen metabolism in cucumber. <em>BMC Plant Biol.</em> 12, 1–15 (2012).</li>
+<li>Chichiriccò, G. ve ark. Nutrients and heavy metals in flowers and corms of Saffron <em>Crocus</em>. <em>Med. Aromat. Plants</em> 5, 2167 (2016).</li>
+<li>Esmaeili, N. ve ark. Determination of metal content in <em>Crocus sativus</em> corms. <em>Iran. J. Pharm. Res.</em> 12, 31 (2013).</li>
+<li>Qu, X. ve ark. Drought stress physiological and metabolic changes in oil tea. <em>J. Am. Soc. Hortic. Sci.</em> 144, 439–447 (2019).</li>
+<li>Kumar, R. ve ark. State of art of saffron agronomy: A comprehensive review. <em>Food Reviews Int.</em> 25, 44–85 (2008).</li>
+<li>Mavrogianopoulos, G.N. Irrigation dose according to substrate characteristics. <em>Open Agric.</em> 1, 1–6 (2016).</li>
+<li>Naseri, E. ve ark. The impact of substrate type on saffron in soilless cultivation. <em>J. Soil Plant Interact.</em> 15 (2024).</li>
+<li>Nijs, I. ve ark. Stomatal regulation in a changing climate. <em>Plant Cell Environ.</em> 20, 1041–1050 (1997).</li>
+<li>Temminghoff, E.E.J.M. Plant Analysis Procedures. Springer Netherlands, 2004.</li>
+</ol>
+  </div>
+</div>
+</main>
+
+<footer>
+    <div class="container">Safran Topluluğu — Bilimsel kaynaklara dayalı safran yetiştiriciliği</div>
+</footer>
+
+</body>
+</html>

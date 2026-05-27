@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Akıllı Hidroponik Safran Çerçevesi — Hassas Tarım Perspektifi (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-full { border-color: #D97706; color: #D97706; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h1 { font-size: 1.5rem; margin-top: 2.5em; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.88rem; overflow-x: auto; display: block; }
+        .post-content th { background: #f7f7f7; font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #ddd; }
+        .post-content td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        .post-content tr:nth-child(even) td { background: #fafafa; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; }
+        .post-content code { font-family: monospace; background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.3em; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+
+  'indoor-saffron-production-profitability-blueprint':                          {lang:'en', pair:'i-c-mekanda-safran-uretimi-karlilik-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint':                              {lang:'tr', pair:'indoor-saffron-production-profitability-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'iot-based-smart-aeroponic-system-for-saffron-cultivation-2':                 {lang:'en', pair:'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2'},
+  'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2':           {lang:'tr', pair:'iot-based-smart-aeroponic-system-for-saffron-cultivation-2'},
+  'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3':         {lang:'en', pair:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3':          {lang:'tr', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4':           {lang:'en', pair:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4':                  {lang:'tr', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5':           {lang:'en', pair:'tetikleyici-hava-kosullari-safran-fenolojisi-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-5':                             {lang:'tr', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'saffron-aeroponic-cultivation-step-by-step-visual-guide':                    {lang:'en', pair:'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber'},
+  'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber':                 {lang:'tr', pair:'saffron-aeroponic-cultivation-step-by-step-visual-guide'},
+  'saffron-hydroponic-vertical-farming-concept-and-design-7':                   {lang:'en', pair:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7':                         {lang:'tr', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'saffron-production-life-cycle-biology-dormancy-and-flowering-8':             {lang:'en', pair:'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8'},
+  'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8':                   {lang:'tr', pair:'saffron-production-life-cycle-biology-dormancy-and-flowering-8'},
+  'smart-hydroponic-framework-for-saffron-precision-agriculture-9':             {lang:'en', pair:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-9':                          {lang:'tr', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'growth-medium-vegetative-productivity-and-corm-quality-10':                  {lang:'en', pair:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10':                    {lang:'tr', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11':         {lang:'en', pair:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11':              {lang:'tr', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12':      {lang:'en', pair:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12':                     {lang:'tr', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13':     {lang:'en', pair:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13':                  {lang:'tr', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'saffron-cultivation-using-aeroponics-viable-approach-2026-14':               {lang:'en', pair:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14':                {lang:'tr', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15':              {lang:'en', pair:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15':                     {lang:'tr', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'benchmarking-energy-efficiency-vertical-farming-18':                         {lang:'en', pair:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18':                      {lang:'tr', pair:'benchmarking-energy-efficiency-vertical-farming-18'},
+  'cradle-to-customer-lca-uk-vertical-farming-19':                              {lang:'en', pair:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19':                            {lang:'tr', pair:'cradle-to-customer-lca-uk-vertical-farming-19'},
+  'lca-urban-vertical-farm-construction-dismantling-20':                        {lang:'en', pair:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20':                    {lang:'tr', pair:'lca-urban-vertical-farm-construction-dismantling-20'},
+  'towards-sustainable-vertical-farming-eroi-review-21':                        {lang:'en', pair:'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21'},
+  'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21':                      {lang:'tr', pair:'towards-sustainable-vertical-farming-eroi-review-21'},
+  'innovation-vertical-farming-adaptive-vs-standard-22':                        {lang:'en', pair:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22':                        {lang:'tr', pair:'innovation-vertical-farming-adaptive-vs-standard-22'},
+  'sustainable-vf-machine-learning-iot-energy-23':                              {lang:'en', pair:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23':                         {lang:'tr', pair:'sustainable-vf-machine-learning-iot-energy-23'},
+  'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r': {lang:'en', pair:'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal'},
+  'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal':  {lang:'tr', pair:'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r'}
+
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint-full': {lang:'tr-full', pair:'indoor-saffron-production-profitability-blueprint', pairOzet:'i-c-mekanda-safran-uretimi-karlilik-blueprint'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3': {lang:'tr-full', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairOzet:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4': {lang:'tr-full', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairOzet:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-full-5': {lang:'tr-full', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairOzet:'tetikleyici-hava-kosullari-safran-fenolojisi-5'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7': {lang:'tr-full', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairOzet:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9': {lang:'tr-full', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairOzet:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10': {lang:'tr-full', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairOzet:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11': {lang:'tr-full', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairOzet:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12': {lang:'tr-full', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairOzet:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13': {lang:'tr-full', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairOzet:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14': {lang:'tr-full', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairOzet:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15': {lang:'tr-full', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairOzet:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15'},
+};
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a href="../index.html" class="site-logo">
+            <svg viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span>Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="https://ko-fi.com/safrantoplulugu" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="post-header">
+  <div class="container">
+    <div class="breadcrumb">
+        <a href="../index.html">Araştırmalar</a>
+        <span> / </span>
+        <span>Akıllı Hidroponik Safran Çerçevesi — Hassas Tarım Perspektifi</span>
+    </div>
+    <div class="full-badge">TR Full — Tam Çeviri</div>
+    <h1 class="post-title">Akıllı Hidroponik Safran Çerçevesi — Hassas Tarım Perspektifi</h1>
+    <div class="post-actions" id="langSwitchArea">
+        <div class="lang-switch" id="langSwitch"></div>
+    </div>
+    <script>
+    (function() {
+        var _parts = window.location.pathname.replace(/^\/|\/$/g, '').split('/').filter(function(p){ return p && p !== 'index.html'; });
+        var slug = _parts[_parts.length - 1] || '';
+        var info = window.LANG_MAP && window.LANG_MAP[slug];
+        if (!info) return;
+        var sw = document.getElementById('langSwitch');
+        if (!sw) return;
+        var html = '';
+        if (info.lang === 'tr-full') {
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pair + '/">EN →</a>';
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pairOzet + '/">TR Özet →</a>';
+            html += '<span class="lang-switch-current lang-switch-full">TR Full</span>';
+        }
+        sw.innerHTML = html;
+    })();
+    </script>
+  </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+    <h1>Safran Yetiştiriciliği için Akıllı Hidroponik Tabanlı Çerçeve: Hassas Akıllı Tarım Perspektifi</h1>
+<p><strong>Kaynak:</strong> Sustainability 2022, 14, 1120<br />
+<strong>DOI:</strong> https://doi.org/10.3390/su14031120<br />
+<strong>Yayın tarihi:</strong> 19 Ocak 2022<br />
+<strong>Erişim:</strong> Açık erişim — CC BY 4.0</p>
+<p><strong>Yazarlar:</strong><br />
+Kanwalpreet Kour¹, Deepali Gupta¹, Kamali Gupta¹, Gaurav Dhiman², Sapna Juneja³, Wattana Viriyasitavat⁴, Hamidreza Mohafez⁵* ve Mohammad Aminul Islam⁶</p>
+<p>¹ Chitkara Üniversitesi Mühendislik ve Teknoloji Enstitüsü, Chitkara Üniversitesi, Rajpura 140401, Hindistan<br />
+² Bilgisayar Bilimleri Bölümü, Government Bikram Commerce Fakültesi, Patiala 147001, Hindistan<br />
+³ KIET Kurumlar Grubu, Delhi NCR Kampüsü, Ghaziabad 201206, Hindistan<br />
+⁴ İstatistik Bölümü, Chulalongkorn Üniversitesi, Bangkok 10330, Tayland<br />
+⁵ Biyomedikal Mühendisliği Bölümü, Mühendislik Fakültesi, Malaya Üniversitesi, Kuala Lumpur 50603, Malezya<br />
+⁶ Elektrik Mühendisliği Bölümü, Mühendislik Fakültesi, Malaya Üniversitesi, Kuala Lumpur 50603, Malezya<br />
+*Yazışma adresi: h.mohafez@um.edu.my</p>
+<p><strong>Finansman:</strong> Malezya Yükseköğretim Bakanlığı FRGS hibesi FRGS/1/2020/TK0/UM/02/33; Malaya Üniversitesi Araştırma Hibesi RU013AC-2021<br />
+<strong>Akademik Editör:</strong> Anastasios Michailidis<br />
+<strong>Alındı:</strong> 20 Kasım 2021 | <strong>Kabul edildi:</strong> 11 Ocak 2022</p>
+<hr />
+<h2>Özet</h2>
+<p>Dünyanın en pahalı bitkisel ürünlerinden biri olan safran, çok geniş bir uygulama alanına sahip olup Hindistan ekonomisini güçlendirme potansiyeli taşımaktadır. Geçtiğimiz birkaç yılda değişen iklim koşulları safran yetiştiriciliğini ciddi biçimde olumsuz etkilemiştir. Yapay yetiştirme yöntemlerine rağmen, Nesnelerin İnterneti (IoT) ile desteklenen hidroponik yaklaşımların en iyi sonuçları verdiği görülmektedir. Bu çalışma; yetiştiricilikte kullanılan potansiyel yapay yaklaşımları, hidroponiksin farklı parametreler temelinde bu yaklaşımlar arasından en uygun seçenek olarak öne çıkışını ve altı mevcut hidroponik yöntemin karşılaştırmalı analizini sunmaktadır. Safranın büyümesini etkileyen faktörler, büyüme gerilemesinin nedenleri ve çeşitli agronomi değişkenleri grafik biçiminde aktarılmıştır. NFT (besin filmi tekniği) ve yenilenebilir enerji kaynaklarını kullanan akıllı bir hidroponik safran yetiştirme sistemi önerilmektedir.</p>
+<p><strong>Anahtar Kelimeler:</strong> IoT; safran; NFT; hidroponik; WSN</p>
+<hr />
+<h2>1. Giriş</h2>
+<p>Tarım, Hindistan ekonomisinin temel direği sayılmakta; Gayri Safi Yurt İçi Hasıla'nın (GSYİH) yaklaşık %18'ini ve ülke topraklarının %43'ünü oluşturmaktadır [1]. Nüfusun hızla artmasıyla birlikte dünya nüfusunun 2050 yılına kadar 9,8 milyara ulaşacağı ve bu durumun Hindistan gibi gelişmekte olan ülkeleri en çok etkileyeceği öngörülmektedir [2,3]. Temel gıda kaynağı olan tarım, köklü bir dönüşüm ve teknoloji kullanımını zorunlu kılmaktadır [2,4]. Bu bağlamda, safran gibi ekonomik değeri yüksek ürünlerin yetiştiriciliğini iyileştirerek tarımın ekonomik potansiyelini artırmak büyük önem taşımaktadır.</p>
+<p>Safran, dünya genelinde en pahalı tarım ürünü olma özelliğiyle bir ülkenin ekonomisine büyük katkı sağlayabilmektedir. Mevcut verilere göre Afganistan ve İtalya gibi ülkelerin ekonomileri safran yetiştiriciliğinden ciddi biçimde yararlanmıştır [5,6]. En büyük ve en kaliteli safran üretim merkezi olan Herat, safran ekimini %21 artırarak 6.200 hektara çıkarmış ve 2,6 milyar doların üzerinde gelir elde etmiştir [6,7]. Safranın dünya üretiminin yılda 200 metrik tonun üzerinde olduğu tahmin edilmektedir [5,8]. Başlıca üreticiler İran, Afganistan, Hindistan, İspanya, İtalya ve Yunanistan'dır [5,9]. Bununla birlikte İspanya, İtalya, Yunanistan ve Hindistan gibi bazı ülkelerde üretim ani bir düşüş yaşamaktadır [8]. Bu durum, İran'ı dünya safran üretiminin yaklaşık %90'ını karşılayan lider ülke konumuna getirmektedir [8]. Nesnelerin İnterneti (IoT) sensörleri aracılığıyla çevresel koşulların izlenmesiyle ürünün verimi ve kalitesi artırılabilmektedir [10].</p>
+<p>IoT, herhangi bir anda, herhangi bir yerde, herhangi bir hizmet aracılığıyla her şeyin ve herkesin birbirine bağlanmasına olanak tanıyan geniş bir ağ olarak tanımlanabilir [11,12]. Son birkaç yılda IoT kapsamındaki cihaz sayısı 2008'deki 0,9 milyardan 2020 yılı sonunda 50 milyara yükselmiş ve IoT günlük hayatın her alanına girmiştir [11,13–15]. IoT, çeşitli akıllı tarım çözümlerinde de kullanılmaktadır. Ürünlerin yapay yetiştiriciliğinde en yaygın kullanılan yöntemlerden biri olan hidroponikte bitkilerin yetiştirilmesinde toprak yerine besin çözeltisi içeren su kullanılmaktadır [16,17]. Bu yöntemde mikro ve makro besin maddelerince zengin çözeltiler suyla birlikte bitkiye iletilmektedir [16,17]. NFT (besin filmi tekniği), ince film, damla sulama, gelgit-akış sistemi ve sürekli akış sistemi gibi çeşitli hidroponik teknikler mevcuttur [16,18].</p>
+<p>Pek çok nedene bağlı olarak safran yetiştiriciliğinde kayda değer bir düşüş trendi yaşanmaktadır. Safran üretimi 2011'deki 9,85 MT'dan 2019'da 5,91 tona gerilemiştir [19–24]. Safran, çok sayıda titiz el işçiliği gerektiren emek-yoğun bir üründür. Stigmaların kurutulması da tüm yararlarının korunabilmesi için 55°C'nin altında sıcaklıklarda yapılmalıdır [25–27]. Stigmaların taban kısmının bütün tutulmaması kalite kaybına yol açmaktadır. Tarlanın hemen yanında uygun depolama alanlarının bulunmaması nedeniyle ürün serin, karanlık ve kuru ortamlarda bilimsel normlara uygun biçimde depolanamamakta; bu da safsızlaşmaya (tağşiş) neden olmaktadır [27–29].</p>
+<p>Hindistan'daki Jammu ve Keşmir (J&amp;K) Tarım ve Gelir İdaresi'nin raporlarına göre safran üretiminde kayda değer bir artış yaşanmamaktadır [19]. Son 10 yılın verileri karşılaştırıldığında üretimin grafiksel olarak nasıl seyrettiği Şekil 1'de görülmektedir [19,22–24].</p>
+<p>Dünya genelinde üretilen 200 MT safranın yaklaşık 178 tonunu İran karşılamaktaydı [8]. İhracat ne kadar fazla olursa ülke ekonomisine katkı da o kadar büyük olur. Şekil 2'de İran, İspanya, Afganistan, Yunanistan, İtalya ve Hindistan'ın öncü üretici ve ihracatçılar olduğu açıkça görülmektedir [19,22–24]. Bu makalenin başlıca katkıları şöyle özetlenebilir:</p>
+<ul>
+<li>Safran yetiştiriciliği ve verim düşüşünün nedenlerine ilişkin ayrıntılı bir özet sunulması</li>
+<li>Farklı hidroponik yaklaşımların karşılaştırmalı analizi</li>
+<li>Safran yetiştiriciliğinde kullanılan farklı yapay yöntemler</li>
+<li>Safran yetiştiriciliği için akıllı hidroponik sistem önerisi</li>
+</ul>
+<p>Makalenin bölümleri şu şekilde düzenlenmiştir: Bölüm 2, mevcut çalışmaları ve bulguların özetini sunar. Bölüm 3, araştırma metodolojisini açıklar. Bölüm 4, IoT destekli safran yetiştiriciliğinin kritik boyutlarını ele alır. Bölüm 5, akıllı hidroponik sistem yaklaşımını önermektedir. Bölüm 6, gelecek kapsam ve sonuçları tartışmaktadır.</p>
+<hr />
+<h2>2. Literatür Taraması</h2>
+<p>Geleneksel tarım yöntemlerinin yol açtığı sorunların büyük bölümü — daha uzun zaman gereksinimi, toprakta besin yetersizliği, fazla alan kullanımı ve yüksek işgücü ihtiyacı — yapay yetiştirme yöntemleriyle kolaylıkla giderilebilir [30]. Büyük Veri, Makine Öğrenmesi ve Robotik gibi teknolojilerle birleştirilmiş IoT, geleneksel tarımın tüm sorunlarını çözebilecek akıllı çiftçilik tekniklerinin geliştirilmesinde kullanılabilmektedir [31,32]. Hidrokültür, bitkilerin toprak kullanılmadan yetiştirildiği bir tekniktir ve kil bilyalar, taş yünü veya sıvı ortam gibi toprak dışı herhangi bir ortamda bitki yetiştirmeyi kapsamaktadır [33,34]. Aeroponik, bitkilerin havada asılı olarak havayla beslenmesini; akvaponikte ise suyun bitki büyümesine katkı sağlayan bir ekosistem kurulmasını içermektedir. Her iki sistemin de maliyet, alan kullanımı, belirli ürünlere özgü sınırlı uygunluk ve tek nokta arızasıyla tüm sistemin işlevsiz kalma riski gibi dezavantajları mevcuttur [36,37].</p>
+<h3>2.1. Aeroponik</h3>
+<p>Aeroponik; bitki köklerinin havada serbest bırakıldığı, besinlerin sürekli ya da belirli aralıklarla nozüllerden spreyle verildiği yapay ve topraksız bir yetiştiricilik yöntemidir [38]. Bu teknik, NASA'nın bitki fizyolojisi araştırmalarında yaygın biçimde kullanılmış; ancak hidroponiğe kıyasla ticari alanda daha az yaygınlaşmıştır [38,39]. Köklerin ürün olarak kullanıldığı salatalık, domates, marul, otlar ve tıbbi bitkiler gibi küçük sebze ürünleri için en uygun yöntemdir [39]. Kurulumu için özel tasarlanmış bir alan gerekmekte olup bakım maliyeti yüksektir [40,41].</p>
+<p>Kerns ve ark., Arduino ve çeşitli sensörler kullanarak aeroponikle otomatik kapalı alan yetiştirme sistemi geliştirmiştir. Sistem, kentsel alanlardaki iç mekân çiftçiliğine uygundur; web servisleri ve sürekli veri izleme sistemi yönetmektedir. Kullanıcı dostu yapısıyla karmaşık işletme prosedürleri gerektirmemektedir [42].</p>
+<p>Francis ve ark., sağlıklı bitki büyümesi için zararlı ve hastalıktan arındırılmış, IoT tabanlı bir aeroponik sistem önermiştir. Sıcaklık, pH ve nem ölçüp kontrol eden çeşitli sensörler kullanılmış; ışık LED'lerle sağlanmış ve besin içeren sis spreyle uygulanmıştır. Sensör verileri düzenli aralıklarla toplanmakta ve her sensörün verisi ayrı ayrı analiz edilmektedir [43].</p>
+<p>Salazar ve ark., otomatik sulama içeren, IoT tabanlı bir aeroponik sistem tasarlamıştır. Roka bitkisi için tasarlanan bu sistemde MATLAB/Simulink'le oluşturulan yazılım tabanlı elektronik devreler sayesinde belirli aralıklarla sulama döngüleri üretilmekte; bu yaklaşımla hasat süresinin beş haftaya indirildiği rapor edilmektedir [44].</p>
+<p>Jamhari ve ark., aeroponik bir ortamda altı sebze bitkisine yönelik IoT destekli iç mekân sistemi tasarlamıştır. Aeroponik sistemin seçiminde su kullanımının azaltılması belirleyici olmuştur. DHT11 sıcaklık sensörü, bir mikroişlemci ve Wi-Fi modülüne bağlanarak 25–30°C'nin korunması amacıyla izleme ve kontrol işlevlerini yerine getirmiştir. Nem ve ışık yoğunluğu da sürekli olarak izlenmiştir [45].</p>
+<p>Mangaiyarkarasi ve ark., safran dahil bahçıvanlık ürünlerinin aeroponik sistemde yetiştirilmesini incelemiştir. Gerekli besin maddeleri, hava-asılı köklere sprey kaplama teknikleriyle verilmekte; daha hızlı kök gelişimini desteklemek amacıyla mühürlü kutular kullanılarak ışık penetrasyonu ve alg büyümesi engellenmektedir. Domates, salatalık, safran, marul, bezelye ve soğan gibi ürünler için besin spreyi süresi de hesaplanmıştır [46].</p>
+<p>Fallahi ve ark., kontrollü bir ortamda çiçeklenmemiş küçük ana korm kullanan bir aeroponik sistemde safran yetiştirmiştir. Kontrollü ortamdan elde edilen korm kullanımının verimi nasıl etkilediği araştırılmıştır. Süper emici kullanımı köklerin su tutma kapasitesini ve besin emilimini artırmıştır. Büyüme sonrasında elde edilen yeni kormlar daha fazla ağırlık ve kütleye ulaşmıştır. Sistemin sınırlılıkları arasında kasılmacı kök oluşumu ve toprak üstü aksamın kuruması sayılabilir [47].</p>
+<p>Razavizadeh ve ark., bitki akustik frekans teknolojisi (PAFT) ve likit kromatografi kullanarak yüksek frekanslı ses dalgalarıyla işlem görmüş korm içeren aeroponik ortamda safranın krosin, safranol ve pikrokrosin kalite parametrelerini incelemiştir. Aeroponik büyüme odası bağıl nem, sıcaklık ve ışığı izleyip kontrol etmiştir. Deney sonuçları bazı metabolitlerin safranın kalitesi üzerinde olumlu etki gösterdiğini ortaya koymuştur [48].</p>
+<p>Ebrahimi ve ark., tohumluk olarak kullanılacak korm ağırlığı, apokarotenoid, safranol ve pikrokrosin içeriğinin aeroponik ortamda üretilen safranın verimi ve kalitesine etkisini araştırmıştır. Ana kormlar artan ağırlık sıralamasına göre üç kategoriye ayrılmış; ana korm ağırlığı 16 g'a kadar çıktıkça safranol, pikrokrosin, apokarotenoid içeriği ile bitki başına çiçek sayısının arttığı gözlemlenmiştir [49].</p>
+<p>Salas ve ark., safranın aeroponik yetiştirilmesini ve kullanılan besin çözeltisinin özelliklerini incelemeyi amaçlamıştır. Yetiştiriciliği 15 litrelik kaplar kullanılarak Almeria Üniversitesi'nde gerçekleştirilmiş ve toprak yerine perlit kullanılmıştır. Sürgün uzunluğu, korm verimi ve bitkilerdeki besin çözeltisi konsantrasyonu incelenmiş; besin alımındaki artışın üretimi artırdığı gözlemlenmiştir [50].</p>
+<p>Eldridge ve ark., hem aeroponik hem de hidroponik ortamda safran yetiştiriciliğini araştırarak aeroponik alandaki gelecek araştırma konularını ve boşluklarını belirlemiştir. Aeroponik dikey tarımın üretkenlik artışı ve az alan kullanımı açısından önemli bir yöntem olduğu, ancak bu genellemenin ağırlıklı olarak sebzeler ve küçük otlara özgü kaldığı saptanmıştır. Safran yetiştiriciliğinde aeroponik, korm üretimini artırmakta ve ürün verimini korumakta; ancak çiçek yaprağı kalitesinde bir iyileşme veya çiçeklenme artışı raporlanmamıştır. Kök ürünlerde aeroponik yöntemin kullanılması için çeşit, fotoperiod döngüleri, kök geri dönüşümü ve mikrobiyolojik etki gibi kök morfolojisi parametrelerinin önceden analiz edilmesi gerektiği vurgulanmıştır [51].</p>
+<p><strong>Tablo 1. Mevcut aeroponik modellerin karşılaştırması</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ref.</th>
+<th>Sistemin Niteliği</th>
+<th>Kullanılan Parametreler</th>
+<th>Avantajlar</th>
+<th>Dezavantajlar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[42]</td>
+<td>IoT ile akıllı tarım için otomatik aeroponik sistem</td>
+<td>Sıcaklık, pH, nem</td>
+<td>Kullanıcı dostu; karmaşık işlem prosedürü yok; iç mekân tarımına uygun</td>
+<td>Tam otomatik değil. Maliyetli.</td>
+</tr>
+<tr>
+<td>[43]</td>
+<td>IoT tabanlı otomatik aeroponik sistem</td>
+<td>Sıcaklık, pH, nem</td>
+<td>Sıcaklık ve nemi etkin biçimde kontrol eder</td>
+<td>Birimler arası eşzamanlılık eksikliği. Uzaktan veri izleme yok.</td>
+</tr>
+<tr>
+<td>[44]</td>
+<td>Otomatik sulama ile aeroponik roka yetiştirme</td>
+<td>Sıcaklık, ışık, pH</td>
+<td>Hasat süresi beş haftaya indirildi</td>
+<td>Yaprak ve kök boyutunda küçülme gözlemlendi</td>
+</tr>
+<tr>
+<td>[45]</td>
+<td>Sıcaklık izlemeli aeroponik oda IoT sistemi</td>
+<td>Nem, ışık yoğunluğu</td>
+<td>Su tüketimini azaltır; geniş ürün yelpazesi</td>
+<td>Sıcaklık gibi parametreler dikkate alınmamış</td>
+</tr>
+<tr>
+<td>[46]</td>
+<td>Bahçıvanlık ürünleri için aeroponik sistem</td>
+<td>Işık penetrasyonu, alg büyümesi</td>
+<td>Su tasarrufu; düşük mineral tüketimi</td>
+<td>Kök genişlemesi için sınırlı alan</td>
+</tr>
+<tr>
+<td>[47]</td>
+<td>Aeroponikde safran şaşırtma ve korm üretim değerlendirmesi</td>
+<td>Korm boyutu</td>
+<td>Korm boyutunda artış</td>
+<td>Kasılmacı kök üretimi; toprak üstü aksamın kuruması</td>
+</tr>
+<tr>
+<td>[48]</td>
+<td>PAFT ile aeroponik safran stigmasında safranol ve pigment ölçümü</td>
+<td>Krosin, safranol, pikrokrosin</td>
+<td>Safran kalitesini iyileştirmek için yenilikçi yaklaşım</td>
+<td>Maruziyet süresi ve diğer faktörlerin belirlenmesinde daha fazla araştırmaya ihtiyaç var</td>
+</tr>
+<tr>
+<td>[49]</td>
+<td>Aeroponik safran yetiştiriciliğinde korm ağırlığının verim ve kaliteye etkisi</td>
+<td>Ağırlık, apokarotenoid, safranol, pikrokrosin</td>
+<td>Ana korm ağırlığında artış (16 g'a kadar)</td>
+<td>Korm boyutunda belirli bir sınırın ötesinde artış olmuyor</td>
+</tr>
+<tr>
+<td>[50]</td>
+<td>Aeroponik safran yetiştiriciliğinde besin çözeltisinin optimum gücü</td>
+<td>Sürgün uzunluğu, korm verimi, besin çözeltisi konsantrasyonu</td>
+<td>Besin çözeltisinin verim ve kaliteye etkisi incelenmiş</td>
+<td>Farklı ürünlerdeki besin çözeltisi bileşenleri analiz edilmemiş</td>
+</tr>
+<tr>
+<td>[51]</td>
+<td>Aeroponik iç mekân tarımında köklere ulaşmak</td>
+<td>Kök morfolojisi, fotoperiod döngüleri, kök geri dönüşümü, mikrobiyolojik etki</td>
+<td>Aeroponik kullanımı için derinlemesine inceleme</td>
+<td>Safran gibi önemli endüstriyel ürünler hakkında çalışma eksikliği</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>2.2. Akvaponiği</h3>
+<p>Akvaponiği; hem hayvan hem de bitki kültürünün karşılıklı yararına gerçekleştirilen bir birlikteliğidir. Bu simbiyotik ilişki, su ortamı koşullandırması ve bitkiler için oksijenli su geri dönüşümüyle sonuçlanmaktadır [52,53].</p>
+<p><strong>Tablo 2. Mevcut akvaponik modellerin karşılaştırması</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ref.</th>
+<th>Sistemin Niteliği</th>
+<th>Kullanılan Parametreler</th>
+<th>Avantajlar</th>
+<th>Dezavantajlar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[54]</td>
+<td>IoT tabanlı akıllı akvaponik sistem</td>
+<td>Asitlik, su seviyesi, sıcaklık</td>
+<td>Kullanıcı dostu ve gerçek zamanlı sonuçlar</td>
+<td>Verim indeksi gecikmesi; paket kaybı ve gecikme sorunları</td>
+</tr>
+<tr>
+<td>[55]</td>
+<td>Otomatik akvaponiğe doğru: izleme, IoT ve akıllı sistemler incelemesi</td>
+<td>Sıcaklık, pH, nem, alkalinite, çözünmüş oksijen, su sertliği, bağıl nem, nitrikleşme</td>
+<td>Otomasyon ve IoT kullanımı hakkında ayrıntılı teknik bilgi</td>
+<td>Henüz uygulanmamış</td>
+</tr>
+<tr>
+<td>[56]</td>
+<td>IoT kullanarak akıllı akvaponik tasarımı</td>
+<td>Sıcaklık, ışık, pH</td>
+<td>Küçük ölçekli uygulamalar için uygun</td>
+<td>Ölçeklenebilir ağlar için uygulanmamış</td>
+</tr>
+<tr>
+<td>[57]</td>
+<td>IoT tabanlı izleme ve kontrol sistemli akıllı akvaponik</td>
+<td>Sıcaklık, nem, toprak nemi</td>
+<td>Otomatik ve manuel çalışma modları</td>
+<td>Ortalama manuel kontrol hızı 5 saniye</td>
+</tr>
+</tbody>
+</table>
+<p>Ulum ve ark., IoT kullanarak su düzenli aralıklarla akan akıllı bir akvaponik sistem önermiştir. Asitlik, su seviyesi, sıcaklık ve balık yemi gibi çeşitli parametreler mobil uygulama üzerinden gerçek zamanlı olarak izlenmiş; tüm veriler Ubuntu bulutunda depolanmıştır. pH, sıcaklık ve diğer parametreleri kontrol eden sensörler doğru ve gerçek zamanlı sonuçlar vermiştir [54].</p>
+<p>Yanes ve ark., Yeşil IoT'den yararlanarak su ve pestisit kullanımını minimize eden, otomatik bir akvaponik sistem önermiştir. Akvaponik ortamda kullanılan sensörlere ilişkin sistematik bir literatür taraması da sunulan makale, sıcaklık, pH, nem, alkalinite, çözünmüş oksijen, su sertliği, bağıl nem ve nitrikleşme parametrelerinin izlenmesi ve kontrolüne odaklanmaktadır [55].</p>
+<p>Hardyanto ve ark., bitkilerin hayvansal sıvı özlerden beslenirken hayvanlar için suyu arıttığı IoT tabanlı akıllı bir akvaponik yaklaşım önermiştir. Sistem, aktuatörler ve sensörler aracılığıyla cep telefonuyla izlenip kontrol edilebilmektedir. Sonuçlar, bu sistemin küçük ölçekli uygulamalar için uygun olduğunu göstermektedir [56].</p>
+<p>Vernandhes ve ark., IoT kullanarak sıcaklık, nem, toprak nemini izleyen ve kontrol eden akıllı bir akvaponik sistem tasarlamıştır. Sistem otomatik ve manuel olmak üzere iki modda çalışmakta, ortalama manuel kontrol hızı ise beş saniyedir [57].</p>
+<hr />
+<h3>2.3. Hidroponik</h3>
+<p>Hidroponik, su ortamında ürün yetiştirmeyi içermektedir. IoT, hidroponikteki çeşitli agronomi değişkenlerini izleyip kontrol ederek safran yetiştiriciliği için akıllı bir ortam oluşturabilmektedir. IoT sensör ağı, ürün sağlığını ve büyümesini sürekli izleyip denetleyebilmektedir. Safran bitkisinin ihtiyaç duyduğu tüm makro (Ca, N, Mg, S, K, P) ve mikro (Cu, Fe, B, Mn, Ni) besin maddeleri kanaller ya da diğer ortamlar aracılığıyla bitkiye iletilmektedir [58]. Çiftçiler, gerçek zamanlı veriyi bulutta depolayan uygulama arayüzleri sayesinde büyüme için gereken agronomi değişkenlerini hem izleyebilmekte hem de kontrol edebilmektedir. Bu yöntem aynı zamanda ürün kalitesinin yükseltilmesini sağlamakta ve kontrollü ortamlar sayesinde parazit ile kemirgen zararını ortadan kaldırmaktadır [59].</p>
+<p><strong>NFT (Besin Filmi Tekniği):</strong> Besin çözeltisinin bir dizi bitki boyunca sürekli dolaştırıldığı küçük kanal veya tüplere dayanan elektrik tabanlı bir sistemdir. Kanallar, besinlerin yukarı kesimlere de taşınabilmesini sağlamak amacıyla açılı olarak yerleştirilmektedir [60–64].</p>
+<p><strong>Gelgit-Akış Sistemi:</strong> Besin hareketi için sel ve drenaj kavramını kullanmaktadır. Hava pompası, döngüler halinde bitki köklerine oksijen ve besin taşırken zamanlayıcının yardımıyla fazla su sistemin kuruyabilmesi için uzaklaştırılmaktadır. Ancak, bitkiler tüm tepsiyi kaplayan geniş kökler oluşturduğundan hasarlı ve artık bitkilerin uzaklaştırılması oldukça güçleşmekte; bu da sistemi yalnızca küçük bitkilerin yetiştiriciliğine uygun kılmaktadır [35,62,64].</p>
+<p><strong>Damla/Trickle Hidroponik:</strong> Emitterler aracılığıyla besin içeren çözeltiyi çok yavaş bir hızda damlatan aktif bir sistemdir. Kontrollü besin arzı sayesinde ticari hidroponik kurulumlar için çoğunlukla tercih edilmektedir. Soğan, kavun, çilek, salatalık ve bezelye gibi büyük bitkilerin yetiştiriciliğine uygundur; küçük projeler için dezavantajı ise karmaşıklığında yatmaktadır [62–64].</p>
+<p><strong>Fitil Sistemi:</strong> Bitkilere besin maddelerinin rezervuardan fitiller aracılığıyla kapiler etki ile ulaştığı bir sistemdir. Hava pompası, rezervuar, fitil, yetiştirme ortamı ve bitkiden oluşmakta; kurulumu çok kolay ve bakımı minimal düzeyde gerekmektedir. Fazla su gerektirmeyen otlar gibi küçük bitkiler için uygundur [62,64].</p>
+<p><strong>Sürekli Akış Sistemi:</strong> Bitki büyümesi için besin içeren suyu geri dönüştürür ve yeniden kullanır. Besin çözeltisi, bitkilerin büyümeleri için gereken suyu emebilmeleri amacıyla sürekli olarak boru hattından geçirilmektedir [64,65].</p>
+<p><strong>Derin Su Kültürü (DWC):</strong> Bitki köklerinin besin ve oksijence zengin çözeltide sürekli olarak bekletildiği etkili hidroponik sistemlerden biridir. Besin stabilitesini korumak için büyük miktarda su gerekmektedir. Sistem, oksijen açığını ve köklerin su baskınına uğramasını önlemek amacıyla sürekli çalışan hava taşı ve hava pompası gerektirmektedir. Domates, biber ve marul gibi çiçeklenme gerektirmeyen bitkiler için idealdir; maksimum verimi hedeflenen senaryolarda bitki büyüme hızını iki katına çıkarmaktadır. Sınırlılıkları arasında hava pompasının arızalanması durumunda tüm bitkilerin oksijen açlığı çekerek tam sistem çöküşü yaşanması ve çözeltideki besin konsantrasyonunun korunmasındaki güçlük sayılabilir [64,66].</p>
+<p><strong>Tablo 3. Mevcut hidroponik modellerin karşılaştırması</strong></p>
+<table>
+<thead>
+<tr>
+<th>Ref.</th>
+<th>Sistemin Niteliği</th>
+<th>Kullanılan Parametreler</th>
+<th>Avantajlar</th>
+<th>Dezavantajlar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[17]</td>
+<td>Akıllı güneş enerjisi birimi kullanan hidroponik otomasyon sistemi</td>
+<td>Sıcaklık, nem, pH</td>
+<td>Sıcaklık ve nemi etkin biçimde kontrol eder</td>
+<td>Uygun pH izleme yok; besin tankında besin ölçümü yetersiz</td>
+</tr>
+<tr>
+<td>[35]</td>
+<td>Safranın hidroponik yetiştirilmesi (gelgit-akış dikey sistemi)</td>
+<td>Sıcaklık, nem, oksijen konsantrasyonu</td>
+<td>Mevcut tüm hidroponik yaklaşımların ayrıntılı analizi</td>
+<td>Henüz uygulanmamış. Maliyetli.</td>
+</tr>
+<tr>
+<td>[66]</td>
+<td>Safranın hidroponik zorlaması</td>
+<td>Işık yoğunluğu, sıcaklık</td>
+<td>Artan ürün verimi</td>
+<td>Seçili bitkilerde çiçeklenme</td>
+</tr>
+<tr>
+<td>[67]</td>
+<td>Vejetatif büyüme ile safran</td>
+<td>Tümü</td>
+<td>Çiçek ve stigma boyutları önemli ölçüde iyileşti</td>
+<td>Teknoloji kullanımı eksikliği. Sınırlı bitkilerde iyi çiçeklenme.</td>
+</tr>
+<tr>
+<td>[68]</td>
+<td>Aeroponik ve hidroponik ortamda safran büyümesi</td>
+<td>Sıcaklık, nem, pH</td>
+<td>Artan verim. İyi kalite. Gerçek zamanlı uygulama.</td>
+<td>Kasılmacı kök gelişimi. Kısa kökler nedeniyle tam besin alımı sorunu.</td>
+</tr>
+<tr>
+<td>[69]</td>
+<td>Hidroponik bitki izleme için IoT uygulaması</td>
+<td>pH, sıcaklık, sıvı seviyesi, ışık yoğunluğu</td>
+<td>Yenilenebilir enerji kullanımı</td>
+<td>Yalnızca birkaç büyüme parametresini dikkate alıyor. Yalnızca bitki izlemeye odaklanmış.</td>
+</tr>
+<tr>
+<td>[70]</td>
+<td>Kablosuz sensör ağı ve IoT kullanarak akıllı çiftlik hidroponik sistemi</td>
+<td>Sıcaklık, nem, pH</td>
+<td>Büyüme parametrelerinin izlenmesi ve kontrolü sağlanmış</td>
+<td>Henüz uygulanmamış</td>
+</tr>
+<tr>
+<td>[71]</td>
+<td>Akıllı çiftlik hidroponik tarzında bitki yetiştirme için IoT</td>
+<td>Sıcaklık, nem</td>
+<td>Tarım alanında IoT'nin geniş kapsamını ele alıyor</td>
+<td>Henüz uygulanmamış</td>
+</tr>
+</tbody>
+</table>
+<p>Jurnal ve ark. [17] tarafından geliştirilen hidroponik sistem, enerji verimliliğini artırmayı hedeflemektedir. Hidroponik sistemi çalıştırmak için güneş enerjisi kullanan bu prototip, büyüme parametrelerini kontrol edip izleyebilmekte; ancak safrana özgü tasarım içermemekte ve yalnızca sıcaklık, nem, pH gibi sınırlı parametrelerle çalışmaktadır.</p>
+<p>Khan ve ark. [35], safranın gelgit-akış yöntemiyle hidroponik yetiştiriciliğine yönelik ev tipi bir sistem önermiştir. Çeşitli hidroponik yaklaşımların performans ve maliyet karşılaştırmasını sunan bu çalışmada gelgit masaları, su kontrol sistemi, gübre sistemi ve havalandırma sistemi kullanılmıştır.</p>
+<p>Schroeder ve ark. [66], organik katman, pin tray, kontrol grubu ve hidroponik sistem olmak üzere dört farklı ortamda büyüme odası kullanarak safran yetiştirmiştir. LED aydınlatma ve sıcaklık düzenleyicilerinden oluşan dikey hidroponik sistemde bitkiler önce tarlada çiçeklenene kadar yetiştirilmiş, ardından büyüme odasına aktarılmıştır. Verim artmış olmakla birlikte maliyet yüksek olmuş; IoT entegrasyonu sağlanamamış ve çiçeklenme tüm bitkilerde gerçekleşmemiştir.</p>
+<p>Fallahi ve ark. [67], daha önce çiçek açmış korm şaşırtmasıyla safran yetiştiriciliğini artırmayı açıklamıştır. Deney gözlemleri, çiçek ve stigma boyutlarının önemli ölçüde iyileştiğini ortaya koymuştur.</p>
+<p>Souret ve ark. [68], safranın doğal, hidroponik ve aeroponik ortamlarda yetiştiriciliğini incelemiştir. Aeroponik ve hidroponik yaklaşımların doğala kıyasla daha iyi sonuç verdiği saptanmış; ancak safranın kalitesi her üç kültürde de aynı kalmıştır. Öte yandan aeroponik ve hidroponik kültürlerde kök boyutunda bir küçülme gözlemlenmiş ve kasılmacı kök gelişimi raporlanmıştır.</p>
+<p>Hidyanti ve ark. [69], azalan Endonezya tarım arazilerine çözüm olarak bir hidroponik sistem tasarlamıştır. Güneş enerjisinin kullanıldığı sistem, pH, sıcaklık, sıvı seviyesi ve ışık yoğunluğu gibi büyüme parametrelerine odaklanmaktadır.</p>
+<p>Boonnam ve ark. [70], IoT ve kablosuz sensör ağı (WSN) kullanarak bir hidroponik sistem geliştirmiştir. Işık, nem ve sıcaklık gibi önemli parametreler bu sistemle kontrol altına alınmış; veriler sürekli olarak buluta gönderilerek mobil uygulama aracılığıyla denetlenmiştir.</p>
+<p>Wongkoon ve ark. [71], serasını kapsayan bir model tasarlamıştır. Pazar erişilebilirliği, coğrafi uzamsal bilgi ve hava tahmini gibi tarımın birçok alanındaki IoT kullanımını ele alan makale, gerçek zamanlı uygulama eksikliği barındırmaktadır.</p>
+<hr />
+<h3>2.4. Tartışma</h3>
+<p>Yukarıda listelenen altı hidroponik teknikten herhangi birinin tercih edilmesi; kök anatomisi, bitki yapısı, su gereksinimi ve belirli bir ortama uygunluk gibi çeşitli faktörlere bağlıdır [51,71]. Literatürden elde edilen safranın kök morfolojisi, su tüketimi ve maliyet verileri göz önünde bulundurulduğunda, NFT'nin safran için en uygun hidroponik uygulama olduğu değerlendirilmektedir [66–69,72]. Düşük maliyeti ve çok sayıda avantajıyla en yaygın uygulanan hidrokültür yaklaşımı hidroponiğe dayanmaktadır [36,37,51,72]. Aeroponik, küçük ve kökle çoğalmayan bitkiler (domates, marul, otlar, kereviz, yapraklı yeşillikler) için daha uygundur [38,44,72]. Akvaponiği ise sığ köklü bitkiler (tatlı mısır, pancar, soğan, salatalık, turp) için tercih edilmektedir. Safran; kısa boylu, orta düzeyde su gerektiren ve kökle çoğalan bir bitki olduğundan yapay yetiştiriciliği için en uygun ortam hidroponiğe dayanmaktadır [20,22,23,73]. Düşük maliyet, az su tüketimi ve iyileştirilen verim-kalite açısından hidroponik yöntem yaygın biçimde tercih edilmektedir [36,37,73].</p>
+<hr />
+<h2>3. Araştırma Metodolojisi</h2>
+<p>Bu bölümde, güncel araştırmalarda IoT kullanarak safran yetiştiriciliğine yönelik çeşitli yapay yaklaşımları kategorize eden sistematik literatür taraması (SLT) yöntemi sunulmaktadır. Önemli eş anlamlıları ve anahtar kelimeleri belirlemek amacıyla aşağıdaki arama dizileri kullanılmıştır:</p>
+<p><em>("Saffron" OR "Cultivation" OR "IoT" OR "Saffron Cultivation" OR "Hydroponics")</em></p>
+<p>SLT yöntemi kapsamında hassas tarımla safran yetiştiriciliğini ele alan teknik sorular (TS) oluşturulmuştur:</p>
+<ul>
+<li><strong>TS1:</strong> Safran gerilimesinin birincil nedenleri nelerdir?</li>
+<li><strong>TS2:</strong> Safran üretiminde hangi yapay teknikler kullanılmaktadır?</li>
+<li><strong>TS3:</strong> Verimi artırmak için hangi agronomi değişkenleri dikkate alınmaktadır?</li>
+</ul>
+<p>Nihai makale seçiminde kâğıt taraması olarak ekleme ve çıkarma teknikleri uygulanmıştır. Web of Science ve ISI Proceedings'e dizinlenmiş, hakemli makaleler dahil edilmiştir. Dışlama kriterleri: (1) İngilizce olmayan makaleler ve (2) dört sayfadan az hacimli düşük kaliteli konferans bildirileri. Teknik sorulara yanıt vermek üzere 100 makale seçilmiştir. Google Scholar, IEEE, Elsevier, Springer, ACM ve Wiley gibi bilimsel yayıncılar her yıl çok sayıda araştırma yayımlamaktadır. Nihai seçim için ekleme ve red akış şeması Şekil 6'da gösterilmektedir.</p>
+<hr />
+<h2>4. Özet ve Tartışma</h2>
+<p>Bu bölüm; farklı araştırmacılar tarafından safran yetiştiriciliğinde kullanılan kritik faktörlerin — gerileme nedenleri, yapay yöntemler ve agronomi değişkenleri — analitik bir incelemesini sunmaktadır. Analiz ve raporlar, Bölüm 3'teki mevcut TS'lere dayanmaktadır.</p>
+<p><strong>TS1: Safran gerilimesinin birincil nedenleri nelerdir?</strong></p>
+<p>Şekil 7, safran gerilimiyle ilgili çeşitli sorunların istatistiksel karşılaştırmasını göstermektedir. Beş farklı sorun ele alındığında, iyi kaliteli korm bulunmaması <strong>%37</strong> ile en yüksek paya sahip olup bunu <strong>%20</strong> ile besin açısından yetersiz toprak ve <strong>%18</strong> ile etkisiz hasat sonrası uygulamalar izlemektedir.</p>
+<p><strong>TS2: Safran üretiminde hangi yapay teknikler kullanılmaktadır?</strong></p>
+<p>Şekil 8, safran yetiştiriciliğinde kullanılan yapay yaklaşımların istatistiksel karşılaştırmasını sunmaktadır. IoT'nin yapay teknikler için kullanımını araştıran 22 araştırma makalesi incelenmiştir. Bu makalelerin <strong>11'i hidroponik modellere</strong>, <strong>9'u aeroponiğe</strong>, <strong>4'ü ise akvaponiğe</strong> ayrılmıştır.</p>
+<p><strong>TS3: Verimi artırmak için hangi agronomi değişkenleri dikkate alınmaktadır?</strong></p>
+<p>Şekil 9'daki analitik rapor; sıcaklık parametresinin safran verimini artırmada <strong>%27</strong> ile en sık kullanılan değişken olduğunu, bunu <strong>%21</strong> ile korm boyutu ve <strong>%19</strong> ile yağışın izlediğini göstermektedir.</p>
+<hr />
+<h2>5. Safran Yetiştiriciliği için Akıllı Hidroponik Sistem</h2>
+<p>Önerilen akıllı hidroponik sistem (Şekil 10), mevcut tüm hidroponik sistemler incelenerek özellikleri ve eksiklikleri analiz edildikten sonra tasarlanmıştır. Uygun maliyetli ve yenilenebilir enerji kaynakları kullanılarak yapay bir ortamda safran verimi ve kalitesinin artırılması hedeflenmektedir [17]. Sistem, elektrik kıtlığı yaşanan bölgelerde de çalışabilmesi için güneş ve su gibi yenilenebilir enerji kaynaklarını kullanmayı amaçlamaktadır. Güvenilirliği ve su geri dönüşüm kapasitesi nedeniyle hidroponik yaklaşım olarak NFT tercih edilmiştir.</p>
+<p>Sistem; akıllı güç kaynağı, besin çözeltisi tankı, büyüme odası, akıllı korm sepeti, kullanıcı arayüzü ve analiz ile ileride kullanım için bulut veri depolamasından oluşmaktadır.</p>
+<p>Güç kaynağı modu otomatik olarak seçildikten sonra besin tankındaki sensörler etkinleştirilmektedir. pH, türbidite, sıcaklık ve mineral konsantrasyonu gibi besin çözeltisiyle ilgili farklı parametreler sürekli büyüme odasına gönderilmekte, izlenmekte ve parametrelerin kontrolü ile ileride kullanım amacıyla kullanıcı cihazına ve buluta aktarılmaktadır. Safran yetiştiriciliği için gereken mikro ve makro besinlerce zengin su akışı sürekli olarak büyüme odasında dolaşmaktadır.</p>
+<p>Korm seçimi, yük sensörü donanımlı akıllı sepet tarafından kütle ve boyuta göre yapılarak safran verimi ve kalitesi en üst düzeye çıkarılmaktadır. <strong>Ağırlığı 2 g'ın altındaki kormlar hiç çiçek vermediğinden ayıklanmakta; yalnızca 10 g'ı aşan ağırlık ve çaplara sahip kormlar ekilmektedir</strong> [20]. En kaliteli kormlar, mantar enfeksiyonlarına karşı korumak amacıyla bir fungisit çözeltisinden geçirilerek ekilmektedir [22]. Besin tankı çeşitli sensörler, hava pompası ve hava taşıyla donatılmıştır. Hava pompası besin çözeltisini büyüme odasında sürekli dolaştırırken hava taşı sağlanan çözeltideki oksijen düzeyini yüksek tutmaktadır. Ultrasonic sensörler, büyüme odasında iki safran bitkisi arasında gereken mesafeyi hesaplamaktadır [20]. Yetiştiriciliğin son aşaması, bitkiler çiçek açıp stigmalar ayrıldıktan sonra gerçekleşmektedir. Elde edilen stigmalar, <strong>maksimum ürün değeri için %30 nem kalacak şekilde</strong> kurutulabilmektedir.</p>
+<h3>5.1. Sistem Bileşenleri</h3>
+<p><strong>Güç Ünitesi:</strong> Çeşitli sensör cihazlarının yüksek enerji tüketimi nedeniyle güneş, rüzgâr ve hidro enerji gibi yenilenebilir kaynakların kullanımı gerekmektedir. Bu sayede tasarlanan hidroponik sistem daha sürdürülebilir ve uygun maliyetli olacaktır. Güç ünitesi; fotovoltaik hücre dizisi, mikroturbinler, güç kaynağı, gerilim sensörleri, denetleyici, röleler ve enerji depolama bataryasından oluşmaktadır. Kullanıcı, röle ve anahtarlar aracılığıyla alternatifler arasında geçiş yapabilmektedir. Fotovoltaik hücre dizisi güneş enerjisini elektriğe dönüştürürken mikroturbinler hidroelektrik üretimine katkı sağlamaktadır. Her ikisinin de bulunmaması durumunda güç kaynağı da kullanılabilmektedir. Lityum batarya, sistem boyutu, kullanılan cihazlar ve konuşlandırılan sensör sayısına bağlı olarak güç kesintisi anında sistemi saatlerce çalıştırmaktadır. İnvertör ise DC'yi AC'ye dönüştürmektedir.</p>
+<p><strong>Sensör Ünitesi:</strong> Safranın çeşitli agronomi değişkenlerinin izlenmesi ve kontrolüne bağlı olarak kullanılan sensörlerden oluşan bir diziden oluşmaktadır. Türbidite sensörü, besin çözeltisinin temizliğini kontrol ederek besin tankındaki istenmeyen atık maddelerin varlığını tespit etmektedir. Gaz sensörleri, büyüme odasındaki oksijen düzeyini ölçerek bitkilerin oksijen eksikliği yaşamasını önlemektedir. Basınç ve akış sensörleri, besin çözeltisinin büyüme odası boyunca akışını kullanıcıya bildirmektedir. Sıcaklık, pH, ışık, nem ve yük sensörleri de diğer kullanılan sensörler arasında yer almaktadır. Yük sensörleri, yetiştirmeye uygun boyut ve kütledeki kormları belirlemektedir.</p>
+<p><strong>İşleme ve Analiz Ünitesi:</strong> Tüm sensör verileri analiz için mikrodenetleyici ve NodeMCU'ya iletilmektedir. Büyüme parametrelerinin tümü Arduino ve NodeMCU aracılığıyla izlenip kontrol edilebilmektedir. NodeMCU, karmaşık uygulama programlama arayüzlerinin (API) yerini alan ve ESP8266 Wi-Fi modülünü kullanan açık kaynaklı bir platformdur. Küçük boyutuyla ESP8266 modülü, çeşitli sensör düğümlerinden gelen verileri hatasız biçimde kablosuz olarak algılayabilmektedir [72]. Bu ünite aynı zamanda grafik kullanıcı arayüzüne ve veri toplama ve görselleştirme için çevrimiçi bir platform olan ThingSpeak'e bağlıdır. Kullanıcı anlık erişim sağlayabilmekte ve akıllı telefon uygulamaları aracılığıyla gerekli aksiyonları alabilmektedir. Ağ içindeki veri transferi için kullanılan IoT protokolleri CoAP (Kısıtlı Uygulama Protokolü) ve STOMP (Basit Metin Odaklı Mesajlaşma Protokolü)'dur. CoAP ve STOMP, yapay zekâ ve bulanık mantık gibi diğer teknolojilerle kablosuz güvenlik sunan akıllı sağlık hizmetleri ve akıllı eğitim gibi farklı uygulamalarda kullanılabilmektedir [73–86].</p>
+<hr />
+<h2>Tablo 4. NFT, Gelgit-Akış ve Damla Sistemlerinin Karşılaştırması</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>NFT (Besin Filmi Tekniği)</th>
+<th>Gelgit-Akış</th>
+<th>Damla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Çalışma prensibi</td>
+<td>Besin çözeltisi bitkilere film oluşturarak geçirilir</td>
+<td>Besinleri ve oksijeni bitkilere iletmek için sel ve drenaj kullanır</td>
+<td>Her bitki için ayrı emitter ile sürekli besin arzı</td>
+</tr>
+<tr>
+<td>Su tasarrufu</td>
+<td>Su tasarrufu sağlar</td>
+<td>Çok su kullanır</td>
+<td>Sınırlı su kullanımı</td>
+</tr>
+<tr>
+<td>Arıza riski</td>
+<td>Pompa arızasında tek nokta arızası</td>
+<td>Tek nokta arızası</td>
+<td>Tek nokta arızası yok</td>
+</tr>
+<tr>
+<td>Uygun bitki türü</td>
+<td>Ispanak ve marul gibi çok su gerektiren bitkiler</td>
+<td>Farklı bitkilerden oluşan büyük bahçeler</td>
+<td>Orta boyutlu bitkiler</td>
+</tr>
+<tr>
+<td>Maliyet</td>
+<td>Başlangıçta pahalı ve karmaşık</td>
+<td>Bitkiler arası mesafenin az olması nedeniyle karmaşık yönetim</td>
+<td>Büyük projeler için uygun fiyatlı ve düşük bakım</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Tablo 5. Fitil, Sürekli Akış ve Derin Kültür Sistemlerinin Karşılaştırması</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Fitil Sistemi</th>
+<th>Sürekli Akış</th>
+<th>Derin Su Kültürü</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Çalışma prensibi</td>
+<td>Kapiler etki ile fitiller aracılığıyla besin çözeltisi köklere ulaşır</td>
+<td>Sabit aralıklarla köklerden besin çözeltisi sürekli geçirilir</td>
+<td>Bitki kökleri besin çözeltisine sürekli daldırılır</td>
+</tr>
+<tr>
+<td>Su tüketimi</td>
+<td>Çok az su tüketir</td>
+<td>Fitil sisteminden daha fazla su tüketir</td>
+<td>Çok fazla su tüketir</td>
+</tr>
+<tr>
+<td>Besin kontrolü</td>
+<td>—</td>
+<td>Çözeltideki besin konsantrasyonunu korumak zordur</td>
+<td>Çözeltideki besin konsantrasyonunu korumak zordur</td>
+</tr>
+<tr>
+<td>Arıza riski</td>
+<td>Tek nokta arızası yok</td>
+<td>Tek nokta arızası</td>
+<td>Hava pompası veya hava taşı arızasında tek nokta arızası</td>
+</tr>
+<tr>
+<td>Uygun bitki türü</td>
+<td>Düşük su ihtiyacı olan küçük bitkiler için ideal</td>
+<td>Aralıklı su ihtiyacı olan bitkiler için ideal</td>
+<td>Çok su gerektiren bitkiler için uygun</td>
+</tr>
+<tr>
+<td>Maliyet</td>
+<td>Ekonomik</td>
+<td>Maliyetli</td>
+<td>Maliyetli</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>6. Sonuçlar</h2>
+<p>Bu makale, safran yetiştiriciliğinde kullanılabilecek yapay yaklaşımların kapsamlı bir sistematik literatür taramasını sunmaktadır. Çeşitli yapay yöntemler genel olarak incelenmiş; ancak ağırlık esas olarak hidroponik yaklaşımlara verilmiştir. Hidroponikteki farklı yaklaşımların uygunluğu ve önemli sorunları, safran büyümesi için gereken temel agronomi değişkenleriyle birlikte vurgulanmıştır. Bu alanda farklı araştırmacılarca geliştirilen IoT tabanlı çeşitli hidroponik modeller incelenmiş; önerilen akıllı hidroponik safran yetiştiricilik sistemi de aktarılmıştır.</p>
+<p>Literatür taramasına göre safran yetiştiriciliğindeki gerilemenin başlıca nedenleri arasında iyi kaliteli korm yokluğu, su yetersizliği, fark edilmeden seyreden besin eksikliği ve mantar hastalıkları yer almaktadır. Akıllı sensör ve cihazların safran yetiştirme koşullarını iyileştirmeye yönelik kullanımının araştırmacılar tarafından henüz yeterince ele alınmadığı gözlemlenmiştir. Aeroponik, akvaponiği ve hidroponik kullanan çeşitli IoT tabanlı safran yetiştirme modellerinden <strong>22'si karşılaştırmalı incelemeye uygun</strong> bulunmuştur. İncelenen 100 araştırma makalesinden yalnızca <strong>25'inin tamamıyla safran yetiştiriciliğine</strong> odaklandığı saptanmıştır. Bu çalışmanın gelecekteki kapsamı, önerilen sistemin hayata geçirilmesini içerecektir.</p>
+<hr />
+<h2>Yazar Katkıları</h2>
+<p>Kavramsallaştırma: D.G.; Veri kürasyon: K.K.; Kaynaklar: H.M.; Araştırma: K.G.; Metodoloji: S.J. ve G.D.; Proje Yönetimi: H.M. ve M.A.I.; Finansman temini: M.A.I.; Biçimsel Analiz: W.V. Tüm yazarlar makalenin yayımlanan sürümünü okumuş ve kabul etmiştir.</p>
+<hr />
+<h2>Kaynaklar</h2>
+<ol>
+<li>Dolli, M.; Divya, K.S. Günümüz Hindistan tarımı üzerine bir çalışma: Durum, önem ve Hindistan ekonomisindeki rolü. ZENITH Int. J. Multidiscip. Res. 2020, 10, 30–34.</li>
+<li>Gubbi, J.; Buyya, R.; Marusic, S.; Palaniswami, M. Nesnelerin İnterneti (IoT): Bir vizyon, mimari unsurlar ve gelecek yönelimler. Future Gener. Comput. Syst. 2013, 29, 1645–1660.</li>
+<li>Alexandratos, N.; Bruinsma, J. 2030/2050'ye Doğru Dünya Tarımı: 2012 Revizyonu. FAO.</li>
+<li>Lee, I.; Lee, K. Nesnelerin İnterneti (IoT): İşletmeler için uygulamalar, yatırımlar ve zorluklar. Bus. Horiz. 2015, 58, 431–440.</li>
+<li>Giupponi, L. ve ark. İtalya'da üretilen safranın kalite özellikleri. J. Appl. Bot. Food Qual. 2019, 336–342.</li>
+<li>Wali, E. ve ark. Afganistan'ın Host İli'nde safran yetiştiriciliği için arazi uygunluk modeli. Arch. Agron. Soil Sci. 2016, 62, 921–934.</li>
+<li>Asiabani, N. ve ark. Safran hedef pazarlarının yapısının belirlenmesi ve İran ihracatına etkisi. Saffron Agron. Technol. 2020, 8, 421–426.</li>
+<li>Khajeh-Hosseini, M.; Fallahpour, F. Safran üretiminde ortaya çıkan yenilikler. In Saffron; Woodhead Publishing: Cambridge, UK, 2020; ss. 205–216.</li>
+<li>Caser, M. ve ark. Topraksız kültürde safranın mahsul performansı ve metabolik profilinin mikorizal funguslarla düzenlenmesi. Agronomy 2019, 9, 232.</li>
+<li>Gokul, S. ve ark. IoT Kullanan Akıllı Hidroponik Sistem. ICICC 2021.</li>
+<li>Perera, C. ve ark. Akıllı şehirler için servis olarak algılama modeli. Trans. Emerg. Telecommun. Technol. 2014, 25, 81–93.</li>
+<li>Jin, J. ve ark. Nesnelerin İnterneti aracılığıyla akıllı şehir yaratmak için bilgi çerçevesi. IEEE Internet Things J. 2014, 1, 112–121.</li>
+<li>Ghobaei-Arani, M. ve ark. Sis bilişimde kaynak yönetimi yaklaşımları. J. Grid Comput. 2019, 18, 1–42.</li>
+<li>Kour, K. ve ark. IoT: Sistematik inceleme, mimari, uygulamalar. IOP Conf. Ser. Mater. Sci. Eng. 2021, 1022, 012053.</li>
+<li>Chauhan, H. ve ark. GSM Modülü Kullanan IoT Tabanlı Elektronik Bilet Cihazı. ICIMI 2021; Springer: Singapur, ss. 103–111.</li>
+<li>Joshitha, C. ve ark. Hidroponige bir bakış: IoT girişimi. ICEES 2021, ss. 553–557.</li>
+<li>Siregar, S.; Sari, M.I.; Jauhari, R. Akıllı güneş enerjisi birimi kullanan hidroponik otomasyon sistemi. J. Teknol. 2016, 78.</li>
+<li>Majid, M. ve ark. Marul yetiştiriciliği için hidroponik sistemlerin değerlendirilmesi. Agric. Water Manag. 2021, 245, 106572.</li>
+<li>Ali, A.; Hakim, I.A. Keşmir Vadisi'nde safran üretimi ve ticaret mekanizmasına genel bakış. Pac. Bus. Rev. Int. 2017, 10, 97–106.</li>
+<li>Husaini, A.M. ve ark. Keşmir'de safran yetiştiriciliği: Uygulamalar ve sorunlar. Funct. Plant Sci. Biotechnol. 2010, 4, 108–115.</li>
+<li>Hassan-Beygi, S.R. ve ark. Safran crocus kormunun bazı fiziksel özellikleri. Cercet. Mold. 2010, 141, 17–29.</li>
+<li>Nehvi, F.A.; Yasmin, S. Safran çiftçilik sistemi ve ticaretinin teşviki için politika ve araştırma girişimleri. J. Hortic. Postharvest Res. 2021, 4, 89–110.</li>
+<li>Taufique, M. ve ark. Jammu ve Keşmir'de safran üretimi: Sorunlar ve beklentiler. IJSRD 2017, 5.</li>
+<li>Keşmir'in Safran Tarlalarının Neden Küçüldüğü. The Wire.</li>
+<li>Fallahi, H.R. ve ark. Bazı hasat öncesi ve sonrası uygulamaların safran stigması kalitesine etkisi. Sci. Hortic. 2021, 278, 109846.</li>
+<li>Aghaei, Z. ve ark. Safran yaprak ve stigmasının kurutulması için yenilikçi yaklaşım. J. Food Process Eng. 2018, 41, e12863.</li>
+<li>Sereshti, H. ve ark. Safranın kalite kontrolü ve potansiyel safsızlaşma değerlendirmesi. Food Control 2018, 90, 48–57.</li>
+<li>Li, S. ve ark. Safranın lotus erkek organları ve mısır yumurtalığıyla safsızlaştırılmasının NIR ile tespiti. Ind. Crops Prod. 2020, 152, 112539.</li>
+<li>Mehmood, Y.; Kumar, P. Jammu ve Keşmir'de Tarım Üretiminin Durumu. 2020.</li>
+<li>Kumar, M.S. IoT ve büyük veri analizi kullanan dikey hidroponik çiftçilik için otomatik robot sisteminin tasarımı. Turk. J. Comput. Math. Educ. 2021, 12, 1597–1607.</li>
+<li>Shrivastava, A. ve ark. IoT ve büyük veri kullanan dikey hidroponik çiftçilik için otomasyon. Mater. Today Proc. 2021.</li>
+<li>Garg, D. ve ark. Tarım uygulamaları için IoT ve derin öğrenmenin bütünleşik kullanımı. ICETIT 2019; Springer: Cham, ss. 521–531.</li>
+<li>Zsombik, L. ve ark. Hidrokültür koşullarında buğday genotiplerinin fide morfolojisi. Acta Agrar. Debr. 2021, 249–254.</li>
+<li>DasGupta, A. Hidrokültür tarihleri ve anlatıları. Ecol. Econ. Soc. INSEE J. 2020, 3, 169–178.</li>
+<li>Khan, K.A. Safranın Hidroponik Büyütülmesi (Gelgit-Akış Dikey Sistemi). ResearchGate 2021.</li>
+<li>Çalışkan, M.E. ve ark. Aeroponik ve geleneksel patates mini yumrusu üretim sistemlerinin karşılaştırması. Potato Res. 2021, 64, 41–53.</li>
+<li>Bhakar, V. ve ark. LCA kullanarak akvaponik sistemin çevresel yükünün analizi. Procedia CIRP 2021, 98, 223–228.</li>
+<li>Lakhiar, I.A. ve ark. Aeroponik inceleme: Kontrollü ortamda modern bitki yetiştirme teknolojileri. J. Plant Interact. 2018, 13, 338–352.</li>
+<li>Li, Q. ve ark. Aeroponik, hidroponik ve substrat kültürde marul büyüme tepkileri ve kök özellikleri. Horticulturae 2018, 4, 35.</li>
+<li>Tunio, M.H. ve ark. Aeroponikde patates üretimi. Chil. J. Agric. Res. 2020, 80, 118–132.</li>
+<li>Lucero, L. ve ark. Otomatik aeroponik sebze büyütme sistemi. ANDESCON 2020, ss. 1–6.</li>
+<li>Kerns, S.C.; Lee, J.L. Akıllı çiftçilik için IoT kullanan otomatik aeroponik sistem. ISF 2017, ss. 7–8.</li>
+<li>Francis, F. ve ark. IoT tabanlı otomatik aeroponik sistem. In Intelligent Embedded Systems; Springer: Singapur, 2018; ss. 337–345.</li>
+<li>Juneja, S. ve ark. Evrişimli Sinir Ağlarıyla Göğüs Sendromu Sınıflandırması. Comput. Math. Methods Med. 2021, 2021, 3900254.</li>
+<li>Jamhari, C.A. ve ark. Aeroponik Oda Sıcaklık İzleme için IoT Sistemi. ICVEE 2020, ss. 1–4.</li>
+<li>Mangaiyarkarasi, R. Bahçıvanlık ürünleri için aeroponik sistem. Madras Agric. J. 2020, 107.</li>
+<li>Fallahi, H.R. ve ark. Topraksız yetiştiricilik sisteminde safran şaşırtma ve korm üretim değerlendirmesi. J. Saffron Res. 2020, 8, 269–284.</li>
+<li>Razavizadeh, B.M.; ArabshahiDelooei, N. Akustik dalgalarla işlem görmüş safran stigmasında krosin, pikrokrosin ve safranol ölçümü. Phytochem. Anal. 2021, 32, 1059–1066.</li>
+<li>Ebrahimi, M. ve ark. Aeroponik safran yetiştiriciliğinde ana korm ağırlığının verime etkisi. J. Saffron Res. 2021.</li>
+<li>Salas, M.D.C. ve ark. Topraksız safran yetiştiriciliğinde optimum besin çözeltisi gücü. Agronomy 2020, 10, 1311.</li>
+<li>Eldridge, B.M. ve ark. Aeroponik iç mekân çiftçiliğinin köklerine ulaşmak. New Phytol. 2020, 228, 1183–1192.</li>
+<li>Baganz, G.F. ve ark. Akvaponik prensibi. Rev. Aquac. 2021, 14, 252–264.</li>
+<li>Jordan, R.A. ve ark. Akvaponik sistemde farklı substratlarda marul verimi. Rev. Eng. E Ambient. 2018, 22, 27–31.</li>
+<li>Ulum, M. ve ark. IoT tabanlı akıllı akvaponik sistem. J. Phys. Conf. Ser. 2019, 1211, 012047.</li>
+<li>Yanes, A.R. ve ark. Otomatik akvaponiğe doğru: İzleme, IoT ve akıllı sistemler incelemesi. J. Clean. Prod. 2020, 263, 121571.</li>
+<li>Hardyanto, R.H.; Ciptadi, P.W. IoT Teknolojisi Kullanarak Akıllı Akvaponik Tasarımı. J. Phys. Conf. Ser. 2020, 835, 012026.</li>
+<li>Vernandhes, W. ve ark. IoT tabanlı izleme ve kontrol sistemli akıllı akvaponik. ICIC 2017, ss. 1–6.</li>
+<li>Trejo-Téllez, L.I.; Gómez-Merino, F.C. Hidroponik sistemler için besin çözeltileri. In Hydroponics; InTechOpen: Rijeka, Hırvatistan, 2012; ss. 1–22.</li>
+<li>Palande, V. ve ark. İç mekân bitki büyümesi için tam otomatik hidroponik sistem. Procedia Comput. Sci. 2018, 129, 482–488.</li>
+<li>De Castro Silva, M.G. ve ark. Hidroponiklere Küresel Bakış: NFT. Rev. Eng. Agric.-REVENG 2021, 29, 138–145.</li>
+<li>Megantoro, P.; Ma'arif, A. Arduino Tabanlı Otomatik Hidroponik Sistem için NFT. ICIEE 2020, ss. 84–86.</li>
+<li>Yuvaraj, M.; Subramanian, K.S. Farklı Hidroponik Sistem Türleri. Biot. Res. Today 2020, 2, 835–837.</li>
+<li>Ani, A.; Gopalakrishnan, P. Büyük Veri Kullanan Otomatik Hidroponik Damla Sulama. ICIRCA 2020, ss. 370–375.</li>
+<li>Maiti, M.; Saha, T. Hindistan'da Hidroponikleri Anlamak. Just Agriculture Newsletter.</li>
+<li>Sevostianov, I.; Melnyk, O. Geliştirilmiş Hidroponik Sistemlerin Hazırlanması. VSAU Journals 2021, ss. 66–75.</li>
+<li>Schroeder, F.G. ve ark. Safranın hidroponik zorlaması. IHC2018 Bildirisi, ss. 281–288.</li>
+<li>Fallahi, H.R. ve ark. Şaşırtma ve doğrudan korm ekiminin safran vejetatif büyümesine etkisi. J. Hortic. Postharvest Res. 2021, 4, 1–10.</li>
+<li>Souret, F.F.; Weathers, P.J. Aeroponik ve hidroponikde safranın büyümesi. J. Herbs Spices Med. Plants 2000, 7, 25–35.</li>
+<li>Hidayanti, F. ve ark. Hidroponik Bitki İzleme için IoT Uygulaması Maket. Int. J. Adv. Sci. Technol. 2020, 29, 5157–5164.</li>
+<li>Boonnam, N. ve ark. Akıllı çiftlik hidroponik sisteminde optimum bitki büyümesi için WSN+IoT entegrasyonu. Adv. Sci. Technol. Eng. Syst. J. 2017, 2, 1006–1012.</li>
+<li>Pitakphongmetha, J. ve ark. Akıllı çiftlik hidroponik tarzında bitki yetiştirme için IoT. ICSEC 2016, ss. 1–5.</li>
+<li>Sutikno, T. ve ark. NodeMCU ESP8266 kullanan IoT tabanlı fotovoltaik parametre izleme sistemi. Int. J. Electr. Comput. Eng. 2021, 11, 2088–8708.</li>
+<li>Upadhyay, H. ve ark. Bulanık AHP kullanarak Çevrimiçi Eğitimde Ergonomi Değerlendirmesi. Comput. Intell. Neurosci. 2021, 2021, 2214971.</li>
+<li>Juneja, A. ve ark. CNN tabanlı tek atışlı dedektör modeli ile gerçek zamanlı nesne tespiti. J. Inf. Technol. Manag. 2021, 13, 62–80.</li>
+<li>Upadhyay, H.K. ve ark. COVID-19 döneminde sosyal izolasyon engellerinin bulanık AHP ile çok kriterli analizi. World J. Eng. 2021.</li>
+<li>Dhankhar, A. ve ark. Kalp hastalığı tespiti için çekirdek parametre ayarı. Int. J. E-Health Med. Commun. 2021, 12, 1–16.</li>
+<li>Juneja, S. ve ark. 6G Teknolojisi için Cyber-İkiz Mimarisi. Scientific Programming 2021.</li>
+<li>Zeidabadi, F.A. ve ark. MLA: Yeni Mutasyona Uğramış Lider Algoritması. CMC 2022, 70, 5631–5649.</li>
+<li>Zeidabadi, F.A. ve ark. AMBO: Tüm Üye Tabanlı Optimize Edici. CMC 2022, 70, 2905–2921.</li>
+<li>Balakrishnan, A. ve ark. Evrişimli Katmanlar Kullanan Nesne Tanıma. Wirel. Commun. Mob. Comput. 2021, 2021, 5543720.</li>
+<li>Dhiman, G. ve ark. Dijital Çift Biçimli Sistemlerin Metasistemik Sürdürülebilirliği. Math. Probl. Eng. 2021, 2021, 2423750.</li>
+<li>Kansal, L. ve ark. 5G için WOFDM-WiMAX Performans Analizi. Wirel. Commun. Mob. Comput. 2021, 2021, 5835806.</li>
+<li>Viriyasitavat, W. ve ark. Hizmet İş Akışı: Güncel Durum ve Gelecek Eğilimler. IEEE Trans. Serv. Comput. 2021.</li>
+<li>Vaishnav, P.K. ve ark. COVID-19 hastalığını taramak için analitik inceleme. Int. J. Mod. Res. 2021, 1, 22–29.</li>
+<li>Chatterjee, I. Yapay zekâ ve patentlenebilirlik. Int. J. Mod. Res. 2021, 1, 15–21.</li>
+<li>Kumar, R.; Dhiman, G. Bulanık sayı aracılığıyla bulanık optimizasyonun karşılaştırmalı çalışması. Int. J. Mod. Res. 2021, 1, 1–14.</li>
+</ol>
+  </div>
+</div>
+</main>
+
+<footer>
+    <div class="container">Safran Topluluğu — Bilimsel kaynaklara dayalı safran yetiştiriciliği</div>
+</footer>
+
+</body>
+</html>

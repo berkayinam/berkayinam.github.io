@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LED Işık Spektrumu: Mavi Işığın Safran Fotosentezine Etkisi (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-full { border-color: #D97706; color: #D97706; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h1 { font-size: 1.5rem; margin-top: 2.5em; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.88rem; overflow-x: auto; display: block; }
+        .post-content th { background: #f7f7f7; font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #ddd; }
+        .post-content td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        .post-content tr:nth-child(even) td { background: #fafafa; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; }
+        .post-content code { font-family: monospace; background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.3em; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+
+  'indoor-saffron-production-profitability-blueprint':                          {lang:'en', pair:'i-c-mekanda-safran-uretimi-karlilik-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint':                              {lang:'tr', pair:'indoor-saffron-production-profitability-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'iot-based-smart-aeroponic-system-for-saffron-cultivation-2':                 {lang:'en', pair:'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2'},
+  'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2':           {lang:'tr', pair:'iot-based-smart-aeroponic-system-for-saffron-cultivation-2'},
+  'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3':         {lang:'en', pair:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3':          {lang:'tr', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4':           {lang:'en', pair:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4':                  {lang:'tr', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5':           {lang:'en', pair:'tetikleyici-hava-kosullari-safran-fenolojisi-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-5':                             {lang:'tr', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'saffron-aeroponic-cultivation-step-by-step-visual-guide':                    {lang:'en', pair:'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber'},
+  'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber':                 {lang:'tr', pair:'saffron-aeroponic-cultivation-step-by-step-visual-guide'},
+  'saffron-hydroponic-vertical-farming-concept-and-design-7':                   {lang:'en', pair:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7':                         {lang:'tr', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'saffron-production-life-cycle-biology-dormancy-and-flowering-8':             {lang:'en', pair:'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8'},
+  'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8':                   {lang:'tr', pair:'saffron-production-life-cycle-biology-dormancy-and-flowering-8'},
+  'smart-hydroponic-framework-for-saffron-precision-agriculture-9':             {lang:'en', pair:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-9':                          {lang:'tr', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'growth-medium-vegetative-productivity-and-corm-quality-10':                  {lang:'en', pair:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10':                    {lang:'tr', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11':         {lang:'en', pair:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11':              {lang:'tr', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12':      {lang:'en', pair:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12':                     {lang:'tr', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13':     {lang:'en', pair:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13':                  {lang:'tr', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'saffron-cultivation-using-aeroponics-viable-approach-2026-14':               {lang:'en', pair:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14':                {lang:'tr', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15':              {lang:'en', pair:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15':                     {lang:'tr', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'benchmarking-energy-efficiency-vertical-farming-18':                         {lang:'en', pair:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18':                      {lang:'tr', pair:'benchmarking-energy-efficiency-vertical-farming-18'},
+  'cradle-to-customer-lca-uk-vertical-farming-19':                              {lang:'en', pair:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19':                            {lang:'tr', pair:'cradle-to-customer-lca-uk-vertical-farming-19'},
+  'lca-urban-vertical-farm-construction-dismantling-20':                        {lang:'en', pair:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20':                    {lang:'tr', pair:'lca-urban-vertical-farm-construction-dismantling-20'},
+  'towards-sustainable-vertical-farming-eroi-review-21':                        {lang:'en', pair:'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21'},
+  'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21':                      {lang:'tr', pair:'towards-sustainable-vertical-farming-eroi-review-21'},
+  'innovation-vertical-farming-adaptive-vs-standard-22':                        {lang:'en', pair:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22':                        {lang:'tr', pair:'innovation-vertical-farming-adaptive-vs-standard-22'},
+  'sustainable-vf-machine-learning-iot-energy-23':                              {lang:'en', pair:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23':                         {lang:'tr', pair:'sustainable-vf-machine-learning-iot-energy-23'},
+  'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r': {lang:'en', pair:'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal'},
+  'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal':  {lang:'tr', pair:'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r'}
+
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint-full': {lang:'tr-full', pair:'indoor-saffron-production-profitability-blueprint', pairOzet:'i-c-mekanda-safran-uretimi-karlilik-blueprint'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3': {lang:'tr-full', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairOzet:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4': {lang:'tr-full', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairOzet:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-full-5': {lang:'tr-full', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairOzet:'tetikleyici-hava-kosullari-safran-fenolojisi-5'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7': {lang:'tr-full', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairOzet:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9': {lang:'tr-full', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairOzet:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10': {lang:'tr-full', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairOzet:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11': {lang:'tr-full', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairOzet:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12': {lang:'tr-full', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairOzet:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13': {lang:'tr-full', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairOzet:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14': {lang:'tr-full', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairOzet:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15': {lang:'tr-full', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairOzet:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15'},
+};
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a href="../index.html" class="site-logo">
+            <svg viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span>Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="https://ko-fi.com/safrantoplulugu" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="post-header">
+  <div class="container">
+    <div class="breadcrumb">
+        <a href="../index.html">Araştırmalar</a>
+        <span> / </span>
+        <span>LED Işık Spektrumu: Mavi Işığın Safran Fotosentezine Etkisi</span>
+    </div>
+    <div class="full-badge">TR Full — Tam Çeviri</div>
+    <h1 class="post-title">LED Işık Spektrumu: Mavi Işığın Safran Fotosentezine Etkisi</h1>
+    <div class="post-actions" id="langSwitchArea">
+        <div class="lang-switch" id="langSwitch"></div>
+    </div>
+    <script>
+    (function() {
+        var _parts = window.location.pathname.replace(/^\/|\/$/g, '').split('/').filter(function(p){ return p && p !== 'index.html'; });
+        var slug = _parts[_parts.length - 1] || '';
+        var info = window.LANG_MAP && window.LANG_MAP[slug];
+        if (!info) return;
+        var sw = document.getElementById('langSwitch');
+        if (!sw) return;
+        var html = '';
+        if (info.lang === 'tr-full') {
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pair + '/">EN →</a>';
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pairOzet + '/">TR Özet →</a>';
+            html += '<span class="lang-switch-current lang-switch-full">TR Full</span>';
+        }
+        sw.innerHTML = html;
+    })();
+    </script>
+  </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+    <h1>Mavi Işık; Safranda (Crocus sativus L.) Fotosentetik Performansı ve Biyokütle Dağılımını Hasat Organlarına Yöneltir</h1>
+<p><strong>Kaynak:</strong> Moradi S., Kafi M., Aliniaeifard S., Salami S.A., Shokrpour M., Pedersen C., Moosavi-Nezhad M., Wróbel J., Kalaji H.M. Blue Light Improves Photosynthetic Performance and Biomass Partitioning toward Harvestable Organs in Saffron (Crocus sativus L.). <em>Cells</em> 2021, 10, 1994. DOI: 10.3390/cells10081994</p>
+<p><strong>Yazarlar:</strong>
+- Shirin Moradi¹ — shirinmoradi@ut.ac.ir
+- Mohsen Kafi¹<em> — mkafi@ut.ac.ir
+- Sasan Aliniaeifard²</em> — aliniaeifard@ut.ac.ir
+- Seyed Alireza Salami¹ — asalami@ut.ac.ir
+- Majid Shokrpour¹ — shokrpour@ut.ac.ir
+- Carsten Pedersen³ — cpr@plen.ku.dk
+- Moein Moosavi-Nezhad¹² — moein.moosavi@ut.ac.ir
+- Jacek Wróbel⁴ — jacek.wrobel@zut.edu.pl
+- Hazem M. Kalaji⁵⁶ — hazem@kalaji.pl</p>
+<p>¹ Bahçe Bitkileri Bilimleri Bölümü, Tarım Bilimi ve Mühendisliği Fakültesi, Tarım ve Doğal Kaynaklar Yüksekokulları, Tahran Üniversitesi, Karaj P.O. Box 31587-77871, İran</p>
+<p>² Fotosentez Laboratuvarı, Bahçe Bitkileri Bölümü, Abureyhan Kampüsü, Tahran Üniversitesi, Tahran P.O. Box 33916-53755, İran</p>
+<p>³ Kopenhag Bitki Bilimi Merkezi, Bitki ve Çevre Bilimleri Bölümü, Kopenhag Üniversitesi, Thorvaldsensvej 40, 1871 Frederiksberg, Danimarka</p>
+<p>⁴ Biyomühendislik Bölümü, Batı Pomeranya Teknoloji Üniversitesi, Szczecin, Polonya</p>
+<p>⁵ Bitki Fizyolojisi Bölümü, Biyoloji Enstitüsü, Yaşam Bilimleri Üniversitesi SGGW, 02-776 Varşova, Polonya</p>
+<p>⁶ Teknoloji ve Yaşam Bilimleri Enstitüsü — Ulusal Araştırma Enstitüsü, Falenty, Polonya</p>
+<p><strong>Alındı:</strong> 29 Haziran 2021 | <strong>Kabul Edildi:</strong> 27 Temmuz 2021 | <strong>Yayımlandı:</strong> 5 Ağustos 2021</p>
+<p><strong>Akademik Editör:</strong> László Kozma-Bognár</p>
+<hr />
+<h2>Özet</h2>
+<p>Safran değerli bir bitki olup dünya genelindeki en pahalı baharatlardan biridir. Günümüzde bu bitkinin kapalı bitki üretim sistemlerinde yetiştirilmesine yönelik artan bir eğilim bulunmaktadır. Ancak yüksek kaliteli kormlara yönelik üreme gereksinimleri, safran üretimini kısıtlamaktadır. Bu çalışmada; kırmızı (K) ve mavi (M) ışık spektralarının farklı oranlarının (%100 M (tek renkli M), %75, %50, %40, %25 M ve %0 M (tek renkli K)) safranın fotosentetik performansı ile biyokütle dağılımı ve morfolojik-biyokimyasal özellikleri üzerindeki etkileri araştırılmıştır.</p>
+<p>Çiçek, kök ve korm büyümesi; M ışığının K ışığına oranının artmasıyla iyileştirilmiştir. M ışığı altında yetiştirilen bitkiler; K ışığı altında yetiştirilenlere kıyasla verimli elektron taşınımı ve daha düşük enerji disipasyonu ile en yüksek fotosentetik işlevsellikle öne çıkmıştır. M ışığı biyokütleyi kormlara ve çiçek organlarına yönlendirirken K ışığı yapraklara yönlendirmiştir.</p>
+<p>Safranda kız soğancığın ağırlığı; bir sonraki yılın verimini belirlediğinden büyük önem taşımaktadır. M ışığının K ışığına oranı arttıkça kız soğancıklar daha ağır hale gelmiş; ancak bu gelişme sayılarının azalması pahasına gerçekleşmiştir. M oranının artması; antioksidan kapasitesini, askorbat peroksidaz ve katalaz enzim aktivitesini artırırken K ışığı altında yetişen bitkilerde süperoksit dismutaz aktivitesi yükselmiştir.</p>
+<p>Sonuç olarak M ışığı; safranda yüksek kaliteli kız soğancık üretimini artırmış ve biyokütle dağılımını hasat organlarına (korm ve çiçekler) yönlendirmiştir.</p>
+<p><strong>Anahtar Sözcükler:</strong> korm üretimi; klorofil floresansı; ışık spektrası; O-J-I-P geçişi; fotosentetik işlevsellik</p>
+<hr />
+<h2>1. Giriş</h2>
+<p>Iridaceae familyasından Crocus sativus L.'nin kurutulmuş stigmaları; dünyanın en pahalı baharatlarından biri olduğu için kızıl altın olarak bilinmektedir. Kendine özgü aroma ve rengi nedeniyle safran; mutfak, boyama ve kozmetik endüstrilerinde kullanılmaktadır. Anti-depresif, kansere karşı ve hatta anti-tümör etkileri için kullanılan kimyasal bileşenleri sayesinde tıbbi değere de sahiptir [1,2]. Bu bitkinin değerli baharat olarak pazarlanan hasat edilebilir kısmı olan stigma; çiçek başına yaklaşık 80 mg ürün vermektedir [1].</p>
+<p>Safran yetiştiriciliği binlerce yıl boyunca değişmeden kalmış; büyük ölçüde tarlalarda sürdürülmüştür. Bu yetiştiricilik biçimi; çok düşük su kullanım verimliliği, yabancı ot yönetimi, sulama ve çiçek hasadında işgücü harcamalarının artması, mekanizasyon kullanımının sınırlı kalması ve en önemlisi birim alana verimin düşük olması gibi çeşitli sorunlara yol açmaktadır. Geleneksel yetiştiriciliğin; üretim süreçlerinde mekanizasyondan yararlanan, dikey tarım olarak da bilinen kapalı bitki üretim sistemlerine dönüştürülmesinin safran yetiştiriciliğinin kârlılığını artıracağı düşünülmektedir [3–5].</p>
+<p>Son birkaç on yılda safranın örtüaltı koşullarda yetiştirilmesine yönelik artan bir eğilim gözlemlenmektedir [2,6–8]. Safran çiçekleri sera koşullarında kolayca üretilebilse de yüksek kaliteli kormlerin sera koşullarında üretimi güçtür. Safran korm vejetatif büyümesi ve fizyolojik gelişimi üzerine sınırlı sayıda çalışma mevcuttur; safran yetiştiriciliğinin açık arazilerden kontrollü ortamlara transferini daha uygulanabilir kılacak daha fazla bilgiye ihtiyaç duyulmaktadır. Bazı raporlar; dormansi ve çiçeklenme aşamalarının serada, vejetatif aşamanın ise açık arazide yürütüldüğü kombine bir sistem önermektedir [9,10]. Yüksek kalite ve verimde safran bitkilerinin sera koşullarında üretilebileceği bildirilmiştir. Korm depolama süresini ve süresini kontrol ederek çiçeklenme dönemini uzatmak ve safran hasat süresini artırmak için bir yöntem sunulmuştur [11–13].</p>
+<p>Büyük korm büyüklükleri bir sonraki yılda yüksek verimi garanti ettiğinden korm büyümesi ve gelişimi safran yaşam döngüsünün en önemli parçasıdır. Bu aşama; sıcaklık, ışık ve su kullanılabilirliği gibi çevre koşullarına son derece bağımlıdır [9].</p>
+<p>Önceki çalışmalar; sıcaklığın safran yaşam döngüsünün farklı aşamaları üzerindeki etkilerini açıkça ortaya koymuştur. Yüksek hassasiyetli sensörlerden yararlanan kontrollü bitki üretim sistemlerinde optimum sıcaklık kolayca sürdürülebilir. Işıklandırma ortamının safran büyümesini etkilediği de gösterilmiştir; ancak korm üretimi için uygun aydınlatma koşullarına ilişkin mevcut bilgimizde büyük bir boşluk bulunmaktadır [9]. Özellikle ışık kalitesinin biyokütle dağılımı üzerindeki etkisi farklı organlara göre büyük ölçüde bilinmemektedir.</p>
+<p>Işık; fotosentez için bir enerji kaynağı olmanın ötesinde fotomorfogenez ve nişasta birikimi ile ikincil metabolit üretimi gibi diğer fizyolojik süreçler dahil bitki aktivitelerini modüle eden bir sinyal olarak da görev yapar [14–16]. Işığa maruz kalmanın ardından ortaya çıkan iç sinyaller; bitki yaşam döngüsü boyunca büyüme ve gelişimi düzenler [14]. Karotenoid biyosentezi, depolama ve plastid gelişimi de karmaşık ışık odaklı sinyaller tarafından ayarlanır [14,17].</p>
+<p>Işık yayan diyotlar (LED); diğer ışık kaynaklarına kıyasla sağladıkları avantajlar nedeniyle son yıllarda araştırmacıların ilgisini çekmiştir. Yapay ışık teknolojisindeki hızlı ilerleme, kapalı yetiştiricilik sistemlerindeki uygulamalarını artırmıştır [3]. Belirli dalga boylarında ışık spektrası sağlayan LED'ler; ışık spektrumunun bitki büyümesi ve fizyolojisi üzerindeki etkilerinin anlaşılmasında kolay kullanımlı bir araç sunabilmektedir.</p>
+<p>Her ışık spektrumu dalga bandı bitkide belirli yanıtları tetikler. Kırmızı (K) ve Mavi (M) ışıklar; klorofil (Kl) pigmentlerinin bu ışık dalga bandı aralıklarında en yüksek absorpsiyona sahip olduğu fotosentetik sistemlerdeki elektron uyarımı için daha etkindir. Monokromatik ya da kombine K ve M ışığın etkileri; çeşitli bitki türlerinin büyümesi ve fizyolojisi üzerinde geniş çapta incelenmiştir [18–21]. Ancak safran gibi soğanlı bitkilerde farklı organlar arasındaki biyokütle ve karbonhidrat dağılımına ilişkin bilgide hâlâ eksiklik bulunmaktadır. Bu nedenle mevcut çalışma; farklı M ile K ışığı spektra oranlarına maruz kalmanın ardından safranda fotosentetik performansı, biyokütle ve karbonhidrat dağılımını ve korm üretimini araştırmayı hedeflemiştir.</p>
+<hr />
+<h2>2. Materyal ve Yöntem</h2>
+<h3>2.1 Bitki Materyali ve Büyüme Koşulları</h3>
+<p>Safran kormlari (Crocus sativus L.); İran'ın en önemli safran üretim bölgelerinden biri olan Nişabur'dan (Horasan-Razavi Eyaleti, İran) bir geleneksel safran üretim bölgesinden temin edilmiştir. Haziran sonu hasadının ardından eşit ağırlıklı kız soğancıklar (10–12 g) ayrılmış ve sınıflandırılmıştır. Ardından fungisit solüsyonuna (%0,1 Prokloraz) daldırılarak 1–2 saat kurutulmuştur. Çiçek oluşumu; [12,13]'e göre kormlerin %85±2 bağıl nemde 25°C'de 90 gün boyunca karanlık ortamda inkübe edilmesiyle başlatılmıştır. Korm daha sonra yetiştirme ortamı olarak perlit ile doldurulmuş saksılara ekilmiştir. Deneyin geri kalanı; 10 m² taban alanına ve 2,5 m yüksekliğe sahip, ışık geçişini önlemek için özel panellerle bölünmüş LED donanımlı kapalı kontrollü iklim odasında yürütülmüştür.</p>
+<p>Çiçeklenmenin başlangıcında korm; damla sulama sistemiyle her gün 1/2 Hoagland ve Arnon [22] besin solüsyonuyla fertigasyona alınmıştır. Çiçeklerin ortaya çıkmasını sağlamak için korm; mavi (M, 400–500 nm), kırmızı (K, 600–700 nm), M ve K'nın kombinasyonu ile beyaz (B) LED'ler tarafından 150 µmol m⁻² s⁻¹'lik foton akı yoğunluğunda (FAY) sağlanan ışık koşulları altında 17°C'de inkübe edilmiştir.</p>
+<p>Çiçeklenmein ardından; daha önceki çalışmaların bu koşulda korm havuzlarının en yüksek kapasiteye ulaştığını göstermesi üzerine korm indüksiyonu için sıcaklık 11/13 saatlik fotoperiod ile 15/6°C'ye (ışık/karanlık) ayarlanmıştır [23,24].</p>
+<p>Bitkiler daha sonra; LED modülleriyle (24W, OPPLE, Suzhou, Çin) 150±10 µmol m⁻² s⁻¹ fotosentetik foton akı yoğunluğunda (FFAY/PPFD) sağlanan %100 M (tek renkli M), %75 M (%75 M, %25 K), %50 M (%50 M, %50 K), %40 M (B; M dalga bandı aralığında %40 ve K dalga bandı aralığında %20'den oluşur), %25 M (%25 M, %75 K), %0 M (tek renkli K) dahil farklı oranlarda K ve M ışığın monokromatik ya da kombinasyonlarını içeren ışık uygulamalarına tabi tutulmuştur. Işık uygulamaları; ışık rejimlerini birbirinden ayırmak için panel duvarıyla ayrıştırılmıştır. Işık yoğunluğu ve spektrumu sırasıyla FluorPen FP100-MAX (Photon Systems Instruments, Drasov, Çek Cumhuriyeti) ve Sekonic ışık ölçer (Sekonic C-7000) kullanılarak izlenmiştir.</p>
+<h3>2.2 Morfolojik ve Büyüme Ölçümleri</h3>
+<p>Bitki boyu ve yaprak sayısı haftalık olarak kaydedilmiştir. Bitki boyu; bitkilerin tacından en uzun yaprak ucuna kadar ölçülmüştür. Çiçeklenmeden sonra (120 gün) bazı bitkiler bitki biyokütlesi analizi için hasat edilmiştir. Hasat hemen ardından bitkilerin farklı parçalarının (yaprak, kök ve korm dahil) taze ağırlığı (TA) kaydedilmiştir. Bitki dokuları; kuru ağırlıklarını (KA) kaydetmek amacıyla 80°C'de 72 saat fırında kurutmanın ardından yeniden tartılmıştır.</p>
+<h3>2.3 Klorofil Floresansı ve OJIP Test Ölçümlerinin Analizi</h3>
+<p>Safran bitkilerinin yapışık, genç, tam gelişmiş yaprakları; 20 dakika karanlık adaptasyonunun ardından FluorPen FP 100-MAX kullanılarak çiçeklenmeden 60 gün sonra polifazik Kl-a floresans (OJIP) geçişlerinin ölçülmesinde kullanılmıştır. OJIP protokolünden elde edilen parametreler önceki çalışmalara göre hesaplanmıştır [19–22]. Temel ve hesaplanan parametreler ile formülleri Tablo 1'de gösterilmektedir.</p>
+<p><strong>Tablo 1: Bu çalışmada OJIP parametrelerinin kısaltmaları, tanımları ve formülleri</strong></p>
+<table>
+<thead>
+<tr>
+<th>Sembol</th>
+<th>Tanım</th>
+<th>Formül</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Temel Parametreler</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>F₀</td>
+<td>Tüm PSII reaksiyon merkezlerinin (RM) açık olduğu minimum floresans (OJIP geçişinin O-adımı)</td>
+<td>F₅₀µs</td>
+</tr>
+<tr>
+<td>FJ</td>
+<td>OJIP'nin J-adımındaki (2 ms) floresans yoğunluğu</td>
+<td>F₂ms</td>
+</tr>
+<tr>
+<td>FI</td>
+<td>OJIP'nin I-adımındaki (30 ms) floresans yoğunluğu</td>
+<td>F₃₀ms</td>
+</tr>
+<tr>
+<td><strong>Floresans Parametreleri</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fm</td>
+<td>Tüm PSII RM kapalıyken maksimum floresans (OJIP geçişinin P-adımı)</td>
+<td>F₁s</td>
+</tr>
+<tr>
+<td>Fv</td>
+<td>Karanlık adapte yapraklardaki değişken floresans</td>
+<td>Fm − F₀</td>
+</tr>
+<tr>
+<td><strong>Hesaplanan Parametreler</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>VJ</td>
+<td>Aktenik ışık darbesinin başlangıcından 2 ms (J-adımı) sonraki relatif değişken floresans</td>
+<td>(FJ − F₀)/(Fm − F₀)</td>
+</tr>
+<tr>
+<td>VI</td>
+<td>Aktenik ışık darbesinin başlangıcından 30 ms (I-adımı) sonraki relatif değişken floresans</td>
+<td>(F₃₀ms − F₀)/(Fm − F₀)</td>
+</tr>
+<tr>
+<td>Fv/Fm</td>
+<td>PSII fotokimyasının maksimum kuantum verimi</td>
+<td>1 − (F₀/Fm) = ϕP₀</td>
+</tr>
+<tr>
+<td><strong>Kuantum Verimleri ve Etkinlikler/Olasılıklar</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ϕE₀</td>
+<td>Elektron taşınımının kuantum verimi</td>
+<td><a href="1 − VJ">1 − (F₀/Fm)</a></td>
+</tr>
+<tr>
+<td>ϕD₀</td>
+<td>Enerji disipasyonunun kuantum verimi</td>
+<td>F₀/Fm</td>
+</tr>
+<tr>
+<td>ϕFM (ϕPAV)</td>
+<td>0'dan tFM'e kadar birincil fotokimya için ortalama kuantum verimi</td>
+<td>ϕP₀(1 − VJ)</td>
+</tr>
+<tr>
+<td><strong>Özgün Enerji Akıları (RM başına)</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ABS/RC</td>
+<td>RM başına enerji emilimi</td>
+<td>M₀(1/VJ)(1/ϕP₀)</td>
+</tr>
+<tr>
+<td>TR₀/RC</td>
+<td>RM başına hapsolmuş enerji akısı</td>
+<td>M₀(1/VJ)</td>
+</tr>
+<tr>
+<td>ET₀/RC</td>
+<td>RM başına elektron taşınım akısı</td>
+<td>M₀(1/VJ)(1 − VJ)</td>
+</tr>
+<tr>
+<td>DI₀/RC</td>
+<td>Disipe edilen enerji akısı</td>
+<td>(ABS/RC) − (TR₀/RC)</td>
+</tr>
+<tr>
+<td><strong>Performans İndeksleri</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PIABS</td>
+<td>PSII fotokimyasal aktivite performans indeksi</td>
+<td>[(γRC/1−γRC)(ϕP₀/1−ϕP₀)(ψE₀/1−ψE₀)]</td>
+</tr>
+</tbody>
+</table>
+<h3>2.4 Pigment Ölçümleri</h3>
+<p>Işık koşullarının fotosentetik pigment (Kl-a, b, a+b ve karotenoidler) içerikleri üzerindeki etkisi Lichtenthaler (1987)'in yöntemine göre değerlendirilmiştir. 100 mg yaprak dokusunun alıkotları; 10 mL %80 aseton ile homojenize edilerek 4°C'de bir gece boyunca inkübe edilmiştir. 25°C'de 600×g'de 10 dakika santrifüjün ardından süpernatanın absorbansı; 646, 663 ve 470 nm'de PowerWave™ XS Mikrokumbara Okuyucu (BioTek Instruments, Inc., Winooski, VT, ABD) kullanılarak spektrofotometrik olarak kaydedilmiştir.</p>
+<h3>2.5 Antioksidan Kapasitenin Belirlenmesi</h3>
+<p>Antioksidan aktivitesi; Sharma'nın yöntemi [25] uyarınca kararlı 2,2-difenil-1-pikrilhidrazil (DPPH) serbest radikal temizleme kapasite deneyleriyle saptanmıştır. 12,5 µL uygun biçimde seyreltilmiş numuneler; 96 kuyucuklu bir plakın kuyucuğunda 100 µL DPPH solüsyonuna (metanolde çözülmüş) eklenmiştir. Absorbans ardından 517 nm'de ölçülmüştür.</p>
+<h3>2.6 Antioksidan Enzim Aktivitelerinin Ölçümü</h3>
+<p>Önemli antioksidan enzimler olan askorbat peroksidaz (APX), katalaz (KAT) ve süperoksit dismutaz (SOD) aktiviteleri çiçeklenmeden 60 gün sonra incelenmiştir. APX aktivitesi; 265 nm'de askorbik asidin (AA) oksidasyonuyla (ε=13,7 mM⁻¹ cm⁻¹) Nakano ve Asada'nın [26] yöntemine göre tanımlanmıştır. Enzim aktivitesi µmol AA dk⁻¹ taze ağırlık g başına olarak ifade edilmiştir.</p>
+<p>KAT aktivitesinin belirlenmesinde H₂O₂'nin bozunması; 240 nm'deki absorbans azalmasıyla kaydedilmiştir. Bir KAT birimi; 1 mM dk⁻¹ H₂O₂'yi bozundurmak için gerekli enzim miktarı olarak tanımlanmıştır. KAT aktivitesi U g⁻¹ TA dk⁻¹ [27] cinsinden ifade edilmiştir.</p>
+<p>SOD aktivitesi Dhindsa ve ark. [28]'ın yöntemine göre belirlenmiştir. Yöntem; SOD'un nitroblu tetrazoliyum'un (NBT) fotokimyasal indirgenmesini inhibe etme kapasitesine dayanmaktadır.</p>
+<h3>2.7 Yaprak ve Kormlardaki Karbonhidratların Belirlenmesi</h3>
+<p>Karbonhidrat konsantrasyonunu denemek için çiçeklenmeden 120 gün sonra hem genç yapraklar hem de kız soğancıklar toplandı. Toplam çözünür karbonhidratlar; numunelerin sıvı nitrojende öğütüldüğü, 0,2 g dokunun 7 mL %70 etanol (w/v) ile buz üzerinde 5 dakika karıştırılarak 4°C'de 10 dakika 6700×g'de santrifüjlendiği antrona prosedürü kullanılarak analiz edilmiştir.</p>
+<h3>2.8 İstatistiksel Analiz</h3>
+<p>Veriler; her ışık uygulamasında 20 bitki kullanılarak altı farklı ışık uygulamasıyla 'tamamen randomize tasarım' yöntemi kullanılarak istatistiksel olarak değerlendirilmiştir. Her bitki bağımsız replikat olarak alınmıştır. Analiz için uygulamaya göre 6 (morfolojik özellikler dışındaki tüm ölçümler için) veya 9 (morfolojik özellikler için) replikat dikkate alınmıştır. Veriler; varyans analizine (ANOVA) tabi tutulmuş; ortalamalar SAS yazılımı (Sürüm 9.4) kullanılarak %0,01 anlamlılık düzeyinde Duncan'ın çoklu aralık testine göre karşılaştırılmıştır.</p>
+<hr />
+<h2>3. Sonuçlar</h2>
+<h3>3.1 Bitki Morfolojisi ve Mimarisi</h3>
+<p>Klorofil absorpsiyon spektraları, fotosentez ve büyüme için temel ışık spektraları M ve K ışığı olsa da bunların soğanlı bitkilerde büyüme, gelişim ve biyokütle dağılımı üzerindeki rolleri üzerine çalışmalar yetersiz kalmaktadır. Bu çalışmada 25°C'de karanlık koşullarda 90 günlük inkübasyonun ardından korm, çiçek çıkışı için ışık uygulamaları altında 17°C'de inkübe edilmiştir. Çiçeklenme; ışık uygulamasından 20–28 gün sonra gerçekleşmiştir.</p>
+<p><strong>Tablo 2: Farklı Mavi (M) ile Kırmızı (K) ışık oranları altında yetiştirilen safran bitkilerinin çiçek özellikleri</strong> (150±10 µmol m⁻² s⁻¹ PPFD, Duncan testi p≤0,01)</p>
+<table>
+<thead>
+<tr>
+<th>Uygulama</th>
+<th>Korm Başına Çiçek Sayısı</th>
+<th>Çiçek TA (mg)</th>
+<th>Çiçek KA (mg)</th>
+<th>Stigma TA (mg)</th>
+<th>Stigma KA (mg)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%100 M</td>
+<td>2,3 a</td>
+<td>622,2 a</td>
+<td>112,7 a</td>
+<td>54,03 a</td>
+<td>16,57 a</td>
+</tr>
+<tr>
+<td>%75 M</td>
+<td>0,98 b</td>
+<td>408,3 bc</td>
+<td>48,43 bc</td>
+<td>44,03 b</td>
+<td>9,25 b</td>
+</tr>
+<tr>
+<td>%50 M</td>
+<td>1,3 ab</td>
+<td>494,4 b</td>
+<td>75,44 b</td>
+<td>52,03 ab</td>
+<td>13,33 ab</td>
+</tr>
+<tr>
+<td>%40 M</td>
+<td>0,66 c</td>
+<td>277,9 c</td>
+<td>45,03 bc</td>
+<td>35,86 c</td>
+<td>5,83 c</td>
+</tr>
+<tr>
+<td>%25 M</td>
+<td>0,77 c</td>
+<td>275 c</td>
+<td>42,43 bc</td>
+<td>24,54 c</td>
+<td>4,03 c</td>
+</tr>
+<tr>
+<td>%0 M</td>
+<td>0,66 c</td>
+<td>222 c</td>
+<td>32,03 c</td>
+<td>26,03 c</td>
+<td>3,83 c</td>
+</tr>
+<tr>
+<td>p değeri</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+<td>0,0027</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+</tr>
+<tr>
+<td>VK%</td>
+<td>20</td>
+<td>18,6</td>
+<td>15</td>
+<td>11,4</td>
+<td>15,5</td>
+</tr>
+</tbody>
+</table>
+<p>Sonuçlara göre (Tablo 2); M ışığı altında yetiştirilen safran bitkilerinin çiçek sayısı, K ışığı altında yetiştirilenlerin yaklaşık dört katıdır. Ancak %50 M'den daha az M içeren uygulamalar arasında (%40 M, %25 M ve %0 M) anlamlı fark bulunmamıştır. K ışığı altında yetişen bitkilerde en yüksek yaprak sayısı ve artan yaprak uzunluğu gözlemlenmiştir. Buna karşılık M ışığı bitki kompaktlığına yol açmıştır.</p>
+<p><strong>Tablo 3: Farklı Mavi (M) ile Kırmızı (K) ışık oranları altında yetiştirilen safran bitkilerinin yaprak ve kök özellikleri</strong> (150±10 µmol m⁻² s⁻¹ PPFD, Duncan testi p≤0,01)</p>
+<table>
+<thead>
+<tr>
+<th>Uygulama</th>
+<th>Yaprak Sayısı</th>
+<th>Yaprak TA (mg)</th>
+<th>Yaprak KA (mg)</th>
+<th>Yaprak Uzunluğu (cm)</th>
+<th>Kök TA (mg)</th>
+<th>Kök KA (mg)</th>
+<th>Kök Uzunluğu (cm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%100 M</td>
+<td>15,27 d</td>
+<td>4,33 c</td>
+<td>0,73 b</td>
+<td>46,4 d</td>
+<td>4,93 a</td>
+<td>0,44 a</td>
+<td>3,47 a</td>
+</tr>
+<tr>
+<td>%75 M</td>
+<td>15,53 d</td>
+<td>4 c</td>
+<td>0,67 b</td>
+<td>45 d</td>
+<td>3,93 b</td>
+<td>0,22 c</td>
+<td>3,03 ab</td>
+</tr>
+<tr>
+<td>%50 M</td>
+<td>16,6 c</td>
+<td>5,16 b</td>
+<td>0,5 c</td>
+<td>50 c</td>
+<td>5,03 a</td>
+<td>0,49 a</td>
+<td>3,33 a</td>
+</tr>
+<tr>
+<td>%40 M</td>
+<td>17,3 b</td>
+<td>6,5 a</td>
+<td>1,66 a</td>
+<td>53,03 b</td>
+<td>3,5 bc</td>
+<td>0,27 bc</td>
+<td>2,03 b</td>
+</tr>
+<tr>
+<td>%25 M</td>
+<td>20,77 a</td>
+<td>5,5 ab</td>
+<td>0,61 b</td>
+<td>50,9 c</td>
+<td>3,98 b</td>
+<td>0,36 b</td>
+<td>2,9 b</td>
+</tr>
+<tr>
+<td>%0 M</td>
+<td>18,66 ab</td>
+<td>6,33 a</td>
+<td>1,03 a</td>
+<td>59,77 a</td>
+<td>1,83 c</td>
+<td>0,14 c</td>
+<td>1,77 b</td>
+</tr>
+<tr>
+<td>p değeri</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+<td>0,0003</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+</tr>
+<tr>
+<td>VK%</td>
+<td>20,17</td>
+<td>17,56</td>
+<td>25</td>
+<td>16,4</td>
+<td>18,43</td>
+<td>25</td>
+<td>15,5</td>
+</tr>
+</tbody>
+</table>
+<p>Korm üretimi; bu çalışmanın en önemli amacı olan safran vejetatif büyümesinin en önemli parçasıdır. Korm üretimi ve kız soğancık özellikleri ışık spektrasından anlamlı ölçüde (p≤0,01) etkilenmiştir (Tablo 4). M ile K ışığı oranı arttıkça kız soğancıklar daha ağır hale gelmiş; ancak bu durum sayılarının azalması pahasına gerçekleşmiştir. Safranda kız soğancığın ağırlığı bir sonraki yılın verimini belirlediğinden büyük önem taşımaktadır [9]. Buna göre %50 M uygulaması; uygun sayıda ağır kız soğancık üreterek uygulamalar arasında en yüksek verimliliği sağlamıştır.</p>
+<p><strong>Tablo 4: Farklı Mavi (M) ile Kırmızı (K) ışık oranları altında yetiştirilen safran bitkilerinin kız soğancık özellikleri</strong> (150±10 µmol m⁻² s⁻¹ PPFD, Duncan testi p≤0,01)</p>
+<table>
+<thead>
+<tr>
+<th>Uygulama</th>
+<th>Ana Korm Başına Kız Soğancık Sayısı</th>
+<th>En Büyük Kız Soğancık (g)</th>
+<th>Kız Soğancık Çapı (mm)</th>
+<th>Kız Soğancık TA (g)</th>
+<th>Kız Soğancık KA (g)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%100 M</td>
+<td>2,06 c</td>
+<td>6,47 a</td>
+<td>23,39 a</td>
+<td>10,5 a</td>
+<td>5,57 a</td>
+</tr>
+<tr>
+<td>%75 M</td>
+<td>3 b</td>
+<td>3,03 b</td>
+<td>19,43 b</td>
+<td>6 b</td>
+<td>2,67 c</td>
+</tr>
+<tr>
+<td>%50 M</td>
+<td>2,88 ab</td>
+<td>5,33 a</td>
+<td>22,38 a</td>
+<td>9,95 a</td>
+<td>4,25 b</td>
+</tr>
+<tr>
+<td>%40 M</td>
+<td>3 b</td>
+<td>3,07 b</td>
+<td>19 b</td>
+<td>6,03 b</td>
+<td>2,46 c</td>
+</tr>
+<tr>
+<td>%25 M</td>
+<td>3,3 b</td>
+<td>2,9 bc</td>
+<td>17,86 bc</td>
+<td>5,06 b</td>
+<td>2,16 c</td>
+</tr>
+<tr>
+<td>%0 M</td>
+<td>4 a</td>
+<td>1,97 c</td>
+<td>15,66 c</td>
+<td>4,03 c</td>
+<td>0,83 d</td>
+</tr>
+<tr>
+<td>p değeri</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+<td>&lt;0,0001</td>
+</tr>
+<tr>
+<td>VK%</td>
+<td>11,3</td>
+<td>20</td>
+<td>6,2</td>
+<td>16,7</td>
+<td>15,54</td>
+</tr>
+</tbody>
+</table>
+<h3>3.2 Karbonhidrat İçerikleri ve Biyokütle Dağılımı</h3>
+<p>Farklı ışık spektralarının farklı organlardaki karbonhidrat translokasyonu ve birikimine etkisini araştırmak amacıyla hem yaprak hem de korm dokularındaki çözünür ve depolama (nişasta) karbonhidrat miktarı ölçülmüştür. Sonuçlar; karbonhidrat içeriğinin farklı M ile K ışığı oranlarından anlamlı biçimde etkilendiğini göstermiştir.</p>
+<p>Yapraklardaki karbonhidrat içeriklerinin sonuçları; artan nişasta içeriği ile azalan M ışığı yüzdesi arasında doğrusal bir ilişki ortaya koymuştur. En yüksek nişasta miktarı %25 M ışığında (91,9 mg g⁻¹ TA) gözlemlenirken en düşük miktarlar %0 M ya da %75 M'de (87,9 mg g⁻¹ TA) görülmüştür. Aksine çözünür karbonhidrat içeriği; M ışığı yüzdesinin artmasıyla artış trendi göstermiştir.</p>
+<p>Kormlardaki karbonhidrat içeriklerine ilişkin sonuçlar, yapraklardan elde edilenlerden farklılık göstermiştir. %50 M ışığının altındaki uygulamalar arasında korm karbonhidratları açısından anlamlı fark bulunmamış; ancak %50 M üzerindeki uygulamalarla karşılaştırıldığında anlamlı farklar ortaya çıkmıştır. %100 M ışığında yetiştirilen kormlarda en düşük çözünür karbonhidrat miktarı (63,05 mg g⁻¹ TA) kaydedilmiştir. %0 M (tek renkli K) uygulamasında kormlardaki çözünür karbonhidratlar %100 M'inkinin 1,5 katıdır.</p>
+<p>Biyokütle dağılımı açısından %100 M ışığı altındaki bitkilerin biyokütlesinin %78,8'i yeraltı organlarına ayrılmış; bunun %53,6'sı korm üretiminden, %25,2'si ise yeni köklerden kaynaklanmıştır. K ışığının oranının artması; biyokütlenin toprak üstü parçalara —özellikle yapraklara (~%54)— yönelmesine neden olmuştur. Çiçek ve stigmaya yönelik en yüksek biyokütle dağılım yüzdesi; %100 M ışığı altında yetiştirilen bitkilerde kaydedilmiş olup %0 M ışığındakilere kıyasla yaklaşık üç ila dört kat fazladır.</p>
+<h3>3.3 Fotosentetik Parametreler</h3>
+<p>Farklı ışık spektralarının enerji içeriği; fotosentetik aparatın elektron taşıma zincirini doğrudan etkileyen Kl pigmentleri tarafından absorplanmaktadır. Bu nedenle farklı M ışığı oranları altında yetiştirilen safran bitkilerinin karanlık adapte yapraklarında polifazik Kl-a floresans (OJIP) analiz edilmiştir.</p>
+<p>PSII'nin maksimum kuantum verimi (Fv/Fm); farklı ışık uygulamalarından anlamlı biçimde etkilenmiştir. Sonuçlar; Fv/Fm değerinin tüm uygulamalarda M ile K ışığı oranının azalmasıyla anlamlı ölçüde düştüğünü göstermiştir. En yüksek Fv/Fm (0,83), %100 M ışığı uygulamasında kaydedilmiştir. Sağlıklı bitkilerin Fv/Fm değerinin yaklaşık 0,83 olduğu bilinmektedir [45–47]; bu çalışmada da yüksek M yüzdesindeki bitkiler bu optimal değeri sergilemiştir.</p>
+<p>Reaksiyon merkezi (RM) başına özgün enerji akıları: ABS/RC, TR₀/RC ve DI₀/RC parametreleri; M ışığı oranının artmasıyla azalmıştır. Bu parametrelerin en yüksek değerleri; %0 M altında yetiştirilen bitkilerde gözlemlenmiştir. TR₀/RC ise K ışığı yüzdesinin artmasıyla yükselmiştir. ET₀/RC oranı da genel ışık spektrumunda M oranının azalmasıyla düşmüş; bu durum M ışığının PSII aparatında normal elektron taşınımını sürdürmedeki belirgin önemini göstermiştir.</p>
+<p>Absorpsiyon bazındaki performans indeksi (PIABS): Yüksek M ışığı oranlarıyla anlamlı biçimde artmış; en yüksek değeri %100 M uygulamasında kaydetmiştir. Enerji disipasyonunun kuantum verimi (ϕD₀) ve birincil fotokimya için ortalama kuantum verimi (ϕPAV); M ışığı oranının artmasıyla kademeli olarak azalmıştır. En düşük PIABS değeri %0 M'de kaydedilmiştir.</p>
+<h3>3.4 Pigment İçeriği</h3>
+<p>Pigment konsantrasyonu; farklı ışık spektrumlarının saffron yapraklarındaki pigment birikimine etkisini incelemek amacıyla analiz edilmiştir. En yüksek Kl-a, Kl-b, Kl a+b ve Kl a/b içerikleri %100 M uygulamasında gözlemlenmiştir. Kl-a içeriği; monokromatik M ışığında en yüksek düzeyde kaydedilirken kombinasyon uygulamaları (%75, %50, %40 ve %25 M ışığı) arasında en düşük konsantrasyon saptanmıştır. Kl-a/b oranı; %100 M ışığına maruz kalan bitkilerde en yüksek sırayı almış; %0 M uygulamasına kıyasla 1,5 kat fazla bulunmuştur.</p>
+<p>Karotenoid birikimi; monokromatik M ışığı altında yetiştirilen bitkilerde artmış; bunu %75 M ve monokromatik K izlemiştir. Buna karşılık %50, %40 ve %25 M'ye maruz kalan yapraklar; anlamlı fark olmaksızın en düşük karotenoid miktarını göstermiştir.</p>
+<h3>3.5 Antioksidan Kapasitesi</h3>
+<p>M ve K ışığının farklı oranları; DPPH radikal temizleme aktivitesi (antioksidan kapasitesi) üzerinde anlamlı etkiler göstermiştir. %50'nin üzerinde M içeren uygulamalara maruz kalan bitkiler; kararlı DPPH serbest radikal temizleme aktivitesinde olumlu etkiler sergilemiş; daha düşük M oranlarıyla (%40 ve %50 M) yetiştirilenlerden daha yüksek antioksidan kapasitesi göstermiştir. En düşük DPPH aktivitesi yüzdesi; tek renkli K ışığında yetiştirilen bitkilerde saptanmıştır.</p>
+<h3>3.6 Antioksidan Enzim Aktivitesi</h3>
+<p>M ile K ışığının farklı oranları; APX, KAT ve SOD enzim aktivitelerini zıt yönlerde anlamlı biçimde etkilemiştir. APX aktivitesi; M ile K ışığı oranının azalmasıyla düşüş trendi göstermiştir. %100 M'ye maruz kalan bitkilerde saptanan en yüksek APX aktivitesi; %0 M ışığında yetiştirilen bitkidekinin 2,7 katıdır. İki monokromatik uygulama dışındaki uygulamalarda (tek renkli K ve M) KAT aktivitesinde kademeli azalma kaydedilmiştir. En yüksek KAT aktivitesi; %75 M ışığında yetiştirilen bitkilerde gözlemlenmiş olup %0 M ışığındakinin 4,7 katıdır. Buna karşın SOD aktivitesi; K ile M ışığı oranının artmasıyla azalmıştır. En yüksek SOD aktivitesi; tek renkli K ışığına maruz kalan bitkilerde kaydedilmiştir. K ışığı altındaki bitkinin SOD aktivitesi; %75 M ışığındakinin 1,5 katıdır.</p>
+<hr />
+<h2>4. Tartışma</h2>
+<h3>4.1 Safran Bitkilerinin Büyümesi ve Morfolojisi Işık Kalitesinden Etkilendi</h3>
+<p>Fotomorfogenez; bitkinin çevreye uyumunu kolaylaştıran bir bitki stratejisidir. Bu süreç; K ışığına duyarlı fitokromlar (FTK), M ışığına duyarlı kriptokromlar (KRİ) ve fototropinler (FOT) gibi ışık reseptörleri tarafından düzenlenen ışıktan doğrudan etkilenmektedir. Işık reseptörlerinin ürettiği sinyaller; farklı büyüme yollarında fizyolojik ve biyokimyasal değişiklikleri tetikler [32].</p>
+<p>Bu çalışmada beklenen şekilde; farklı aydınlatma koşulları altında yetiştirilen bitkilerin farklı parçalarında belirgin morfolojik yanıtlar gözlemlenmiştir. Yüksek M ile K ışığı oranları; en yüksek çiçek TA ve KA'sıyla birlikte daha fazla çiçek oluşumuna neden olmuştur. M ışığı altında yetişen bitkilerde stigma TA ve KA üzerinde olumlu etkiler kaydedilmiştir. M ışığının; KRİ ile çiçeklenme genleri (ÇIÇEKLENME LOKUS T (FT) ve CONSTANS (CO)) arasındaki etkileşim yoluyla çiçeklenmeyi desteklediğine dair kanıtlar mevcuttur [32]. K ışığı ise çiçeklenmeyi olumsuz yönde etkilemiştir.</p>
+<p>Mavi ışık, CRY1 aracılığıyla hipokotil hücre uzamasını baskılayarak hücre büyümesini ve gelişimini uyarmaktadır [34]. K ışığı ise giberellinlerin (GA'lar) düzenlenmesiyle gövde uzamasını desteklemiştir [36].</p>
+<h3>4.2 M Işığı Karbonhidratları ve Biyokütleyi Safranda Yeraltı Organlarına Yöneltti</h3>
+<p>En yüksek nişasta konsantrasyonları (hem kormlarda hem de yapraklarda); yüksek M ile K ışığı oranı içeren uygulamalarda saptanmıştır. Bu sonuçlar; M ışığının kız soğancıkların gelişim aşamasında nişasta birikimini artırarak karbonhidrat depolanmasını teşvik ettiğini göstermektedir. Öte yandan K ışığı bitkilerini yaprak büyümesi ve yapraklardaki nişasta birikimine yöneltmiştir.</p>
+<p>K ışığının; yapraklardaki yüksek karbonhidrat miktarı nedeniyle fotosentezi azaltacak şekilde yapraklardan depo organlarına karbonhidrat taşınımını engellediği bildirilmiştir [15]. %100 K ışığı altında yetiştirilen bitkilerin toprak üstü kısımlarında 2,6 kat daha fazla biyokütle ürettiği görülmektedir; bu durum K ışığının yaprak büyümesini artırdığını desteklemektedir.</p>
+<h3>4.3 Safran Bitkilerinin Fotosentetik İşlevselliği K Işığıyla Aşağı Yönde Düzenlendi</h3>
+<p>Bu çalışmada sağlıklı bitkilerin yaklaşık 0,83'lük Fv/Fm değerine ulaştığı bilinmektedir [45–47]. Yüksek M ışığı yüzdesi altında yetiştirilen bitkiler optimal Fv/Fm değerini gösterirken en düşük değer %0 M'de (tek renkli K ışığı) gözlemlenmiştir. K ışığıyla Fv/Fm'nin azalması; PSII reaksiyon merkezlerinin inaktivasyonu ve D₁ proteininin hasarından kaynaklanan fotokimyasal aktivitedeki düşüşe bağlanmaktadır [48].</p>
+<p>DI₀/RC ve ϕD₀; PSII'deki enerji disipasyonunu göstermekte olup bu parametrelerin yüksek değeri enerjinin büyük ölçüde ısıya dönüştürüldüğüne işaret eder. Yüksek K ışığı oranında yetiştirilen bitkilerde bu parametreler artmış; bu durum M ile K ışığı oranının azalmasıyla fotosentez verimliliğinin aşağı yönde düzenlendiğine işaret etmiştir.</p>
+<h3>4.4 Safranda Pigment Birikimi M Işığına Maruz Kalmayla Gerçekleşti</h3>
+<p>M ışığı; 5-aminolevulinik asit (ALA) biyosentezini artırarak Kl biyosentez yolundaki önemli genlerin (MgCH, GluTR, FeCH) ekspresyonunu yukarı yönde düzenler ve böylece kloroplas gelişimini uyararak fotosentetik performansı artırır [14,32]. Karotenoidler; M bölgesinde güçlü ışık absorpsiyonu gösterip maksimum piklere 454 ve 448 nm'de ulaşır [17]. M ışığının karotenoid biyosentezi ve birikimi üzerinde sinerjistik etki gösterebileceği bildirilmiştir.</p>
+<h3>4.5 Işık Kalitesinin Safranda Antioksidan Enzimleri ve Oksidatif Hasara Etkisi</h3>
+<p>Süperoksit dismutaz (SOD); serbest oksijen radikallerini H₂O₂'ye dönüştüren birinci savunma hattı olarak görev yapar; ardından oluşan H₂O₂, KAT ve APX tarafından H₂O'ya dönüştürülür. Bu nedenle KAT ve APX aynı aktiviteye sahiptir [67]. M ışığının APX ve KAT aktivitesini artırdığı, bu aydınlatma ortamının ise SOD aktivitesini azalttığı saptanmıştır. Bu sonuçlar; M ışığının bitkinin antioksidan kapasitesini artırıcı etkiyle örtüşmektedir. Bayat ve ark. [57]; SOD aktivitesi ile H₂O₂ üretimi arasında olumlu bir korelasyon bulurken KAT ve APX'in H₂O₂ üretimini olumsuz yönde düzenlediğini bildirmiştir. Ayrıca depolama karbonhidrat içeriği ile SOD aktivitesi arasında olumsuz bir ilişki saptamışlardır [57].</p>
+<hr />
+<h2>5. Sonuçlar</h2>
+<p>Ana besin kaynağı olarak korm; safran yaşam döngüsünde kritik bir rol üstlenmektedir. Kormlarin büyüklüğü ve ağırlığı; stigma verimliliğini ve kız soğancıkların kalitesini belirlemekle kalmaz, ayrıca hasat döneminin süresini de etkiler.</p>
+<p>Bu çalışma; bitki fotosentezi için iki önemli ışık spektrasının (K ve M ışığı) farklı oranlarının safranda biyokütle dağılımı, fotosentetik performans ve biyokimyasal özellikler üzerindeki etkilerini ilk kez araştırmıştır. Yüksek oranlı M ışığı; daha yüksek stigma verimiyle çiçek üretimini artırmış ve kompakt bitki oluşumunu desteklemiştir. Bunun yanı sıra ışık spektrumunun bu bölgesi; PSII ile PSI arasındaki elektron akışını kolaylaştırarak safran bitkilerinin fotosentetik performansını geliştirmiştir.</p>
+<p>Yüksek M ile K ışığı oranı; korm üretimini ve safran bitkilerinin en yüksek karbonhidrat birikimini olumlu yönde etkilemiştir. M ışığı; korm organında nişasta birikimini uyarmış ve artırmıştır. Bu durum; M ışığının yüksek fotosentetik performansı sürdürme kapasitesiyle ilişkilendirilebilir.</p>
+<p>M ile K ışığı oranının artması; bitkileri yeraltı organları üretmeye yönlendirerek ağır kız soğancıkların oluşumuna zemin hazırlamıştır. Buna karşın yüksek K ışığı oranları; yanal tomurcuk üretimini uyararak bitkinin yaprak yönünde gelişimine neden olmuştur. M ışığı; antioksidan kapasiteyi artırmış, KAT ve APX aktivitesini desteklemiştir.</p>
+<p>Bu çalışmanın bulguları; M ışığının daha iyi fotosentetik verime yol açtığını, böylece daha fazla fotosentetik ürün ürettiğini ve en sonunda safranda hasat edilebilir organların (korm ve çiçekler) üretimi ile gelişimini olumlu etkilediğini ortaya koymaktadır. Üretilen kız soğancık sayısı ve ağırlığı arasındaki denge gözetildiğinde <strong>%50 M uygulaması en verimli uygulama</strong> olarak öne çıkmaktadır.</p>
+<hr />
+<h2>Kaynaklar</h2>
+<ol>
+<li>Fernández J.A. Genetic resources of saffron and allies (Crocus spp.). <em>Acta Hortic.</em> 2007, 739, 167–185.</li>
+<li>Molina R.V., ve ark. Greenhouse saffron culture—temperature effects on flower emergence and vegetative growth. <em>Acta Hortic.</em> 2010, 850, 91–94.</li>
+<li>Kozai T., Niu G., Takagaki M. <em>Plant Factory</em>. Elsevier, 2020.</li>
+<li>Kozai T. Resource use efficiency of closed plant production system with artificial light. <em>Proc. Jpn. Acad. Ser. B</em> 2013, 89, 447–461.</li>
+<li>Eldridge B.M., ve ark. Getting to the roots of aeroponic indoor farming. <em>New Phytol.</em> 2020, 228, 1183–1192.</li>
+<li>Souret F.F., Weathers P.J. The growth of saffron in aeroponics and hydroponics. <em>J. Herbs Spices Med. Plants</em> 2000, 7, 25–35.</li>
+<li>Maggio A., ve ark. Soilless cultivation of saffron in Mediterranean environment. <em>Acta Hortic.</em> 2006, 718, 515–521.</li>
+<li>Çavuşoğlu A., ve ark. Saffron studies with two mother corm dimensions on yield. <em>Am. J. Sustain. Agric.</em> 2009, 3, 126–129.</li>
+<li>Renau-Morata B., ve ark. Effect of corm size, water stress and cultivation conditions on photosynthesis and biomass partitioning during saffron vegetative growth. <em>Ind. Crop. Prod.</em> 2012, 39, 40–46.</li>
+<li>Poggi L.M., ve ark. New proposal for handling of saffron flowering under environmentally controlled conditions. <em>Acta Hortic.</em> 2017, 1184, 245–252.</li>
+<li>Molina R.V., ve ark. The effect of time of corm lifting and duration of incubation. <em>Sci. Hortic.</em> 2004, 103, 79–91.</li>
+<li>Molina R.V., ve ark. Temperature effects on flower formation in saffron. <em>Sci. Hortic.</em> 2005, 103, 361–379.</li>
+<li>Molina R.V., ve ark. Low temperature storage of corms extends the flowering season of saffron. <em>J. Hortic. Sci. Biotechnol.</em> 2005, 80, 319–326.</li>
+<li>Klem K., ve ark. Distinct morphological, physiological, and biochemical responses to light quality in barley. <em>Front. Plant Sci.</em> 2019, 10.</li>
+<li>Dou H., ve ark. Effects of light quality on growth and phytonutrient accumulation of herbs under controlled environments. <em>Horticulturae</em> 2017, 3, 36.</li>
+<li>Fan X.X., ve ark. Effects of different light quality on growth, chlorophyll concentration and chlorophyll biosynthesis precursors of non-heading Chinese cabbage. <em>Acta Physiol. Plant.</em> 2013, 35, 2721–2726.</li>
+<li>Amiri A., ve ark. Tulip response to different light sources. <em>J. Anim. Plant Sci.</em> 2018, 28, 539–545.</li>
+<li>Aalifar M., ve ark. Blue light improves vaselife of carnation cut flowers through its effect on the antioxidant defense system. <em>Front. Plant Sci.</em> 2020, 11.</li>
+<li>Seif M., ve ark. Monochromatic red light during plant growth decreases the size and improves the functionality of stomata in chrysanthemum. <em>Funct. Plant Biol.</em> 2021, 48, 515–528.</li>
+<li>Hoagland D.R., Arnon D.I. The water-culture method for growing plants without soil. <em>Circ. Calif. Agric. Exp. Stn.</em> 1938, 347, 32.</li>
+<li>Miyagawa S., ve ark. Effect of plant shoot number and air temperature on saffron corm production and total crocin content. <em>Shokubutsu Kankyo Kogaku</em> 2015, 27, 204–212.</li>
+<li>Kajikawa N., ve ark. Effect of far-red light on saffron growth and crocin yields. <em>Environ. Control Biol.</em> 2018, 56, 51–57.</li>
+<li>Sharma O.P., Bhat T.K. DPPH antioxidant assay revisited. <em>Food Chem.</em> 2009, 113, 1202–1205.</li>
+<li>Naznin M.T., ve ark. Blue light added with red LEDs enhance growth characteristics, pigments content, and antioxidant capacity in lettuce, spinach, kale, basil, and sweet pepper. <em>Plants</em> 2019, 8, 93.</li>
+<li>Yu X., ve ark. The cryptochrome blue light receptors. <em>Arab. Book</em> 2010, 8, e0135.</li>
+<li>Dierck R., ve ark. Light quality regulates plant architecture in different genotypes of chrysanthemum. <em>Sci. Hortic.</em> 2017, 218, 177–186.</li>
+<li>Yang F.O., ve ark. Transcriptome analysis reveals that red and blue light regulate growth and phytohormone metabolism in Norway spruce. <em>PLoS ONE</em> 2015, 10, e0127896.</li>
+<li>Hernández R., Kubota C. Physiological responses of cucumber seedlings under different blue and red photon flux ratios. <em>Environ. Exp. Bot.</em> 2016, 121, 66–74.</li>
+<li>Lian M.L., ve ark. Effects of light emitting diodes (LEDs) on the in vitro induction and growth of bulblets of Lilium oriental hybrid "Pesaro". <em>Sci. Hortic.</em> 2002, 94, 365–370.</li>
+<li>Kalaji H.M., ve ark. Chlorophyll a fluorescence as a tool to monitor physiological status of plants under abiotic stress conditions. <em>Acta Physiol. Plant.</em> 2016, 38, 102.</li>
+<li>Chen Y.E., ve ark. Salicylic acid protects photosystem II by alleviating photoinhibition in Arabidopsis thaliana under high light. <em>Int. J. Mol. Sci.</em> 2020, 21, 1229.</li>
+<li>Hogewoning S.W., ve ark. Blue light dose-responses of leaf photosynthesis, morphology, and chemical composition of Cucumis sativus. <em>J. Exp. Bot.</em> 2010, 61, 3107–3117.</li>
+<li>Aliniaeifard S., ve ark. Growth and photosynthetic performance of Calendula officinalis under monochromatic red light. <em>Int. J. Hortic. Sci. Technol.</em> 2018, 5, 123–132.</li>
+<li>Hosseini A., ve ark. Photosynthetic and growth responses of green and purple basil plants under different spectral compositions. <em>Physiol. Mol. Biol. Plants</em> 2019, 25, 741–752.</li>
+<li>Bayat L., ve ark. Effects of growth under different light spectra on the subsequent high light tolerance in rose plants. <em>AoB Plants</em> 2018.</li>
+<li>Liu X., ve ark. Interplay between light and plant hormones in the control of Arabidopsis seedling chlorophyll biosynthesis. <em>Front. Plant Sci.</em> 2017, 8, 1433.</li>
+<li>Aalifar M., ve ark. Blue light postpones senescence of carnation flowers through regulation of ethylene and abscisic acid pathway-related genes. <em>Plant Physiol. Biochem.</em> 2020, 151, 103–112.</li>
+<li>Hasanuzzaman M., ve ark. Reactive oxygen species and antioxidant defense in plants under abiotic stress. <em>Antioxidants</em> 2020, 9, 681.</li>
+</ol>
+<hr />
+<p><em>Çeviri notu: Bu makale, Cells dergisinde 2021 yılında (10, 1994) yayımlanan araştırma makalesinin tam Türkçe çevirisidir. Makale; LED ışık spektrum oranının safran bitkisinde fotosentez, biyokütle dağılımı, korm üretimi ve antioksidan enzim aktivitesi üzerine etkilerini kapsamlı biçimde incelemektedir. OJIP analizi, klorofil floresansı ve biyokimyasal parametreler Crocus sativus L. üzerinde yürütülen kapalı LED ortamı deneyiyle test edilmiştir.</em></p>
+  </div>
+</div>
+</main>
+
+<footer>
+    <div class="container">Safran Topluluğu — Bilimsel kaynaklara dayalı safran yetiştiriciliği</div>
+</footer>
+
+</body>
+</html>

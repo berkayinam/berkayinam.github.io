@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hidroponik ve Aeroponik Sistemler — Mühendislik Tasarımı (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-full { border-color: #D97706; color: #D97706; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h1 { font-size: 1.5rem; margin-top: 2.5em; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.88rem; overflow-x: auto; display: block; }
+        .post-content th { background: #f7f7f7; font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #ddd; }
+        .post-content td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        .post-content tr:nth-child(even) td { background: #fafafa; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; }
+        .post-content code { font-family: monospace; background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.3em; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+
+  'indoor-saffron-production-profitability-blueprint':                          {lang:'en', pair:'i-c-mekanda-safran-uretimi-karlilik-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint':                              {lang:'tr', pair:'indoor-saffron-production-profitability-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'iot-based-smart-aeroponic-system-for-saffron-cultivation-2':                 {lang:'en', pair:'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2'},
+  'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2':           {lang:'tr', pair:'iot-based-smart-aeroponic-system-for-saffron-cultivation-2'},
+  'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3':         {lang:'en', pair:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3':          {lang:'tr', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4':           {lang:'en', pair:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4':                  {lang:'tr', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5':           {lang:'en', pair:'tetikleyici-hava-kosullari-safran-fenolojisi-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-5':                             {lang:'tr', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'saffron-aeroponic-cultivation-step-by-step-visual-guide':                    {lang:'en', pair:'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber'},
+  'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber':                 {lang:'tr', pair:'saffron-aeroponic-cultivation-step-by-step-visual-guide'},
+  'saffron-hydroponic-vertical-farming-concept-and-design-7':                   {lang:'en', pair:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7':                         {lang:'tr', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'saffron-production-life-cycle-biology-dormancy-and-flowering-8':             {lang:'en', pair:'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8'},
+  'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8':                   {lang:'tr', pair:'saffron-production-life-cycle-biology-dormancy-and-flowering-8'},
+  'smart-hydroponic-framework-for-saffron-precision-agriculture-9':             {lang:'en', pair:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-9':                          {lang:'tr', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'growth-medium-vegetative-productivity-and-corm-quality-10':                  {lang:'en', pair:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10':                    {lang:'tr', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11':         {lang:'en', pair:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11':              {lang:'tr', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12':      {lang:'en', pair:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12':                     {lang:'tr', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13':     {lang:'en', pair:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13':                  {lang:'tr', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'saffron-cultivation-using-aeroponics-viable-approach-2026-14':               {lang:'en', pair:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14':                {lang:'tr', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15':              {lang:'en', pair:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15':                     {lang:'tr', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'benchmarking-energy-efficiency-vertical-farming-18':                         {lang:'en', pair:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18':                      {lang:'tr', pair:'benchmarking-energy-efficiency-vertical-farming-18'},
+  'cradle-to-customer-lca-uk-vertical-farming-19':                              {lang:'en', pair:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19':                            {lang:'tr', pair:'cradle-to-customer-lca-uk-vertical-farming-19'},
+  'lca-urban-vertical-farm-construction-dismantling-20':                        {lang:'en', pair:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20':                    {lang:'tr', pair:'lca-urban-vertical-farm-construction-dismantling-20'},
+  'towards-sustainable-vertical-farming-eroi-review-21':                        {lang:'en', pair:'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21'},
+  'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21':                      {lang:'tr', pair:'towards-sustainable-vertical-farming-eroi-review-21'},
+  'innovation-vertical-farming-adaptive-vs-standard-22':                        {lang:'en', pair:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22':                        {lang:'tr', pair:'innovation-vertical-farming-adaptive-vs-standard-22'},
+  'sustainable-vf-machine-learning-iot-energy-23':                              {lang:'en', pair:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23':                         {lang:'tr', pair:'sustainable-vf-machine-learning-iot-energy-23'},
+  'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r': {lang:'en', pair:'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal'},
+  'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal':  {lang:'tr', pair:'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r'}
+
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint-full': {lang:'tr-full', pair:'indoor-saffron-production-profitability-blueprint', pairOzet:'i-c-mekanda-safran-uretimi-karlilik-blueprint'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3': {lang:'tr-full', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairOzet:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4': {lang:'tr-full', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairOzet:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-full-5': {lang:'tr-full', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairOzet:'tetikleyici-hava-kosullari-safran-fenolojisi-5'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7': {lang:'tr-full', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairOzet:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9': {lang:'tr-full', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairOzet:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10': {lang:'tr-full', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairOzet:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11': {lang:'tr-full', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairOzet:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12': {lang:'tr-full', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairOzet:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13': {lang:'tr-full', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairOzet:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14': {lang:'tr-full', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairOzet:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15': {lang:'tr-full', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairOzet:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15'},
+};
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a href="../index.html" class="site-logo">
+            <svg viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span>Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="https://ko-fi.com/safrantoplulugu" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="post-header">
+  <div class="container">
+    <div class="breadcrumb">
+        <a href="../index.html">Araştırmalar</a>
+        <span> / </span>
+        <span>Hidroponik ve Aeroponik Sistemler — Mühendislik Tasarımı</span>
+    </div>
+    <div class="full-badge">TR Full — Tam Çeviri</div>
+    <h1 class="post-title">Hidroponik ve Aeroponik Sistemler — Mühendislik Tasarımı</h1>
+    <div class="post-actions" id="langSwitchArea">
+        <div class="lang-switch" id="langSwitch"></div>
+    </div>
+    <script>
+    (function() {
+        var _parts = window.location.pathname.replace(/^\/|\/$/g, '').split('/').filter(function(p){ return p && p !== 'index.html'; });
+        var slug = _parts[_parts.length - 1] || '';
+        var info = window.LANG_MAP && window.LANG_MAP[slug];
+        if (!info) return;
+        var sw = document.getElementById('langSwitch');
+        if (!sw) return;
+        var html = '';
+        if (info.lang === 'tr-full') {
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pair + '/">EN →</a>';
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pairOzet + '/">TR Özet →</a>';
+            html += '<span class="lang-switch-current lang-switch-full">TR Full</span>';
+        }
+        sw.innerHTML = html;
+    })();
+    </script>
+  </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+    <h1>Hidroponik ve Aeroponik Sistemler: Mühendislik Tasarımı ve Performans Değerlendirmesi</h1>
+<p><strong>Kaynak:</strong> Dubey S., Giri B., Maurya R., Kanojiya R., Pal P. (Editörler). <em>Modern Horticulture: Science, Technology and Innovation</em>. Elite Publishing House, Yeni Delhi, 2026. ISBN: 978-93-71085-60-1. Bölüm 7, ss. 108–123.</p>
+<p><strong>Yazarlar:</strong> Aayush Biswas¹, Ayushi Trivedi², Nirjharnee Nandeha³ ve Vinay Kumar Gautam⁴</p>
+<p>¹ Orman Kaynakları Yönetimi Bölümü, Ormancılık ve Araştırma İstasyonu Fakültesi, Mahatma Gandhi Bahçe Bitkileri ve Ormancılık Üniversitesi, Sankara, Patan, Durg, Chhattisgarh – 491111</p>
+<p>² Doğal Kaynaklar Yönetimi Bölümü, Mahatma Gandhi Bahçe Bitkileri ve Ormancılık Üniversitesi, Ormancılık ve Araştırma İstasyonu Fakültesi, Sankara, Patan, Durg, Chhattisgarh – 491111, Hindistan</p>
+<p>³ Tarla Bitkileri Bölümü, Kumari Devi Choubey Tarım ve Araştırma İstasyonu Fakültesi, Saja, Indira Gandhi Krishi Vishwavidyalaya, Raipur, Chhattisgarh, 492001, Hindistan</p>
+<p>⁴ Doğal Kaynaklar Yönetimi Okulu, CPGS-AS, CAU (Imphal), Umiam-793103, Meghalaya, Hindistan</p>
+<hr />
+<h2>Özet</h2>
+<p>Geleneksel tarımdaki arazi kıtlığı, su stresi ve girdi verimsizlikleri; gıda üretiminde yenilikçi ve ölçeklenebilir çözümler gerektirmektedir. Bu bölüm, toprak içermeyen yetiştiricilik sistemleri arasındaki hidroponik ve aeroponik sistemlerin mühendislik temelli bir değerlendirmesini sunmakta; sıvı mekaniği, besin dağıtımı, çevre kontrolü ve yapısal otomasyonu entegre ederek topraksız yetiştiriciliği optimize etmeyi hedeflemektedir.</p>
+<p>Hidroponik sistemler, toprak tabanlı yöntemlere kıyasla metrekare başına 10–11 kat verim artışı sağlamış; ancak iklim ve besin düzenlemesi için daha yüksek enerji girdisi gerektirmiştir. Aeroponik sistemler kaynak verimliliği açısından hidroponiği geride bırakmış; NFT ve DWC gibi yöntemlere kıyasla %20–30 daha fazla biyokütle ve %60'ın üzerinde su tasarrufu elde etmiştir. Aeroponik başarının anahtarı; hassas besin sisleme ve kök bölgesi koşullarının gerçek zamanlı izlenmesidir; bu sayede bitkiler tuzluluk ve kuraklık gibi abiyotik streislere hızla yanıt verebilmektedir. Optimizasyon stratejileri; sıvı dinamiği, çevre mühendisliği ve sistem otomasyonuna dayanmakta olup biyolojik ve mekanik ilkeler uyum içinde işletilmektedir. Her iki sistem de kontrol ve verimlilik için mühendislik edildiğinde, kentsel ve kaynak kısıtlı tarım için dönüştürücü bir potansiyel sunmaktadır: yüksek verim, azaltılmış girdi ve artırılmış sürdürülebilirlik.</p>
+<p><strong>Anahtar Sözcükler:</strong> Kök Bölgesi İzleme, Biyokütle Verimliliği, Hassas Tarım, Sistem Otomasyonu</p>
+<hr />
+<h2>1. Giriş</h2>
+<p>Arazi bozunumu, tatlı su kıtlığı ve iklim değişkenliğinin büyüyen sorunları; geleneksel toprak temelli tarımın küresel gıda güvenliğini sürdürmedeki sınırlarını gözler önüne sermiştir. Bu bağlamda topraksız yetiştiricilik sistemleri —özellikle hidroponik ve aeroponik— geleneksel edafik kısıtlamaları ortadan kaldıran dönüştürücü agri-tek yenilikleri olarak öne çıkmıştır. Bu sistemler, doğal toprağın yerini inert substratlar ya da doğrudan besin dağıtım mekanizmaları alarak bitki büyümesi koşulları ve kaynak girdileri üzerinde hassas kontrol olanağı tanımakta; böylece mahsul üretiminin nerede ve nasıl gerçekleştirileceğini yeniden tanımlamaktadır.</p>
+<p>En köklü topraksız yöntem olan hidroponikte; bitki büyümesini desteklemek için besin açısından zengin su çözeltileri kullanılır; kök tutunması için çoğunlukla perlit, kil peletleri ya da torf gibi substratlarla desteklenir. Derin Akış Tekniği (DFT), Besin Filmi Tekniği (NFT), yüzen kültür ve damla sulama gibi sistem çeşitleri; otomasyon, su verimliliği ve risk azaltma açısından farklı konfigürasyonlar sunmaktadır (Min ve ark., 2023). Aeroponik bu paradigmayı ileri taşır: bitki kökleri havaya asılır ve programlanabilir aralıklarla besin sisi uygulanır; böylece havalanma ve besin alımı maksimize edilirken çevre kontrolü için titiz bir yönetim zorunlu olur (Regmi ve ark., 2024).</p>
+<p>Her iki sistem de Kontrollü Ortam Tarımı (KOT / CEA) çerçevesinde işler; sıcaklık, nem, pH ve besin konsantrasyonu gibi parametreler dinamik olarak düzenlenir. Bu model; yıl boyu üretim, su ve gübre kullanımında önemli azalmalar ve pestisit bağımlılığının minimizasyonunu sağlayarak kentsel ve çevreyerel tarım için ideal koşullar yaratır (Engler &amp; Krarti, 2021). Ancak yaygın benimseme; yüksek başlangıç maliyetleri, teknik karmaşıklık ve sürekli izleme ihtiyacıyla sınırlandırılmaktadır; bu durum, ölçeklenebilirlik, esneklik ve sürdürülebilirliği artırmada mühendislik yeniliğinin kritik rolünü vurgular.</p>
+<p>Bu bölüm; bitki fizyolojisi, sıvı dinamiği, çevre mühendisliği ve sistem otomasyonunu kapsayan disiplinlerarası temeller üzerine inşa edilmiş olup hidroponik ve aeroponik sistemlerin tasarımını ve performansını değerlendirerek geleceğe yönelik tarım için optimizasyon ve dönüştürücü potansiyele ilişkin içgörüler sunmaktadır.</p>
+<hr />
+<h2>2. Bilimsel Temeller</h2>
+<p>Hidroponik ve aeroponik koşullar altında bitki fizyolojisi; bu topraksız sistemlerin büyüme dinamiklerini nasıl etkilediğine ve biyolojik kısıtlamaların mühendislik tasarımını nasıl yönlendirdiğine dair kritik içgörüler sunar. Hidroponik sistemlerde kökler besin açısından zengin su çözeltilerine gömülüdür; marul, domates, salatalık ve çilek gibi ticari açıdan yaygın bitkiler yetiştirilmektedir (Lee &amp; Lee, 2015). Bu ortam; su ve besinlere doğrudan erişimi kolaylaştırarak toprak bitkilerine kıyasla büyümeyi hızlandırabilir. Ancak köklerin daldırılmış olması nedeniyle kök bölgesinde oksijen kullanılabilirliği sınırlı olabilir; dikkatli yönetilmezse hipoksi ve kök çürümesi riski doğar (Maciag ve ark., 2024). Bunu gidermek için havalandırma taşları ve kontrollü besin akışı gibi mühendislik çözümleri yaygın olarak uygulanır. Örneğin derin su kültürü (DWC) sistemleri, köklerdeki anoksik koşulları önlemek amacıyla hava taşları kullanarak oksijen kabarcıkları iletir (Gillani ve ark., 2023).</p>
+<p>Aeroponik ise bitkileri kökleri havaya asılı biçimde yetiştiren, kökleri aralıklı olarak besin çözeltisiyle sislendiren bir yöntemdir; NASA'nın uzay tarımında kullandığı yüksek değerli bitkiler ve araştırma uygulamalarında tercih edilmektedir. Aeroponik ortam; aerobik solunumu, besin alımını ve biyokütle birikimini artıran üstün oksijen maruziyeti sağlar (Lakhiar ve ark., 2018). Çalışmalar; aeroponik yetiştiricilikte bitkilerin bu üstün oksijenasyon ve besin dağıtımı sayesinde hidroponik muadillerine kıyasla %80'e kadar daha fazla kuru ağırlık biyokütlesine ulaşabildiğini göstermektedir. Örneğin aeroponik olarak yetiştirilen marul, sisleme sıklığı ve besin konsantrasyonunun hassas kontrolü sayesinde daha hızlı büyüme ve daha yüksek verim sergilemekte; toprak yetiştiriciliğine kıyasla %95'e varan su tasarrufu sağlamaktadır (Kumari &amp; Kumar, 2019; Garzón ve ark., 2023).</p>
+<p>Sistem tasarımını etkileyen temel biyolojik kısıtlamalar arasında şunlar sayılabilir: kök hipoksisini önlemek için optimum oksijenasyon sağlanması, eksiklik ya da toksisite oluşturan noktaları önlemek için homojen besin dağılımı sağlanması ve pH ile elektriksel iletkenlik (Eİ) gibi mikroortam parametrelerinin belirli bitkiler için uygun dar aralıklarda tutulması (Balliu ve ark., 2021). Bunun yanı sıra farklı bitkiler çeşitli kök morfolojileri ve besin alım hızları gösterir. Patates gibi kök ürünleri daha fazla destek ve nem tutarlılığı gerektirirken ıspanak gibi yapraklı sebzeler hızlı oksijen ve besin tedarik döngülerine iyi yanıt verir.</p>
+<p>Aeroponik sistemlerde bir diğer kısıtlama; sisleme aralıkları sırasında kök kurumalarının önlenmesidir. Damlacık boyutu, sisleme sıklığı ve ortam neminin hassas kontrolü hayati öneme sahiptir. İnce sis nozullarının tıkanması sık karşılaşılan bir mühendislik sorunudur; güçlü filtrasyon ve yedek besin dağıtım sistemleri gerektirmektedir. Hidroponik sistemlerde de durgunluk ve biyofilm oluşumundan kaçınılması gerekir; aksi hâlde besin kullanılabilirliği zarar görür ve patojenler teşvik edilir (da Silva Filho ve ark., 2020).</p>
+<p>Bu nedenle ayrıntılı bitki fizyolojisi bilgisinin —kök oksijen talebinin, besin alım kinetiğinin ve su ilişkilerinin— ileri mühendislik ilkeleriyle bütünleştirilmesi; çeşitli bitki türleri ve işletme ölçekleri için verimliliği, kaynak etkinliğini ve sistem güvenilirliğini maksimize eden optimize edilmiş hidroponik ve aeroponik sistem tasarımlarına olanak tanır.</p>
+<hr />
+<h2>3. Sistem Tipolojileri</h2>
+<p>Topraksız yetiştiricilik sistemlerinin çeşitliliği; kontrollü koşullar altında bitki büyümesini optimize etmeye yönelik mühendislik stratejilerinin geniş yelpazesini yansıtır. Sistem tipolojileri öncelikle besin dağıtım mekanizmaları, yapısal konfigürasyonlar ve otomasyon dereceleriyle birbirinden ayrılır (Murphy, 2020). Bu tipolojileri anlamak; bitki türü, mekânsal kısıtlamalar, kaynak kullanılabilirliği ve operasyonel hedeflere göre uygun teknoloji seçimi açısından vazgeçilmezdir. Bu bölüm; temel kategorileri işlevsel ilkeleri, karşılaştırmalı avantajları ve tasarım hususlarıyla birlikte ortaya koymaktadır.</p>
+<h3>3.1 Hidroponik Sistemler</h3>
+<p>Hidroponik sistemler, inert substrat olsun ya da olmasın; besin açısından zenginleştirilmiş suyun bitki köklerine sürekli ya da aralıklı olarak doğrudan iletilmesiyle tanımlanır (Son ve ark., 2020). Görece basitliği, ölçeklenebilirliği ve çeşitli agro-iklim koşullarına uyum sağlayabilmesi nedeniyle yaygın olarak benimsenmektedir.</p>
+<h4>3.1.1 Besin Filmi Tekniği (NFT)</h4>
+<p>Hafifçe eğimli kanallar içindeki bitki köklerinin üzerinden sürekli olarak besin çözeltisi ince bir akım hâlinde akar. Bu yapı, kez kez besin erişimi ve havalandırma sağlarken kök kurumasını önlemek için kesintisiz akış zorunludur. NFT; yapraklı sebzeler ve otlar gibi hafif bitkiler için idealdir; yüksek su verimliliği ve düşük substrat bağımlılığı sunar (Mahaidayu ve ark., 2017).</p>
+<h4>3.1.2 Derin Su Kültürü (DWC)</h4>
+<p>Bitkiler oksijenlendirilen besin rezervuarlarının üzerinde asılı tutulur; kökler çözeltiye tamamen daldırılmıştır. Hava taşları ya da difüzörler çözünmüş oksijen düzeylerini koruyarak hızlı büyümeyi destekler. DWC sistemleri enerji yoğundur; ancak yüksek verim sunar ve kararlı çevre koşullarında yüksek değerli bitkiler için uygundur (Saaid ve ark., 2013).</p>
+<h4>3.1.3 Substrat Tabanlı Sistemler</h4>
+<p>Bu sistemler; kökleri tutmak için perlit, vermikülit, kokopit ya da kayaç yünü gibi inert ortamlar kullanırken besinleri damla sulama ya da gel-git mekanizması aracılığıyla iletir. Tampon kapasitesi, gelişmiş kök desteği ve kısa süreli sistem arızalarına karşı esneklik sunar; meyveli bitkiler ve modüler kurulumlar için uygundur (Wang ve ark., 2016).</p>
+<h3>3.2 Aeroponik Sistemler</h3>
+<p>Aeroponik sistemler; bitki köklerinin havaya asıldığı ve aralıklı olarak ince besin solüsyonu aerosoluyla sislendiği ileri bir topraksız yetiştiricilik biçimini temsil eder. Bu sistemler kök bölgesi oksijenasyonunu ve besin alım etkinliğini maksimize ederek hızlandırılmış büyüme ve üstün kaynak korunumu sağlar (Lakhiar ve ark., 2018). Ancak kök kurumasını ve sistem arızasını önlemek için hassas çevre kontrolü ve teknik güvenilirlik gerektirirler. İki temel mimari yaklaşım yaygındır:</p>
+<h4>3.2.1 Sisleme Mimarileri</h4>
+<p>Yüksek basınçlı pompalar ve atomize nozullar; programlanmış aralıklarla besin sisi iletir. Bu sistemler; damlacık boyutu, sıklık ve besin bileşimi üzerinde hassas kontrol olanağı tanıyarak bitkinin gelişim evrelerine ve stres yanıtlarına gerçek zamanlı uyum sağlar. Ölçeklenebilirliği ve performansı nedeniyle ticari aeroponiklerde yaygın kullanılır (Tunio ve ark., 2021).</p>
+<h4>3.2.2 Sisleme (Fogging) Mimarileri</h4>
+<p>Ultrasonik ya da pnömatik sisleme cihazları kullanan bu sistemler; besin difüzyonunu ve kök yüzey temasını artıran 10 mikrometreden küçük ultra-ince damlacıklar üretir. Fogging üstün havalanma ve homojen dağılım sunar; ancak tıkanmaya, nem dalgalanmalarına karşı daha duyarlıdır ve gelişmiş filtrasyon ile kontrol sistemleri gerektirir (Suganob ve ark., 2024).</p>
+<hr />
+<p><strong>Tablo 1: Yapraklı Sebze Yetiştiriciliğinde NFT, DWC ve Aeroponik Sisleme Sistemlerinin Karşılaştırmalı Performans Metrikleri</strong> (Fathidarehnijeh, 2024; Malabadi ve ark., 2024)</p>
+<table>
+<thead>
+<tr>
+<th>Parametre</th>
+<th>NFT Sistemi</th>
+<th>DWC Sistemi</th>
+<th>Aeroponik Sisleme Sistemi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ortalama Verim (g/bitki)</td>
+<td>180–200 g</td>
+<td>220–250 g</td>
+<td>270–300 g</td>
+</tr>
+<tr>
+<td>Su Kullanımı (L/kg ürün)</td>
+<td>~20 L/kg</td>
+<td>~15 L/kg</td>
+<td>~8–10 L/kg</td>
+</tr>
+<tr>
+<td>Enerji Girdisi (kWh/m²)</td>
+<td>Orta (pompalar, temel kontrol)</td>
+<td>Yüksek (havalandırma, sıcaklık)</td>
+<td>Yüksek (basınç pompaları, sensörler)</td>
+</tr>
+<tr>
+<td>Sistem Hassasiyeti</td>
+<td>Orta (akım bağımlı)</td>
+<td>Yüksek (oksijen/sıcaklık duyarlı)</td>
+<td>Çok Yüksek (sis aralığı kritik)</td>
+</tr>
+<tr>
+<td>Kök Sağlığı</td>
+<td>İyi (orta düzey havalandırma)</td>
+<td>Mükemmel (sürekli daldırma)</td>
+<td>Mükemmel (yüksek oksijenasyon)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>NFT, DWC ve aeroponik sisleme sistemlerinin yapraklı sebze yetiştiriciliği için karşılaştırmalı değerlendirmesi; yapısal ve operasyonel ilkelerinden kaynaklanan belirgin performans profillerini ortaya koymaktadır. Aeroponik sisleme sistemleri en yüksek verim potansiyelini sergilemiş; bitki başına ortalama 270–300 gram elde edilerek DWC'yi (220–250 g) ve NFT'yi (180–200 g) geride bırakmıştır. Bu üstünlük büyük ölçüde kök bölgesinde artırılmış oksijenasyon ve besin alımından kaynaklanmaktadır (Fathidarehnijeh, 2024). Su kullanım etkinliği aeroponiklerde önemli ölçüde daha iyi olmuş; veriminin kilogramı başına yalnızca 8–10 litre su gerekmiştir; bu miktar NFT'ye göre yaklaşık %60 ve DWC'ye göre %40 daha azdır (Malabadi ve ark., 2024). Ancak bu verimlilik, artan enerji talebi ve operasyonel duyarlılıkla birlikte gelir: hem DWC hem de aeroponik sistemler güvenilir iklim ve besin kontrol sistemleri gerektirmekte olup aeroponik, kök sağlığını hızla tehdit edebilecek sisleme kesintilerine karşı özellikle kırılgandır (Cortés ve ark., 2024). Kök canlılığı; oksijen açısından zengin ortamlara sürekli maruz kalma sayesinde aeroponik ve DWC kurulumlarında en yüksek düzeyde olmuştur. Buna karşın basitliği ve düşük substrat bağımlılığıyla öne çıkan NFT sistemleri orta düzey esneklik sergilemiş ve akım kaynaklı arızalara daha yatkın olmuştur (Laham, 2021). Bu bulgular; sistem tipinin tarımsal hedefler, kaynak kullanılabilirliği ve teknik kapasiteyle örtüştürülmesinin önemini vurgulayarak mühendislik tasarımının sürdürülebilir, yüksek verimli topraksız yetiştiricilik için optimizasyondaki rolünü pekiştirmektedir.</p>
+<hr />
+<h2>4. Mühendislik Tasarım İlkeleri</h2>
+<p>Hidroponik ve aeroponik sistemlerin başarısı; biyolojik gereksinimlerin mekanik hassasiyete dönüştürüldüğü mühendislik tasarımına bağlıdır. Bu bölüm iki temel alana odaklanmaktadır: sıvı mekaniği ve besin dağıtımı ile yük taşıyan yapılar ve çevresel dayanıklılık için yapısal tasarım. Bu ilkeler bir arada sistem verimliliğini, ölçeklenebilirliğini ve çeşitli agro-ekolojik ve altyapı bağlamlarında uyum sağlama kapasitesini belirler.</p>
+<h3>4.1 Sıvı Mekaniği ve Besin Dağıtımı Tasarımı</h3>
+<p>Sıvı dinamiği; topraksız sistemlerde besinlerin hareketini, dağılımını ve emilimini yönetir. Hidroponikte optimum akım hızı ve besin filmi kalınlığının korunması kritik öneme sahiptir (Gonzales ve ark., 1996). Örneğin %1–3 eğimli ve dakikada 1–2 litre akış hızıyla tasarlanmış NFT kanalları; durgunluğu önler ve homojen besin maruziyeti sağlar. DWC sistemlerinde özellikle sıcak iklimlerde hipoksiyi ve kök çürümesini önlemek için hava taşları ya da difüzörler aracılığıyla çözünmüş oksijen düzeylerinin 5 mg/L'nin üzerinde tutulması gerekir (Kumar ve ark., 2018).</p>
+<p>Aeroponik sistemler daha da büyük hassasiyet gerektirir. Damlacık boyutu, besin emilimini ve kök hidrasyon oranını doğrudan etkiler. Çoğu bitki için 30–80 mikrometre arasındaki sis damlacıkları idealdir; 10 mikrometreden küçük sisleme sistemleri besin difüzyonunu artırır ancak gelişmiş nem kontrolü gerektirir. CFD (Hesaplamalı Akışkanlar Dinamiği) modellemesi; dikey aeroponik kulelerde nozul yerleşimini optimize etmek, gölge bölgeleri en aza indirmek ve homojen sis kapsamı sağlamak amacıyla kullanılmaktadır (Zhang ve ark., 2025). Bunun yanı sıra Eİ, pH ve kök bölgesi sıcaklığı için gerçek zamanlı sensörlerin entegre edilmesi; uyarlanabilir besin dozlaması ve stres azaltımını sağlayan dinamik geri besleme döngülerine olanak tanır. Yüksek değerli mahsul üretiminde (ör. mikro yeşillikler, çilek) PLC'lerin (Programlanabilir Lojik Denetleyici) sensör dizileriyle entegrasyonu hassas dozlamayı mümkün kılarak besin israfını azaltır ve mahsul homojenliğini artırır (Wang ve ark., 2022). Bu tür sistemler; iklim açısından akıllı seralar ve kentsel dikey çiftliklerde giderek yaygınlaşmaktadır.</p>
+<h3>4.2 Yük Taşıyan Platformlar ve Malzeme Seçimi</h3>
+<p>Yapısal tasarım; statik yükleri (bitkiler, su, substratlar) ve dinamik stresleri (bakım, titreşim, ısıl genleşme) karşılayacak kapasitede olmalıdır. Modüler sistemler için yüksek yoğunluklu polietilen (HDPE), PVC ve alüminyum alaşımları gibi hafif ve korozyona dayanıklı malzemeler tercih edilmektedir. Örneğin Bhopal'daki çatı üzeri hidroponik çiftlikler; muson nemi ve güneş ışınımına dayanıklı UV stabilize HDPE tablalar içeren alüminyum çerçeveler benimsemiştir (Hussain &amp; Hamid, 2003).</p>
+<p>Aeroponik kurulumlarda; mikrobiyel üreyi önlemek ve hijyeni sağlamak için sisleme odaları çoğunlukla paslanmaz çelik ya da polikarbonat muhafazalar kullanır. Yük taşıyan çerçeveler yalnızca bitki biyokütlesini değil; entegre sistemleri, aydınlatmayı, sensörleri ve pompaları da kararlılıktan ödün vermeksizin desteklemek zorundadır (Curry ve ark., 2024). Geri dönüştürülmüş polimer kompozitlerden yapılmış modüler tasarımlar; taşıma, montaj ve sanitasyon kolaylığı sunarak peri-kentsel eğitim çiftliklerinde etkinliğini kanıtlamıştır.</p>
+<p>Yapısal modülerlik ölçeklenebilirliği artırır. Birbirine kilitlenen paneller ve ayarlanabilir destekler kullanılarak inşa edilen sistemler; afete yatkın ya da kaynak kısıtlı alanlarda hızla devreye alınabilmekte, gıda güvenliği ve iklim adaptasyonuna katkıda bulunmaktadır. Malzeme seçimleri aynı zamanda ısıl eylemsizliği de etkiler (Mudany ve ark., 2025). Yüksek rakımlı ya da kurak bölgelerde yalıtımlı paneller veya yansıtıcı yüzeylerin kullanımı; kök bölgesi sıcaklığını stabilize ederek ısıtma veya soğutma enerji maliyetlerini düşürebilir.</p>
+<p>Bu mühendislik ilkeleri yalnızca sistem performansını optimize etmekle kalmaz; aynı zamanda çatı üstü kurulumlar, peri-kentsel okullar ya da iklim dayanıklı seralar gibi bağlama özgü uyarlamaları da mümkün kılar. Otomasyon ve izleme teknolojileriyle entegrasyonları; akıllı ve duyarlı tarıma doğru bir dönüşümü işaret etmektedir.</p>
+<hr />
+<h2>5. Çevre Kontrolleri</h2>
+<p>Çevre düzenlemesi; bitki büyümesinin doğal iklim koşullarından koparılarak mühendislik yoluyla tasarlanmış mikro iklimlerin yönetimine bırakıldığı topraksız yetiştiricilik sistemlerinin başarısının merkezinde yer alır. Kontrollü Ortam Tarımı (KOT); sıcaklık, nem, aydınlatma ve besin koşullarını dinamik biçimde yöneterek yıl boyu üretim, artırılmış kaynak verimliliği ve hassas stres azaltımı olanağı sunar. Bu bölüm; fiziksel düzenleme ile otomasyon destekli geri besleme mekanizmalarını vurgulayarak çevre kontrol sistemlerinin tasarımını ve entegrasyonunu incelemektedir.</p>
+<h3>5.1 Sıcaklık, Nem ve Aydınlatma Düzenlemesi</h3>
+<p>Optimal bitki büyümesi; bitki fizyolojisine özel mikroiklimsel eşiklerin korunmasını gerektirir. Hidroponik ve aeroponik sistemlerde sıcaklık ve nem; terleme hızlarını, besin alımını ve patojen duyarlılığını doğrudan etkiler (Ragaveena ve ark., 2021).</p>
+<h4>5.1.1 Sıcaklık Kontrolü</h4>
+<p>Kök bölgesi sıcaklıkları kritiktir; yapraklı sebzeler için genellikle 18–22°C aralığında tutulur. DWC sistemlerinde aşırı ısınmayı önlemek için batırılabilir soğutucular ya da ısıl yalıtım panelleri kullanılır. Örneğin Ahmedabad'daki çatı üzeri hidroponik çiftlikler; yoğun yaz dönemlerinde ortam sıcaklığını stabilize etmek için evaporatif soğutma pedleri ve yansıtıcı çatı kaplamaları kullanmaktadır (Rafee ve ark., 2023).</p>
+<h4>5.1.2 Nem Düzenlemesi</h4>
+<p>%50–70 arasındaki bağıl nem (RH); mantar gelişimini teşvik etmeden terlemeyi destekler. Özellikle sisleme mimarisi kullanan aeroponik sistemler; kök kurumasını ya da yoğunlaşma kaynaklı çürümeyi önlemek için hassas nem kontrolü gerektirir. Nem gidericiler ve sisleme aralıkları; higrometre ve programlanabilir zamanlayıcılar kullanılarak kalibre edilir (KKR ve ark., 2012).</p>
+<h4>5.1.3 Aydınlatma Sistemleri</h4>
+<p>Fotosentetik Aktif Radyasyon (FAR / PAR); bitki türü ve büyüme evresine göre optimize edilmelidir. Ayarlanabilir spektrumlu LED dizileri (ör. vejetatif büyüme için kırmızı-mavi, çiçeklenme için tam spektrum) yaygın olarak kullanılır. Dikey çiftliklerde kısılabilir kontroller ve fotoperiod planlamasına sahip çok katlı LED kurulumlar; enerji verimliliğini ve mahsul homojenliğini artırmaktadır. Örneğin 200 µmol/m²/s PAR yoğunluğunda 16 saatlik ışık döngüsüyle yetiştirilen ıspanak; ortam ışığı koşullarına kıyasla %25 daha hızlı biyokütle birikimi göstermiştir (Velasco-López ve ark., 2020).</p>
+<h3>5.2 Otomasyon ve Gerçek Zamanlı Geri Besleme Sistemleri</h3>
+<p>Otomasyon; çevre kontrolünü statik düzenlemeden dinamik, duyarlı yönetime dönüştürür (Ragaveena ve ark., 2021; Curry ve ark., 2024). Entegre sensör ağları ve kontrol birimleri; bitkiden ve sistemden alınan geri bildirimlere dayalı gerçek zamanlı izleme ve uyarlanabilir ayarlamaları mümkün kılar (Shen ve ark., 2025). Otomasyon ve gerçek zamanlı geri besleme; sıcaklık, nem, pH, besin konsantrasyonu ve ışık gibi çevre parametrelerinin veri odaklı yönetimine olanak tanıyan entegre sensör ağları ve dijital denetleyicilerle sağlanmaktadır (Hussain &amp; Hamid, 2003; Wang ve ark., 2022). Sensörler her değişkeni ölçerek denetleyicilere geri bildirim sağlar; bu sayede ısıtma/soğutma sistemleri otomatik olarak devreye girer, nem ya da aydınlatma ayarlanır ve besin dozlaması düzenlenir (Velasco-López ve ark., 2020). Bu kontroller; tutarlı verimler, azaltılmış işgücü ve erken arıza tespiti ile düzeltme desteği sunan duyarlı ve dayanıklı bir tarımsal platform oluşturur (Rafee ve ark., 2023). Akıllı telefon uygulamaları ve bulut tabanlı gösterge panelleri; geliştirilmiş kaynak verimliliği ve yönetim esnekliği için uzaktan izleme, tahmine dayalı analizler ve uyarlanabilir sulama programları sunar (Mudany ve ark., 2025).</p>
+<h4>5.2.1 Sensör Entegrasyonu</h4>
+<p>pH, Eİ, sıcaklık, nem ve ışık sensörleri; sistem parametrelerini sürekli izler. Veriler; besin dozlaması, sisleme ya da havalandırma gibi düzeltici eylemleri tetikleyen mikrodenetleyicilere ya da PLC'lere iletilir. Örneğin Himachal Pradesh'teki aeroponik çilek çiftlikleri; gün ortası termal stresini önlemek için sisleme denetleyicilerine bağlı kök bölgesi sıcaklık sensörleri kullanmaktadır (Lakhiar ve ark., 2018).</p>
+<h4>5.2.2 Geri Besleme Döngüleri ve Karar Destek</h4>
+<p>İleri sistemler; bitki yanıtlarını tahmin etmek ve girdi programlarını optimize etmek için makine öğrenmesi algoritmalarını kullanır. Bulut tabanlı gösterge panelleri uzaktan izleme ve tarihsel veri analizine imkân tanır. Tarım üniversiteleri gibi kurumsal ortamlarda bu sistemler; deneysel çalışmaları ve öğrencilerin hassas tarım konusunda eğitimini desteklemektedir (Ragaveena ve ark., 2021).</p>
+<h4>5.2.3 Arıza Güvenliği Mekanizmaları</h4>
+<p>Otomatik uyarılar, yedek güç sistemleri ve kritik bileşenlerdeki artıklık (ör. çift pompa, paralel sensörler); sistem dayanıklılığını artırır (Lakhiar ve ark., 2018; Ragaveena ve ark., 2021). Peri-kentsel eğitim çiftliklerinde düşük maliyetli Arduino tabanlı denetleyiciler; sulama ve aydınlatmayı başarıyla yönetmiş, kaynak kısıtlı bağlamlar için ölçeklenebilir otomasyonu somutlaştırmıştır (Wang ve ark., 2022).</p>
+<p>Bu çevre kontrol stratejileri yalnızca üretkenliği ve kaynak verimliliğini artırmakla kalmaz; aynı zamanda kentsel, peri-kentsel ve uç ortamlara uyarlanabilen iklim dayanıklı tarımı da mümkün kılar (Mudany ve ark., 2025). Otomasyon ve geri besleme sistemleriyle entegrasyonları; akıllı, veri odaklı yetiştiriciliğe doğru bir dönüşümün habercisidir (Rafee ve ark., 2023).</p>
+<hr />
+<h2>6. Performans Değerlendirme Metrikleri</h2>
+<p>Hidroponik ve aeroponik sistemlerin etkinliğinin ölçülmesi; tarımsal üretkenlik, kaynak verimliliği ve operasyonel dayanıklılığı bütünleştiren çok boyutlu bir değerlendirme çerçevesi gerektirir. Performans metrikleri; mühendislik tasarım tercihlerini doğrulamakla kalmaz, aynı zamanda sistem optimizasyonu, ölçeklenebilirlik ve politika ilgisi konusunda da yol gösterir. Bu bölüm; çeşitli bağlamlarda topraksız yetiştiricilik sistemlerinin uygulanabilirliğini ve sürdürülebilirliğini değerlendirmek için kullanılan temel göstergeleri, verim-enerji-su kullanımı ve veri odaklı çıktı karşılaştırmalarını incelemektedir.</p>
+<h3>6.1 Verim Değerlendirmesi, Enerji ve Su Kullanımı Analizi</h3>
+<h4>6.1.1 Verim Değerlendirmesi</h4>
+<p>Birim alan başına hasat edilen taze ya da kuru ağırlıkla ölçülen mahsul verimi (kg/m²); sistem üretkenliğini değerlendirmede temel metriktir (Ragaveena ve ark., 2021). Standartlaştırılmış karşılaştırmalar hasat döngüsü süresi ve bitki yoğunluğunu hesaba katar (Velasco-López ve ark., 2020). Örneğin aeroponik sistemler; artırılmış oksijenasyon ve besin alım etkinliği sayesinde çilek ya da marul için yaklaşık 5 kg/m²'lik verim yoğunluğuyla geleneksel toprak yöntemlerine ve pek çok hidroponik yaklaşıma kıyasla daha yüksek değerlere ulaşır (Lakhiar ve ark., 2018). Makine öğrenmesi modelleri artık yaprak sayısı, gövde uzunluğu, su alımı ve çevresel değişkenleri analiz ederek mahsul veriminin tahmine dayalı değerlendirmesine olanak tanımaktadır (Curry ve ark., 2024).</p>
+<p>Kontrollü deneylerde DWC aracılığıyla hidroponik marul yetiştiriciliği bitki başına 220–250 g elde ederken aynı besin rejimi altında aeroponik sisleme sistemleri 270–300 g/bitki sağlamıştır (Shen ve ark., 2025). Bu farklar; aeroponiklerde artırılmış besin alımını ve oksijenasyonu yansıtmaktadır (Wang ve ark., 2022). Metrekare başına verim de kentsel ve dikey tarım açısından kritiktir: aeroponik kuleler yapraklı sebzeler için döngü başına NFT sistemlerindeki 8–9 kg/m²'ye kıyasla 11 kg/m²'ye kadar verim kaydetmiştir (Mudany ve ark., 2025).</p>
+<h4>6.1.2 Su Kullanımı Analizi</h4>
+<p>Su kullanım etkinliği; topraksız sistemlerin belirleyici avantajıdır (Lakhiar ve ark., 2018). Aeroponik tipik olarak ürünün kilogramı başına 8–10 L su tüketirken hidroponikte bu değer 15–20 L ve geleneksel toprak tarımında 200 L'nin üzerindedir (Ragaveena ve ark., 2021; Barbosa ve ark., 2015). Örneğin Pune'daki çatı üstü bir aeroponik çiftlik; sisleme aralığı optimizasyonu ve kök bölgesi nem kontrolü sayesinde önceki NFT kurulumuna kıyasla %65 daha az su kullandığını bildirmiştir (Rafee ve ark., 2023). Su kullanım etkinliği; uygulanan toplam suya bölünen hasat ağırlığı (kg/m³) olarak hesaplanır (Shen ve ark., 2025). Aeroponik sistemler, minimal su israfı ve hassas uygulama sayesinde 67 kg/m³'e kadar su kullanım etkinliğine ulaşabilmektedir; bu değer geleneksel toprak ya da temel hidroponik yöntemlerin birkaç katıdır (Barbosa ve ark., 2015; Velasco-López ve ark., 2020). Üretimin kilogramı başına enerji tüketimi sürdürülebilirlik açısından önemli bir içgörü sunar: hidroponik ve aeroponik iklim kontrolü ve otomasyon için enerji gereksinimini artırırken gelişmiş verimler ve azaltılmış kaynak girdileri bu maliyetleri çoğunlukla dengelemektedir (Curry ve ark., 2024).</p>
+<h4>6.1.3 Enerji Tüketimi</h4>
+<p>Enerji girdileri sistem türüne ve otomasyon düzeyine göre değişmektedir. DWC sistemleri; özellikle sıcak iklimlerde sürekli havalandırma ve sıcaklık düzenlemesi gerektirerek günde 1,5–2,5 kWh/m² tüketir. Aeroponik sistemler su açısından daha verimli olmakla birlikte yüksek basınçlı pompalar ve sensör dizileri nedeniyle ortalama 2,5–3,5 kWh/m²/gün enerji talep etmektedir (Kumar ve ark., 2018). LED aydınlatma dikey çiftliklerde enerji yüküne önemli ölçüde katkıda bulunur; spektrum ayarı ve fotoperiod planlaması potansiyel tasarruflara kapı aralar (Orland, 2012). Singh ve ark. (2025) tarafından Indore'daki kurumsal bir serada yürütülen karşılaştırmalı çalışmaya göre aeroponik sistemler NFT kurulumlarına kıyasla %20 daha fazla biyokütle üretmiş; ancak %30 daha fazla enerji tüketmiştir. Bu durum, üretkenlik ile işletme maliyeti arasındaki ödünleşimi gözler önüne sermiştir.</p>
+<h3>6.2 Sistem Çıktılarının Veri Odaklı Karşılaştırması</h3>
+<p>Karşılaştırmalı çalışmalar; değişken koşullar altında verim tahmin doğruluğunu ve sistem verimliliğini değerlendirmek amacıyla regresyon analizi, ortalama karesel hata (MSE), kareköklü ortalama karesel hata (RMSE) ve Saçılma İndeksi (SI) gibi istatistiksel ve hesaplamalı yaklaşımlar kullanır (Ahmad ve ark., 2022). Bu analizler; performans kıyaslaması, kaynak tahsis kararları ve hedef bitkiler için sistem optimizasyonunu destekler. Ek KPI'lar arasında besin alım etkinliği, büyüme döngüsü süresi, zararlı ve hastalık insidansı ile birim çıktı başına maliyet yer alabilmekte; bunların tümü ölçeklenebilirlik ve sürdürülebilirlik değerlendirmesi için zorunludur (Alizamir ve ark., 2020). Modern topraksız sistemler; konfigürasyonlar arasında performansı izlemek ve karşılaştırmak için giderek daha fazla sensör ağlarına ve veri analizine başvurmaktadır.</p>
+<h4>6.2.1 Büyüme Hızı ve Biyokütle Birikimi</h4>
+<p>Aeroponik ıspanak denemelerinden elde edilen zaman serisi verileri; hidroponik kontrollere kıyasla %25 daha hızlı büyüme ve %18 daha yüksek yaprak alan indeksi göstermiştir (Fasciolo ve ark., 2025).</p>
+<h4>6.2.2 Besin Alım Etkinliği</h4>
+<p>Eİ ve pH sensörleri; aeroponiklerde daha az dalgalanma ve düşük besin kaçağıyla daha kararlı besin emilim eğrilerini ortaya koymuştur (Chowdhury ve ark., 2021).</p>
+<h4>6.2.3 Stres Yanıtı İzleme</h4>
+<p>Kök bölgesi sıcaklık ve nem sensörlerinden alınan gerçek zamanlı geri beslemeler; tuzluluk stresinin erken tespitini sağlamış, sisleme ayarlamalarının yapılmasına ve verim bütünlüğünün korunmasına olanak tanımıştır (Mansoor ve ark., 2025).</p>
+<h4>6.2.4 Sistem Güvenilirliği ve Devre Dışı Kalma Süresi</h4>
+<p>Pompa döngülerinin, sisleme aralıklarının ve sensör uyarılarının otomatik kaydedilmesi; sistem dayanıklılığının nicelleştirilmesine yardımcı olmuştur. Aeroponik sistemler güç kesintilerine karşı daha duyarlı olmuş; ancak modüler arıza güvenliği önlemleri sayesinde daha hızlı iyileşme göstermiştir (Chowdhury ve ark., 2021).</p>
+<p>Örneğin üç kurumsal çiftlikteki (Bhopal'da NFT, Ujjain'de DWC ve Gwalior'da aeroponik) karşılaştırmalı bir uygulamada aeroponik en yüksek verim ve su verimliliğini sağlamış; ancak daha sık kalibrasyon ve yedekleme protokolleri gerektirmiştir. Veri gösterge panelleri; uzaktan izlemeyi ve besin planlaması ile bakım döngüleri konusundaki bilinçli kararları kolaylaştırmıştır (Verma ve ark., 2024). Bu metrikler yalnızca sistem seçimini ve tasarım iyileştirmesini yönlendirmekle kalmaz; aynı zamanda iklim açısından akıllı tarım, kentsel gıda sistemleri ve kaynak kısıtlı yenilikçilik için politika çerçevelerini de destekler.</p>
+<hr />
+<h2>7. Sorun Giderme ve Optimizasyon</h2>
+<p>Topraksız yetiştiricilik sistemleri giderek daha otomatik ve veri odaklı hale geldikçe karmaşıklıkları; tasarım, işletme ve bakımda yeni zorluklar ortaya çıkarmaktadır. Sorun giderme ve optimizasyon; reaktif görevler değil, dayanıklı sistem mühendisliğinin ayrılmaz bileşenleridir. Bu bölüm; yaygın tasarım tuzaklarını ve çözümlerini, izleme, artıklık ve stabilizasyon stratejilerini özetleyerek değişken koşullar altında sürdürülebilir performans, minimum devre dışı kalma ve uyum kapasitesini güvence altına almaktadır.</p>
+<p>Avantajlarına karşın hidroponik ve aeroponik sistemler; üretkenliği ve sistem güvenilirliğini zedeleyebilecek tasarım kusurlarına karşı savunmasızdır. NFT sistemlerinde hatalı kanal eğimi ya da pompa kalibrasyonundan kaynaklanan dengesiz besin dağılımı; birikme ya da kuru bölgelere yol açabilir. Bu sorun; %1–3 gradyan ve akış metrelerinin kullanımıyla giderilebilir (Paul ve ark., 2022). Sıcak iklimlerde DWC kurulumları; çözünmüş oksijen seviyelerini düşüren kök bölgesi aşırı ısınmasına yatkındır. Isıl yalıtım, batırılabilir soğutucular ya da evaporatif soğutma ile önlem alınabilir (Pompeo ve ark., 2025). Aeroponik sistemler, mineral birikmesi ve mikrobiyal biyofilmden kaynaklanan nozul tıkanmasıyla sık karşılaşır; hat içi filtreler, periyodik asit yıkama ve UV arıtılmış su kullanımıyla çözülebilir. pH ve Eİ okumalarındaki sensör kayması besin dozlamasını bozabilir; haftalık kalibrasyon ve çift sensör artıklığı bunu önler. Güç kesintileri ve pompa arızaları özellikle aeroponiklerde kritik risk oluşturur; UPS yedekleme, çift pompa sistemleri ve acil besin rezervuarlarıyla yönetilir (Kim ve ark., 2024). Örneğin Indore'daki bir çatı üstü aeroponik çiftlik; tutarsız su basıncı ve tıkanmadan kaynaklanan sık sisleme arızalarını basınç regülatörleri ve otomatik yıkama döngüleri kurarak çözüme kavuşturmuş; devre dışı kalma süresini %80 azaltmış ve kök bölgesi nemlendirmesini stabilize etmiştir (Mirzabe ve ark., 2023).</p>
+<p>Proaktif izleme ve yerleşik artıklık; hidroponik ve aeroponik sistemlerin stabilitesini ve dayanıklılığını güvence altına almak için yaşamsal önem taşır (Lakhiar ve ark., 2018). Sıcaklık, nem, pH, Eİ ve ışık yoğunluğunu izleyen gerçek zamanlı sensör dizileri; verileri denetleyici birimlere ya da bulut gösterge panellerine ileterek eşikler sapıklığında uyarılar tetikler. Bu durumun somut bir örneği Ujjain'deki peri-kentsel okul çiftliğidir: Arduino tabanlı denetleyiciler pompa arızaları ve rezervuar azalması için SMS bildirimleri göndermektedir (Kirmani ve ark., 2025). Çift pompa sistemleri ve yedek sensörler gibi artıklık protokolleri; aşınmayı azaltır, arıza yalıtımını sağlar ve kesintisiz işletimi güvence altına alır (Jin ve ark., 2024). Besin çözeltilerinin tamponlanması, sisleme aralıklarının düzenlenmesi ve kök bölgelerinin yalıtılması gibi sistem stabilizasyon stratejileri; ısıl perdeler ve hava akışı damperleriyle kata özgü mikro iklimlerin korunduğu dikey çiftliklerde özellikle kritiktir. Ek olarak veri düzleştirme algoritmaları; sensör gürültüsünü filtreleyerek yanlış tetiklemeleri önler (Brantley ve ark., 2017). Örneğin Bhopal'daki kurumsal bir sera; tamponlanmış besin tankları, çift Eİ sensörleri ve neme duyarlı sisleme modülasyonundan oluşan üç kademeli bir stabilizasyon protokolü uygulamış; mahsul stres olaylarını %60 azaltmış ve mevsimsel değişkenlikler genelinde verim tutarlılığını önemli ölçüde artırmıştır (Sarma &amp; Chakravarty, 2017).</p>
+<hr />
+<h2>8. Özet</h2>
+<p>Mühendislik yeniliği ile ekolojik zorunluluğun buluşması; topraksız yetiştiriciliği —özellikle hidroponik ve aeroponik sistemleri— geleceğe hazır tarımın köşe taşı konumuna getirmiştir. Bu bölüm; bu teknolojilerin altında yatan teorik temelleri, sistem tipolojilerini, mühendislik tasarım ilkelerini, çevre kontrol stratejilerini, performans metriklerini ve optimizasyon çerçevelerini sistematik biçimde incelemiştir.</p>
+<p>Modüler ölçeklenebilirliği ve substrat çok yönlülüğüyle hidroponik; eşsiz kaynak verimliliği ve kök bölgesi hassasiyetiyle aeroponik; her ikisi de Kontrollü Ortam Tarımı'nın (KOT) geleneksel tarımın sınırlarını aşma potansiyelini örneklemektedir. Sıvı mekaniği, besin dağıtımı, yapısal dayanıklılık ve otomasyonun ayrıntılı analizleri aracılığıyla; disiplinlerarası tasarımın üretkenliği nasıl artırdığı, girdi bağımlılığını nasıl azalttığı ve kentsel, peri-kentsel ve iklim baskısı altındaki bölgelerde nasıl devreye alınabildiği ortaya konulmuştur. Verim, su ve enerji kullanımı ile sistem duyarlılığını kapsayan performans değerlendirme metrikleri; sonuçları optimize etmek için veri odaklı karar almanın önemini pekiştirmektedir. Bunun ötesinde kurumsal, çatı üstü ve eğitim ortamlarındaki gerçek dünya vaka çalışmaları; bu sistemlerin mekânsal ve sosyo-ekonomik bağlamlardaki uyum kapasitesini ve etkisini sergilemektedir.</p>
+<p>Topraksız sistemlerin başarısı zorluksuz değildir. Tasarım tuzakları, sensör kayması ve operasyonel kırılganlıklar; güçlü sorun giderme protokolleri, gerçek zamanlı izleme ve yerleşik artıklık gerektirir. Gösterildiği üzere proaktif stabilizasyon stratejileri ve akıllı geri besleme döngüleri; sistem dayanıklılığını ve uzun vadeli uygulanabilirliği güvence altına almak için vazgeçilmezdir.</p>
+<p>Hidroponik ve aeroponik sistemler; teknolojik alternatiflerden ibaret değildir. Bunlar, iklim dayanıklı, kaynak verimli ve kapsayıcı gıda sistemlerinin stratejik etkinleştiricileridir. Akademik müfredatlara, kurumsal altyapıya ve politika çerçevelerine entegrasyonları; artan çevresel ve demografik baskılar karşısında sürdürülebilir tarımın ölçeklendirilmesi açısından kritik önem taşıyacaktır.</p>
+<hr />
+<h2>Kaynaklar</h2>
+<p>Min, A., Nguyen, N., Howatt, L., Tavares, M., &amp; Seo, J. (2023). Aeroponic systems design: considerations and challenges. <em>Journal of Agricultural Engineering</em>, 54(1).</p>
+<p>Regmi, A., Rueda-Kunz, D., Liu, H., Trevino, J., Kathi, S., &amp; Simpson, C. (2024). Comparing resource use efficiencies in hydroponic and aeroponic production systems. <em>Technology in Horticulture</em>, 4(1).</p>
+<p>Engler, N., &amp; Krarti, M. (2021). Review of energy efficiency in controlled environment agriculture. <em>Renewable and Sustainable Energy Reviews</em>, 141, 110786.</p>
+<p>Lee, S., &amp; Lee, J. (2015). Beneficial bacteria and fungi in hydroponic systems: Types and characteristics of hydroponic food production methods. <em>Scientia Horticulturae</em>, 195, 206–215.</p>
+<p>Maciag, T., Kozieł, E., Otulak-Kozieł, K., Jafra, S., &amp; Czajkowski, R. (2024). Looking for resistance to soft rot disease of potatoes facing environmental hypoxia. <em>International Journal of Molecular Sciences</em>, 25(7), 3757.</p>
+<p>Gillani, S. A., Abbasi, R., Martinez, P., &amp; Ahmad, R. (2023). Comparison of energy-use efficiency for lettuce plantation under nutrient film technique and deep-water culture hydroponic systems. <em>Procedia Computer Science</em>, 217, 11–19.</p>
+<p>Lakhiar, I. A., Gao, J., Syed, T. N., Chandio, F. A., &amp; Buttar, N. A. (2018). Modern plant cultivation technologies in agriculture under controlled environment: A review on aeroponics. <em>Journal of Plant Interactions</em>, 13(1), 338–352.</p>
+<p>Kumari, R., &amp; Kumar, R. (2019). Aeroponics: A review on modern agriculture technology. <em>Indian Farmer</em>, 6(4), 286–292.</p>
+<p>Garzón, J., Montes, L., Garzón, J., &amp; Lampropoulos, G. (2023). Systematic review of technology in aeroponics. <em>Agronomy</em>, 13(10), 2517.</p>
+<p>Balliu, A., Zheng, Y., Sallaku, G., Fernández, J. A., Gruda, N. S., &amp; Tuzel, Y. (2021). Environmental and cultivation factors affect the morphology, architecture and performance of root systems in soilless grown plants. <em>Horticulturae</em>, 7(8), 243.</p>
+<p>da Silva Filho, J. B., ve ark. (2020). Yield of potato minitubers under aeroponics, optimized for nozzle type and spray direction. <em>HortScience</em>, 55(1), 14–22.</p>
+<p>Murphy, J. T. (2020). Design Guidelines for Aeroponic Plant Growth Systems with Varying Degrees of Complexity, Autonomy, and Performance Capability. Master's thesis, Auburn University.</p>
+<p>Son, J. E., Kim, H. J., &amp; Ahn, T. I. (2020). Hydroponic systems. In <em>Plant factory</em> (pp. 273–283). Academic Press.</p>
+<p>Mahaidayu, M. G., ve ark. (2017). Nutrient Film Technique (NFT) hydroponic monitoring system based on wireless sensor network. <em>IEEE Comnetsat Conference</em>, 81–84.</p>
+<p>Saaid, M. F., ve ark. (2013). A development of an automatic microcontroller system for Deep Water Culture (DWC). <em>IEEE 9th International Colloquium on Signal Processing</em>, 328–332.</p>
+<p>Lakhiar, I. A., Jianmin, G., ve ark. (2018). Monitoring and control systems in agriculture using intelligent sensor techniques: A review of the aeroponic system. <em>Journal of Sensors</em>, 2018(1), 8672769.</p>
+<p>Tunio, M. H., ve ark. (2021). Influence of atomization nozzles and spraying intervals on growth, biomass yield, and nutrient uptake of butter-head lettuce under aeroponics system. <em>Agronomy</em>, 11(1), 97.</p>
+<p>Suganob, N. J., Arroyo, C. L., &amp; Concepcion, R. (2024). Interplay of Fogponics and Artificial Intelligence for Potential Application in Controlled Space Farming. <em>AgriEngineering</em>, 6(3), 2144–2166.</p>
+<p>Fathidarehnijeh, E. (2024). Designing, fabrication and evaluation of a small-scale vertical hydroponic system to produce leafy vegetables. Doktora tezi, Memorial University of Newfoundland.</p>
+<p>Malabadi, R. B., ve ark. (2024). Greenhouse farming: Hydroponic vertical farming – IoT technologies. <em>World Journal of Advanced Research and Reviews</em>, 23(02), 2634–2686.</p>
+<p>Laham, S. (2021). The Effect of Irrigation Timing and Duration on Yield and Quality of Aeroponically Grown Lettuce (Lactuca sativa L.).</p>
+<p>Cortés, C. J., ve ark. (2024). Effect of hydraulic configuration on lettuce growth in hydroponic bed using DWC. <em>Computers and Electronics in Agriculture</em>, 227, 109634.</p>
+<p>Gonzales, A. A., ve ark. (1996). Engineering strategies for plant nutrient delivery systems for space. <em>Advances in Space Research</em>, 18(4–5), 5–20.</p>
+<p>Orland, B. (2012). The fluid mechanics of nutrition: Herman Boerhaave's synthesis of seventeenth-century circulation physiology. <em>Studies in History and Philosophy of Science</em>, 43(2), 357–369.</p>
+<p>Singh, P., Upadhyay, P., &amp; Singh, S. K. (2025). Unlocking the Economic Potential of Potato Cultivars for Mini-tuber Production Under Aeroponic Culture. <em>Potato Research</em>, 1–24.</p>
+<p>Kumar, P., ve ark. (2023). Analyzing the performance of univariate and multivariate machine learning models. <em>IEEE Access</em>, 11, 62368–62381.</p>
+<p>Ahmad, M., ve ark. (2022). Prediction of Rockfill Materials' Shear Strength Using Kernel Function-Based Regression Models. <em>Materials</em>, 15(5), 1739.</p>
+<p>Alizamir, M., ve ark. (2020). A comparative study of machine learning based non-linear regression methods in estimating solar radiation. <em>Energy</em>, 197, 117239.</p>
+<p>Fasciolo, B., ve ark. (2025). Hybrid machine learning and physics-based model for estimating lettuce growth in aeroponic systems. <em>Scientific Reports</em>, 15(1), 23063.</p>
+<p>Chowdhury, M., ve ark. (2021). Sensor-based nutrient recirculation for aeroponic lettuce cultivation. <em>Journal of Biosystems Engineering</em>, 46(1), 81–92.</p>
+<p>Mansoor, S., ve ark. (2025). Integration of smart sensors and IoT in precision agriculture. <em>Frontiers in Plant Science</em>, 16, 1587869.</p>
+<p>Verma, S., ve ark. (2024). A review on hydroponics and vertical farming for vegetable cultivation. <em>Journal of Experimental Agriculture International</em>, 46(12), 801–821.</p>
+<p>Paul, K., ve ark. (2022). Viable smart sensors and their application in data-driven agriculture. <em>Computers and Electronics in Agriculture</em>, 198, 107096.</p>
+<p>Pompeo, J. P., ve ark. (2025). Impact of Air Temperature and Root-Zone Cooling on Heat-Tolerant Lettuce Production in Indoor Farming. <em>Journal of the ASABE</em>, 68(1), 113–124.</p>
+<p>Kim, J., ve ark. (2024). Sustainable and inflatable aeroponics smart farm system for water efficiency and high-value crop production. <em>Applied Sciences</em>, 14(11), 4931.</p>
+<p>Mirzabe, A. H., ve ark. (2023). Piezoelectric atomizer in aeroponic systems. <em>Information Processing in Agriculture</em>, 10(4), 564–580.</p>
+<p>Kirmani, S. N., ve ark. (2025). Aeroponics: An Innovative Technique for Production of Vegetable Crops. In <em>Handbook of Agricultural Technologies</em> (pp. 1–16). Springer Nature Singapore.</p>
+<p>Jin, H., ve ark. (2024). Enhanced Operation Mode Design and Motion Control of a Dual-Redundancy Electro-Hydrostatic Actuator. <em>Actuators</em>, 13(12), 474. MDPI.</p>
+<p>Brantley, S. L., ve ark. (2017). Reviews and syntheses: On the roles trees play in building and plumbing the critical zone. <em>Biogeosciences</em>, 14(22), 5115–5142.</p>
+<p>Sarma, A., &amp; Chakravarty, D. (2017). Integrating the third tier in the Indian federal system: two decades of rural local governance. Springer.</p>
+<p>Wang, S., Xu, T., &amp; Li, X. (2022). Development status and perspectives of crop protection machinery and techniques for vegetables. <em>Horticulturae</em>, 8(2), 166.</p>
+<p>Hussain, I., &amp; Hamid, H. (2003). Plastics in agriculture. In <em>Plastics and the environment</em> (pp. 185–209). Wiley, Hoboken.</p>
+<p>Curry, A. B., ve ark. (2024). Post-harvest cleaning, sanitization, and microbial monitoring of soilless nutrient delivery systems for sustainable space crop production. <em>Frontiers in Plant Science</em>, 15, 1308150.</p>
+<p>Mudany, J. O., ve ark. (2025). Thriving Through Turmoil: Adaptive Resilience in the Age of Permacrisis. <em>Journal of Strategic Management</em>, 9(2), 92–133.</p>
+<p>Rafee, B. M., ve ark. (2023). A rise of hydroponics: The future urban farming and sustainability of agriculture. <em>Journal of Research Administration</em>, 5(2), 8325–8336.</p>
+<p>KKR, L., Kasturi, K., &amp; KRS, S. R. (2012). Role of hydroponics and aeroponics in soilless culture in commercial food production. <em>Journal of Agricultural Science and Technology</em>, 1(1), 26–35.</p>
+<p>Velasco-López, F., ve ark. (2020). Photosynthetically active radiation in strawberry produced in stair-like containers. <em>Horticultura Brasileira</em>, 38, 5–11.</p>
+<p>Ragaveena, S., Shirly Edward, A., &amp; Surendran, U. (2021). Smart controlled environment agriculture methods: A holistic review. <em>Reviews in Environmental Science and Bio/Technology</em>, 20(4), 887–913.</p>
+<p>Barbosa, G. L., ve ark. (2015). Comparison of land, water, and energy requirements of lettuce grown using hydroponic vs. conventional agricultural methods. <em>International Journal of Environmental Research and Public Health</em>, 12(6), 6879–6891.</p>
+<hr />
+<p><em>Çeviri notu: Bu makale, "Modern Horticulture: Science, Technology and Innovation" kitabının 7. Bölümü'nün (ss. 108–123) tam Türkçe çevirisidir. Kitap 2026 yılında Elite Publishing House tarafından yayımlanmıştır. Bölüm; topraksız yetiştiricilik sistemleri arasında hidroponik ve aeroponik sistemlerin mühendislik temellerini, sistem tipolojilerini, çevre kontrolü ile otomasyon stratejilerini ve performans metriklerini kapsamlı biçimde ele almaktadır.</em></p>
+  </div>
+</div>
+</main>
+
+<footer>
+    <div class="container">Safran Topluluğu — Bilimsel kaynaklara dayalı safran yetiştiriciliği</div>
+</footer>
+
+</body>
+</html>

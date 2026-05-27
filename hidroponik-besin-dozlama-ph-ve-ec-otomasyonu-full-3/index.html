@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hidroponik Besin Dozlama, pH ve EC Otomasyonu — Sistematik Derleme (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-full { border-color: #D97706; color: #D97706; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h1 { font-size: 1.5rem; margin-top: 2.5em; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.88rem; overflow-x: auto; display: block; }
+        .post-content th { background: #f7f7f7; font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #ddd; }
+        .post-content td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        .post-content tr:nth-child(even) td { background: #fafafa; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; }
+        .post-content code { font-family: monospace; background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.3em; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+
+  'indoor-saffron-production-profitability-blueprint':                          {lang:'en', pair:'i-c-mekanda-safran-uretimi-karlilik-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint':                              {lang:'tr', pair:'indoor-saffron-production-profitability-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'iot-based-smart-aeroponic-system-for-saffron-cultivation-2':                 {lang:'en', pair:'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2'},
+  'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2':           {lang:'tr', pair:'iot-based-smart-aeroponic-system-for-saffron-cultivation-2'},
+  'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3':         {lang:'en', pair:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3':          {lang:'tr', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4':           {lang:'en', pair:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4':                  {lang:'tr', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5':           {lang:'en', pair:'tetikleyici-hava-kosullari-safran-fenolojisi-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-5':                             {lang:'tr', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'saffron-aeroponic-cultivation-step-by-step-visual-guide':                    {lang:'en', pair:'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber'},
+  'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber':                 {lang:'tr', pair:'saffron-aeroponic-cultivation-step-by-step-visual-guide'},
+  'saffron-hydroponic-vertical-farming-concept-and-design-7':                   {lang:'en', pair:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7':                         {lang:'tr', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'saffron-production-life-cycle-biology-dormancy-and-flowering-8':             {lang:'en', pair:'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8'},
+  'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8':                   {lang:'tr', pair:'saffron-production-life-cycle-biology-dormancy-and-flowering-8'},
+  'smart-hydroponic-framework-for-saffron-precision-agriculture-9':             {lang:'en', pair:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-9':                          {lang:'tr', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'growth-medium-vegetative-productivity-and-corm-quality-10':                  {lang:'en', pair:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10':                    {lang:'tr', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11':         {lang:'en', pair:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11':              {lang:'tr', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12':      {lang:'en', pair:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12':                     {lang:'tr', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13':     {lang:'en', pair:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13':                  {lang:'tr', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'saffron-cultivation-using-aeroponics-viable-approach-2026-14':               {lang:'en', pair:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14':                {lang:'tr', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15':              {lang:'en', pair:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15':                     {lang:'tr', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'benchmarking-energy-efficiency-vertical-farming-18':                         {lang:'en', pair:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18':                      {lang:'tr', pair:'benchmarking-energy-efficiency-vertical-farming-18'},
+  'cradle-to-customer-lca-uk-vertical-farming-19':                              {lang:'en', pair:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19':                            {lang:'tr', pair:'cradle-to-customer-lca-uk-vertical-farming-19'},
+  'lca-urban-vertical-farm-construction-dismantling-20':                        {lang:'en', pair:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20':                    {lang:'tr', pair:'lca-urban-vertical-farm-construction-dismantling-20'},
+  'towards-sustainable-vertical-farming-eroi-review-21':                        {lang:'en', pair:'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21'},
+  'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21':                      {lang:'tr', pair:'towards-sustainable-vertical-farming-eroi-review-21'},
+  'innovation-vertical-farming-adaptive-vs-standard-22':                        {lang:'en', pair:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22':                        {lang:'tr', pair:'innovation-vertical-farming-adaptive-vs-standard-22'},
+  'sustainable-vf-machine-learning-iot-energy-23':                              {lang:'en', pair:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23':                         {lang:'tr', pair:'sustainable-vf-machine-learning-iot-energy-23'},
+  'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r': {lang:'en', pair:'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal'},
+  'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal':  {lang:'tr', pair:'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r'}
+
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint-full': {lang:'tr-full', pair:'indoor-saffron-production-profitability-blueprint', pairOzet:'i-c-mekanda-safran-uretimi-karlilik-blueprint'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3': {lang:'tr-full', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairOzet:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4': {lang:'tr-full', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairOzet:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-full-5': {lang:'tr-full', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairOzet:'tetikleyici-hava-kosullari-safran-fenolojisi-5'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7': {lang:'tr-full', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairOzet:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9': {lang:'tr-full', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairOzet:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10': {lang:'tr-full', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairOzet:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11': {lang:'tr-full', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairOzet:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12': {lang:'tr-full', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairOzet:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13': {lang:'tr-full', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairOzet:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14': {lang:'tr-full', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairOzet:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15': {lang:'tr-full', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairOzet:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15'},
+};
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a href="../index.html" class="site-logo">
+            <svg viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span>Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="https://ko-fi.com/safrantoplulugu" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="post-header">
+  <div class="container">
+    <div class="breadcrumb">
+        <a href="../index.html">Araştırmalar</a>
+        <span> / </span>
+        <span>Hidroponik Besin Dozlama, pH ve EC Otomasyonu — Sistematik Derleme</span>
+    </div>
+    <div class="full-badge">TR Full — Tam Çeviri</div>
+    <h1 class="post-title">Hidroponik Besin Dozlama, pH ve EC Otomasyonu — Sistematik Derleme</h1>
+    <div class="post-actions" id="langSwitchArea">
+        <div class="lang-switch" id="langSwitch"></div>
+    </div>
+    <script>
+    (function() {
+        var _parts = window.location.pathname.replace(/^\/|\/$/g, '').split('/').filter(function(p){ return p && p !== 'index.html'; });
+        var slug = _parts[_parts.length - 1] || '';
+        var info = window.LANG_MAP && window.LANG_MAP[slug];
+        if (!info) return;
+        var sw = document.getElementById('langSwitch');
+        if (!sw) return;
+        var html = '';
+        if (info.lang === 'tr-full') {
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pair + '/">EN →</a>';
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pairOzet + '/">TR Özet →</a>';
+            html += '<span class="lang-switch-current lang-switch-full">TR Full</span>';
+        }
+        sw.innerHTML = html;
+    })();
+    </script>
+  </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+    <h1>Otomatik Hidroponik Besin Dozlama Sistemi: pH ve Elektriksel İletkenlik Dozlama Çerçevelerinin Kapsamlı Derleme İncelemesi</h1>
+<p><strong>Makale Türü:</strong> Sistematik Derleme</p>
+<p><strong>Kaynak:</strong> Sulaiman H., Yusof A.A., Mohamed Nor M.K. Automated Hydroponic Nutrient Dosing System: A Scoping Review of pH and Electrical Conductivity Dosing Frameworks. <em>AgriEngineering</em> 2025, 7, 43. DOI: 10.3390/agriengineering7020043</p>
+<p><strong>Yazarlar:</strong>
+- Hamdan Sulaiman¹²* — hamdan91821@uitm.edu.my
+- Ahmad Anas Yusof³ — anas@utem.edu.my
+- Mohd Khairi Mohamed Nor³ — khairi@utem.edu.my</p>
+<p>¹ Mekanik Teknoloji ve Mühendislik Fakültesi, Universiti Teknikal Malaysia Melaka, Melaka 76100, Malezya</p>
+<p>² Tarımsal Teknoloji Araştırma Girişim Grubu, Tarım ve Agroteknik Fakültesi, Universiti Teknologi MARA, Melaka 77300, Malezya</p>
+<p>³ Robotik ve Endüstriyel Otomasyon Araştırma Grubu, Elektrik Teknoloji ve Mühendislik Fakültesi, Universiti Teknikal Malaysia Melaka, Melaka 76100, Malezya</p>
+<p><strong>Alındı:</strong> 8 Ocak 2025 | <strong>Revize Edildi:</strong> 2 Şubat 2025 | <strong>Kabul Edildi:</strong> 6 Şubat 2025 | <strong>Yayımlandı:</strong> 11 Şubat 2025</p>
+<hr />
+<h2>Özet</h2>
+<p>Topraksız bir yetiştiricilik yöntemi olan hidroponik; bitki büyümesini optimize etmek için hassas besin yönetimine dayanmaktadır. Bu çalışma; hidrojen potansiyeli (pH) ve elektriksel iletkenlik (Eİ) dozlama çerçevelerine odaklanarak otomatik hidroponik besin dozlama sistemlerine ilişkin sistematik bir kapsam incelemesi sunmaktadır. Sistematik ve kapsam incelemeleri için PRISMA uzantısı (PRISMA-ScR) yönergeleri çerçevesinde 3.222 çalışma taranmış; bunların 89'u dahil etme kriterlerini karşılayarak analize alınmıştır.</p>
+<p>Derleme; güncel araştırma eğilimlerini, dozlama çerçevelerini, kritik değişkenleri ve araştırma boşluklarını belirlemeyi amaçlamaktadır. Sonuçlar; 2015'ten (n=4) 2022'ye (n=18) kadar yayın sayısında sürekli bir artış olduğunu ortaya koymaktadır. Geri besleme döngüsü çerçeveleri ve tahmine dayalı analitikler eşit temsille yer almaktadır (n=45). Kritik değişkenler; pH (n=70), Eİ (n=36), toplam çözünmüş katılar (TÇK) (n=27), besin solüsyonu hacmi (BSH) (n=42) ve besin solüsyonu sıcaklığı (BSS) (n=28) olarak saptanmıştır. Çalışma; dozlama hızını, doğruluğunu ve sağlamlığını artırmak amacıyla gelişmiş dozlama çerçevelerini ve eş zamanlı dozlama stratejilerini bir araya getiren güçlü çerçevelere duyulan ihtiyacı vurgulamaktadır. Bu boşlukları gidermek üzere çoklu regresyon modellerini kullanan tahmine dayalı analitiği entegre eden özgün bir çerçeve önerilmektedir. Bu çerçeve; otomatik hidroponik besin dozlama sistemlerinin dozlama hızını, doğruluğunu ve sağlamlığını artırmayı hedeflemektedir.</p>
+<p>Bulgular; hassas hidroponik sistemlere yönelik artan talebi karşılamak için uyarlanabilir çerçeveler üzerine daha fazla araştırma yapılmasının önemini güçlü biçimde ortaya koymaktadır.</p>
+<p><strong>Anahtar Sözcükler:</strong> elektriksel iletkenlik; hidroponik; otomatik dozlama sistemi; pH; kapsam incelemesi</p>
+<hr />
+<h2>1. Giriş</h2>
+<p>Hidroponik; bitki köklerinin genellikle besin solüsyonuna daldırıldığı kapalı döngülü bir sulama sistemi aracılığıyla ürünlere besin maddesi sağlayan, topraksız bir yetiştiricilik yöntemidir [1,2]. Besin solüsyonu; bitkilerin büyümesi için zorunlu olan makro ve mikro besin elementlerini içermektedir [3]. Makro ve mikro besin elementleri bitkiler tarafından sırasıyla büyük ve küçük miktarlarda tüketilerek çeşitli metabolik ve hücresel süreçleri destekler [4]. Bu nedenle hidroponik besin solüsyonu dozlama sisteminin hassasiyeti ve verimliliği; optimal mahsul büyümesi açısından kritik öneme sahiptir [5].</p>
+<p>Hidroponik besin dozlama sistemlerine ilişkin araştırmalar; genellikle hidrojen potansiyeli (pH) ve elektriksel iletkenlik (Eİ) gibi kritik değişkenlerin ayarlama sürecini kapsamaktadır. Dahası bu değişkenler; belirli ürünlerin gerektirdiği optimum koşullara bağlı olarak farklı değerlerde kontrol edilmektedir [6,7].</p>
+<p>Eİ, hidroponiklerde besin kullanılabilirliğini, su alımını ve genel bitki büyümesini doğrudan etkilemesi nedeniyle kritik bir parametredir; bu nedenle optimum verim ve kalite için hassas yönetim zorunludur. Örneğin Wongsorn ve ark.; Pepino (Solanum muricatum) bitkisinin vejetatif büyümesi üzerinde farklı Eİ düzeylerinin (1, 2, 3 ve 4 mS/cm) etkisini incelemiştir. Sonuçlar; Eİ düzeylerinin bitki büyüme parametrelerini belirgin biçimde etkilediğini ortaya koymuştur. 2 ve 3 mS/cm'lik Eİ düzeyleri en yüksek klorofil floresansı ve yaprak yeşillik indeksini sağlarken 4 mS/cm'lik Eİ, en büyük bitki boyu, taç genişliği ve gövde çapını üretmiştir. Düşük Eİ düzeyleri (1 ve 2 mS/cm) ise daha yüksek çiçeklenme yüzdesiyle ilişkilendirilmiştir [8]. Ayrıca dikey hidroponik sistemlerde yetiştirilen marulda 2,5 mS/cm Eİ düzeyinin maksimum verimi sağladığı; 1,5 mS/cm Eİ'nin ise en yüksek C vitamini ve klorofil içeriğiyle sonuçlandığı ortaya konulmuştur [9]. Bu durum, farklı Eİ düzeylerinin arzu edilen çıktıya göre ya verimi ya da kaliteyi optimize edebildiğini göstermektedir.</p>
+<p>Öte yandan pH da hidroponiklerde kritik bir faktördür. Besin çözünürlüğü ve kullanılabilirliğini, kök sağlığını ve genel bitki büyümesini doğrudan etkiler; bu nedenle optimum mahsul performansı için hassas pH yönetimi zorunludur. Örneğin Hopkinson ve ark.; aşırı pH düzeylerinin (hem çok asidik hem de çok bazik) fasulye (Phaseolus vulgaris) büyümesini engellediğini saptamıştır. pH 5–6 aralığındaki besin solüsyonlarında yetiştirilen bitkiler daha sağlıklı büyüme sergilemiş; pH 8–9'dakilerde ise stunted büyüme, kısalmış boğum arası ve besin eksikliği belirtileri gözlemlenmiştir. Fasulyeler için optimal pH aralığı; yeterli besin çözünürlüğü ve alımını sağlamak üzere 5,6–6,2 olarak belirlenmiştir [10]. Bunun yanı sıra hidroponik ıspanak üzerine yapılan araştırmalar; 5,5–6,5 pH aralığının korunmasının daha hızlı büyüme ve daha iyi besin emilimine yol açtığını ortaya koymuştur. pH bu aralıktan saptığında bitkiler, yetersiz besin alımı nedeniyle soluk sarı yapraklar ve düşük büyüme göstermiştir [11]. Bu nedenle hidroponiklerde bitki büyümesi; her iki parametrenin de Şekil 1'de gösterildiği gibi optimal aralıklarında dikkatle düzenlenmesini gerektirmekte olup pH ve Eİ'ye eşit ölçüde bağlıdır. Ne yazık ki yetiştiriciler bu değişkenler üzerindeki sürekli kontrolü sürdürmekte sıklıkla güçlük çekmektedir [12]. Bu nedenle otomatik dozlama sisteminin uygulanması giderek daha zorunlu hale gelmektedir.</p>
+<p>Hidroponik besin solüsyonunda dozlama süreci; kritik değişkenlerin istenilen değerlere getirilmesini içermektedir [14]. Hassas hidroponik için dozlama sistemlerine yönelik araştırmalar; pek çok akademisyenin odak noktası haline gelmiştir. Bununla birlikte bu dozlama çerçevelerine ilişkin bilgileri kapsayan ve analiz eden kapsamlı bir sistematik derlemenin bulunmadığı görülmektedir.</p>
+<p>Bu çalışmanın önemi; pH ve Eİ'yi düzenlemek amacıyla hidroponik besin yönetiminde kullanılan çerçeveye ilişkin anlayış boşluğunu giderme potansiyelinden kaynaklanmaktadır. Bu çalışmadan elde edilen bilgiler; hidroponik besin dozlama sisteminin nasıl yürütüleceğine ya da geliştirileceğine dair bir rehber olarak gelecekteki araştırmalara yol gösterebilir. Bu nedenle sistematik kapsam incelemesi şu hedeflere ulaşmayı amaçlamaktadır:</p>
+<ol>
+<li>Besin dozlama işlemlerine ilişkin hidroponik teknikler konusundaki güncel araştırma eğilimlerinin haritalanması,</li>
+<li>Hidroponik besin dozlama sisteminde kullanılan hidroponik besin dozlama çerçevesinin sınıflandırılması,</li>
+<li>Hidroponik besin dozlama sistemindeki kritik değişkenlerin belirlenmesi,</li>
+<li>Gelecekteki araştırmalara rehberlik etmek amacıyla hidroponik besin dozlama çerçevesine ilişkin bilgi boşluklarının tespit edilmesi.</li>
+</ol>
+<hr />
+<h2>2. Materyal ve Yöntem</h2>
+<p>Sistematik kapsam incelemeleri; bilgi boşluklarını sistematik biçimde belirlemeyi, mevcut literatürün kapsamlı özetlerini sunmayı, teorik çerçeveleri netleştirmeyi ve önceki araştırma çalışmalarında kullanılan metodolojileri, yaklaşımları ve uygulamaları değerlendirmeyi hedeflemektedir [15]. Buna göre bu bölüm; çalışmada kullanılan metodolojileri ortaya koymaktadır. Yöntemimiz; Arksey ve ark.'ın [17] kurduğu özgün PRISMA çerçevesinin rafine bir versiyonu olan Sistematik ve Kapsam İncelemeleri için Tercih Edilen Raporlama Öğeleri (PRISMA-ScR) yönergelerine [16] uyum sağlamaktadır. Protokol; literatürün incelenmesi ve özümsenmesinde yapılandırılmış ve şeffaf bir süreç sağlayan bir yönerge niteliğindedir.</p>
+<h3>2.1 Araştırma Soruları</h3>
+<p>Araştırma sorusunun açık biçimde ifade edilmesi; tüm literatür tarama sürecinin rehber yönergesi olarak zorunludur [18]. Levac ve ark.'ın önerilerine uygun biçimde [19] araştırma soruları; çalışmanın hedefleriyle tam uyum sağlayacak ve pratik ile ilgili bir literatür araştırmasını kolaylaştıracak şekilde netleştirilmiştir. Araştırma soruları şöyle sıralanabilir:</p>
+<ul>
+<li>Hidroponik teknikler ve besin dozlama işlemlerine ilişkin güncel araştırma eğilimleri nelerdir?</li>
+<li>Hidroponik besin dozlama işlemlerinde hangi çerçeveler ağırlıklı olarak kullanılmaktadır?</li>
+<li>Hidroponik besin dozlama çerçevesinde hangi değişkenler yaygın olarak dikkate alınmaktadır?</li>
+<li>Mevcut hidroponik dozlama çerçevelerinde hangi metodolojik sınırlamalar ve teknolojik gelişmeler mevcuttur?</li>
+</ul>
+<h3>2.2 Bilgi Kaynağı ve Arama Stratejisi</h3>
+<p>Kapsam incelemesinde araştırmanın kalitesi birincil endişe olmamakla birlikte kapsamın geniş tutulması gerekmektedir [18]. Bu nedenle çalışmaya hem hakemli hem de hakemli olmayan belgeler dahil edilmiştir. Literatür taraması; Web of Science (WoS), Scopus, ProQuest, IEEE Xplore ve Google Scholar olmak üzere beş farklı veri tabanını kapsamaktadır. Literatür taraması için anahtar sözcük seçimi kritik önem taşımakta olup araştırma sorularından türetilmesi gerekmektedir [18,20]. Bu çalışmadaki anahtar sözcük dizileri; Boole operatörleri kullanılarak şu şekilde oluşturulmuştur: (Otomatik VEYA Otonom VEYA Bilgisayar Destekli) VE (Hidroponik VEYA Topraksız) VE ("Elektriksel İletkenlik" VEYA Eİ) VE ("Hidrojen Potansiyeli" VEYA pH) VE (Dozlama VEYA Sistem VEYA Kontrol VEYA Ayarlama VEYA Yönetim VEYA Regülatör VEYA Çerçeve).</p>
+<h3>2.3 Uygunluk Kriterleri ve Veri Çıkarımı</h3>
+<p>Tarama İngilizce makalelerle sınırlı tutulmuştur. Yalnızca araştırma makaleleri dahil edilmiş; derleme makaleleri kapsam dışı bırakılmıştır. Makalelerin ilgililik düzeyi; öncelikli olarak hidroponik dozlama çerçeveleriyle ilgili literatüre odaklanılarak değerlendirilmiştir. Aramalar; 2015'ten Eylül 2023'e kadar yayımlanan çalışmalarla sınırlandırılmıştır. Veri çıkarımı; araştırma sorularına yanıt üretmeye elverişli biçimde gerçekleştirilmiştir. Seçilen bazı literatür yalnızca istenen bilgilerin bir kısmını içerse de çalışmaya dahil edilmiştir. Tüm çıkarılan verileri düzenlemek amacıyla şu ayrıntıları kapsayan bir Excel çalışma kitabı oluşturulmuştur: (1) Hidroponik teknik; (2) hidroponik dozlama çerçevesi; (3) dozlama değişkenleri. Veriler; içgörüleri vurgulamak ve gelecekteki araştırmalar için bilgi boşluklarını belirlemek amacıyla grafiklendirilmiş, sentezlenmiş ve özetlenmiştir.</p>
+<hr />
+<h2>3. Sonuçlar ve Tartışma</h2>
+<p>Aralık 2024'te tamamlanan beş veri tabanındaki kapsamlı arama 3.222 yayın belirledi. Bu titiz tarama; başlık ve özetteki ilgisizlik (n=3.004) ve kopyalanma (n=65) gibi nedenlerle 3.069 yayının elenmesine yol açtı. İlgililik değerlendirmesi aşamasında 64 yayın daha dışarıda bırakılarak dahil etme kriterlerini karşılayan ve Şekil 2'de gösterildiği üzere nihai analize alınan 81 çalışmaya ulaşıldı. Yayınlar; dergi makalelerinden (n=43), konferans bildirilerinden (n=44) ve kitap bölümlerinden (n=2) oluşmaktadır. Veri tabanlarına göre dağılım şöyledir: Web of Science'dan 28, Scopus'tan 35, ProQuest'ten 4, IEEE Xplore'dan 4 ve Google Scholar'dan 18 çalışma.</p>
+<h3>3.1 Otomatik Hidroponik Besin Dozlama Sisteminde Araştırma Eğilimleri</h3>
+<p>Besin filmi tekniği (NFT); 45 çalışmayla (%50,56) hidroponik besin dozlama sistemi araştırmalarına hâkimdir. Gel-git (EF) sistemi 8 çalışmayla (%9,00), derin su kültürü (DWC) 9 çalışmayla (%10,11), derin akış tekniği (DFT) 5 çalışmayla (%5,62), yüzen salça (YS) 4 çalışmayla (%4,50), Hollanda kova sistemi (HKS) ve damla ile fitil sistemleri birer çalışmayla (%1,12) temsil edilmektedir. 15 araştırmacı ise kullandıkları hidroponik tekniği belirtmemiştir.</p>
+<p>Otomatik hidroponik dozlama sistemine ilişkin yayın sayısı; 2015'teki 4'ten 2017'de 6'ya yükselmiş, 2018'de durağanlaşmıştır. Araştırma 2019'da 13'e ikiye katlanmış; 2020 ile 2021 arasında (6 ve 15 yayın) dalgalanmış ve 2022'de 18 yayınla zirveye ulaşmıştır. Eğilim; 2023'te 13 ve 2024'te 7 yayınla azalmıştır. Bu sonuçlar; araştırmacıların bitki büyümesini ve sürdürülebilirliği optimize etmek amacıyla besin dozlama sistemleri dahil hidroponiklerin çeşitli boyutlarını keşfettiğini açıkça ortaya koymaktadır.</p>
+<h3>3.2 Besin Dozlama Çerçevesi</h3>
+<p>Hidroponiklerdeki besin dozlama çerçeveleri; geri besleme döngüsü (n=45) ve tahmine dayalı analitik (n=45) olmak üzere iki alan halinde sınıflandırılabilir. Geri besleme döngüsü çerçevesi; güncel değişken değerlerinin önceden belirlenmiş eşiklerle sürekli izlenmesini ve karşılaştırılmasını ön plana çıkarır. Bu alan; geleneksel geri besleme döngüsü (n=42) ve orantısal-integral-türev (OİT/PID) kontrolünü (n=3) kapsar. Tahmine dayalı analitik alanı ise önceden eğitilmiş veri kümelerine dayalı olarak değişken yanıtlarını öngörmek için analitik teknikleri kullanır. Bu alanda üç yöntem öne çıkmıştır: makine öğrenmesi (n=8), istatistiksel teknikler (n=17) ve bulanık mantık (n=20).</p>
+<p><strong>Geleneksel geri besleme döngüsü</strong>, besin dozlaması için en basit çerçeve olarak öne çıkmaktadır. Bu çerçevedeki otomasyon süreci; ilgili değişkenlere ait önceden belirlenmiş eşik değerleriyle kontrol edilen dozlama aktüatörlerinin etkinleştirilmesine dayanmaktadır. Bu operasyonel çerçeve; Hakam ve ark.'ın [71] sağladığı akış şemasıyla somutlaştırılmıştır. Sistem; değişken değerlerini belirlenmiş eşiklerle sürekli karşılaştırmaktadır. Servolar [45], solenoid valfler [33] ve peristaltik pompalar [50] gibi dozlama aktüatörleri; değişken değerleri kabul edilebilir aralığın dışına çıktığında tetiklenmektedir. Değerler belirtilen eşiklerle yeniden örtüştüğünde ise bu aktüatörler devre dışı bırakılmaktadır.</p>
+<p><strong>PID kontrol yöntemi</strong>, dozlama çerçevesi olarak daha az tercih edilmektedir. PID kontrol sistemi; mevcut ölçüm ile istenen ayar noktası arasındaki farkı değerlendirerek hata değerini sürekli hesaplayan bir geri besleme mekanizması olarak işlev görür. Ryan ve ark. [25], pH ayar noktası aralığı olan 5,5–6,5'ten sapma üzerine hata değerini belirlemiştir. Bu hata hesaplama; doz pompasının aktivasyonunu darbe genişliği modülasyonu kullanarak düzenlemek amacıyla kullanılabilir.</p>
+<p><strong>Bulanık mantığın</strong> besin dozlama çerçevelerinde uygulanması tipik olarak şu adımları içermektedir: (1) bulanıklaştırma, (2) bulanık çıkarım ve (3) netleştirme. Bulanıklaştırma aşamasında; giriş ve çıkış değişkenleri kesin değerler olarak tanımlanarak bir üyelik fonksiyonuna atanır [37]. Bu değişkenler daha sonra uygulanan bulanık çıkarım sistemine göre dilsel ya da matematiksel olarak modellenir [43]. Sistem; "eğer-ise" kuralları ve "ve" bulanık mantık operatörü temelinde işler. Netleştirme; birikimli bulanık çıktıyı tekil ve kesin bir değere dönüştürür. Fakhrurroja ve ark. [42]; pompa aktivasyon süresine ilişkin bulanık çıktının dönüştürülmesiyle bunu somutlaştırmıştır.</p>
+<p><strong>Makine öğrenmesi</strong> de besin dozlama çerçevelerinde giderek artan ölçüde kullanılmaktadır. Uygulaması; genellikle eğitim veri kümesi ve test veri kümesi olmak üzere iki kategoriye ayrılan kapsamlı veri kümelerinin işlenmesini içerir [49,83]. Eğitim veri kümesi; dozlama aktüatörünün etkinleştirilmesi için karar alma sürecine rehberlik eden bir model geliştirmek amacıyla kullanılır. Örneğin Albert ve ark. [99], bir dozlama pompasının uygun aktivasyon zamanlamasını belirlemek için K-en yakın komşu (KNN) makine öğrenmesi tekniğini uygulamıştır. Farklı bir çalışmada Arora ve ark. [14], piksel görüntü piksellerinin kırmızı-yeşil-mavi (RGB) değerlerine göre belirlenen bitki rengini esas alarak besin solüsyonunun pH'ını düzenlemek amacıyla yapay sinir ağı (YSA) kullanmıştır. Bu bağlamda makine öğrenmesi; besin solüsyonunun nihai pH ve Eİ ölçümlerini tahmin etmek için tahmine dayalı modeller ya da karar alma süreçlerini kullanan tahmine dayalı analitiğin kapsamına girmektedir.</p>
+<p><strong>İstatistiksel teknikler</strong>, incelenen çalışmalarda besin dozlama çerçevesinde tahmine dayalı analitik olarak kullanılmaktadır. Bu yaklaşım öncelikle regresyon analizini içermekte olup bağımlı değişkenleri (yanıtları) bağımsız değişkenlerle (öngörücüler) ilişkilendiren tahmine dayalı modeller önermektedir. Regresyon yöntemi seçimi; dahil edilen öngörücü ve yanıt sayısına bağlıdır. Örneğin Abd Rahman ve ark. [32], dozlama pompasının aktivasyon süresini öngörerek besin solüsyonunun Eİ'sini kontrol etmek amacıyla doğrusal regresyon uygulamıştır. Bir diğer yaygın yöntem ise birden fazla öngörücüye dayalı bir yanıtı öngören çoklu doğrusal regresyondur. Helmy ve ark. [56]; besin solüsyon düzeyi ve dozlama pompasının aktivasyonu için gereken süre olmak üzere iki öngörücüyü göz önünde bulundurarak besin solüsyonunun pH düzeyini düzenlemeyi hedefleyen araştırma yürütmüştür.</p>
+<p>Sonuç olarak hidroponiklerdeki besin dozlama çerçeveleri; geri besleme döngüsü ve tahmine dayalı analitik olmak üzere iki ana yaklaşımda toplanabilir. Gerçek zamanlı eşik izleme ve optimal solüsyon parametrelerini korumak için anlık düzeltici eylemleri ön plana çıkaran geri besleme döngüsü çerçevesi; reaktif kontrolü temsil eder. Buna karşın giriş değişkeni ayarlamalarını öngörmek için veri odaklı yöntemleri kullanan tahmine dayalı analitik çerçeve; hassas ve verimli dozlama kararlarına olanak tanıyan proaktif bir yaklaşımdır. Bu iki çerçeve; reaktif kontrol ve proaktif tahmin arasındaki dengeyi yansıtarak hidroponik sistemlerde besin yönetimi için kapsamlı bir strateji sunar.</p>
+<h3>3.3 Dozlama Değişkenleri</h3>
+<p>pH, araştırmalarda en sık kullanılan değişkendir (n=70). Bunu besin konsantrasyonu (n=63) —Eİ (n=36) ve TÇK'yı (n=27) kapsar— izlemektedir. BSH (n=42) ve BSS (n=28) de belirgin biçimde dahil edilmiştir. pH ve Eİ eşlemesi en yaygın kombinasyon olup bu değişkenlerin besin yönetimindeki kritik rolünü ve birbirine bağımlılığını ortaya koymaktadır.</p>
+<p><strong>pH değeri</strong>; hidrojen iyonları (H⁺) konsantrasyonunu ölçerek besin solüsyonunun asitliğini ya da bazikliğini ölçer. Düşük bir pH değeri; daha yüksek hidrojen iyonu konsantrasyonunu ifade eder ve pH 7'nin altındaki bir solüsyon asidik olarak sınıflandırılır [108]. Besin alımının bu aralıkta en yüksek olduğu göz önüne alındığında hidroponik besin solüsyonunun pH değerinin 6,2–6,5 arasındaki optimal aralıkta tutulması gerekmektedir [13]. Besin solüsyonundaki pH ayarlama solüsyonlarının kullanımı da hesaba katılması gereken temel bir unsurdur. Hidroponik sistemlerde besin solüsyonlarının pH'ı; asidik ya da bazik solüsyonlar kullanılarak ayarlanır. Asit kullanan çözümler arasında nitrik asit [30], fosforik asit [70], sitrik asit [25], asetik asit [67] ve hidroklorik asit [95] sayılabilir. Bazik solüsyonlar ise sodyum bikarbonat [58], potasyum hidroksit [31] ve sodyum hidroksit [95] gibi bileşikleri kapsamaktadır.</p>
+<p><strong>Eİ</strong>; bir besin solüsyonunun elektrik akımını iletme kapasitesini ölçer [110]. TÇK ise çözünmüş katı parçacıkların konsantrasyonunu nicelleştirir [111]. Düşük Eİ ve TÇK değerleri; yetersiz besinlere işaret ederken yüksek değerler tuz birikimine yol açarak bitki büyümesini olumsuz etkileyebilir [112].</p>
+<p><strong>BSS</strong>, hidroponik besin solüsyonunun pH ve Eİ ölçümlerini etkileyen önemli bir faktördür [109,122]. Standardizasyon amacıyla pH okumalarının 25°C'ye göre düzenlenmesi gerekmektedir [122]. BSS değişiklikleri; oksijen kullanılabilirliğini ve bitki fizyolojik işlevlerini de etkiler [115,116].</p>
+<p><strong>BSH</strong>, BSH dalgalanmalarının pH ve Eİ'yi etkileyen asidik ve bazik bileşenler arasındaki dengeyi bozması nedeniyle kritik bir faktördür. BSH'deki artış; solüsyonu seyrelttiği için tipik olarak pH'ı yükseltirken azalma solüsyonu yoğunlaştırarak pH'ı düşürür [119,120].</p>
+<h3>3.4 Çeşitli Çerçevelerde Dozlama Değişkenlerinin Önemi</h3>
+<p><strong>Tablo 2: Dozlama Çerçevesine Göre Her Parametreyi Dahil Eden Çalışma Sayısı</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dozlama Çerçevesi</th>
+<th>Toplam Çalışma</th>
+<th>pH</th>
+<th>Eİ/TÇK</th>
+<th>BSS</th>
+<th>BSH</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geleneksel geri besleme döngüsü</td>
+<td>42</td>
+<td>33</td>
+<td>25</td>
+<td>14</td>
+<td>22</td>
+</tr>
+<tr>
+<td>PID</td>
+<td>3*</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Bulanık mantık</td>
+<td>20*</td>
+<td>16</td>
+<td>14</td>
+<td>5</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Makine öğrenmesi</td>
+<td>8</td>
+<td>8</td>
+<td>9</td>
+<td>6</td>
+<td>4</td>
+</tr>
+<tr>
+<td>İstatistiksel teknik</td>
+<td>17</td>
+<td>11</td>
+<td>14</td>
+<td>3</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>*Rao ve ark. [103] çalışmasında iki farklı dozlama çerçevesi kullanmıştır: pH kontrolü için bulanık mantık, Eİ düzenlemesi için PID.</p>
+<p>Ki-kare 12 serbestlik derecesiyle 6,186 olarak hesaplanmış; karşılık gelen p değeri 0,9064 olarak bulunmuştur. Bu yüksek p değeri (p&gt;0,05); dozlama çerçeveleri ile parametre dahil etme arasında istatistiksel açıdan anlamlı bir ilişki olmadığına işaret etmektedir. Bulgular; hidroponik araştırmalardaki güncel eğilimlerle uyumludur: seçilen dozlama çerçevesi parametreleri belirlemez, parametre seçimi spesifik deneysel gereksinimlere göre yapılır.</p>
+<h3>3.5 Dozlama Stratejisi</h3>
+<p>Besin dozlama sisteminin çıkış değişkenleri; yalnızca pH, yalnızca Eİ ya da her iki değişkenden oluşmaktadır. Buna karşılık giriş değişkenleri; Eİ ayarlama solüsyonu, pH ayarlama solüsyonu ya da her ikisini içerebilir. Bu nedenle dozlama stratejisi; tek girişli tek çıkışlı (TGTÇ/SISO) ve çok girişli çok çıkışlı (ÇGÇÇ/MIMO) olmak üzere iki kategoride ele alınmaktadır. TGTÇ stratejisi yalnızca tek bir değişkenin düzenlenmesini gerektirdiğinden daha basittir. Buna karşın ÇGÇÇ stratejisi; hem pH hem de Eİ değerlerini kontrol etmesi gerektiğinden daha karmaşıktır. ÇGÇÇ işlemi sıralı ya da eş zamanlı olarak gerçekleştirilebilir.</p>
+<p>Adidrana ve ark. [84] ile Herman ve ark. [48] gibi çalışmalar; dozlama aktüatörlerinin eş zamanlı olarak etkinleştirildiği pH ve TÇK'nın eş zamanlı dozlamasını sergilemektedir. Bu yaklaşım; birkaç değişkenin eş zamanlı kontrolüne olanak tanıyarak beslenme solüsyonlarını kontrol etmenin daha karmaşık ama etkili bir yolunu göstermektedir.</p>
+<p>Dozlama solüsyonlarının hidroponik sistemlere eklenmesi; peristaltik pompalar [26,50,59], solenoid valfler [30,64,88] ve servolar [21,29,70] gibi aktüatörlerin etkinleştirilmesiyle kolaylaştırılmaktadır. Geri besleme döngüsü çerçevesinde bu aktüatörlerin aktivasyonu basittir: pH ve Eİ değerleri izin verilen eşiği aştığında tetiklenirler. Ancak bulanık mantık ve tahmine dayalı analitik kullanan çerçevelerde aktüatör aktivasyonu; zaman tabanlı [24,32,43], dönüş tabanlı [24,45], hacim tabanlı [14,34,74] ve diğer stratejilere dayanan farklı yöntemlerle sağlanır.</p>
+<p>Zaman tabanlı stratejilerde hedef değere ulaşmak için aktüatör aktivasyon süresi tahmin edilirken dönüş tabanlı strateji; adım motorları gibi aktüatörlerin dönüş sayısına dayanır [51]. Bunlar arasında en doğru strateji hacim tabanlıdır; çünkü dozlama işlemlerini etkileyen temel faktör, besin solüsyonuna enjekte edilen dozlama solüsyonlarının hacmidir. Bunun yanı sıra eklenen solüsyon miktarını ölçmek için hacim sensörlerinin kullanılması; besin solüsyonu dozlama sistemindeki hassasiyeti önemli ölçüde artırabilmektedir.</p>
+<p>Ayrıca büyüme evresine özgü besin yönetiminin entegrasyonunun da hidroponik sistemleri optimize etmek açısından kritik olduğu görülmektedir. Wongsorn ve ark. [8] ile Sangeetha &amp; Periyathambi'nin [104] yeni çalışmaları; bitki besin gereksinimlerinin gelişim evreleri boyunca önemli ölçüde değiştiğini ve dinamik dozlama ayarlamalarını zorunlu kıldığını ortaya koymaktadır. Wongsorn ve ark. [8]; Pepino bitkilerinin vejetatif evrede 2–3 mS/cm Eİ'de optimal büyüme gösterdiğini, çiçeklenme evresinde 3–4 mS/cm'e ve meyve oluşumu evresinde 4–5 mS/cm'e çıktığını saptamıştır. Bu durum; kontrollü deneylerde çiçek üretiminde %65 artış ve meyve biyokütlesinde %30 yükselişle ilişkilendirilmiştir. Bu bulguları tamamlar nitelikte Sangeetha &amp; Periyathambi [104]; büyüme evresini belirlemede %97,5 ve meyve oluşumu evresinde besin iletim zamanlamasında %99,4 doğruluk elde eden makine öğrenmesi çerçeveleri geliştirmiştir.</p>
+<hr />
+<h2>4. Araştırma Boşlukları</h2>
+<h3>4.1 Sıcaklık Telafi Modeli</h3>
+<p>BSS; hidroponik besin solüsyonu pH ve Eİ ölçümlerini etkilemektedir [109,122]. BSS; hidroponik sistemlerde pH ve Eİ izleme açısından zorunludur. Standart uygulama; tutarlılık ve doğruluk için pH okumalarını 25°C'ye göre düzenlemektir [122]. Sıcaklık telafi formülleri, pH okumalarını sıcaklık değişikliklerine göre uyarlar.</p>
+<p>İncelenen çalışmalar arasında Eİ veya pH ölçümü için sıcaklık düzeltme faktörüne atıfta bulunan yalnızca bir makaleye rastlanmıştır. Bu bileşenin BSS çalışmaları dahil diğer araştırmalara dahil edilip edilmediği belirsiz kalmaktadır. Telaumbanua ve ark. [38]; doğrusal regresyon modeli kullanarak Eİ ölçüm düzeltme faktörü geliştirmiştir. Helmy ve ark. [57]; TÇK ve BSS arasındaki açık ilişkiyi ortaya koyarak sıcaklık adaptasyonunun gerekliliğini vurgulamıştır. Bu bulgular; ölçüm doğruluğunu artırmak için hidroponik araştırmalara sıcaklık düzeltme bileşeninin eklenmesinin gerektiğini göstermektedir.</p>
+<h3>4.2 Özgün Bir Dozlama Çerçevesi</h3>
+<p>Sağlamlığı, doğruluğu ve hızı artırmak amacıyla yeni bir besin dozlama çerçevesi önerilmektedir. pH ve Eİ'nin hassas ve doğru ölçümleri için Sulaiman ve ark.'ın [124] önerdiği seçici yöntemlerin kullanılması güçlü biçimde tavsiye edilmektedir. Bu yaklaşım; hidroponik besin solüsyonlarındaki optimal koşulların sağlanması için temel olan bu kritik değişkenlerin güvenilir biçimde izlenmesini ve kontrolünü güvence altına alır.</p>
+<p>Dozlama hızı açısından İbrahim ve ark. [24]; iyi tanımlanmış bir dozaj modelinin muhtemelen dozlama süresini kısaltacağını belirtmiştir. Ek olarak DaeHyun ve ark. [22]; sıralı dozlama stratejisinin hatalı sonuçlar verdiğini saptamıştır. Musluk suyu Eİ'sinin (Eİ_su) dışarıda bırakılmasının yüksek göreceli hatalara yol açtığını bulmuştur. Benzer şekilde hatalı pH okumalarına; kısmen musluktan akan suyun pH'ının (pH_su) neden olabileceğini vurgulamıştır.</p>
+<p>Bu doğrultuda önerilen çerçeve; toplam 21 değişkeni (18 öngörücü ve 3 yanıt) kullanan çok değişkenli doğrusal regresyon modelleri aracılığıyla ÇGÇÇ stratejisini benimseyen tahmine dayalı bir dozlama modeli sunmaktadır. Bu yöntem; dozlama süresini önemli ölçüde azaltmakta, dozlama doğruluğunu artırmakta ve önemi giderek artan dozlama modelinin sağlamlığını güçlendirmektedir.</p>
+<p>Çerçeve uygulamasında bazı kısıtlamaların göz önünde bulundurulması gerekmektedir. Yoğunlaştırılmış besin solüsyonu A ve B'nin giriş hacimleri (Hacim_a ve Hacim_b); üreticinin tavsiyelerine uygun biçimde eklenmek zorundadır. Besin solüsyonunun hacmi; normalleştirme için de hesaba katılmaktadır. Normalleştirme hedeflenmediği durumlarda Hacim_son; karışım tankında kalan besin solüsyonu hacmine (Hacim_kalan) eşit kabul edilir ve ilave su eklenmez (Hacim_su = 0 mL). Sıcaklık telafi faktörleri; tüm solüsyonlarda Eİ ve pH'ın hassas biçimde ölçülmesi ve çerçevenin doğruluğunun artırılması açısından vazgeçilmezdir. Çoklu dozlama değişkenlerinin entegrasyonu; çerçevenin besin solüsyonu parametre dalgalanmalarına dinamik biçimde uyum sağlamasına, sistem sağlamlığını ve dozlama hassasiyetini artırmasına olanak tanımaktadır.</p>
+<h3>4.3 Önerilen Dozlama Çerçevesinin Optimizasyonu</h3>
+<p>Önerilen çerçeve önemli bir ilerlemeyi temsil etmekle birlikte tam optimizasyona ihtiyaç duyulabilir. Gelecekteki araştırmaların; dozlama işlemlerini iyileştirmek için yeni yöntem ve teknolojileri keşfederek hidroponik besin dozlama çerçevelerinin optimizasyonuna odaklanması önerilmektedir.</p>
+<p>Tahmine dayalı modellerin geliştirilmesi; sonuçlarımız olan hidroponik besin solüsyonunun nihai pH, Eİ ve hacim değerini önemli ölçüde etkileyen temel değişkenleri belirleyen ve daha az deneme run gerektiren Kesin Tarama Tasarımını (KTT/DSD) kullanan tarama süreciyle başlar [125]. Değişkenler iki sınıfa ayrılmaktadır: (1) kontrollü değişkenler —deneylerde belirlenebilen— ve (2) karıştırıcı değişkenler —kontrol edilemeyen ama yanıtları etkilediği bilinen.</p>
+<p><strong>Tablo 3: Dozlama Değişkeni Sınıflandırmaları</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dozlama Solüsyonu</th>
+<th>Kontrollü Değişkenler</th>
+<th>Karıştırıcı Değişkenler</th>
+<th>Yanıtlar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yoğunlaştırılmış besin solüsyonu A</td>
+<td>Eİ_a, Hacim_a</td>
+<td>pH_a</td>
+<td>pH_son</td>
+</tr>
+<tr>
+<td>Yoğunlaştırılmış besin solüsyonu B</td>
+<td>Eİ_b, Hacim_b</td>
+<td>pH_b</td>
+<td></td>
+</tr>
+<tr>
+<td>pH yükseltici</td>
+<td>pH_y, Hacim_y</td>
+<td>Eİ_y</td>
+<td>Eİ_son</td>
+</tr>
+<tr>
+<td>pH düşürücü</td>
+<td>pH_d, Hacim_d</td>
+<td>Eİ_d</td>
+<td></td>
+</tr>
+<tr>
+<td>Musluk suyu</td>
+<td>Hacim_su</td>
+<td>Eİ_su, pH_su</td>
+<td>Hacim_son</td>
+</tr>
+<tr>
+<td>Kalan besin solüsyonu</td>
+<td>Hacim_kalan</td>
+<td>Eİ_kalan, pH_kalan</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Ardından karmaşık ilişkileri analiz ederek ayrıntılı modelleme oluşturmak amacıyla yanıt yüzey metodolojisi (YYM/RSM) uygulanabilir. Belirlenen yanıtlara dayalı üç tahmine dayalı model önerilecektir. Önerilen hidroponik dozlama çerçevesi; YYM ve arzulabilirlik fonksiyonu kullanılarak daha da optimize edilebilir [126,127]. Bu yöntem; her yanıtı 0 (istenmeyen) ile 1 (tamamen istenen) arasında bir arzulabilirlik değerine dönüştürerek —bazı araştırmalarda yüzdeye çevrilmektedir— birden fazla yanıtı eş zamanlı olarak optimize etmeye olanak tanır [128]. Bu arzulabilirlik değerlerinin tümü; hidroponik dozlama işlemleri için optimum giriş değişkenlerini belirlemek amacıyla optimize edilecek bir bileşik arzulabilirlik puanı elde etmek için birleştirilir.</p>
+<p>Son olarak tahmine dayalı modellerin ve sonuçların doğrulanması; önerilen çerçevenin doğruluğunu ve güvenilirliğini güvence altına almak açısından kritiktir. Araştırmacılar; model doğrulama için istatistiksel analiz kullanabilir ve çerçevenin önerilen dozlama çerçevesinin davranışını doğru biçimde yansıtmasını sağlamak amacıyla gerçek koşullarda deneyler yürütebilir.</p>
+<hr />
+<h2>5. Sonuçlar</h2>
+<p>Hidroponik besin solüsyonlarının etkin kontrolü; hidroponik yetiştiriciliğin başarısı için kritiktir. Bu sistematik kapsam incelemesi; hidroponik besin dozlama çerçevesi üzerine 81 araştırma makalesini kapsamlı biçimde inceleyerek hidroponik besin dozlama işlemleri için çeşitli çerçeveleri ana hatlarıyla ortaya koymuştur. Bu çerçeveler; geri besleme döngüsü ve tahmine dayalı analitik olmak üzere iki alanda kategorize edilmektedir. Her alan; dozlama işlemlerinin sıralı mı yoksa eş zamanlı mı yürütüleceğini etkileyerek gerekli dozlama süresini belirler.</p>
+<p>Çalışma; pH, Eİ veya TÇK, BSS ve BSH gibi kritik dozlama değişkenlerinin önemini vurgulamaktadır. pH, Eİ ve TÇK; belirli eşikler dahilinde tutulması gereken temel değişkenlerdir. BSH; normalleştirme prosedürleri uygulandığında kritik önem kazanırken BSS'nin ölçülmesi, pH, Eİ ve TÇK ölçülürken sıcaklık telafi faktörünün dahil edilmesi açısından zorunludur.</p>
+<p>Bu kapsamlı derleme; bu dozlama değişkenlerinin kritik önemini ve aralarındaki karmaşık ilişkileri de vurgulamaktadır. Ancak bu değişkenlerin tümü; performansı artırmak için tek bir dozlama sistemine dahil edilmelidir. Bu incelemeden elde edilen içgörüler; besin dozlama stratejilerinin çeşitli boyutlarının kapsamlı biçimde anlaşılmasına sağlam bir temel oluşturarak tarımsal uygulamaları hassasiyet ve verimlilik açısından önemli ölçüde zenginleştirmektedir.</p>
+<p>Ancak bu kapsam incelemesi yalnızca araştırma makaleleriyle sınırlıdır; gelecekteki çalışmalarda derleme makalelerinin dahil edilmesi hidroponik besin dozlama sistemlerine ilişkin ek içgörüler sunabilir. Mevcut besin dozlama çerçevelerinin sağlamlık açısından revize edilmesi gerektiği görülmektedir. Önerilen dozlama çerçevesinin gelecekteki araştırmalarda kullanılması ve optimize edilmesi önerilmektedir. Önerilen çerçeve; besin dozlama işlemlerinin sağlamlığına, doğruluğuna ve verimliliğine anlamlı katkı sağlaması beklenmekte olup hassas hidroponiklerde önemli bir ilerlemeyi temsil etmektedir.</p>
+<hr />
+<h2>Katkılar</h2>
+<p>Kavramsallaştırma: H.S., A.A.Y. ve M.K.M.N. | Metodoloji: H.S. | Yazılım: H.S. | Doğrulama: H.S., A.A.Y. ve M.K.M.N. | Biçimsel analiz: H.S. | Araştırma: H.S. | Kaynaklar: H.S. | Veri kürasyon: H.S. | Özgün taslak yazımı: H.S. | İnceleme ve düzenleme: H.S., A.A.Y. ve M.K.M.N. | Görselleştirme: H.S. | Danışmanlık: A.A.Y. ve M.K.M.N. | Proje yönetimi: H.S.</p>
+<p><strong>Finansman:</strong> Bu araştırma harici finansman almamıştır.</p>
+<p><strong>Çıkar Çatışması:</strong> Yazarlar çıkar çatışması bulunmadığını beyan eder.</p>
+<hr />
+<h2>Kısaltmalar</h2>
+<table>
+<thead>
+<tr>
+<th>Kısaltma</th>
+<th>Açılım</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRISMA</td>
+<td>Sistematik Derlemeler ve Meta-Analizler için Tercih Edilen Raporlama Öğeleri</td>
+</tr>
+<tr>
+<td>PRISMA-ScR</td>
+<td>PRISMA Kapsam İncelemesi Uzantısı</td>
+</tr>
+<tr>
+<td>pH</td>
+<td>Hidrojen Potansiyeli</td>
+</tr>
+<tr>
+<td>Eİ (EC)</td>
+<td>Elektriksel İletkenlik</td>
+</tr>
+<tr>
+<td>TÇK (TDS)</td>
+<td>Toplam Çözünmüş Katılar</td>
+</tr>
+<tr>
+<td>BSH (NSV)</td>
+<td>Besin Solüsyonu Hacmi</td>
+</tr>
+<tr>
+<td>BSS (NST)</td>
+<td>Besin Solüsyonu Sıcaklığı</td>
+</tr>
+<tr>
+<td>WoS</td>
+<td>Web of Science</td>
+</tr>
+<tr>
+<td>IEEE</td>
+<td>Elektrik ve Elektronik Mühendisleri Enstitüsü</td>
+</tr>
+<tr>
+<td>DWC</td>
+<td>Derin Su Kültürü</td>
+</tr>
+<tr>
+<td>EF</td>
+<td>Gel-Git (Ebb and Flow)</td>
+</tr>
+<tr>
+<td>NFT</td>
+<td>Besin Filmi Tekniği</td>
+</tr>
+<tr>
+<td>DFT</td>
+<td>Derin Akış Tekniği</td>
+</tr>
+<tr>
+<td>YS (FR)</td>
+<td>Yüzen Salça (Floating Raft)</td>
+</tr>
+<tr>
+<td>HKS (DBS)</td>
+<td>Hollanda Kova Sistemi (Dutch Bucket System)</td>
+</tr>
+<tr>
+<td>PID (OİT)</td>
+<td>Orantısal-İntegral-Türev Kontrolü</td>
+</tr>
+<tr>
+<td>KNN</td>
+<td>K-En Yakın Komşu</td>
+</tr>
+<tr>
+<td>YSA (ANN)</td>
+<td>Yapay Sinir Ağı</td>
+</tr>
+<tr>
+<td>RGB</td>
+<td>Kırmızı-Yeşil-Mavi</td>
+</tr>
+<tr>
+<td>ANOVA</td>
+<td>Varyans Analizi</td>
+</tr>
+<tr>
+<td>ÇGÇÇ (MIMO)</td>
+<td>Çok Girişli Çok Çıkışlı</td>
+</tr>
+<tr>
+<td>TGTÇ (SISO)</td>
+<td>Tek Girişli Tek Çıkışlı</td>
+</tr>
+<tr>
+<td>KTT (DSD)</td>
+<td>Kesin Tarama Tasarımı</td>
+</tr>
+<tr>
+<td>YYM (RSM)</td>
+<td>Yanıt Yüzey Metodolojisi</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>Kaynaklar (Seçilmiş)</h2>
+<ol>
+<li>
+<p>Pomoni D.I., ve ark. A Review of Hydroponics and Conventional Agriculture Based on Energy and Water Consumption, Environmental Impact, and Land Use. <em>Energies</em> 2023, 16, 1690.</p>
+</li>
+<li>
+<p>Fitriyah H., ve ark. Controlling the Nutrition Water Level in the Non-Circulating Hydroponics. <em>IJCCS</em> 2022, 16, 181–192.</p>
+</li>
+<li>
+<p>Aggarwal A., Mathur A. Recent Advances in Hydroponic Culture Media: Composition and Their Effect on Plant Growth. <em>Def. Life Sci. J.</em> 2023, 8, 162–169.</p>
+</li>
+<li>
+<p>Wongsorn C., ve ark. Effects of Electrical Conductivity of the Nutrient Solution on the Growth of Pepino (Solanum muricatum Aiton) Plants under Hydroponic Cultivation. <em>J. Sci. Agric. Technol.</em> 2024, 5, 20–25.</p>
+</li>
+<li>
+<p>Van Quy N., ve ark. Effects of Electrical Conductivity (EC) of the Nutrient Solution on Growth, Yield and Quality of Lettuce under Vertical Hydroponic Systems. <em>Khon Kaen Agr. J.</em> 2018, 46, 613–622.</p>
+</li>
+<li>
+<p>Hopkinson S., Harris M. Effect of pH on Hydroponically Grown Bush Beans (Phaseolus vulgaris). <em>Int. J. Environ. Agric. Biotechnol.</em> 2019, 4, 142–145.</p>
+</li>
+<li>
+<p>Ali Al Meselmani M. Nutrient Solution for Hydroponics. In <em>Recent Research and Advances in Soilless Culture</em>. IntechOpen, 2023, pp. 1–21.</p>
+</li>
+<li>
+<p>Arora U., ve ark. Automated Dosing System in Hydroponics with Machine Learning. <em>IEEE ICCICT</em>, 2021, pp. 1–6.</p>
+</li>
+<li>
+<p>Dae Hyun J., ve ark. Automated Lettuce Nutrient Solution Management Using an Array of Ion-Selective Electrodes. <em>Trans. ASABE</em> 2015, 58, 1309–1319.</p>
+</li>
+<li>
+<p>Ibrahim M.N.R., ve ark. Control System for Nutrient Solution of Nutrient Film Technique Using Fuzzy Logic. <em>Telkomnika</em> 2015, 13, 1281–1288.</p>
+</li>
+<li>
+<p>Ryan L.S., ve ark. Raspberry Pi Based pH Control for Nutrient Film Hydroponic System. <em>24th Conference on Automation Technology</em>, 2016.</p>
+</li>
+<li>
+<p>Abd Rahman M.A.A., ve ark. EC Prediction for Hydroponic System. 2018.</p>
+</li>
+<li>
+<p>Chang M., ve ark. Fuzzy-Based Hydroponics System. 2018.</p>
+</li>
+<li>
+<p>Herman L., ve ark. Simultaneous Dosing System for Hydroponics. 2019.</p>
+</li>
+<li>
+<p>Alipio M.I., ve ark. Machine Learning in Hydroponics. 2019.</p>
+</li>
+<li>
+<p>Helmy E.A., ve ark. Multiple Linear Regression for pH Control. 2020.</p>
+</li>
+<li>
+<p>Hakam M.F., ve ark. DWC Conventional Dosing. 2022.</p>
+</li>
+<li>
+<p>Albert T., ve ark. KNN-Based Dosing Pump for Wick Hydroponics. 2023.</p>
+</li>
+<li>
+<p>Rao P.K., ve ark. PID + Fuzzy Logic Combined System. 2024.</p>
+</li>
+<li>
+<p>Sangeetha P., Periyathambi J. Machine Learning for Growth Stage Identification. 2024.</p>
+</li>
+<li>
+<p>Al-Harbi A.R. ve ark. pH and EC in Hydroponics. 2008.</p>
+</li>
+<li>
+<p>Bugbee B. Nutrient Management in Recirculating Hydroponic Culture. 2004.</p>
+</li>
+<li>
+<p>Paradiso R., ve ark. Electrical Conductivity in Hydroponics. 2011.</p>
+</li>
+<li>
+<p>Bugbee B. Principles of Nutrient Management. Utah State Univ., 2014.</p>
+</li>
+<li>
+<p>Rouphael Y., ve ark. Salinity Effects on Hydroponics. 2018.</p>
+</li>
+<li>
+<p>Sulaiman H., ve ark. EC and TDS correlation study. 2023.</p>
+</li>
+<li>
+<p>Poorter H., ve ark. Temperature and Nutrient Uptake. 2012.</p>
+</li>
+<li>
+<p>Lykas C., ve ark. NST effects on plant physiology. 2006.</p>
+</li>
+<li>
+<p>Aisha A.H., ve ark. NST and dissolved oxygen. 2007.</p>
+</li>
+<li>
+<p>Stikic R., ve ark. Partial root drying. 2003.</p>
+</li>
+<li>
+<p>Dorais M., ve ark. Influence of variable EC. 2001.</p>
+</li>
+<li>
+<p>Dong C., ve ark. NSV and pH relationship. 2018.</p>
+</li>
+<li>
+<p>Tyson R.V., ve ark. Volume effects on nutrient balance. 2004.</p>
+</li>
+<li>
+<p>Sonneveld C., Voogt W. Plant Nutrition of Greenhouse Crops. Springer, 2009.</p>
+</li>
+<li>
+<p>HACH. pH Temperature Compensation. 2020.</p>
+</li>
+<li>
+<p>Sulaiman H., ve ark. Peltier temperature control. 2024.</p>
+</li>
+<li>
+<p>Sulaiman H., ve ark. Selective EC and pH measurement method. 2022.</p>
+</li>
+<li>
+<p>Jones B. ve ark. Definitive Screening Design. 2011.</p>
+</li>
+<li>
+<p>Myers R.H. ve ark. Response Surface Methodology. Wiley, 2016.</p>
+</li>
+<li>
+<p>Bezerra M.A. ve ark. RSM in optimization. <em>Anal. Chim. Acta</em> 2008, 620, 29–47.</p>
+</li>
+<li>
+<p>Sulaiman H., ve ark. Desirability function optimization. 2023.</p>
+</li>
+</ol>
+<hr />
+<p><em>Çeviri notu: Bu makale; AgriEngineering dergisinde 2025 yılında (7, 43) yayımlanan PRISMA-ScR uyumlu sistematik kapsam incelemesinin tam Türkçe çevirisidir. Makale; otomatik hidroponik besin dozlama sistemlerini, pH ve Eİ dozlama çerçevelerini, kritik dozlama değişkenlerini ve özgün bir çok değişkenli regresyon tabanlı dozlama çerçevesi önerisini kapsamlı biçimde ele almaktadır. Veri tablosu (Tablo 1) özgün makalede 81 çalışmayı kapsamakta olup bu çeviride yalnızca temsili satırlar yer almaktadır; tam tablo için özgün makaleye başvurulabilir.</em></p>
+  </div>
+</div>
+</main>
+
+<footer>
+    <div class="container">Safran Topluluğu — Bilimsel kaynaklara dayalı safran yetiştiriciliği</div>
+</footer>
+
+</body>
+</html>

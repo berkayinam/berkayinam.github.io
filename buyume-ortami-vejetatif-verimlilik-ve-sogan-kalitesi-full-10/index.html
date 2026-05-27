@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Büyüme Ortamı, Vejetatif Verimlilik ve Soğan Kalitesi (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-full { border-color: #D97706; color: #D97706; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h1 { font-size: 1.5rem; margin-top: 2.5em; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.88rem; overflow-x: auto; display: block; }
+        .post-content th { background: #f7f7f7; font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #ddd; }
+        .post-content td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        .post-content tr:nth-child(even) td { background: #fafafa; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; }
+        .post-content code { font-family: monospace; background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.3em; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+
+  'indoor-saffron-production-profitability-blueprint':                          {lang:'en', pair:'i-c-mekanda-safran-uretimi-karlilik-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint':                              {lang:'tr', pair:'indoor-saffron-production-profitability-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'iot-based-smart-aeroponic-system-for-saffron-cultivation-2':                 {lang:'en', pair:'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2'},
+  'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2':           {lang:'tr', pair:'iot-based-smart-aeroponic-system-for-saffron-cultivation-2'},
+  'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3':         {lang:'en', pair:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3':          {lang:'tr', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4':           {lang:'en', pair:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4':                  {lang:'tr', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5':           {lang:'en', pair:'tetikleyici-hava-kosullari-safran-fenolojisi-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-5':                             {lang:'tr', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'saffron-aeroponic-cultivation-step-by-step-visual-guide':                    {lang:'en', pair:'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber'},
+  'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber':                 {lang:'tr', pair:'saffron-aeroponic-cultivation-step-by-step-visual-guide'},
+  'saffron-hydroponic-vertical-farming-concept-and-design-7':                   {lang:'en', pair:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7':                         {lang:'tr', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'saffron-production-life-cycle-biology-dormancy-and-flowering-8':             {lang:'en', pair:'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8'},
+  'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8':                   {lang:'tr', pair:'saffron-production-life-cycle-biology-dormancy-and-flowering-8'},
+  'smart-hydroponic-framework-for-saffron-precision-agriculture-9':             {lang:'en', pair:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-9':                          {lang:'tr', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'growth-medium-vegetative-productivity-and-corm-quality-10':                  {lang:'en', pair:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10':                    {lang:'tr', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11':         {lang:'en', pair:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11':              {lang:'tr', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12':      {lang:'en', pair:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12':                     {lang:'tr', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13':     {lang:'en', pair:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13':                  {lang:'tr', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'saffron-cultivation-using-aeroponics-viable-approach-2026-14':               {lang:'en', pair:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14':                {lang:'tr', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15':              {lang:'en', pair:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15':                     {lang:'tr', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'benchmarking-energy-efficiency-vertical-farming-18':                         {lang:'en', pair:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18':                      {lang:'tr', pair:'benchmarking-energy-efficiency-vertical-farming-18'},
+  'cradle-to-customer-lca-uk-vertical-farming-19':                              {lang:'en', pair:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19':                            {lang:'tr', pair:'cradle-to-customer-lca-uk-vertical-farming-19'},
+  'lca-urban-vertical-farm-construction-dismantling-20':                        {lang:'en', pair:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20':                    {lang:'tr', pair:'lca-urban-vertical-farm-construction-dismantling-20'},
+  'towards-sustainable-vertical-farming-eroi-review-21':                        {lang:'en', pair:'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21'},
+  'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21':                      {lang:'tr', pair:'towards-sustainable-vertical-farming-eroi-review-21'},
+  'innovation-vertical-farming-adaptive-vs-standard-22':                        {lang:'en', pair:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22':                        {lang:'tr', pair:'innovation-vertical-farming-adaptive-vs-standard-22'},
+  'sustainable-vf-machine-learning-iot-energy-23':                              {lang:'en', pair:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23':                         {lang:'tr', pair:'sustainable-vf-machine-learning-iot-energy-23'},
+  'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r': {lang:'en', pair:'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal'},
+  'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal':  {lang:'tr', pair:'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r'}
+
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint-full': {lang:'tr-full', pair:'indoor-saffron-production-profitability-blueprint', pairOzet:'i-c-mekanda-safran-uretimi-karlilik-blueprint'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3': {lang:'tr-full', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairOzet:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4': {lang:'tr-full', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairOzet:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-full-5': {lang:'tr-full', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairOzet:'tetikleyici-hava-kosullari-safran-fenolojisi-5'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7': {lang:'tr-full', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairOzet:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9': {lang:'tr-full', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairOzet:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10': {lang:'tr-full', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairOzet:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11': {lang:'tr-full', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairOzet:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12': {lang:'tr-full', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairOzet:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13': {lang:'tr-full', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairOzet:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14': {lang:'tr-full', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairOzet:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15': {lang:'tr-full', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairOzet:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15'},
+};
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a href="../index.html" class="site-logo">
+            <svg viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span>Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="https://ko-fi.com/safrantoplulugu" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="post-header">
+  <div class="container">
+    <div class="breadcrumb">
+        <a href="../index.html">Araştırmalar</a>
+        <span> / </span>
+        <span>Büyüme Ortamı, Vejetatif Verimlilik ve Soğan Kalitesi</span>
+    </div>
+    <div class="full-badge">TR Full — Tam Çeviri</div>
+    <h1 class="post-title">Büyüme Ortamı, Vejetatif Verimlilik ve Soğan Kalitesi</h1>
+    <div class="post-actions" id="langSwitchArea">
+        <div class="lang-switch" id="langSwitch"></div>
+    </div>
+    <script>
+    (function() {
+        var _parts = window.location.pathname.replace(/^\/|\/$/g, '').split('/').filter(function(p){ return p && p !== 'index.html'; });
+        var slug = _parts[_parts.length - 1] || '';
+        var info = window.LANG_MAP && window.LANG_MAP[slug];
+        if (!info) return;
+        var sw = document.getElementById('langSwitch');
+        if (!sw) return;
+        var html = '';
+        if (info.lang === 'tr-full') {
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pair + '/">EN →</a>';
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pairOzet + '/">TR Özet →</a>';
+            html += '<span class="lang-switch-current lang-switch-full">TR Full</span>';
+        }
+        sw.innerHTML = html;
+    })();
+    </script>
+  </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+    <h1>Farklı Büyüme Ortamlarında Saksıda Yetiştirilen Crocus sativus'un Vejetatif Büyümesi ve Verimliliği</h1>
+<p><strong>Kaynak:</strong> Horticulturae 2023, 9, 377<br />
+<strong>DOI:</strong> https://doi.org/10.3390/horticulturae9030377<br />
+<strong>Yazarlar:</strong> Mohammed E. El-Mahrouk¹, Yaser Hassan Dewir²*, Hassan El-Ramady³,⁴, Mayada Kadri Seliem⁵</p>
+<p>¹ Bahçecilik Bölümü, Ziraat Fakültesi, Kafr El-Sheikh Üniversitesi, Kafr El-Sheikh 33516, Mısır<br />
+² Bitki Üretimi Bölümü, Gıda ve Ziraat Bilimleri Fakültesi, Kral Saud Üniversitesi, Riyad 11451, Suudi Arabistan<br />
+³ Hayvan Bilimleri, Biyoteknoloji ve Doğa Koruma Enstitüsü, Debrecen Üniversitesi, Debrecen, Macaristan<br />
+⁴ Toprak ve Su Bölümü, Ziraat Fakültesi, Kafr El-Sheikh Üniversitesi, Mısır<br />
+⁵ Süs Bitkileri ve Çiçekçilik Bölümü, Bahçecilik Araştırma Enstitüsü, El-Sabahia, İskenderiye 21599, Mısır  </p>
+<p><em>Yazışma adresi: ydewir@ksu.edu.sa</em></p>
+<hr />
+<h2>Özet</h2>
+<p>Safran (<em>Crocus sativus</em>), dünyanın en pahalı baharatı ve değerli bir tıbbi bitkidir. Bu çalışmada, saksıda yetiştirilen safranın çiçeklenme, vejetatif büyüme performansı ve yavru soğan oluşumu altı farklı büyüme ortamında araştırılmıştır: tınlı toprak, siltli toprak, kumlu toprak, torf, torf + kumlu toprak ve torf + köpük. Stigma taze ağırlığı, kök ağırlığı ile yavru soğanların sayısı ve çapı bakımından en yüksek değerler; hafif tekstürlü toprakta, yani kumlu toprak veya torf + köpükte yetiştirilen bitkilerde gözlenmiştir. Ancak kumlu toprakta yetişen bitkiler daha küçük yavru soğanlar üretmiştir. Tınlı toprakla (ağır toprak) karşılaştırıldığında, torf + köpük büyüme ortamı yaprak pigment düzeylerini, yaprak sayısını ve yavru soğan sayısını artırmış; çapı ≥2 cm olan en yüksek yavru soğan sayısını üretmiştir. Diğer ortamlarla kıyaslandığında, tınlı toprakta yetişen safran bitkilerinde daha yüksek katalaz ve peroksidaz aktiviteleri, ancak daha düşük polifenol oksidaz aktivitesi tespit edilmiştir. Genel olarak, safran pH değerleri 4,00–9,25 arasında değişen büyüme ortamlarında yetiştirilebilir ve üretilebilir; ancak torf + köpük karışımı saksı safran üretimi için en uygun büyüme ortamı olarak belirlenmiştir. Bu bulgular, tarım arazilerinde safran yetiştiriciliği için en uygun büyüme ortamı/toprağın seçilmesinde faydalıdır.</p>
+<p><strong>Anahtar Kelimeler:</strong> köpük; büyüme ortamı; tınlı toprak; torf; safran; stigma; toprak pH'ı</p>
+<hr />
+<h2>1. Giriş</h2>
+<p>Safran (<em>Crocus sativus</em> L.), Iridaceae familyasına ait, yüksek değerli bir baharat bitkisi olan çok yıllık bir bitkidir [1]. Safranın dormansi dönemi Mayıs'tan yaz sonuna kadar (Haziran, Temmuz ve Ağustos) uzanabilir; bitki ise sonbaharda çiçek açar [2]. Safran, monokotiledon otsu triploid bir bitki olarak sınıflandırılmakta ve stigması (ipek denen kısım) için yetiştirilmekte olup küresel üretimin %90–93'ü İran'da gerçekleşmektedir [2–5]. Stigmalar toplandıktan ve kurutulduktan sonra esas olarak gıdalarda renklendirici ve çeşni maddesi olarak kullanılmaktadır; bunun yanı sıra pek çok sektörde (boyalar, tekstil, ilaç, mutfak katkıları ve aromalar) ile antikanser, antioksidan, antitümör ve antimutajenik özellikler gibi farmakolojik amaçlarla değerlendirilmektedir [6,7]. 0,5 g kuru stigma üretmek için 75–100 safran çiçeği gerektiği bildirilmekte olup bu çiçekler yaklaşık 225–300 ipek sağlamaktadır. Bu nedenle safran, 1 kg'ı 1.500–2.200 Avro değerinde olan dünyanın en pahalı baharatı kabul edilmektedir [4,7].</p>
+<p>Safran yetiştiriciliği yalnızca birkaç bölgede yapılmaktadır; yetiştirilen alanlara göre sıralama şöyledir (hektar cinsinden): İran (108.000), Afganistan (7.557), Hindistan (3.674), Yunanistan (1.000), Fas (850), İspanya (150), İtalya (70) ve Fransa (37) [3]. Safran baharatının fitokimyasal, farmasötik veya terapötik özelliklerini kazandıran biyoaktif bileşenler arasında krosindler, krossetin, pikrosrosin ve safranal bulunmaktadır; bu bileşenler aynı zamanda baharatın renk, acılık ve aromatik özelliklerini de oluşturmaktadır [4,5,7–9]. Safranın diabetes mellitus ile ilgili komplikasyonları da hafiflettiği bildirilmektedir [10,11].</p>
+<p>Büyüme ortamları, fiziksel ve kimyasal özellikleri aracılığıyla bitki büyümesini ve gelişimini etkiler [12,13]. Bu ortamların düşük fiziksel dayanıklılığa ve yüksek gözenekliliğe sahip olması gerekir [14]; bu özellikler, havanın, suyun ve besinlerin köklere ulaşmasını sağlamak açısından hayati önem taşır. Ancak büyüme ortamının en önemli kalite ölçütü, suyu adsorbe etme, tutma ve salma kapasitesidir [15]. Yüksek su tutma kapasitesi, köklerin yetersiz havalanmasına ve boğulmasına yol açabilir [16]. pH, katyon değişim kapasitesi, elektriksel iletkenlik (EC) ve besin maddesi kullanılabilirliği gibi kimyasal özellikler de bitki büyümesini etkiler [17]. Yüksek katyon değişim kapasitesine sahip bir büyüme ortamı daha elverişlidir; çünkü temel besinler substrat bünyesinde (partiküllere adsorbe olarak) tutulabilir [18]. Ortam karışımında torf, iyi havalanma ile orta ila yüksek su tutma kapasitesi sağlar [19]. Bu nedenle kimyasal ve fiziksel özellikleri sayesinde [20,21] torf, sera karışımlarında su ve havalanma dengesini sağlamak için en sık kullanılan substrat bileşenidir.</p>
+<p>Safran yetiştiriciliği, soğuk iklim koşullarına sahip yüksek irtifadaki tarım arazileriyle sınırlı kalmaktadır [22–24]. Yüksek talep ve düşük arz, safranı dünyanın en pahalı baharatı haline getirmiştir [25,26]. Safran yetiştiriciliğinin ılıman iklimdeki farklı bölgelere tanıtılması, safran arzını artırabilir. Başarılı safran yetiştiriciliği ve büyümesi; iklimsel faktörler (başta sıcaklık ve nem), kültürel uygulamalar (yabancı ot, zararlı ve hastalık kontrolü; sulama ve ekim tarihi) ve toprak özellikleri (pH, tuzluluk, tekstür ve organik madde içeriği) dahil pek çok faktöre bağlıdır [27–30]. Bu faktörler safran veriminin miktarını ve kalitesini, büyümesini de etkiler. Optimum toprak pH'ının 6,8–7,8, EC'nin ise &lt;2 dS m⁻¹ olması gerektiği kabul görmektedir [13,31,32]; yıllık ideal yağış miktarı ise 600 mm'dir [33]. Safran yetiştiriciliği için tercih edilen toprak; iyi sulanan, gevşek, ufalanabilir, düşük yoğunluklu ve iyi drene edilmiş kil toprağıdır [29]. Toprak özellikleri, vejetatif büyümeyi ve safran verimini etkileyerek ekonomik üretimi doğrudan belirlemektedir. Bu nedenle bu çalışma; farklı büyüme ortamlarına —torf, siltli, kumlu ve tınlı topraklar— karşı safranın çiçeklenme verimi, vejetatif büyüme performansı ve yavru soğan verimi yanıtlarını araştırmayı amaçlamıştır.</p>
+<hr />
+<h2>2. Materyal ve Metot</h2>
+<h3>2.1. Bitki Materyali</h3>
+<p>Safran soğanları (çevresi 10–11 cm; çapı 3,2–3,5 cm), Hollanda'daki Bloembollenbedrijf J.C. Koot firmasından temin edilmiştir. Tüm soğanlar soyulmuş, hasarsız ve enfeksiyonsuz olanlar seçilmiştir. Soğanlar, mantar bulaşmasını önlemek amacıyla %15 (ağırlık/ağırlık) metalaksil ve %35 (ağırlık/ağırlık) bakır oksiklorür içeren 0,5 g L⁻¹'lik fungisit çözeltisine (Aromil-Plus 50WP; Mobedco-Vet, Amman, Ürdün) daldırılarak sterilize edilmiştir. Soğanlar ekimden önce kurutulmuştur.</p>
+<h3>2.2. Büyüme Ortamı Uygulamaları ve Analizleri</h3>
+<p>Safran soğanları, altı farklı büyüme ortamıyla doldurulmuş plastik saksılara (çap 12 cm; saksı başına 1 soğan) dikilmiş ve açık tarla koşullarına bırakılmıştır. Kullanılan ortamlar şunlardır:</p>
+<ul>
+<li><strong>M1</strong> – Tınlı toprak (Loamy soil): Nil Delta bölgesini temsil eden verimli toprak, Kafr El-Zayat, Garbia İlinden toplandı (30°49'K, 30°49'D)</li>
+<li><strong>M2</strong> – Siltli toprak (Silty soil): 200 m derinliğindeki kuyudan alınan siltli ıslah edilmiş toprak, Kafr El-Zayat (30°49'K, 30°49'D)</li>
+<li><strong>M3</strong> – Kumlu toprak (Sandy soil): Vadi El-Natron, Beheira İli'nden (deniz seviyesinin 23 m altı); kurak/çöl bölgesini temsil eden verimsiz toprak (30°27'K, 30°10'D)</li>
+<li><strong>M4</strong> – Torf (Peat moss): Estonya'dan ithal edilen torf</li>
+<li><strong>M5</strong> – Torf + kumlu toprak (1:1 v/v)</li>
+<li><strong>M6</strong> – Torf + köpük/strafor (1:1 v/v)</li>
+</ul>
+<p>Büyüme ortamlarının analizleri; deney başlamadan önce ve deney sonunda (hasatta) gerçekleştirilmiştir. Tüm ortamların pH değerleri, 1:1 süspansiyonda kalibre edilmiş pH metre 3510 (Jenway, Staffordshire, İngiltere) ile ölçülmüştür. EC değerleri, 1:5 oranındaki (toprak:deiyonize su) karışımda EC Metre (MI170, İtalya) kullanılarak belirlenmiştir. Kullanılabilir azot (NH₄⁺) mikro Kjeldahl yöntemiyle [34], kullanılabilir fosfor ise Olsen ve Sommers yöntemiyle [35] saptanmıştır. Kalsiyum ve magnezyum Jackson'ın yöntemine [36] göre ölçülmüştür. Bakır (Cu²⁺), demir (Fe²⁺), çinko (Zn⁺) ve mangan (Mn⁺) konsantrasyonları, atomik absorpsiyon spektrofotometresi ile belirlenmiştir [37]. Sodyum (Na⁺) ve potasyum (K⁺), Page ve ark. [37] tarafından tanımlanan yöntemlerle ekstrakte edilmiş; konsantrasyonları alevfotometre PFP7 (Jenway, Staffordshire, İngiltere) kullanılarak saptanmıştır.</p>
+<h4>Tablo 2. Büyüme Ortamlarının pH ve Tuzluluk (EC) Değerleri (Yetiştirme Öncesi ve Sonrası)</h4>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Büyüme Ortamı</th>
+<th>pH (Ekim Öncesi)</th>
+<th>pH (Hasatta)</th>
+<th>EC (dS m⁻¹, Ekim Öncesi)</th>
+<th>EC (dS m⁻¹, Hasatta)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>Tınlı toprak</td>
+<td>8,07</td>
+<td>7,1</td>
+<td>1,900</td>
+<td>1,59</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>Siltli toprak</td>
+<td>9,09</td>
+<td>7,2</td>
+<td>0,147</td>
+<td>0,14</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Kumlu toprak</td>
+<td>9,25</td>
+<td>7,1</td>
+<td>0,143</td>
+<td>0,11</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Torf</td>
+<td>4,10</td>
+<td>6,2</td>
+<td>0,189</td>
+<td>0,32</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>Torf + kumlu</td>
+<td>5,06</td>
+<td>6,3</td>
+<td>0,247</td>
+<td>0,15</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Torf + köpük</td>
+<td>4,00</td>
+<td>5,7</td>
+<td>0,460</td>
+<td>0,44</td>
+</tr>
+</tbody>
+</table>
+<h4>Tablo 3. Büyüme Ortamlarının Makro ve Mikro Besin Maddesi İçerikleri (mg/kg)</h4>
+<table>
+<thead>
+<tr>
+<th>Ortam</th>
+<th>N</th>
+<th>P</th>
+<th>K</th>
+<th>Mg</th>
+<th>Ca</th>
+<th>Fe</th>
+<th>Mn</th>
+<th>Zn</th>
+<th>Cu</th>
+<th>Na</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1 (Tınlı)</td>
+<td>73,28</td>
+<td>0,93</td>
+<td>372,5</td>
+<td>2229,0</td>
+<td>320,0</td>
+<td>9,40</td>
+<td>1,870</td>
+<td>37,00</td>
+<td>5,400</td>
+<td>547,2</td>
+</tr>
+<tr>
+<td>M2 (Siltli)</td>
+<td>61,85</td>
+<td>1,05</td>
+<td>65,5</td>
+<td>136,5</td>
+<td>399,5</td>
+<td>10,68</td>
+<td>0,966</td>
+<td>29,00</td>
+<td>0,474</td>
+<td>58,0</td>
+</tr>
+<tr>
+<td>M3 (Kumlu)</td>
+<td>84,17</td>
+<td>2,06</td>
+<td>365,0</td>
+<td>107,0</td>
+<td>75,0</td>
+<td>0,98</td>
+<td>0,908</td>
+<td>9,36</td>
+<td>ND</td>
+<td>64,0</td>
+</tr>
+<tr>
+<td>M4 (Torf)</td>
+<td>323,7</td>
+<td>1,80</td>
+<td>130,0</td>
+<td>225,0</td>
+<td>951,0</td>
+<td>11,38</td>
+<td>28,120</td>
+<td>59,50</td>
+<td>11,600</td>
+<td>158,8</td>
+</tr>
+</tbody>
+</table>
+<h3>2.3. Kültürel Uygulamalar</h3>
+<p>Safran soğanları 20 Kasım 2020'de 10 cm derinliğe dikilmiş ve yavru soğanlar hasat edilene kadar 18 hafta boyunca yetiştirilmiştir. Sulama; iklime bağlı olarak Kasım'dan Mart'a kadar her 10 günde bir, Nisan'da her 6 günde bir ve Mayıs'ta her 3 günde bir, her seferinde saksı başına 100 mL uygulanmıştır.</p>
+<p>Gübreler sulama tankına çözdürülerek sulama sırasında doğrudan parsel üzerine verilmiştir: Aralık, Ocak ve Şubat aylarında birer kez, Mart–Mayıs döneminde ise iki kez gübre uygulanmıştır. Kullanılan gübreler şunlardır:
+- 0,25 g L⁻¹ tam gübre (NPK: 19:19:19)
+- 0,2 g L⁻¹ CaNO₃ (N=%15,5, CaO=%26,3) (Yara Şirketi, Kahire, Mısır)
+- 0,15 g L⁻¹ MgSO₄ (Mg=%16, S=%12,5)
+- 0,1 g L⁻¹ şelatlı mikro element (Fe=%4, Zn=%4, Mn=%3, Cu=%0,1, B=%1,5, Mo=%0,5) (Queisna Ziraat Geliştirme, Menofia, Mısır)</p>
+<p>Yetişme periyodu boyunca yabancı ot kontrolü elle yapılmıştır. Her iki tam çiçek hasadından sonra mala kullanılarak kabuk kırma işlemi uygulanmıştır. Herhangi bir hastalık veya böcek istilası tespit edilmemiş; dolayısıyla kimyasal ilaç kullanılmamıştır.</p>
+<h3>2.4. Çiçeklenme, Vejetatif Büyüme ve Yavru Soğan Oluşumu Parametreleri</h3>
+<p>Farklı büyüme ortamlarına ekim yapıldıktan 1 hafta sonra kök uzunluğu, kök sayısı ve kök taze ağırlığı ölçülmüştür. Çiçeklenme parametreleri (bitki başına çiçek sayısı ile stigma taze ve kuru ağırlığı) soğan dikiminden 4 hafta sonra kaydedilmiş; çiçeklenme dönemi 8 gün sürmüştür. Stigmalar, 1 saat boyunca 40°C'de kurutulmuştur [13,38]. Vejetatif büyüme parametreleri (yaprak uzunluğu, yaprak sayısı, bitki taze ve kuru ağırlığı ile kök taze ve kuru ağırlığı), soğanın çimlenme döneminin 9. haftasında ölçülmüştür. Bitki ve kök kuru ağırlıkları, 65°C'de 48 saat fırında kurutma yapıldıktan sonra belirlenmiştir. Yaprak sararmasının ardından bitkiler sökülmüş, ana soğan parçaları uzaklaştırılmış ve yavru soğanlar ayrılmıştır. Soğan oluşum parametreleri (bitki başına soğan sayısı, soğan çapı ve soğan taze ağırlığı) soğan dikiminden 18 hafta sonra kaydedilmiştir.</p>
+<h3>2.5. Yaprak Pigmentlerinin Ölçümü</h3>
+<p>Tam gelişmiş genç yapraklardaki klorofil a (Chl a), klorofil b (Chl b) ve toplam karotenoid içerikleri, spektrofotometrik analizle belirlenmiştir. Klorofil, 0,5 g taze yaprak dokusunun 4°C'de 48 saat karanlıkta 5 mL N,N-dimetilformamit içinde bekletilmesiyle ekstrakte edilmiştir. Emilimler; Chl a için 470, 647 ve 663 nm, Chl b için 647 nm ve karotenoidler için 663 nm dalga boyunda ölçülmüş olup çift ışınlı UV/görünür ışık spektrofotometresi (Double Beam UV/Visible Spectrophotometer Library 80PC, UK) kullanılmıştır. Klorofil ve karotenoid konsantrasyonları, Moran ve Porath formülü esas alınarak hesaplanmıştır [39].</p>
+<h3>2.6. Antioksidan Enzimlerin Ölçümü</h3>
+<p>Kökleme ve vejetatif büyüme değerlendirmeleri temel alınarak; M1 (tınlı toprak), M3 (kumlu toprak), M4 (torf) ve M6 (torf + köpük) olmak üzere yalnızca dört büyüme ortamı, stres koşulları altında safran bitkilerinin büyümesini araştırmak için kullanılmıştır. Antioksidan enzim aktivitelerini ölçmek amacıyla, 0,5 g safran yaprağı soğutulmuş havan ve havan eliyle sıvı azot içinde ilgili ekstrakte tamponuyla 1,5 mL homojenize edilmiştir. Homojenat dört kat gazlı bezden geçirilerek süzülmüş ve 4°C'de 22.000 × g'de 20 dakika santrifüj edilmiştir. Süpernatant yeniden 22.000 × g'de 4°C'de 20 dakika daha santrifüj edilmiştir. Katalaz (CAT; EC 1.11.1.6) aktivitesi, 240 nm'de H₂O₂ tüketimi ölçülerek belirlenmiştir [40]. Peroksidaz (POD; EC 1.11.1.7) aktivitesi Hammerschmidt ve ark.'nın [41] prosedürüne göre saptanmıştır. Polifenol oksidaz (PPO; EC 1.10.3.1) aktivitesi ise Malik ve Singh'in [42] yöntemine göre belirlenmiştir.</p>
+<h3>2.7. İstatistiksel Analizler</h3>
+<p>Deney tamamen randomize blok tasarımına göre kurulmuştur. Her uygulamada dört yinelemesi (replika) bulunmuş; her yineleme beş saksıyla temsil edilmiş ve her saksıda bir bitki yer almıştır (uygulama başına 20 bitki). Ortalamalar, SAS yazılımı (versiyon 6.12; SAS Institute, Cary, NC, ABD) üzerinden Tukey aralık testi kullanılarak karşılaştırılmıştır.</p>
+<hr />
+<h2>3. Bulgular</h2>
+<h3>3.1. Farklı Büyüme Ortamlarında Kök Başlangıcı ve Safran Soğanı Büyümesi</h3>
+<p>Büyüme ortamlarının türü, 1. ve 9. haftalardaki kök sayısını, uzunluğunu, taze ve kuru ağırlığını önemli ölçüde etkilemiştir. M3 (kumlu toprak), M4 (torf) ve M5 (torf + kumlu toprak) ortamları, 1. haftada elverişli kök başlangıcı sağlamıştır. 9. haftada M3 ortamında en fazla kök sayısı (≥140) kaydedilmiş, bunu M4 takip etmiş; M1 (tınlı toprak) ise en az kök içermiştir. En uzun kökler (21 cm) M4 ortamında, en kısa kökler (4 cm) ise M1 ortamında ölçülmüştür. İlginç biçimde 9. haftadan itibaren kök taze ağırlığı M1'den M6'ya doğru giderek artmış; en yüksek değer M6'da, bunu torf + köpük (torf + kum) izlemiştir. Kök kuru ağırlıkları da en yüksek değerleri torf karışımlarında (özellikle torf + köpük ve torf + kum) sergilemiştir.</p>
+<p>Dikimden 9 hafta sonra M1 dışında tüm büyüme ortamlarında iyi gelişmiş bir kök sistemi gözlenmiş; M1'de ise kökleme düzeyi oldukça düşük kalmıştır.</p>
+<h3>3.2. Farklı Büyüme Ortamlarında Safranın Çiçeklenmesi, Vejetatif Büyümesi ve Yaprak Pigmentleri</h3>
+<p>Büyüme ortamlarının türü, stigma taze ve kuru ağırlığını önemli ölçüde etkilemiş; ancak bitki başına çiçek sayısı üzerinde anlamlı bir etki göstermemiştir.</p>
+<h4>Tablo 4. Dikimden 4 Hafta Sonra Büyüme Ortamlarının Safran Çiçeklenmesine Etkileri</h4>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Büyüme Ortamı</th>
+<th>Bitki Başına Çiçek Sayısı</th>
+<th>Stigma Taze Ağırlığı (mg/bitki)</th>
+<th>Stigma Kuru Ağırlığı (mg/bitki)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>Tınlı toprak</td>
+<td>1,7 ± 0,340 ÖD</td>
+<td>19,3 ± 0,340 b</td>
+<td>3,8 ± 0,059 c</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>Siltli toprak</td>
+<td>1,7 ± 0,340</td>
+<td>22,3 ± 0,899 ab</td>
+<td>4,5 ± 0,108 b</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Kumlu toprak</td>
+<td>2,0 ± 0,118</td>
+<td>21,7 ± 0,899 ab</td>
+<td>4,5 ± 0,090 b</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Torf</td>
+<td>2,3 ± 0,340</td>
+<td>25,0 ± 1,566 a</td>
+<td>4,9 ± 0,090 a</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>Torf + kumlu</td>
+<td>2,0 ± 0,059</td>
+<td>22,7 ± 1,358 ab</td>
+<td>4,9 ± 0,034 a</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Torf + köpük</td>
+<td>2,0 ± 0,102</td>
+<td>24,0 ± 0,588 a</td>
+<td>4,9 ± 0,059 a</td>
+</tr>
+</tbody>
+</table>
+<p><em>Veriler ortalama ± SE olarak sunulmuştur. Aynı sütunda farklı harfler, Tukey testi p≤0,05 düzeyinde anlamlı farkı gösterir. ÖD = Önemsiz.</em></p>
+<p>Vejetatif büyüme bakımından yaprak uzunluğu, sürgün taze ve kuru ağırlığı ile bitki başına yaprak sayısı büyüme ortamlarından önemli ölçüde etkilenmiştir. En yüksek vejetatif büyüme parametreleri; torf yalnız, torf + kumlu toprak veya torf + köpük ortamlarında yetişen bitkilerde kaydedilmiştir. En düşük vejetatif büyüme değerleri ise tınlı ve siltli topraklarda yetişen bitkilerde gözlenmiştir.</p>
+<h4>Tablo 5. Dikimden 9 Hafta Sonra Büyüme Ortamlarının Vejetatif Büyümeye Etkileri</h4>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Büyüme Ortamı</th>
+<th>Yaprak Uzunluğu (cm)</th>
+<th>Sürgün Taze Ağırlığı (g)</th>
+<th>Sürgün Kuru Ağırlığı (g)</th>
+<th>Bitki Başına Yaprak Sayısı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>Tınlı toprak</td>
+<td>23,6 ± 0,747 b</td>
+<td>13,607 ± 0,412 f</td>
+<td>3,973 ± 0,078 c</td>
+<td>6,6 ± 0,245 b</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>Siltli toprak</td>
+<td>22,8 ± 0,799 b</td>
+<td>15,453 ± 0,033 e</td>
+<td>4,660 ± 0,074 b</td>
+<td>9,4 ± 0,399 a</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Kumlu toprak</td>
+<td>25,3 ± 0,476 b</td>
+<td>18,670 ± 0,624 d</td>
+<td>4,977 ± 0,101 a</td>
+<td>9,0 ± 0,623 ab</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Torf</td>
+<td>27,8 ± 0,912 a</td>
+<td>20,617 ± 0,323 c</td>
+<td>5,037 ± 0,021 a</td>
+<td>8,8 ± 0,489 a</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>Torf + kumlu</td>
+<td>27,6 ± 0,747 a</td>
+<td>22,253 ± 0,415 b</td>
+<td>4,917 ± 0,015 a</td>
+<td>9,4 ± 0,245 a</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Torf + köpük</td>
+<td>27,4 ± 0,599 a</td>
+<td>23,503 ± 0,127 a</td>
+<td>4,910 ± 0,012 a</td>
+<td>8,4 ± 0,245 a</td>
+</tr>
+</tbody>
+</table>
+<p>M6 ortamı (torf + köpük), safran bitkilerinde en yüksek Chl a (3,5 mg g⁻¹ taze ağırlık), Chl b (0,8 mg g⁻¹ taze ağırlık) ve karotenoid (0,33 mg g⁻¹ taze ağırlık) değerlerini üretirken, tınlı toprak en düşük yaprak pigment değerlerini sağlamıştır.</p>
+<h3>3.3. Farklı Büyüme Ortamlarında Safran Yapraklarındaki Antioksidan Enzim Aktivitesi</h3>
+<p>Büyüme ortamlarının türü, safran bitkilerindeki antioksidan enzim aktivitesini önemli ölçüde etkilemiştir. En yüksek CAT (katalaz) aktivitesi tınlı toprakta yetişen bitkilerde, en düşük CAT aktivitesi ise kumlu toprakta yetişen bitkilerde tespit edilmiştir. Torf + köpük ortamında yetişen safran bitkileri; diğer büyüme ortamlarına kıyasla daha düşük POD (peroksidaz) aktivitesi, ancak daha yüksek PPO (polifenol oksidaz) aktivitesi sergilemiştir.</p>
+<h3>3.4. Farklı Büyüme Ortamlarında Safranın Yavru Soğan Üretimi</h3>
+<p>Yavru soğanların çapı ve taze ağırlığı, bitki başına toplam soğan sayısı ve çapı ≥2,0 cm olan soğancıkların sayısı; farklı büyüme ortamlarından önemli ölçüde etkilenmiştir. Kumlu toprakta yetişen safran bitkilerinde en fazla yavru soğan sayısı kaydedilmiş; ancak bu soğanlar küçük kalmıştır. M6 (torf + köpük) ortamında yetişen bitkiler en yüksek soğan çapı, taze ağırlığı ve çapı ≥2,0 cm olan soğan sayısı değerlerini sergilemiştir; bu boyuttaki soğanlar gelecek sezonda çiçek açabilme potansiyeline sahiptir. En düşük yavru soğan üretimi ise tınlı toprakta yetişen safranlardan elde edilmiştir.</p>
+<h4>Tablo 6. Dikimden 18 Hafta Sonra Büyüme Ortamlarının Soğan Üretimine Etkileri</h4>
+<table>
+<thead>
+<tr>
+<th>Kod</th>
+<th>Büyüme Ortamı</th>
+<th>Soğan Çapı (mm)</th>
+<th>Soğan Taze Ağırlığı (g)</th>
+<th>Toplam Soğan Sayısı</th>
+<th>Soğan Sayısı (≥2,0 cm)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>Tınlı toprak</td>
+<td>18,3 ± 0,774 b</td>
+<td>1,98 ± 0,104 b</td>
+<td>3,4 ± 0,144 c</td>
+<td>1,3 ± 0,155 d</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>Siltli toprak</td>
+<td>19,0 ± 0,707 b</td>
+<td>2,20 ± 0,100 b</td>
+<td>4,2 ± 0,198 b</td>
+<td>1,9 ± 0,118 c</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Kumlu toprak</td>
+<td>17,4 ± 0,665 b</td>
+<td>2,10 ± 0,129 b</td>
+<td>4,8 ± 0,184 a</td>
+<td>1,0 ± 0,100 d</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Torf</td>
+<td>21,5 ± 0,909 ab</td>
+<td>3,54 ± 0,171 ab</td>
+<td>3,4 ± 0,178 c</td>
+<td>2,3 ± 0,120 b</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>Torf + kumlu</td>
+<td>20,3 ± 0,859 ab</td>
+<td>2,46 ± 0,097 b</td>
+<td>3,8 ± 0,275 b</td>
+<td>1,7 ± 0,208 c</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Torf + köpük</td>
+<td>23,3 ± 0,611 a</td>
+<td>3,81 ± 0,176 a</td>
+<td>4,0 ± 0,105 b</td>
+<td>3,0 ± 0,187 a</td>
+</tr>
+</tbody>
+</table>
+<p><em>Aynı sütunda farklı harfler, Tukey testi p≤0,05 düzeyinde anlamlı farkı gösterir.</em></p>
+<hr />
+<h2>4. Tartışma</h2>
+<p>Bu çalışmada büyüme ortamı olarak kullanılan topraklar pH ve tuzluluk (EC) değerleri bakımından farklılık göstermiştir. Kumlu toprak en yüksek pH değerine (9,25) sahipken, torf + köpük ortamı en düşük pH'a (4,00) sahip olmuştur. Kumlu toprak ortamının pH'ı 9,25'ten 7,10'a düşmüş; torf + köpük ortamında ise bunun tersine pH 4,00'den 5,70'e yükselmiştir. Safran yetiştiriciliği, hasat sonrasında çoğu büyüme ortamının tuzluluk değerini azaltmıştır (örneğin kumlu toprak: 0,143'ten 0,11 dS m⁻¹'ye). Torf ortamları ise hasattan sonra EC değerlerinde artış göstermiştir (örneğin torf + kum: 0,242'den 0,560 dS m⁻¹'ye).</p>
+<p>En yüksek büyüme parametresi değerleri; torf yalnız ve torf + kum ya da köpük karışımlarında, özellikle torf + köpük ortamında yetişen bitkilerde, bunu torf + kumlu toprak izlemek üzere, kaydedilmiştir. Buna karşın ağır tınlı toprakta yetişen bitkiler bodur büyüme sergilemiştir. Bu sonuçlar, safranın büyüme ve üretiminin esas olarak toprak tekstürüne ve pH'ına bağlı olduğunu; en iyi büyüme ve üretimin hafif tekstürlü ve nötre yakın pH değerindeki (yani pH 7 civarında) toprakta gerçekleştiğini göstermektedir. Bu bulgular, önceki çalışmalarla örtüşmektedir [29,43]. Shajari ve ark. [43], ağır toprak tekstürüyle kıyaslandığında hafif toprak tekstürünün safran çiçek verimini %15 artırdığını saptamıştır. Safran, geniş bir pedolojik ve zorlaştırma koşulu yelpazesine tolerans gösterebilir [44]. Büyüme ortamı/toprak pH düzeyleri ve tuzluluğunun safran yetiştiriciliği sonucunda azalması; safran bitkisinin büyük olasılıkla bir toprak ıslahçısı işlevi gördüğüne işaret etmektedir.</p>
+<p>Bu çalışma, toprak tekstürünün safranın temel özelliklerinin (stigma ve soğancık) büyüme ve üretimini belirleyen temel toprak niteliği olduğu görüşünü desteklemektedir. Hafif tekstürlü toprak, yeterli toprak havalanması sağlayarak güçlü kök büyümesine olanak tanıdığından safran üretimi için elverişlidir. Ağır tekstürlü toprakta ise (örneğin tınlı toprak) kök büyümesi kısıtlanmaktadır; bu durum, tınlı toprakta yetişen safranın düşük kalite parametreleriyle (yoğun kökleme, kök uzunluğu, istenilen soğancık üretimi, soğancık çapı ve stigma kuru ağırlığı) de kendini göstermektedir. Gerçekten de torf + köpük ortamında yetişen bitkilerle kıyaslandığında, tınlı toprakta yetişen bitkilerde istenilen soğancık üretimi ve soğancık çapı sırasıyla %56,6 ve %21,5 oranında azalmıştır. Safran üretiminin başarısını etkileyen diğer toprak özellikleri arasında toprak pH'ı, düşük hacim ağırlığı, toprak tuzluluğu, iyi gelişmiş ufalanabilir yapı, organik madde içeriği, iyi drenaj ve toprak verimliliği sayılabilir [45].</p>
+<p>Safran yetiştiriciliğinde genellikle yüksek düzeyde gübre ve su eklemek gerekmemektedir [38]; bu nedenle safranı kurak/yarı kurak koşullarda ve yeni ıslah edilmiş topraklarda yetiştirmek mümkündür. Düşük toprak organik maddesi (%0,4), az yağış (206 mm), nötr toprak pH'ı (7,34), düşük toprak tuzluluğu (1,18 dS m⁻¹) ve hafif toprak tekstürü (%55 kum) koşullarında entegre besin yönetimi (kimyasal, organik ve biyolojik gübreler dahil), bazı toprak özelliklerini (katyon değişim kapasitesi, hacim ağırlığı ve besin maddesi içeriği gibi) ve safran biyokütle üretimini iyileştirebilir [46]. Bunun yanı sıra safran üretimi, toprak (5,64 dS m⁻¹) ve sulama suyunun (2,9–5,8 dS m⁻¹) tuzlu olduğu koşullarda, uygun ekim tarihi seçilerek de yönetilebilir [47].</p>
+<p>Mevcut sonuçlar, torf + köpük ortamının safran üretimi için uygun olduğunu ortaya koymaktadır; zira birçok safran verimi parametresi bu ortamda yüksek değerler almış olup tınlı toprakla kıyaslandığında kaydedilen artışlar şöyledir: bitki başına yaprak sayısı (%21,4), soğancık çapı (%21,5), istenilen boyutta soğancık (%56,7), bitki başına taze stigma ağırlığı (%19,6) ve fotosentetik pigment içeriği (%37,5). Bunlara ek olarak tınlı toprakta yetişen safranın yüksek CAT ve POD aktiviteleri, bu bitkilerin söz konusu toprak ortamında oksidatif strese maruz kaldığını göstermektedir. Dolayısıyla torf ile kum ya da köpük gibi daha hafif bir toprak karıştırılması, safran üretimi için üstün bir referans büyüme ortamı oluşturmaktadır. Yeni ıslah edilmiş ya da çöl topraklarının kumlu bir tekstüre sahip olduğu göz önünde bulundurulduğunda, bu sonuçlar safranın toprak asitliği yüksek (pH 9,25'e kadar) olsa dahi bu topraklarda yetiştirilebileceğine işaret etmektedir. Üstelik bu çalışma; ağır tekstürü, yüksek hacim ağırlığı, kötü gelişmiş ufalanabilir yapısı, zayıf drenajı ve potansiyel kirliliği [48] ile tınlı toprağın safran üretimi için uygun olmadığını da göstermektedir. Genel olarak, hafif toprakla torf karıştırılması safran üretimi için kabul edilebilir bir yöntem sayılmakla birlikte, bu agronomik sürecin ekonomik değerlendirmesi henüz yapılmamıştır.</p>
+<hr />
+<h2>5. Sonuçlar</h2>
+<p>Farklı büyüme ortamlarının türü, çeşitli toprak alt tabakalarının fiziksel ve kimyasal özelliklerine bağlı olarak safranın çiçeklenmesini, vejetatif büyümesini ve yavru soğan oluşumunu etkilemiştir. Tınlı toprak gibi ağır topraklar safran büyümesini olumsuz etkilemiştir; torf + köpük veya torf + kum karışımı ise saksı safran üretimi için en uygun büyüme ortamı olmuştur. Tınlı toprakta yetişen safranın yüksek CAT ve POD aktiviteleri, bu bitkilerin söz konusu ortamda oksidatif strese maruz kaldığını göstermektedir. Genel olarak safran, pH değerleri 4,00–9,25 arasında değişen büyüme ortamlarında yetiştirilebilir ve üretilebilir; ancak torf + köpük karışımı, saksı safranı için en uygun büyüme ortamı olarak öne çıkmaktadır.</p>
+<hr />
+<h2>Teşekkür</h2>
+<p>Bu araştırma, Kral Saud Üniversitesi, Riyad, Suudi Arabistan bünyesindeki Araştırmacı Destek Projesi (RSP2023R375) tarafından desteklenmiştir.</p>
+<hr />
+<h2>Kaynaklar</h2>
+<ol>
+<li>Nemati, Z. ve ark. Saffron (<em>Crocus sativus</em>) is an autotriploid that evolved in Attica (Greece) from wild <em>Crocus cartwrightianus</em>. <em>Mol. Phylogenet. Evol.</em> 2019, 136, 14–20.</li>
+<li>Banhangi, F.M. ve ark. Do corm seeding rate and planting depth influence growth indicators of saffron? <em>Ind. Crops Prod.</em> 2021, 174, 114145.</li>
+<li>Cardone, L. ve ark. Saffron (<em>Crocus sativus</em> L.), the king of spices: An overview. <em>Sci. Hortic.</em> 2020, 272, 109560.</li>
+<li>Kothari, D. ve ark. Agro-Climatic Suitability Evaluation for Saffron Production in Areas of Western Himalaya. <em>Front. Plant Sci.</em> 2021, 12, 657819.</li>
+<li>Kothari, D. ve ark. Saffron (<em>Crocus sativus</em> L.): Gold of the spices. <em>Hortic. Environ. Biotechnol.</em> 2021, 62, 661–677.</li>
+<li>Moradi Rikabad, M. ve ark. Agrobiological, chemical and antioxidant properties of saffron exposed to TiO₂ nanoparticles and UV-B stress. <em>Ind. Crops Prod.</em> 2019, 137, 137–143.</li>
+<li>Mykhailenko, O. ve ark. Standard operating procedure of Ukrainian saffron cultivation. <em>Ind. Crops Prod.</em> 2020, 151, 112376.</li>
+<li>Giorgi, A. ve ark. Quality traits of saffron produced in the Italian Alps. <em>Open Agric.</em> 2017, 2, 52–57.</li>
+<li>Musazadeh, V. ve ark. Saffron contributes to relieved depression symptoms: An umbrella meta-analysis. <em>Pharmacol. Res.</em> 2022, 175, 105963.</li>
+<li>Azgomi, R.N.D. ve ark. The mechanisms of saffron on the inflammatory pathways of diabetes mellitus. <em>Diabetes Metab. Syndr.</em> 2022, 16, 102365.</li>
+<li>Jazani, M.A. ve ark. The potential role of saffron and its components in oxidative stress in diabetes mellitus. <em>Clin. Nutr. ESPEN</em> 2022, 48, 148–157.</li>
+<li>Saleh, H.A.R. ve ark. Plant growth, yield and bioactive compounds of two culinary herbs as affected by substrate type. <em>Sci. Hortic.</em> 2019, 243, 464–471.</li>
+<li>Dewir, Y.H. ve ark. Effects of growing substrate, mode of nutrient supply, and saffron corm size on flowering, growth, photosynthetic competence, and cormlet formation in hydroponics. <em>HortTechnology</em> 2022, 32, 234–240.</li>
+<li>Hajiaghaei Kamrani, M. The effects of physicochemical properties of hydroponic substrates on the uptake of macronutrients. <em>J. Plant Nutr.</em> 2021, 44, 2476–2485.</li>
+<li>Verdonck, O.; Demeyer, P. The influence of the particle sizes on physical properties of growing media. <em>Acta Hortic.</em> 2004, 644, 99–101.</li>
+<li>Rahman, M. ve ark. Physical and chemical properties of different substrate mixtures and their effect on growth and yield of lettuce. <em>Bangladesh Hortic.</em> 2017, 2, 39–46.</li>
+<li>Silber, A. Chemical characteristics of soilless media. In <em>Soilless Culture: Theory and Practice</em>; Elsevier B.V.: Amsterdam, Hollanda, 2019; pp. 113–148.</li>
+<li>Graber, E.R. ve ark. Biochar impact on development and productivity of pepper and tomato grown in fertigated soilless media. <em>Plant Soil</em> 2010, 337, 481–496.</li>
+<li>Bigelow, C. ve ark. Physical properties of three sand size classes amended with inorganic materials or sphagnum peat moss for putting green root zones. <em>Crop Sci.</em> 2004, 44, 900–907.</li>
+<li>Prasad, M.; Maher, M.J. Physical and chemical properties of fractionated peat. <em>Acta Hort.</em> 1993, 342, 257–264.</li>
+<li>Sahin, U. ve ark. Physico-chemical and physical properties of some substrates used in horticulture. <em>Die Gart.</em> 2002, 67, 55–60.</li>
+<li>Douglas, M.H. ve ark. Saffron (<em>Crocus sativus</em> L.): The effect of mother corm size on progeny multiplication, flower and stigma production. <em>Sci. Hortic.</em> 2002, 166, 50–58.</li>
+<li>Khilare, V. ve ark. Multiple tests on saffron find new adulterant materials. <em>Food Chem.</em> 2019, 272, 635–642.</li>
+<li>Kumar, R. ve ark. State of art of saffron agronomy: A comprehensive review. <em>Food Rev. Int.</em> 2008, 25, 44–85.</li>
+<li>Aytekin, A.; Acikgoz, O.A. Hormone and microorganism treatments in the cultivation of saffron plants. <em>Molecules</em> 2008, 13, 1135–1147.</li>
+<li>Winterhalter, P.; Straubinger, M. Saffron — renewed interest in an ancient spice. <em>Food Rev. Int.</em> 2000, 16, 39–59.</li>
+<li>Rahimi, H. ve ark. A study on the effects of environmental factors on vegetative characteristics and corm yield of saffron. <em>Iran J. Hortic. Sci.</em> 2017, 48, 45–52.</li>
+<li>Fallahi, H.R.; Mahmoodi, S. Influence of organic and chemical fertilisation on growth and flowering of saffron. <em>Saffron Agron. Technol.</em> 2018, 6, 147–166.</li>
+<li>Cardone, L. ve ark. The influence of soil physical and chemical properties on saffron growth, yield and quality. <em>Agronomy</em> 2020, 10, 1154.</li>
+<li>Esmaeilian, Y. ve ark. High density planting and manure affect flower yield, corm characteristics, and volatile compounds of saffron. <em>Ind. Crops Prod.</em> 2022, 176, 114363.</li>
+<li>Zarghani, F. ve ark. To evaluate the effect of soil physical and chemical characteristics on the growth characteristics of saffron corms. <em>J. Agroecol.</em> 2016, 8, 120–133.</li>
+<li>Dewir, Y.H.; Alsadon, A. Effects of nutrient solution electrical conductivity on the leaf gas exchange, biochemical stress markers, growth, stigma yield, and daughter corm yield of saffron in a plant factory. <em>Horticulturae</em> 2022, 8, 673.</li>
+<li>Fallahi, H.R.; Mahmoodi, S. Impact of water availability and fertilisation management on saffron biomass allocation. <em>J. Horti. Postharvest Res.</em> 2018, 1, 131–146.</li>
+<li>Bremner, J.M.; Mulvaney, C.S. Nitrogen-Total. In <em>Methods of Soil Analysis, Part 2</em>; American Society of Agronomy: Madison, WI, ABD, 1982; pp. 595–624.</li>
+<li>Olsen, S.R.; Sommers, L.E. Phosphorus. In <em>Methods of Soil Analysis, Part 2</em>; ASA: Madison, WI, ABD, 1982; pp. 403–430.</li>
+<li>Jackson, M.L. <em>Soil Chemical Analysis</em>; Prentice Hall of India: Yeni Delhi, Hindistan, 1973.</li>
+<li>Page, A.L. ve ark. <em>Methods of Soil Analysis</em>, Part II, 2nd ed.; ASA and SSSA: Madison, WI, ABD, 1982.</li>
+<li>Maggio, A. ve ark. Soilless cultivation of saffron in Mediterranean environment. <em>Acta Hortic.</em> 2006, 718, 515–522.</li>
+<li>Moran, R.; Porath, D. Chlorophyll determination in intact tissues using N,N-Dimethylformamide. <em>Plant Physiol.</em> 1982, 69, 1370–1381.</li>
+<li>Aebi, H. Catalases. In <em>Methods of Enzymatic Analysis</em>; Academic Press: New York, NY, ABD, 1984; Vol. 2, pp. 673–684.</li>
+<li>Hammerschmidt, R. ve ark. Association of enhanced peroxidase activity with induced systemic resistance of cucumber. <em>Physiol. Plant Pathol.</em> 1982, 20, 73–82.</li>
+<li>Malik, C.P.; Singh, M.B. <em>Plant Enzymology and Histoenzymology</em>; Kalyani Publishers: Delhi, Hindistan, 1980.</li>
+<li>Shajari, M.A. ve ark. The possibility of improving saffron flower and corm yield through the irrigation and soil texture managements. <em>Sci. Hortic.</em> 2020, 271, 109485.</li>
+<li>García-Rodríguez, M.V. ve ark. Saffron quality obtained under different forcing conditions. <em>Sci. Hortic.</em> 2021, 277, 109811.</li>
+<li>Shahandeh, H. Soil conditions for sustainable saffron production. In <em>Saffron Science, Technology and Health</em>; Woodhead Publishing: Chennai, Hindistan, 2020; pp. 59–66.</li>
+<li>Ghanbari, J.; Khajoei-Nejad, G. Integrated nutrient management to improve some soil characteristics and biomass production of saffron. <em>Ind. Crops Prod.</em> 2021, 166, 113447.</li>
+<li>Pirasteh-Anosheh, H. ve ark. Feasibility study of saffron cultivation using a semi-saline water by managing planting date. <em>Environ. Res.</em> 2022, 203, 111853.</li>
+<li>Elbehiry, F. ve ark. Mobility, distribution, and potential risk assessment of selected trace elements in soils of the Nile Delta, Egypt. <em>Env. Monit. Assess</em> 2019, 191, 713.</li>
+</ol>
+  </div>
+</div>
+</main>
+
+<footer>
+    <div class="container">Safran Topluluğu — Bilimsel kaynaklara dayalı safran yetiştiriciliği</div>
+</footer>
+
+</body>
+</html>

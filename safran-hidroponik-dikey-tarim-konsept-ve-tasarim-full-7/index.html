@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Safran Hidroponik Dikey Tarım — Konsept ve Tasarım (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-full { border-color: #D97706; color: #D97706; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h1 { font-size: 1.5rem; margin-top: 2.5em; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content table { width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 0.88rem; overflow-x: auto; display: block; }
+        .post-content th { background: #f7f7f7; font-weight: 700; text-align: left; padding: 8px 12px; border: 1px solid #ddd; }
+        .post-content td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        .post-content tr:nth-child(even) td { background: #fafafa; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; }
+        .post-content code { font-family: monospace; background: #f5f5f5; padding: 1px 4px; border-radius: 3px; font-size: 0.88em; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.3em; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+
+  'indoor-saffron-production-profitability-blueprint':                          {lang:'en', pair:'i-c-mekanda-safran-uretimi-karlilik-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint':                              {lang:'tr', pair:'indoor-saffron-production-profitability-blueprint', pairFull:'i-c-mekanda-safran-uretimi-karlilik-blueprint-full'},
+  'iot-based-smart-aeroponic-system-for-saffron-cultivation-2':                 {lang:'en', pair:'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2'},
+  'iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2':           {lang:'tr', pair:'iot-based-smart-aeroponic-system-for-saffron-cultivation-2'},
+  'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3':         {lang:'en', pair:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3':          {lang:'tr', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairFull:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3'},
+  'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4':           {lang:'en', pair:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4':                  {lang:'tr', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairFull:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4'},
+  'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5':           {lang:'en', pair:'tetikleyici-hava-kosullari-safran-fenolojisi-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-5':                             {lang:'tr', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairFull:'tetikleyici-hava-kosullari-safran-fenolojisi-full-5'},
+  'saffron-aeroponic-cultivation-step-by-step-visual-guide':                    {lang:'en', pair:'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber'},
+  'aeroponik-sistemde-safran-yetistiriciligi-adim-adim-rehber':                 {lang:'tr', pair:'saffron-aeroponic-cultivation-step-by-step-visual-guide'},
+  'saffron-hydroponic-vertical-farming-concept-and-design-7':                   {lang:'en', pair:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7':                         {lang:'tr', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairFull:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7'},
+  'saffron-production-life-cycle-biology-dormancy-and-flowering-8':             {lang:'en', pair:'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8'},
+  'safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8':                   {lang:'tr', pair:'saffron-production-life-cycle-biology-dormancy-and-flowering-8'},
+  'smart-hydroponic-framework-for-saffron-precision-agriculture-9':             {lang:'en', pair:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-9':                          {lang:'tr', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairFull:'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9'},
+  'growth-medium-vegetative-productivity-and-corm-quality-10':                  {lang:'en', pair:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10':                    {lang:'tr', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairFull:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10'},
+  'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11':         {lang:'en', pair:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11':              {lang:'tr', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairFull:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11'},
+  'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12':      {lang:'en', pair:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12':                     {lang:'tr', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairFull:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12'},
+  'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13':     {lang:'en', pair:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13':                  {lang:'tr', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairFull:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13'},
+  'saffron-cultivation-using-aeroponics-viable-approach-2026-14':               {lang:'en', pair:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14':                {lang:'tr', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairFull:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14'},
+  'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15':              {lang:'en', pair:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15':                     {lang:'tr', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairFull:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15'},
+  'benchmarking-energy-efficiency-vertical-farming-18':                         {lang:'en', pair:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18':                      {lang:'tr', pair:'benchmarking-energy-efficiency-vertical-farming-18'},
+  'cradle-to-customer-lca-uk-vertical-farming-19':                              {lang:'en', pair:'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19'},
+  'bk-dikey-tarim-yasam-dongusu-degerlendirmesi-19':                            {lang:'tr', pair:'cradle-to-customer-lca-uk-vertical-farming-19'},
+  'lca-urban-vertical-farm-construction-dismantling-20':                        {lang:'en', pair:'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20'},
+  'kent-ici-dikey-ciftlik-yasam-dongusu-degerlendirmesi-20':                    {lang:'tr', pair:'lca-urban-vertical-farm-construction-dismantling-20'},
+  'towards-sustainable-vertical-farming-eroi-review-21':                        {lang:'en', pair:'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21'},
+  'surdurulebilir-dikey-tarim-enerji-yatirim-getirisi-21':                      {lang:'tr', pair:'towards-sustainable-vertical-farming-eroi-review-21'},
+  'innovation-vertical-farming-adaptive-vs-standard-22':                        {lang:'en', pair:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22':                        {lang:'tr', pair:'innovation-vertical-farming-adaptive-vs-standard-22'},
+  'sustainable-vf-machine-learning-iot-energy-23':                              {lang:'en', pair:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23':                         {lang:'tr', pair:'sustainable-vf-machine-learning-iot-energy-23'},
+  'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r': {lang:'en', pair:'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal'},
+  'nft-hidroponik-sistemlerindeki-gelismeler-kapsamli-derleme-ve-bibliyometrik-anal':  {lang:'tr', pair:'advancements-in-nutrient-film-technique-nft-hydroponic-systems-a-comprehensive-r'}
+
+  'i-c-mekanda-safran-uretimi-karlilik-blueprint-full': {lang:'tr-full', pair:'indoor-saffron-production-profitability-blueprint', pairOzet:'i-c-mekanda-safran-uretimi-karlilik-blueprint'},
+  'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-full-3': {lang:'tr-full', pair:'automated-hydroponic-nutrient-dosing-ph-and-ec-automation-review-3', pairOzet:'hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3'},
+  'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-full-4': {lang:'tr-full', pair:'iot-based-automatic-ec-and-ph-control-in-nft-hydroponic-system-4', pairOzet:'nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4'},
+  'tetikleyici-hava-kosullari-safran-fenolojisi-full-5': {lang:'tr-full', pair:'dormancy-and-temperature-triggers-weather-phenology-in-saffron-5', pairOzet:'tetikleyici-hava-kosullari-safran-fenolojisi-5'},
+  'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-full-7': {lang:'tr-full', pair:'saffron-hydroponic-vertical-farming-concept-and-design-7', pairOzet:'safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7'},
+  'akilli-hidroponik-safran-hassas-tarim-cercevesi-full-9': {lang:'tr-full', pair:'smart-hydroponic-framework-for-saffron-precision-agriculture-9', pairOzet:'akilli-hidroponik-safran-hassas-tarim-cercevesi-9'},
+  'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-full-10': {lang:'tr-full', pair:'growth-medium-vegetative-productivity-and-corm-quality-10', pairOzet:'buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10'},
+  'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-full-11': {lang:'tr-full', pair:'led-light-spectrum-blue-light-effects-on-saffron-photosynthesis-11', pairOzet:'led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11'},
+  'hidroponik-farmasotik-kalitede-safran-uretim-sureci-full-12': {lang:'tr-full', pair:'farming-for-pharming-pharmaceutical-quality-saffron-in-hydroponics-12', pairOzet:'hidroponik-farmasotik-kalitede-safran-uretim-sureci-12'},
+  'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-full-13': {lang:'tr-full', pair:'hydroponic-and-aeroponic-systems-engineering-design-and-performance-13', pairOzet:'hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13'},
+  'aeroponik-safran-yetistiriciligi-verimlilik-analizi-full-14': {lang:'tr-full', pair:'saffron-cultivation-using-aeroponics-viable-approach-2026-14', pairOzet:'aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14'},
+  'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-full-15': {lang:'tr-full', pair:'optimizing-saffron-cormlet-soilless-substrate-nitrate-iron-15', pairOzet:'kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15'},
+};
+    </script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a href="../index.html" class="site-logo">
+            <svg viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span>Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="https://ko-fi.com/safrantoplulugu" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+<div class="post-header">
+  <div class="container">
+    <div class="breadcrumb">
+        <a href="../index.html">Araştırmalar</a>
+        <span> / </span>
+        <span>Safran Hidroponik Dikey Tarım — Konsept ve Tasarım</span>
+    </div>
+    <div class="full-badge">TR Full — Tam Çeviri</div>
+    <h1 class="post-title">Safran Hidroponik Dikey Tarım — Konsept ve Tasarım</h1>
+    <div class="post-actions" id="langSwitchArea">
+        <div class="lang-switch" id="langSwitch"></div>
+    </div>
+    <script>
+    (function() {
+        var _parts = window.location.pathname.replace(/^\/|\/$/g, '').split('/').filter(function(p){ return p && p !== 'index.html'; });
+        var slug = _parts[_parts.length - 1] || '';
+        var info = window.LANG_MAP && window.LANG_MAP[slug];
+        if (!info) return;
+        var sw = document.getElementById('langSwitch');
+        if (!sw) return;
+        var html = '';
+        if (info.lang === 'tr-full') {
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pair + '/">EN →</a>';
+            html += '<a class="action-btn lang-switch-link" href="/' + info.pairOzet + '/">TR Özet →</a>';
+            html += '<span class="lang-switch-current lang-switch-full">TR Full</span>';
+        }
+        sw.innerHTML = html;
+    })();
+    </script>
+  </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+    <h1>Safranın Hidroponik Yetiştiriciliği: Akış-Gelgit Dikey Sistem Konseptinden Tasarıma (530×155 Fit)</h1>
+<p><strong>Kaynak:</strong> Project Technical Note<br />
+<strong>Yazarlar:</strong> Khurshied Ahmed Khan¹*, Jamal Muhammad Khan², Shahbaz Ali³, Shabana Nasreen⁴, Asma Noureen⁵, ve diğerleri<br />
+¹ Ghazi Üniversitesi, Dera Ghazi Khan 32200, Pakistan<br />
+² Cholistan Veteriner ve Hayvan Bilimleri Üniversitesi, Pakistan<br />
+³ Khwaja Fareed Mühendislik ve Bilişim Teknolojileri Üniversitesi, Tarımsal Mühendislik Bölümü<br />
+⁴ Lahore Üniversitesi<br />
+⁵ Samanabad Hükümeti Lisesi, Lahore</p>
+<hr />
+<h2>ÖZET</h2>
+<p>Tarım, Pakistan ekonomisinin bel kemiği konumundadır. Önemine karşın üretimden finansal yetersizliklere uzanan çeşitli sorunlarla karşı karşıyadır: yetersiz tarım ekipmanları, kaliteli araç gereç eksikliği, düzensiz muson yağışları ve zararlı salgınları bunların başında gelmektedir. Hidroponik tarım üretim sistemi ise yıl boyunca verimli hasat vaat etmektedir. Ticari olarak ölçeklenebilen ve toplumun tüm kesimlerine uyarlanabilen bu sistem; evde küçük ölçekli bir sera kurulumundan yüksek verimli endüstriyel ölçeğe kadar geniş bir yelpazede uygulanabilmektedir.</p>
+<p>Bu çalışma, safran bitkileri için ev tipi bir hidroponik sistem önermektedir. Hidroponik yöntemle safran kolayca yetiştirilebilir; bu sistemle safran yetiştiricisi her yıl son derece yüksek fiyatlar elde edebilir. Safran, bilinen en pahalı baharatlar arasında yer almakta olup 7. yüzyıldan bu yana yüksek fiyatıyla tanınmaktadır. Kârı en üst düzeye çıkarmak için safranın yılda 4 kez yetiştirilmesi gerekmektedir. Safran, dikimden hasada genellikle 2,5–3 ay almaktadır; hidroponik kullanımı ise toprakla karşılaştırıldığında büyüme hızını artırarak daha yüksek verim elde edilmesini sağlar.</p>
+<p>Bir pound taze safran toplamak için yaklaşık 70.000 safran çiçeğinden 200.000 stigma toplanması gerekmektedir; bu da yalnızca hidroponik büyüme sistemiyle mümkündür.</p>
+<p><strong>Anahtar Kelimeler:</strong> Sürdürülebilir üretim, Hidroponik, Besin çözeltisi, IoT</p>
+<hr />
+<h2>I. GİRİŞ</h2>
+<p>Hindistan, önümüzdeki on yıllarda Çin'i geçerek dünyanın en kalabalık ülkesi olmaya aday bir nüfus yapısına sahiptir; yaklaşık 1,37 milyarlık bu nüfus, ülkenin ekonomik büyümesine önemli katkı sağlayarak Hindistan'ı GSYH açısından dünyanın beşinci, satın alma gücü açısından ise üçüncü büyük ekonomisi konumuna taşımaktadır. Tarım, Hindistan GSYH'sinin yaklaşık %18'ini ve iş gücünün %50'ye yakınını oluşturmaktadır. Nüfus artışıyla birlikte artan gıda ihtiyacını karşılamak için tarımsal verimin yükseltilmesi ya da gıda ithalatına başvurulması zorunlu hale gelmektedir. Gıda ithalatı ise ekonomik büyümeyi daha maliyetli kılmaktadır. Hidroponik, bu soruna yönelik umut verici bir alternatif tarım tekniği olarak öne çıkmaktadır.</p>
+<p>Hidroponik sistemde bitkiler, kökleri besin çözeltisiyle sulanan bir ortamda yetiştirilir. Kalın gövdeli bitkiler alüvyal toprak topu veya çakıl gibi destek ortamlarıyla desteklenir. Besin çözeltisi; N, K, P, Ca, S, Mg gibi makro besinler ile Ni, Cu, Zn, Fe, B, Mn gibi mikro besinlerden oluşur. Besin konsantrasyonunun emilimi, geleneksel sisteme kıyasla hidroponik yöntemde çok daha yüksektir.</p>
+<hr />
+<h2>II. İLGİLİ ÇALIŞMALAR</h2>
+<p>Hidroponik; sürekli akış sistemi, akış-gelgit sistemi, damla sistemi ve besin filmi tekniği gibi farklı modellerle uygulanmaktadır. Temel çalışmalar şu bulguları ortaya koymuştur:</p>
+<ul>
+<li><strong>NFT Modeli:</strong> Stephanie vd., "Ticari Üretim için Besin Filmi Tekniği (NFT)" başlıklı çalışmalarında konseptten tasarıma kadar NFT hidroponik çiftçiliğinin prototipini ortaya koymuştur.</li>
+<li><strong>IoT Entegrasyonu:</strong> Shreya vd., nesnelerin interneti aracılığıyla maliyet etkin bir sistem geliştirmiş; iç mekân tarım sistemlerinde ve olağandışı iklim koşullarında LED ışık kaynağının kullanımını ele almıştır.</li>
+<li><strong>Akıllı Sensör Ağları:</strong> Nathaphon vd., hidroponik sistemdeki sensör ve aktüatörlerin kablosuz sensör ağları (WSN) aracılığıyla otomasyonunu incelemiş; ışık yoğunluğu, su tüketimi, sıcaklık, nem ve besin suyunun pH değerini ölçen teknolojiyi ele almıştır.</li>
+<li><strong>Derin Sinir Ağı:</strong> Manav vd., hidroponik yetiştiricilikte büyüme kararlarını makine öğrenmesi yoluyla optimize eden derin sinir ağı uygulamasını kapsamlı biçimde sunmuştur.</li>
+<li><strong>Güneş Enerjili Sera:</strong> Parth Varmora vd., güvenilir güç kaynağı için güneş enerjili fonksiyonel üniteyle bir NFT tasarımı geliştirmiştir.</li>
+</ul>
+<hr />
+<h2>III. HİDROPONİK SAFRAN</h2>
+<p>Hidroponik yöntemle safran kolayca yetiştirilebilir ve yetiştirici bu sayede her yıl son derece yüksek fiyatlar elde edebilir. Safran, bilinen en pahalı baharatlar arasında yer almakta olup 7. yüzyıldan bu yana yüksek fiyatıyla tanınmaktadır. Kârı en üst düzeye çıkarmak için safranın yılda 4 kez yetiştirilmesi gerekmektedir. Safran dikimden hasada kadar genellikle 2,5–3 ay sürmektedir; hidroponik kullanımı ise büyüme hızını artırarak toprakla kıyaslandığında daha yüksek verim sağlamaktadır.</p>
+<p>Bir pound taze safran toplamak için yaklaşık 70.000 safran çiçeğinden 200.000 stigma toplanması gerekmektedir.</p>
+<h3>Hidroponik Ortamda Safran Büyüme Koşulları</h3>
+<ul>
+<li><strong>Sistem:</strong> Akış-Gelgit (Flow &amp; Ebb) dikey büyüme sistemi</li>
+<li><strong>Bitki Boyu:</strong> Ortalama safran bitkisi 8–12 inç (20–30 cm) boyuna ulaşabilir</li>
+<li><strong>Yetiştirme Süresi:</strong> 3 aylık büyüme dönemi</li>
+<li><strong>Sıcaklık:</strong> 15–20°C (60–70°F); en ideal 18°C (65°F). Safranın çiçeklenmesini en güçlü biçimde teşvik eden bu sıcaklık kanıtlanmış bir değerdir. Uzun süreler boyunca 24°C'nin (75°F) üzerine çıkılması çiçek dökümüne neden olabilir.</li>
+<li><strong>pH:</strong> 5,5; EC değeri 1,4 olmalıdır.</li>
+<li><strong>Besin Çözeltisi:</strong> Crocus soğanları fosfor ve potasyum bakımından zengin, azot miktarı dengeli bir besleme tercih eder. Besin değişikliği safranın aromasından sorumlu organik bileşik olan safranal üretimini artırabilir. Besin çözeltisi; N, P, K, Ca, S, Mg, Fe, Mn, Zn, B, Cu, Mo dahil tüm gerekli elementleri, ancak fosfor ve potasyum açısından daha yüksek konsantrasyonda içermelidir.</li>
+<li><strong>Çeşit:</strong> Odyssey Bulbs'dan Keşmiri tipi</li>
+<li><strong>Işık İhtiyacı:</strong> Safran günde 14–16 saate kadar ışık gerektirir; bu durum elektrik maliyetlerini önemli ölçüde artırır. Hava pompaları, su pompaları ve iklim kontrol sistemleri de birlikte değerlendirildiğinde yüksek miktarda elektrik tüketir.</li>
+<li><strong>İş Gücü:</strong> Hasat aşamasında yaklaşık 180 saatlik kesintisiz iş gücü gerektirir.</li>
+</ul>
+<h3>Hasat</h3>
+<p>Hasat döneminde 675.000 safran soğanını toplamak doğru yapılmadığında son derece zorlayıcı olabilir. Her büyüme döngüsünün sonunda hasat mevsimi başladığında bilinmesi gereken en kritik bilgi şudur: Safran çiçeğinin ortasındaki stigma iplikleri, tüm bitkinin en değerli bölümüdür.</p>
+<h3>Kurutma ve Depolama</h3>
+<p>Stigma iplikleri toplandıktan sonra safranın kurutulması ve saklanması zorunludur. Taze safran stigma iplikleri yüksek kaliteli nihai ürün elde etmek için iyice kurutulmalıdır. Safran ipliklerini kurutmanın çeşitli yöntemleri vardır; bunlardan biri yüksek sıcaklıkla dehidrasyon yöntemidir:</p>
+<ul>
+<li>Safran iplikleri bir süzgece yerleştirilerek gaz ocağı üzerinde 50–80°C (122–176°F) sıcaklıkta 30–60 dakika ısıtılır. Nem oranı maksimum %5–15'e düşene kadar bu işleme devam edilmelidir.</li>
+<li>Ardından safran hava geçirmez plastik torbalara konulmalıdır. Torbalar yeterince sıkı kapatılmamışsa veya kurutulmuş safranın nem oranı %15'in üzerinde kalırsa mantarlar birkaç gün içinde ürünü mahvedebilir.</li>
+</ul>
+<h3>Korm Büyüklüğü ve Yoğunluğunun Verme Etkisi</h3>
+<p>Üç farklı korm ağırlığı (6–8 g, 8–10 g ve 10 g üzeri) ve üç farklı korm yoğunluğunun (m² başına 50, 100 ve 150 korm) etkisi tam faktöriyel deney düzeniyle incelenmiştir. İncelenen özellikler şunlardır: çiçek sayısı, çiçeğin taze ağırlığı, stigma ve stilin taze ile kuru ağırlığı, biyokütle ve ekonomik verim. Sonuçlar; yetiştirme sistemi, ağırlık ve korm yoğunluğunun tüm özelliklerde anlamlı etkisi olduğunu ortaya koymuştur. Daha ağır kormlar (10 g üzeri) en yüksek verimi sağlamıştır. Korm ağırlığı azaldıkça tüm özellikler belirgin biçimde düşmüştür. Toprak yetiştiriciliğinde ve m² başına 150 korm yoğunluğunda ekonomik safran verimi (stigmanın kuru ağırlığı) 7,38 kg/ha olarak elde edilmiştir.</p>
+<hr />
+<h2>IV. HİDROPONİK SİSTEM</h2>
+<p>Hidroponik domatesler toprak yerine besin çözeltisinde yetiştirilmektedir; ancak kökleri desteklemek ve besinleri tutmak amacıyla genellikle topraksız bir malzemeye yerleştirilmektedir. Hidroponik yolla yetiştirilen sebzeler toprakta yetiştirilenler kadar besleyici olabilmektedir. Bitkiler vitaminleri kendileri ürettiğinden vitamin düzeyleri hidroponik veya toprak yetiştiriciliğinde benzer sonuçlar vermektedir.</p>
+<p>Hidroponik bitkiler, gerekli besinler doğrudan kök sistemine iletildiğinden geleneksel yöntemle yetiştirilen bitkilere göre %25–30 daha hızlı büyümektedir. Bitki, ihtiyacı olan besinleri bulmak için geniş bir kök sistemi geliştirmeye enerji harcamak zorunda kalmadığından tüm enerjisini yukarı yönde yaprak büyümesine aktarabilmektedir.</p>
+<h3>Sera ve Hidroponik Sistemlerin Temel Avantajları</h3>
+<ul>
+<li><strong>Işık Dağılımı:</strong> Sera örtüleri güneş ışınlarının yönünü değiştirerek tüm sera yüzeyine eşit dağılımını sağlayabilir.</li>
+<li><strong>Enerji Verimliliği:</strong> Sera içindeki ısıtma/soğutma koşullarını optimize ederek çevresel koşullardan yararlanır.</li>
+<li><strong>Mikroiklim Kontrolü:</strong> Yetiştiriciliğe yönelik optimum ortamı sağlamak için sıcaklık, nem, aydınlatma gibi parametreler ayarlanabilir.</li>
+<li><strong>Hastalık ve Zararlıdan Koruma:</strong> Kapalı alan olduğundan dışarıdan giriş son derece güçtür.</li>
+<li><strong>Mükemmel Havalandırma:</strong> Tepe veya yan pencereler sayesinde hızlı havalandırma imkânı sunar.</li>
+<li><strong>Yağmur ve Hava Sızdırmazlığı:</strong> İdeal yağmur ve hava yalıtımı sağlar.</li>
+<li><strong>Artan Üretim:</strong> Hava koşullarından bağımsız olarak üretimi yoğunlaştırabilir, bitkilerin büyümesini hızlandırır.</li>
+<li><strong>Sezon Dışı Üretim:</strong> Çevresel kontrol sayesinde sezon dışında üretim yapılabilir; bu durum daha iyi satış fiyatı ve sürekli ürün arzı anlamına gelir.</li>
+<li><strong>Su Kullanım Verimliliği:</strong> Geleneksel toprak tarımına kıyasla %90'a varan su tasarrufu sağlar.</li>
+<li><strong>Verim Artışı:</strong> Aynı alanda 3–10 kat daha fazla üretim imkânı sunar.</li>
+</ul>
+<hr />
+<h2>V. TASARIMIN EKONOMİSİ</h2>
+<h3>Üretim Hesabı</h3>
+<p>1 pound kurutulmuş safran elde etmek için yaklaşık 67.500 Crocus sativus çiçeğinin stigması hasat edilmelidir. 10 pound kurutulmuş safran elde etmek için 675.000 Crocus sativus soğanı yetiştirilmesi gerekmektedir. Her safran bitkisi noktası başına 4 çiçeğe kadar üretebilir; ancak konservatif hesaplamada her bitki noktasının ortalama 2 çiçek verdiği kabul edilir:</p>
+<p>675.000 / 2 = 337.500 nokta<br />
+337.500 / 72 nokta/ünite = <strong>4.687 ünite</strong></p>
+<h3>Sistem Boyutları</h3>
+<p>Önerilen sistem <strong>530 × 155 fit</strong> dikey yapıda olup 4 katlıdır; her birinde 8 büyüme oluğu bulunan 10,6 × 4 × 4 fit boyutundadır.</p>
+<table>
+<thead>
+<tr>
+<th>Tanım</th>
+<th>Detay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alan</td>
+<td>530 × 155 fit (82.150 fit²)</td>
+</tr>
+<tr>
+<td>Yapı</td>
+<td>Akış-Gelgit, U: 18 × G: 4 × Y: 10,6 fit</td>
+</tr>
+<tr>
+<td>Bitki Sayısı</td>
+<td>956.160</td>
+</tr>
+<tr>
+<td>Çiçek Sayısı</td>
+<td>1.912.320</td>
+</tr>
+<tr>
+<td>Stigma Toplama</td>
+<td>~70.000 çiçekten ~200.000 stigma</td>
+</tr>
+<tr>
+<td>Üretim</td>
+<td>113 pound (53 kg)</td>
+</tr>
+</tbody>
+</table>
+<h3>5 Yıllık Mali Projeksiyon (PKR)</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Yıl 1</th>
+<th>Yıl 2</th>
+<th>Yıl 3</th>
+<th>Yıl 4</th>
+<th>Yıl 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gelir</td>
+<td>80.668.000</td>
+<td>88.734.800</td>
+<td>97.608.280</td>
+<td>107.369.108</td>
+<td>118.106.018</td>
+</tr>
+<tr>
+<td>İşletme</td>
+<td>8.590.157</td>
+<td>9.449.172</td>
+<td>10.394.089</td>
+<td>11.433.497</td>
+<td>12.576.846</td>
+</tr>
+<tr>
+<td>Brüt Kâr</td>
+<td>72.077.843</td>
+<td>79.285.628</td>
+<td>87.214.191</td>
+<td>95.935.611</td>
+<td>105.529.172</td>
+</tr>
+<tr>
+<td>Net Gelir</td>
+<td>57.407.439</td>
+<td>63.242.684</td>
+<td>69.472.452</td>
+<td>76.424.199</td>
+<td>84.071.119</td>
+</tr>
+</tbody>
+</table>
+<h3>Gelir Hesabı</h3>
+<table>
+<thead>
+<tr>
+<th>Tanım</th>
+<th>Detay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Üretim</td>
+<td>53 kg</td>
+</tr>
+<tr>
+<td>Safran Geliri</td>
+<td>32.860.000 PKR</td>
+</tr>
+<tr>
+<td>Soğan Geliri</td>
+<td>47.808.000 PKR</td>
+</tr>
+<tr>
+<td>Brüt Kâr</td>
+<td>80.668.000 PKR</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Piyasa Fiyatları:</strong>
+- Keşmiri Safran: PKR 79/gr (min) — PKR 520/gr (max)
+- Doğal Safran: PKR 68.000/kg — PKR 100.000/kg
+- Uluslararası piyasada: USD 5.000–12.000/kg</p>
+<h3>İşletme Maliyeti (Yıllık: 8.590.157 PKR)</h3>
+<table>
+<thead>
+<tr>
+<th>Kalem</th>
+<th>Maliyet (PKR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soğan (15–24 g)</td>
+<td>7.808.000</td>
+</tr>
+<tr>
+<td>Gübre</td>
+<td>667.900</td>
+</tr>
+<tr>
+<td>Besin takviyesi</td>
+<td>175.900</td>
+</tr>
+<tr>
+<td>Elektrik (756 kV ışık)</td>
+<td>6.097.140</td>
+</tr>
+<tr>
+<td>Su (19.920 galon RO)</td>
+<td>425.888</td>
+</tr>
+<tr>
+<td>İşçilik</td>
+<td>76.000</td>
+</tr>
+<tr>
+<td>Sezon işçiliği</td>
+<td>340.000</td>
+</tr>
+<tr>
+<td>Kurutma ünitesi</td>
+<td>45.800</td>
+</tr>
+<tr>
+<td>Ambalaj</td>
+<td>173.529</td>
+</tr>
+<tr>
+<td>Nakliye</td>
+<td>96.000</td>
+</tr>
+<tr>
+<td><strong>TOPLAM</strong></td>
+<td><strong>16.406.157</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Büyüme Ortamı</h3>
+<table>
+<thead>
+<tr>
+<th>Materyal</th>
+<th>Maliyet (PKR)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kokopit, perlit, vermikülit, kokopit kabuğu</td>
+<td>11.500.000</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>VI. HİDROPONİK SAFRAN YETİŞTİRİCİLİĞİNE İLİŞKİN NOTLAR</h2>
+<ul>
+<li>Altı hafta boyunca hidroponik ortamda yetiştirilen safran bitkileri, toprakta yetiştirilen bitkilere kıyasla çok daha az taze ağırlık artışı gösteren kormlar üretmektedir. Ancak hidroponik ortamda yetiştirilen kormaların kuru ağırlığı, toprakta yetiştirilenlere göre belirgin biçimde daha yüksektir.</li>
+<li>Safran, sektör profesyonelleri tarafından en pahalı baharat olarak değerlendirilmektedir; 1 kilogramı 3.500–160.000 USD arasında fiyatlanmaktadır.</li>
+<li>Soğan ağırlığı 15–24 gr olmalıdır; tek seferlik satın alma yatırımı söz konusudur.</li>
+<li>Soğan 6 ay veya daha kısa süre sonra yeniden kullanılabilir.</li>
+<li>Her bitki soğanı, her hasatta 3–4 yeni soğan üretmektedir.</li>
+<li>Stigmanın yanı sıra soğanlar da PKR 150/soğan fiyatıyla satılabilmektedir.</li>
+</ul>
+<hr />
+<h2>VII. ÖNERİLEN SİSTEM ÖZELLİKLERİ — AKIŞ-GELGİT DİKEY SİSTEM</h2>
+<ul>
+<li>Sistem boyutu: U 18 × G 4 × Y 10,6 fit</li>
+<li>1.495 sistem</li>
+<li>Akış-Gelgit masaları: 7.470</li>
+<li>Büyüme ışıkları</li>
+<li>Gübre sistemi</li>
+<li>Su kontrol sistemi</li>
+<li>Su dağıtım ve geri dönüşüm sistemi</li>
+<li>Havalandırma sistemi</li>
+<li>Su sirkülasyonlu soğutma sistemi</li>
+<li>Zemin örtüsü</li>
+<li>Alüminyum gölgeleme</li>
+<li>Alüminyum veya galvanizli çelik boru iç yapı</li>
+</ul>
+<hr />
+<h2>KAYNAKLAR</h2>
+<ol>
+<li>Arjina Shrestha vd. "Hydroponics" teknik raporu, Oklahoma Cooperative Extension Service; 2013.</li>
+<li>Nga T. Nguyen vd. "Hydroponics: A Versatile System to Study Nutrient Allocation and Plant Responses to Nutrient Availability and Exposure to Toxic Elements." Journal of Visualized Experiments. 2016;(113):e54317.</li>
+<li>Stephanie B Mohammed vd. "Nutrient Film Technique for Commercial Production." Agricultural Science Research Journal. 2016;6(11):269–274.</li>
+<li>Shreya Tembe vd. "IoT based Automated Hydroponics System." International Journal of Scientific &amp; Engineering Research. 2018;9(2).</li>
+<li>Nathaphon Boonnam vd. "Optimal Plant Growth in Smart Farm Hydroponics System using the Integration of Wireless Sensor Networks into Internet of Things." Advances in Science, Technology and Engineering Systems Journal. 2017;2(3):1006–1012.</li>
+<li>Charumathi vd. "Optimization and Control of Hydroponics Agriculture using IoT." Asian Journal of Applied Science and Technology. 2017;1(2):96–98.</li>
+<li>Jumras Pitakphongmetha vd. "Internet of things for planting in smart farm hydroponics style." ICSEC 2016:14–17.</li>
+<li>Anuradha Thakare vd. "Decision Support System For Smart Farming With Hydroponics Style." IJARCSE. 2018;9(1).</li>
+<li>Raj Kumar vd. "A Novel Approach for Smart Hydroponic Farming Using IoT." IJERCSE. 2018;5(5).</li>
+<li>Tanabut Changmai vd. "Smart Hydroponic Lettuce Farm using Internet of Things." KST 2018.</li>
+<li>Aju G Nair vd. "Smart Vertical Farming Using Hydroponics." IOSR-JEEE. 2017:14–17.</li>
+<li>Parth Varmora vd. "Design and Development of Solar Powered Smart Hydroponic Greenhouse." IJERA. 2018;8(5):95–98.</li>
+<li>Marilou P. Pascual vd. "Vertical Farming Using Hydroponic System: Toward a Sustainable Onion Production in Nueva Ecija, Philippines." Open Journal of Ecology. 2018;8:25–4.</li>
+<li>Abhijit vd. "IOT based smart system to support agriculture parameters: A case study." EICM, Halifax, Canada; 2019.</li>
+<li>Herman and Nico Surantha. "Intelligent monitoring and controlling system for hydroponics precision agriculture." ICoICT, Kuala Lumpur, Malaysia; 2019.</li>
+<li>Muhammad Agus Triawan vd. "Internet of things using Publish and Subscribe Method for cloud-based application to NFT-based hydroponics system." IEEE ICSET, Bandung, Indonesia; 2016.</li>
+<li>Manav Mehva vd. "IOT based hydroponics system using deep neural network." Computers and Electronics in Agriculture. 2018;155:473–486.</li>
+</ol>
+  </div>
+</div>
+</main>
+
+<footer>
+    <div class="container">Safran Topluluğu — Bilimsel kaynaklara dayalı safran yetiştiriciliği</div>
+</footer>
+
+</body>
+</html>
