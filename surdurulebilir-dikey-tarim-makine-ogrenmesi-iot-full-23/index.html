@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sürdürülebilir Dikey Tarım: Makine Öğrenimi ve IoT ile Enerji Verimliliği (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.5em; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-size: 0.87rem; }
+        th { background: #f5f0e8; color: #1a1a2e; font-weight: 700; padding: 8px 12px; text-align: left; border: 1px solid #e0d8c8; }
+        td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        tr:nth-child(even) td { background: #fafaf8; }
+        .key-finding { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 14px 18px; margin: 1.5em 0; font-size: 0.92rem; }
+        .key-finding strong { color: #166534; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+  'sustainable-vf-machine-learning-iot-energy-23':                              {lang:'en', pair:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23', pairFull:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-full-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23':                         {lang:'tr', pair:'sustainable-vf-machine-learning-iot-energy-23', pairFull:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-full-23'},
+  'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-full-23':                    {lang:'tr-full', pair:'sustainable-vf-machine-learning-iot-energy-23', pairBase:'surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23'},
+};
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a class="site-logo" href="/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 7 7 13a5 5 0 0010 0C17 7 12 2 12 2z" fill="#D97706"/><path d="M12 8v8M9 13l3 3 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Safran Topluluğu
+        </a>
+        <nav class="site-nav">
+            <a href="/">Araştırmalar</a>
+            <a href="/protokol.html">Protokol</a>
+            <a href="/hakkinda.html">Hakkında</a>
+            <a href="https://buymeacoffee.com/berkayinam" class="btn-outline" target="_blank" rel="noopener">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="post-header">
+        <div class="breadcrumb">
+            <a href="/">Araştırmalar</a> / Dikey Tarımda MÖ ve IoT ile Enerji Verimliliği
+        </div>
+        <div class="full-badge">TR Full — Tam Çeviri</div>
+        <h1 class="post-title">Sürdürülebilir Dikey Tarım: Enerji Verimliliği ve Verimlilik İçin Makine Öğrenimi ve IoT'nin Kullanımı</h1>
+        <div class="post-actions">
+            <a class="action-btn" href="/surdurulebilir-dikey-tarim-makine-ogrenmesi-iot-23/">TR Özet →</a>
+            <a class="action-btn" href="/sustainable-vf-machine-learning-iot-energy-23/">EN →</a>
+            <span class="lang-switch-current lang-switch-full">TR Full</span>
+        </div>
+    </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+
+    <p><strong>Yazarlar:</strong> Shruti Gupta, Arnab Das, Sanjay Kumar Sinha<br>
+    <strong>Kurumlar:</strong> Poornima Mühendislik ve Teknoloji Enstitüsü, Jaipur; Ulusal Teknoloji Enstitüsü Itanagar<br>
+    <strong>Konferans:</strong> ICIMMI 2024 (Bilgi Yönetimi ve Makine Zekası Uluslararası Konferansı), 23–24 Aralık 2024, Jaipur, Hindistan<br>
+    <strong>DOI:</strong> https://doi.org/10.1145/3745812.3745818</p>
+
+    <hr>
+
+    <h2>Özet</h2>
+
+    <p>Dikey tarım, dünya genelinde gıda üretimi sorunlarını, azalan tarım arazilerini ve iklim değişikliğini hafifletmeye yönelik yararlı bir strateji olarak öne çıkmaktadır. Kontrollü ortam tarımının kullanımıyla dikey tarım, tüketicilerin yakınında katmanlar hâlinde gıda yetiştirilmesini sağlayarak geleneksel tarıma olan gereksinimi azaltmaktadır. Verimli bitki büyümesini sağlayan hassas çerçeve uygulamalarından biri olarak makine öğrenimi (MÖ) teknolojileri ve Nesnelerin İnterneti (IoT) kolaylıkla entegre edilebilmektedir.</p>
+
+    <p>Robotik, makine öğrenimi, büyük veri analitiği, insansız hava araçları ve IoT sensörleri gibi çeşitli teknolojiler; bitki büyümesi, çevresel koşullar ve hava örüntüleri hakkında veri toplamak için kullanılmaktadır. Bu nedenle enerji verimliliği, dikey çiftliklerin ekonomik sürdürülebilirliğini belirleyen kritik bir parametre olarak değerlendirilmektedir. Bu makale, dikey tarım sistemlerinde enerji verimliliğini ele alarak teknolojinin, daha iyi uygulamaların ve temiz enerji kaynaklarının kullanımının dikey çiftliklerin yüksek enerji ihtiyacına nasıl karşı koyduğunu incelemektedir.</p>
+
+    <p>Makale aynı zamanda; daha az elektrik tüketerek doğal güneş ışığına benzer ışık üretmek için tasarlanmış LED aydınlatma, daha az enerjiyle çalışan enerji tasarruflu HVAC sistemleri ile su ve besin geri dönüşüm sistemleri gibi enerji verimli sistem ve tasarımları da ele almaktadır.</p>
+
+    <p><strong>Anahtar Kelimeler:</strong> Dikey tarım, sürdürülebilirlik, enerji verimliliği, su yönetimi, makine öğrenimi</p>
+
+    <hr>
+
+    <h2>1. Giriş</h2>
+
+    <p>Nüfustaki muazzam artış, dünyayı önümüzdeki elli yılda büyük ekolojik sorunlarla yüzleşmeye zorlayacaktır. BM'nin yayımladığı rapora göre küresel nüfus 7,6 milyar iken 2030'da 8,6 milyara, 2050'de 9,8 milyara ve 2100'de 11,2 milyara ulaşması beklenmektedir. Bu nüfus artışı; küresel ölçekte artan gıda talebi ve daha fazla tarım arazisi ihtiyacı gibi çeşitli riskler doğurmaktadır.</p>
+
+    <p>Dünya genelinde büyüyen nüfus ve daralan tarım arazileriyle birlikte modern tarım teknolojilerine olan talep giderek artmaktadır. Bu durum, mahsullerin katmanlar ya da eğimli yüzeyler hâlinde yetiştirildiği Dikey Tarım adlı bir teknolojinin geliştirilmesine zemin hazırlamıştır. Dikey tarım, yüksek arazi kullanımı için alanı en üst düzeye çıkarmakta ve mevsimlerden bağımsız olarak yıl boyunca mahsul yetiştirilmesini sağlamakta; böylece arazi, pestisit ve herbisit kullanımını azaltmaktadır. Bununla birlikte bu tarım yönteminin genel sürdürülebilirliği, süreçte kullanılan enerjiye büyük ölçüde bağlıdır.</p>
+
+    <p>Enerji, dikey çiftliklerin işletilmesinin özünü oluşturmaktadır; aydınlatmadan sıcaklık kontrolüne, su sirkülasyonundan besin dağıtım sistemine kadar her süreçte belirleyici bir rol oynamaktadır. Yapay ışık, iklim uyumlu uygulamalar ve makineleşme; yüksek denetim sağlanmadığı takdirde bazı ekolojik yönetim faydalarını geride bırakacak enerji kayıplarına yol açabilmektedir. Enerji verimliliği ile verimliliği uygun biçimde dengeleyen bir denge bulmak, dikey tarımı gıda üretiminde uygulamaya karar verirken kritik bir nokta hâline gelmektedir.</p>
+
+    <p>LED büyüme ışıklarında artan verimlilik ve etkinlik, enerji tasarruflu ısıtma-soğutma sistemlerinin geliştirilmesi ve alternatif enerji kaynaklarının kullanımı gibi teknolojik ilerlemeler, dikey çiftliklerin enerji profilini önemli ölçüde değiştirmeye başlamıştır. Ancak dikey tarımın üretimini artırırken bununla ilişkili karbon emisyonlarını düşürmek için daha fazla yenilikçi ve entegre yaklaşıma acil ihtiyaç duyulmaktadır.</p>
+
+    <table>
+        <caption style="font-weight:700; text-align:left; padding:6px 0; font-size:0.9rem;">Tablo 1: Farklı bitki çeşitleri için sıcaklık aralıkları, LED kullanımı ve enerji tasarrufları</caption>
+        <thead>
+            <tr>
+                <th>Bitki Türü</th>
+                <th>Optimum Sıcaklık (°C)</th>
+                <th>LED Aydınlatma Kullanımı</th>
+                <th>Enerji Tasarrufu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Yapraklı Sebzeler</td>
+                <td>15–22°C</td>
+                <td>Vejetatif büyüme için özel ışık spektrumu</td>
+                <td>HPS sistemlere kıyasla %40–70 azalma</td>
+            </tr>
+            <tr>
+                <td>Otlar</td>
+                <td>18–24°C</td>
+                <td>Verimlilik için mavi/kırmızı ışık oranı odağı</td>
+                <td>Düşük ısı çıkışı, daha az soğutma ihtiyacı</td>
+            </tr>
+            <tr>
+                <td>Çilek</td>
+                <td>20–26°C</td>
+                <td>Gelişmiş tam spektrum LED ışıklar</td>
+                <td>Sıcaklık kontrolünde azaltılmış enerji kullanımı</td>
+            </tr>
+            <tr>
+                <td>Domates</td>
+                <td>20–26°C</td>
+                <td>Optimum meyvelendirme için tam spektrum LED</td>
+                <td>Aydınlatma ve HVAC'de düşük işletme maliyeti</td>
+            </tr>
+            <tr>
+                <td>Çiçekler (Süs Bitkileri)</td>
+                <td>18–22°C</td>
+                <td>Renk dengesi ve çiçeklenme büyümesi için tasarlanmış ışık</td>
+                <td>Estetik amaçlar için daha iyi ışık kontrolü</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Geleneksel tarım; uzun çalışma saatleri, afetler, öngörülemeyen verimler ile mahsullerin zararlılara ve hastalıklara karşı savunmasızlığı bakımından çiftçileri en zorlu koşullarla yüz yüze bırakmaktadır. Dikey tarım uygulaması ise insan müdahalesine gerek duymayan tamamen otomatik bir sistemde gerçekleşmektedir. IoT ve MÖ teknolojileri, dikey tarım sistemlerinin performansını önemli ölçüde artırabilmektedir.</p>
+
+    <hr>
+
+    <h2>2. Literatür Taraması</h2>
+
+    <p>Son yıllarda geleneksel mekanizmalara bağlı olmaya devam eden dikey tarım, hidroponik, akvaporik ve aeroponik gibi çeşitli yöntemler aracılığıyla daha kaliteli ürün yetiştirme çabaları kapsamında gelişim göstermiştir. Köklerin besin çözeltisi bakımından zengin sularda bulunması ya da besleyici sis altında açıkta bırakılması şeklinde işleyen bu sistemler birbiriyle kıyaslanmaktadır.</p>
+
+    <h3>2.1 Hidroponik</h3>
+
+    <p>Geleneksel yetiştiriciliğe kıyasla hidroponik, hem yatay hem de dikey yüzeyleri kullanarak daha yüksek verim elde edebilmektedir. Yoğun nüfuslu bölgelerde tüketicilerin taze, besleyici ürünlere günlük taleplerini karşılamak amacıyla birim alana düşen bitki sayısı artırılmakta ve hidroponik dikey tarıma geçiş hız kazanmaktadır. Hidroponik; pestisit ya da gübre çevreye salınımı olmaksızın çok çeşitli ürünlerin yıllık üretimine olanak tanımaktadır. Geleneksel açık alan tarımıyla kıyaslandığında daha az arazi ve su gerektirmektedir.</p>
+
+    <p>Hidroponik sistemler; derin su kültürü (DWC), gelgit-akış sistemi, fitil sistemi, damlama ve besin filmi tekniği (BFT/NFT) dahil olmak üzere çok sayıda besin çözeltisi dağıtım yöntemi kullanmaktadır. Derin Su Kültürü tekniğinde bitki kökleri havalandırılmış besin çözeltisine batırılmaktadır. Gelgit ve akış sisteminde ise bir su pompası, besin çözeltisini köklere periyodik olarak sağlamaktadır.</p>
+
+    <p>Bununla birlikte hidroponiklerin çeşitli sınırlılıkları da mevcuttur: Sistemin nitelikli insan gücüyle işletilip sürdürülmesi gerekmekte; su ve hava pompaları zaman zaman güç kesintilerine neden olmaktadır. Bunların yanı sıra kurulum sırasında yüksek maliyetler ve bu teknikle daha fazla enerji kullanımı gibi sorunlar da söz konusudur.</p>
+
+    <h3>2.2 Akvaporik</h3>
+
+    <p>Akvaporik, su ürünleri yetiştiriciliği ile hidroponiği bir arada uygulayan bir sistemdir. Bu sistemde balıklar ve bitkiler birlikte yetiştirilmektedir: İç havuzlarda balık yetiştiriciliği besin bakımından zengin atıklar üretmekte, bitkiler ise bu atıkları geri dönüştürülmüş atık suyla birlikte alarak balık havuzlarına döndürmektedir.</p>
+
+    <p>Almanya'da çatı serası kullanan ilk süpermarket, balıklardan elde edilen biyoatıkların bitkilere gübre olarak uygulandığı ve suyun biyolojik filtrelenerek balık tankına geri döndürüldüğü akvaporik bir sistem kullanmaktadır. REWE yeşil tarım mağazası yalnızca bir süpermarket değil, aynı zamanda şehrin merkezinde bir üretim tesisidir. REWE'nin ortağı ECF Çiftlik Sistemleri tarafından işletilen çatı çiftliği, akvaporik yöntemiyle her yıl 800.000 fesleğen bitkisi yetiştirebilmektedir.</p>
+
+    <h3>2.3 Aeroponik</h3>
+
+    <p>Aeroponik, bitki köklerini besin bakımından zengin bir sis içinde asılı tutarak besin emilimini ve oksijenlenmesini en üst düzeye çıkaran kapalı alan bahçeciliği tekniğidir. Bu tarım tekniği son derece verimli olup çoğu tarım tekniğine kıyasla bitkileri önemli ölçüde daha yüksek oranlarda ve verimle yetiştirmeye olanak tanımaktadır.</p>
+
+    <p>Aeroponik teknolojisi yeni, özgün ve yenilikçidir; nemli tropik bölgelerde bozulmuş arazileri restore etmek amacıyla AM mantarları ve toprak mikroorganizmalarıyla bağlantılı bitkileri ve ağaç fidelerini büyük miktarlarda üretebilmektedir. Aeroponikte bitkiler yoğun bir buhar ya da hava ortamında yetiştirilmekte; su-besin çözeltisi asılı köklere püskürtülmektedir. Ancak kökler havaya maruz kaldığı için hızla kuruyabilmekte ve bu durum sisleme döngülerinin bitki türüne göre ayarlanmasını zorunlu kılmaktadır.</p>
+
+    <h3>2.4 Dikey Tarım Tekniklerinin Karşılaştırmalı İncelemesi</h3>
+
+    <table>
+        <caption style="font-weight:700; text-align:left; padding:6px 0; font-size:0.9rem;">Tablo 2: Dikey tarım tekniklerinin karşılaştırmalı incelemesi</caption>
+        <thead>
+            <tr>
+                <th>Parametre</th>
+                <th>Hidroponik Sistem</th>
+                <th>Akvaporik Sistem</th>
+                <th>Aeroponik Sistem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Enerji Tasarrufu</td>
+                <td>Yüksek</td>
+                <td>Yüksek</td>
+                <td>Yüksek</td>
+            </tr>
+            <tr>
+                <td>Su Koruma Oranı</td>
+                <td>%90'a kadar</td>
+                <td>%90'a kadar</td>
+                <td>%95'e kadar</td>
+            </tr>
+            <tr>
+                <td>İşgücü</td>
+                <td>Yüksek</td>
+                <td>Yüksek</td>
+                <td>Düşük</td>
+            </tr>
+            <tr>
+                <td>Üretkenlik (m²/yıl)</td>
+                <td>150–200 kg</td>
+                <td>50–80 kg</td>
+                <td>200–250 kg</td>
+            </tr>
+            <tr>
+                <td>Kaynak Gereksinimleri</td>
+                <td>Besin bakımından zengin su, aydınlatma, büyüme ortamı (isteğe bağlı)</td>
+                <td>Besin çözeltisi, akvaryum, ekim yatağı, aydınlatma</td>
+                <td>Besin çözeltili sisleme nozulları, büyüme ışıkları</td>
+            </tr>
+            <tr>
+                <td>Yetiştirilebilen Ürünler</td>
+                <td>Pek çok ürün çeşidi</td>
+                <td>Sınırlı çeşit</td>
+                <td>Daha fazla çeşit</td>
+            </tr>
+            <tr>
+                <td>Alan Kullanım Verimliliği</td>
+                <td>%90'a kadar</td>
+                <td>%75'e kadar</td>
+                <td>%95'e kadar</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2.5 Makine Öğrenimi ve IoT ile Dikey Tarımın Optimizasyonu</h3>
+
+    <p>Dikey tarım, makine öğreniminin IoT teknolojisiyle entegrasyonu sayesinde hassas tarım için akıllı tarımın nihai ifadesi hâline gelmekte ve sürdürülebilir tarım için yeni ufuklar açmaktadır. Çeşitli makine öğrenimi ve derin öğrenme algoritmaları, farklı dikey sulama koşullarında uygulanmaktadır. Ayrıca yapay zekâ yöntemleri; mahsul verimi tahmini, bitki büyümesi izleme ve hastalık tespiti ile numune kalitesinin değerlendirilmesi amacıyla da kullanılmaktadır.</p>
+
+    <p>IoT sistemlerinden elde edilen büyük veri hacminin yanı sıra gelişmiş tarım teknolojileri; dikey tarım sistemleri içinde yenilikçiliği besleyerek gelecekteki gıda arzı zorluklarını karşılama kapasitesine sahiptir. Güncel tarım eğilimleri, dikey tarımın birden fazla tarımsal IoT cihazı boyutunu kapsayacağını göstermektedir. Yapay zekâ ve MÖ gibi ileri teknolojiler sayesinde dikey tarım sisteminin üretkenlik ve kalitesine ilişkin sonuçlar iyileşecektir.</p>
+
+    <hr>
+
+    <h2>3. Dikey Tarımın Uygulanma Prosedürü</h2>
+
+    <p>IoT ve Makine Öğrenimi ile güçlendirilmiş otomasyonu kullanan iç mekân tarım tekniklerinde hassasiyetin benimsenmesi, yapılandırılmış ve dönüştürücü bir yaklaşımı gerektirmektedir. Uygulama sürecinde izlenecek adımlar şöyledir:</p>
+
+    <ul>
+        <li><strong>Hedefleri Tanımla:</strong> Enerji verimliliği ve verim iyileştirmesi için özel hedefler belirle.</li>
+        <li><strong>Dikey Tarım Altyapısını Kur:</strong> Bitki büyütme için gerekli dikey kuleleri veya rafları monte et.</li>
+        <li><strong>Düşük Enerjili LED Sistemler Kur:</strong> Enerji tasarrufu sağlayacak şekilde bitki büyümesi için tasarlanmış LED ışık sistemlerini inşa et.</li>
+        <li><strong>IoT Sensörleri Yerleştir:</strong> Sıcaklık, nem ve ışık dahil tüm çevresel faktörleri izleyen sensörler kur.</li>
+        <li><strong>Bulut Veri İletimini Yapılandır:</strong> IoT sensör verilerinin gerçek zamanlı izleme için merkezi bulut tabanlı bir sisteme iletilmesini ayarla.</li>
+        <li><strong>Veri Ön İşleme:</strong> Analiz için sensörlerden toplanan verileri normalleştir ve temizle.</li>
+        <li><strong>Özellik Mühendisliği:</strong> Sistem performansını artırmak amacıyla enerji verimliliği ve verim odaklı özellik mühendisliği uygula.</li>
+        <li><strong>MÖ Modelleri Geliştir:</strong> Tarım uygulamalarını optimize eden makine öğrenimi modelleri kullan.</li>
+        <li><strong>Enerji Optimizasyonu:</strong> Aydınlatma, HVAC ve diğer kritik sistemlerdeki enerji kullanımını iyileştirmek için optimizasyon teknikleri uygula.</li>
+        <li><strong>Ürün Büyümesi Tahmini:</strong> Tarihsel ve gerçek zamanlı verilere dayalı olarak mahsul büyümesini tahmin etmek için öngörücü analitik kullan.</li>
+        <li><strong>Gerçek Zamanlı İzleme:</strong> Ayarlamalar için sistemin performansını sürekli takip et.</li>
+        <li><strong>Kontrolleri Otomatize Et:</strong> Aydınlatma, iklim kontrolü vb. için otomatik sistemleri devreye al.</li>
+        <li><strong>Uyarılar:</strong> Performanstaki anormallikler veya sapmalar için uyarılar oluştur.</li>
+    </ul>
+
+    <h3>3.1 Modelleri Yineleyerek Geliştir</h3>
+
+    <p>IoT, tarım sektöründe sensörler ve diğer cihazların kullanımını tanımlamak için kullanılan bir terimdir; tarımdaki her boyut ve faaliyeti veriye dönüştürmektedir. IoT, tarımın önemli miktarda hayati bilgi sağlayabilmesinin nedenlerinden biridir. Aynı zamanda tarım 4.0 araştırma ve geliştirme alanındaki gelişmeler için de bir model işlevi görmektedir. IoT ile ilişkili teknolojik gelişmeler ve yenilikler, tarım sektörünü büyük ölçüde etkilemesi beklenmekte olup bu alanda kapsamlı uygulamalara sahip olacaktır.</p>
+
+    <div class="key-finding">
+        <strong>ML Algoritması Doğruluğu — VF Tekniğine Göre:</strong>
+        <table style="margin:10px 0 0; font-size:0.85rem;">
+            <thead>
+                <tr>
+                    <th>DT Tekniği</th>
+                    <th>Veri Toplama</th>
+                    <th>ML Algoritması</th>
+                    <th>Doğruluk</th>
+                    <th>Avantajlar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hidroponik</td>
+                    <td>IoT sensörler (pH, EC, nem, ışık, sıcaklık)</td>
+                    <td>SVR, YSA, RF</td>
+                    <td><strong>%89,10</strong></td>
+                    <td>Besin temini ve çevresel faktörlerin hassas yönetimi; su tüketimini, mahsul çıktısını ve kimyasal kullanımı optimize eder</td>
+                </tr>
+                <tr>
+                    <td>Akvaporik</td>
+                    <td>IoT sensörler (pH, EC, ışık, nem, sıcaklık)</td>
+                    <td>Karar Ağaçları, RF, LR</td>
+                    <td><strong>%91,28</strong></td>
+                    <td>Su kullanımını minimize eder, balık atıklarını besin kaynağına dönüştürür, yüksek mahsul verimi</td>
+                </tr>
+                <tr>
+                    <td>Aeroponik</td>
+                    <td>IoT sensörler (pH, EC, ışık)</td>
+                    <td>XGBoost, RF</td>
+                    <td><strong>%94,37</strong></td>
+                    <td>Besin dağıtımı üzerinde hassas kontrol; hava ve ışık maruziyetiyle kök büyümesini optimize eder</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <h2>4. Sonuç</h2>
+
+    <p>Sonuç olarak dikey tarım; sınırlı arazi kullanımı, su kıtlığı ve iklim değişikliği gibi geleneksel tarımı etkileyen sorunlara uygulanabilir bir çözüm olarak evrilmiştir. Bu araştırma makalesi; tarım sistemlerindeki gelişmeler ve kaynak gereksinimleriyle birlikte dikey tarımla ilgili mevcut teknolojileri incelemektedir. Üstelik çeşitli dikey tarım yaklaşımlarının karşılaştırılması, bu yaklaşımların en çok talep gören gıda ürünlerinin üretimini daha iyi bir şekilde nasıl iyileştirdiğini ortaya koymaktadır.</p>
+
+    <p>Dikey tarım; yatay pirinç tarlaları üzerindeki çevresel faydaların yanı sıra küresel gıda güvenliğiyle uyumlu sosyal ve finansal yararlar da sunmaktadır. Geçmiş araştırmalara dayanarak çeşitli hizmetlerin yönetilmesine yönelik dikey çiftliklerde IoT'nin birçok kullanım alanı önerilmiştir. Özellikle yapay zekâ algoritmalarının dikey tarımda nasıl kullanılabileceği araştırılmıştır. Bu çalışma, akıllı ve hassas iç mekân dikey tarım sayesinde iç mekân gıda mahsülü üretimini keşfetmek ve analiz etmek için yeni araştırma olanaklarını gün yüzüne çıkarmakta; böylece daha sürdürülebilir ve verimli gıda üretim sistemlerinin geliştirilmesini teşvik etmektedir.</p>
+
+    <p>Her sistemin kendine özgü nitelikleri ve faydaları bulunmaktadır; bu nedenle sistem seçimi, ürün türü, alan mevcudiyeti ve yatırım maliyeti gibi çok sayıda faktöre bağlıdır. Aeroponik sistemlerin <strong>%94,37</strong>'lik ML doğruluğuyla en yüksek verimi ve en iyi model performansını sergilediği, akvaponiğin <strong>%91,28</strong>, hidroponiğin ise <strong>%89,10</strong> ile bunu izlediği görülmektedir.</p>
+
+    <hr>
+
+    <h2>Kaynaklar</h2>
+    <ol>
+        <li>Kalantari, F., Tahir, O. M., Joni, R. A., &amp; Fatemi, E. (2018). Opportunities and challenges in sustainability of vertical farming: A review. <em>Journal of Landscape Ecology</em>, 11(1), 35–60.</li>
+        <li>Zhang, Z., Rod, M., &amp; Hosseinian, F. (2021). A comprehensive review on sustainable industrial vertical farming using film farming technology. <em>Sustainable Agriculture Research</em>, 10(1), 46–53.</li>
+        <li>Siregar, R. R. A., Seminar, K. B., Wahjuni, S., &amp; Santosa, E. (2022). Vertical farming perspectives in support of precision agriculture using artificial intelligence: A review. <em>Computers</em>, 11(9).</li>
+        <li>Sasmal, B. vd. (2024). Advancements and challenges in agriculture: a comprehensive review of machine learning and IoT applications in vertical farming and controlled environment agriculture. <em>Big Data and Computing Visions</em>, 4(2), 67–94.</li>
+        <li>Bhamare, A., &amp; Bansal, P. (2024). Artificial Intelligence and Computer Vision in Sustainable Vertical Farming. <em>Artificial Intelligence and Communication Techniques in Industry 5.0</em>, 306.</li>
+        <li>Hao, W. vd. (2023). Efficiency Analysis of the Photovoltaic Shading and Vertical Farming System by Employing the Artificial Neural Network (ANN) Method. <em>Buildings</em>, 14(1), 94.</li>
+        <li>Erekath, S. vd. (2024). Food for future: Exploring cutting-edge technology and practices in vertical farm. <em>Sustainable Cities and Society</em>, 105357.</li>
+        <li>Rajendiran, G., &amp; Rethnaraj, J. (2024). Optimizing Lettuce Crop Yield Prediction in an Indoor Aeroponic Vertical Farming System Using IoT-Integrated Machine Learning Regression Models. <em>Revue d'Intelligence Artificielle</em>, 38(3).</li>
+        <li>Van Delden, S. H. vd. (2021). Current status and future challenges in implementing and upscaling vertical farming systems. <em>Nature Food</em>, 2(12), 944–956.</li>
+        <li>Gupta, S., Das, A., &amp; Sinha, S. K. (2024). Sustainable Vertical Farming: Leveraging Machine Learning and IoT for Energy Efficiency and Productivity. <em>ICIMMI 2024</em>, ACM. DOI: 10.1145/3745812.3745818</li>
+    </ol>
+
+  </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Safran Topluluğu · <a href="/" style="color:#D97706">Araştırmalar</a></p>
+    </div>
+</footer>
+</body>
+</html>
