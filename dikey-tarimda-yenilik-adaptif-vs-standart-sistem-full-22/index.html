@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dikey Tarımda Yenilik: Adaptif ve Standart Sistemlerin Enerji Karşılaştırması (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content h4 { font-size: 0.95rem; font-weight: 700; margin-top: 1.2em; color: #4a5568; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.5em; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-size: 0.87rem; }
+        th { background: #f5f0e8; color: #1a1a2e; font-weight: 700; padding: 8px 12px; text-align: left; border: 1px solid #e0d8c8; }
+        td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        tr:nth-child(even) td { background: #fafaf8; }
+        .key-finding { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 14px 18px; margin: 1.5em 0; font-size: 0.92rem; }
+        .key-finding strong { color: #166534; }
+        .formula-box { background: #f8fafc; border: 1px solid #cbd5e0; border-radius: 6px; padding: 12px 16px; margin: 1.2em 0; font-family: 'Courier New', monospace; font-size: 0.88rem; color: #2d3748; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+  'innovation-vertical-farming-adaptive-vs-standard-22':                        {lang:'en', pair:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22', pairFull:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-full-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22':                        {lang:'tr', pair:'innovation-vertical-farming-adaptive-vs-standard-22', pairFull:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-full-22'},
+  'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-full-22':                   {lang:'tr-full', pair:'innovation-vertical-farming-adaptive-vs-standard-22', pairBase:'dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22'},
+};
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a class="site-logo" href="/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 7 7 13a5 5 0 0010 0C17 7 12 2 12 2z" fill="#D97706"/><path d="M12 8v8M9 13l3 3 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Safran Topluluğu
+        </a>
+        <nav class="site-nav">
+            <a href="/">Araştırmalar</a>
+            <a href="/protokol.html">Protokol</a>
+            <a href="/hakkinda.html">Hakkında</a>
+            <a href="https://buymeacoffee.com/berkayinam" class="btn-outline" target="_blank" rel="noopener">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="post-header">
+        <div class="breadcrumb">
+            <a href="/">Araştırmalar</a> / Dikey Tarımda Adaptif vs Standart Sistem Karşılaştırması
+        </div>
+        <div class="full-badge">TR Full — Tam Çeviri</div>
+        <h1 class="post-title">Dikey Tarımda Yenilik: Adaptif ve Standart Sistemlerin Model Tabanlı Enerji Değerlendirmesi ve Performans Karşılaştırması</h1>
+        <div class="post-actions">
+            <a class="action-btn" href="/dikey-tarimda-yenilik-adaptif-vs-standart-sistem-22/">TR Özet →</a>
+            <a class="action-btn" href="/innovation-vertical-farming-adaptive-vs-standard-22/">EN →</a>
+            <span class="lang-switch-current lang-switch-full">TR Full</span>
+        </div>
+    </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+
+    <p><strong>Yazarlar:</strong> Antonio De Donno*, Luca Antonio Tagliafico, Patrizia Bagnerini<br>
+    <strong>Kurum:</strong> Mekanik, Enerji, Yönetim ve Taşıma Mühendisliği Bölümü (DIME), Politecnico Okulu, Cenova Üniversitesi, İtalya<br>
+    <strong>Dergi:</strong> Sustainability 2025, 17, 8319<br>
+    <strong>DOI:</strong> 10.3390/su17188319 | Yayın tarihi: 17 Eylül 2025</p>
+
+    <hr>
+
+    <h2>Özet</h2>
+
+    <p>BM projeksiyonlarına göre küresel nüfusun 2050'de 9,7 milyara ulaşması ve bu nüfusun %70'inin kentsel alanlarda yaşaması beklenmektedir; öte yandan tarım arazisi mevcudiyeti giderek azalmaktadır. Dikey tarım (DT), dikey alanları ve kontrollü ortamları kullanarak sürdürülebilir kentsel gıda üretimi için umut verici bir yol sunmaktadır.</p>
+
+    <p>Ortaya çıkan yaklaşımlar arasında adaptif dikey çiftlik (ADÇ), bitki büyüme aşamalarına uyum sağlayan hareketli raflama sistemleri sunarak aynı raf yüksekliğinde daha fazla yetiştirme rafı barındırılmasına imkân tanımaktadır. Bu çalışmada; sanayi ölçekli koşullar altında ADÇ ve geleneksel DT sistemlerinin enerji tüketimini ölçmek ve karşılaştırmak amacıyla bir hesaplama modeli geliştirilmiştir.</p>
+
+    <p>Referans senaryo; Lactuca sativa'yı test bitkisi olarak kullanan, DT'de 8 raf ve ADÇ'de 15 raf barındıran 272 çok katlı rafa dayanmaktadır. Termohigrometrik kontrol ve aydınlatmanın enerji tüketimi, farklı ekim programlamaları altında tahmin edilmiş; bitki büyüme dinamikleri planlama algoritmaları kullanılarak simüle edilmiştir.</p>
+
+    <p>Simülasyon sonuçları; ADÇ'nin iklim kontrolü için özgül enerji tüketiminde, ekim stratejisinden bağımsız olarak DT'ye kıyasla ortalama <strong>%22 azalma</strong> sağladığını göstermektedir. Üstelik ADÇ, aynı ayak izinde yetiştirme rafı sayısını neredeyse iki katına çıkararak geleneksel düz iç mekân sistemlere kıyasla ekilebilir yüzey alanını <strong>%400'ün üzerinde</strong> artırmaktadır.</p>
+
+    <p><strong>Anahtar Kelimeler:</strong> Adaptif dikey çiftlik, kaynak optimizasyonu, enerji tasarrufu, sürdürülebilirlik</p>
+
+    <hr>
+
+    <h2>1. Giriş</h2>
+
+    <p>Dikey tarım — kapalı bir ortamda dikey katlı katmanlarda mahsul yetiştiriciliği — hızla kentleşen dünyamızda kritik sürdürülebilirlik zorluklarını ele alma potansiyeli nedeniyle giderek daha fazla ilgi görmektedir. Hidroponik ve aeroponik gibi gelişmiş yetiştiricilik tekniklerini kullanarak doğal güneş ışığının yerini yapay ışık kaynaklarıyla dolduran dikey tarım, gıda üretimine dönüştürücü bir yaklaşım sunmaktadır.</p>
+
+    <p>Dikey çiftliklerin mekansal kullanım verimliliği en belirgin özelliklerinden biridir. Geleneksel tarım yöntemlerinden farklı olarak kısıtlı alanlarda önemli mahsul verimleri üretebilmekte; böylece tarım arazisi tüketimini azaltırken sürdürülebilir uygulamalara katkıda bulunmaktadır. Araştırmalar; Japonya'da dikey tarım üretimiyle ithal sebzelerin ikame edilmesinin azot ve fosfor ayak izlerini sırasıyla %37 ve %36 oranında azalttığını, su kirliliğini düşürdüğünü ve bölgesel gıda özgürlüğünü artırdığını ortaya koymaktadır.</p>
+
+    <h3>1.1 Adaptif Dikey Çiftlik — Yeni Bir Perspektif</h3>
+
+    <p>Adaptif dikey çiftlik (ADÇ), bitki büyümesi için mevcut dikey alanı uyarlama imkânına dayanan yeni bir dikey çiftlik konseptidir. Geleneksel dikey seralarda istiflenen yetiştirme rafları tüm ürün gelişim döngüsü boyunca sabit aralık korurken, ADÇ'de yetiştirme raflarının yüksekliği farklı büyüme aşamalarına uyarlanabilmektedir.</p>
+
+    <p>Raf konumunun akıllı yönetimi; bitkilere gerçek ihtiyaç duydukları koşullu hacmi büyüme süresince otomatik olarak tahsis etmektedir. Erken gelişim sürecinin büyük bölümünde bitkiler az yer gerektirdiğinden, adaptif seranın sürekli "akıllı uyarlaması", bitkilerin farklı büyüme aşamalarında aynı hacimleri paylaşmasına olanak tanır. Bu sayede adaptif sera, sabit raflı seraya kıyasla aynı hacme daha fazla raf sığdırarak üretim verimini önemli ölçüde artırır.</p>
+
+    <p>Optimal koşullar altında ADÇ, aynı hacme sahip geleneksel dikey seraya kıyasla <strong>ortalama %108</strong> üretim kazanımı sağlamaktadır. Bologna Üniversitesi'nde yürütülen bir çalışmada; 1500 m²'lik adaptif dikey çiftliğe 10 yıllık yatırımdan elde edilen kazanımın, aynı büyüklükteki geleneksel dikey çiftliğe kıyasla yaklaşık <strong>%200</strong> olduğu gösterilmiştir.</p>
+
+    <hr>
+
+    <h2>2. Adaptif Dikey Çiftlik Teknolojisinin Tanımı</h2>
+
+    <h3>2.1 Sistem Parametreleri ve Karşılaştırma</h3>
+
+    <p>Bu çalışmada geleneksel dikey çiftlik (DT) ile adaptif dikey çiftlik (ADÇ) karşılaştırılmaktadır. Ele alınan senaryoda DT, 272 çok katlı raftan oluşmaktadır. Her raf, 6,5 m toplam yüksekliğe ulaşan 8 katlı yetiştirme rafı içermektedir. Raf başına 2,05 m² zemin alanıyla her raf, 2,04 m² etkin yetiştirme alanı sunmaktadır. Tüm sistem 2.176 yetiştirme rafına; 4.439 m² toplam yetiştirme alanına sahiptir.</p>
+
+    <p>ADÇ durumunda ise her raf — hareketli raflama sistemi sayesinde — aynı 6,5 m yükseklikte 15 yetiştirme rafı barındırmaktadır. Zemin alanı 2,05 m²'de değişmezken, her raf 1,79 m² yetiştirme alanı sunmaktadır. Adaptif sistem toplamda 4.080 yetiştirme rafına ve 7.303 m² yetiştirme alanına sahiptir.</p>
+
+    <table>
+        <caption style="font-weight:700; text-align:left; padding:6px 0; font-size:0.9rem;">Tablo 1: Geleneksel (DT) ve adaptif sistem (ADÇ) yetiştirme yüzeyi karşılaştırması</caption>
+        <thead>
+            <tr>
+                <th>Özellik</th>
+                <th>DT (Standart)</th>
+                <th>ADÇ (Adaptif)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Raf başına yetiştirme rafı sayısı</td>
+                <td>8</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Raf yüzey alanı</td>
+                <td>2,04 m²</td>
+                <td>1,79 m²</td>
+            </tr>
+            <tr>
+                <td>Toplam yetiştirme rafı</td>
+                <td>2.176</td>
+                <td>4.080</td>
+            </tr>
+            <tr>
+                <td>Yetiştirilebilir alan</td>
+                <td>4.439 m²</td>
+                <td>7.303 m²</td>
+            </tr>
+            <tr>
+                <td>Zemin alanı</td>
+                <td>1.358 m²</td>
+                <td>1.358 m²</td>
+            </tr>
+            <tr>
+                <td>Geleneksel düz iç mekâna kıyasla artış</td>
+                <td><strong>+%226</strong></td>
+                <td><strong>+%437</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>2.2 İklim Koşullandırma Sistemi</h3>
+
+    <p>İklim koşullandırma sistemi olası bir konfigürasyon; duyarlı ve latent ısı yüklerini yönetmeye özellikle uygun olan HVAC sistemidir. Sistem şu bileşenlerden oluşmaktadır: dış higrometrik içeriği azaltmak için soğutucu akışkan kullanan bir chiller (R134a), uygun sıcaklığı sağlamak için bir ısıtıcı, serayı terk eden havanın artık ısısını geri kazanmak için karşı akım kanatlı bir ısı eşanjörü ve özel bir tanktan su atomize ederek havanın higrometrik içeriğini artıran bir nemlendirme bobini.</p>
+
+    <p>Kontrol birimi; sera içi ve dışarıdaki sensörlerden gelen verilerle HVAC sistemini, bitki büyümesi için ideal termohigrometrik koşulları koruyacak şekilde dinamik olarak ayarlamaktadır.</p>
+
+    <hr>
+
+    <h2>3. Hesaplama Modelinin Tanımı</h2>
+
+    <h3>3.1 Terleme Modeli (Penman-Monteith)</h3>
+
+    <p>Bu çalışmada, terleme hızını hesaplamak için Penman–Monteith (PM) modeli kullanılmaktadır. PM modeli; üç boyutlu mahsul örtüsünün, net radyasyonun emildiği, ısının değiştirildiği ve su buharının salındığı tek boyutlu bir "büyük yaprak"a indirgenebileceği varsayımına dayanmaktadır.</p>
+
+    <p>Enerji dengesi şu şekilde ifade edilir:</p>
+    <div class="formula-box">R_net − Q_sens − Q_lat = 0</div>
+
+    <p>Burada:</p>
+    <ul>
+        <li><strong>R_net</strong>: Yaprak tarafından emilen radyasyon — R_net = (1 − ρ₀) · PAR · (1 − exp⁻ᴸᴬᴵ/¹·⁸)⁰·⁸</li>
+        <li><strong>Q_sens</strong>: Yaprak ile çevre arasındaki duyulur ısı akısı — yaprak sıcaklığı Ts ile hava sıcaklığı Ta arasındaki farka bağlı</li>
+        <li><strong>Q_lat</strong>: Yaprakların buharlaşma yoluyla su kütlesi değişiminden kaynaklanan latent ısı akısı</li>
+    </ul>
+
+    <p>Stomaya ait direnç (rs) PPFD değerine bağlı olarak hesaplanmaktadır:</p>
+    <div class="formula-box">rs = 60 · (1500 + PPFD) / (200 + PPFD)</div>
+
+    <h3>3.2 Enerji ve Kütle Dengeleri</h3>
+
+    <p>Bitki büyümesi için termohigrometrik koşullar Tablo 2'de tanımlanmıştır:</p>
+
+    <table>
+        <caption style="font-weight:700; text-align:left; padding:6px 0; font-size:0.9rem;">Tablo 2: Termohigrometrik ve aydınlatma koşulları (marul — Lactuca sativa)</caption>
+        <thead>
+            <tr>
+                <th>Koşul</th>
+                <th>Sıcaklık (°C)</th>
+                <th>Bağıl Nem</th>
+                <th>PAR (W/m²)</th>
+                <th>PPFD (µmol/m²s)</th>
+                <th>Süre</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aydınlık</td>
+                <td>25</td>
+                <td>%65</td>
+                <td>60</td>
+                <td>300</td>
+                <td>16 saat</td>
+            </tr>
+            <tr>
+                <td>Karanlık</td>
+                <td>23</td>
+                <td>%75</td>
+                <td>0</td>
+                <td>0</td>
+                <td>8 saat</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Enerji dengesi şu bileşenleri içermektedir: kabuk üzerinden ısı alışverişi (Q_disp), bitki evapotranspirasyonu (Q_lat), duyulur ısı akısı (Q_sens), LED radyasyonu (R_sens, R_rif, Q_led) ve havalandırma (Q_vent). Ventilasyon hızı N = 50 h⁻¹ sabit tutulmuştur. LED verimi %52 (Philips GreenPower) olarak alınmıştır.</p>
+
+    <h3>3.3 Yaprak Alan İndeksi (LAI)</h3>
+
+    <p>LAI ile yetiştiricilik günü (DC) arasındaki ilişki sinüs toplamı yöntemiyle türetilmiştir:</p>
+    <div class="formula-box">LAI = Σ (i=1..5) [aᵢ · sin(bᵢ · DC + cᵢ)]</div>
+    <p>RMSE = 0,02695. Çimlenme aşaması (14 gün, ayrı iklim odasında yürütülür) hariç tutularak bağlanmıştır.</p>
+
+    <hr>
+
+    <h2>4. Termal Yükler ve Nem</h2>
+
+    <p>ADÇ'nin çalışma prensibi, farklı günlerde fide nakli yapılmasını gerektiren dikkatli ekim planlaması gerektirmektedir. Ekim takvimi Tablo 4'te belirtilmektedir (6 yetiştirme döngüsü × 15 raf). Germination aşaması 14 gün sürmekte ve her iki sistem için de ayrı bir iklim odasında yönetilmektedir. Her yetiştirme döngüsü 21 gündür.</p>
+
+    <p>ADÇ'de ekim programlaması nedeniyle ortalama günlük LAI, geleneksel seraya kıyasla daha fazla dalgalanmaktadır. Bazı günlerde ADÇ'nin LAI değeri DT'nin altına düşmekte ve bu durum ADÇ'de daha düşük tüketimlere yol açmaktadır. Latent yük, ısı yükleri arasında en büyük etkiye sahip olup zaman içinde önemli ölçüde değişkenlik göstermektedir.</p>
+
+    <hr>
+
+    <h2>5. Sonuçlar ve Tartışma</h2>
+
+    <h3>5.1 İklim Koşullandırma Enerji Tüketimi</h3>
+
+    <p>Dört farklı VF ekim stratejisi simüle edilmiştir:</p>
+    <ul>
+        <li><strong>Eş zamanlı ekim:</strong> Tüm nakiller tek günde gerçekleştirilir</li>
+        <li><strong>Programlama 1:</strong> Her hafta DT kapasitesinin 1/3'ü nakledilir</li>
+        <li><strong>Programlama 2:</strong> ADÇ karar algoritması, 8 raf için uygulanır</li>
+        <li><strong>Programlama 3:</strong> ADÇ algoritması; 272 raf 15 gruba (13 grup × 18 raf + 2 grup × 19 raf) bölünerek uygulanır</li>
+    </ul>
+
+    <div class="key-finding">
+        <strong>Temel Enerji Sonucu:</strong> ADÇ, 6 yetiştirme döngüsü boyunca toplam mutlak enerji tüketimi yüksek (8.892 MWh) olmakla birlikte, daha büyük yetiştirme alanı (7.303 m²) sayesinde birim alandaki özgül enerji tüketimini tüm DT stratejilerine kıyasla <strong>%21–28 oranında düşürmektedir</strong>.
+    </div>
+
+    <table>
+        <caption style="font-weight:700; text-align:left; padding:6px 0; font-size:0.9rem;">Tablo 5: ADÇ ve DT sistemlerinin 6 yetiştirme döngüsündeki enerji tüketimi karşılaştırması</caption>
+        <thead>
+            <tr>
+                <th>Parametre</th>
+                <th>ADÇ</th>
+                <th>DT-Prog.1</th>
+                <th>DT-Prog.2</th>
+                <th>DT-Prog.3</th>
+                <th>DT-Eş Zam.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Isıtma [MWh]</td>
+                <td>3.911</td>
+                <td>3.220</td>
+                <td>3.075</td>
+                <td>3.070</td>
+                <td>3.252</td>
+            </tr>
+            <tr>
+                <td>Isıtma: birincil enerji [MWh]</td>
+                <td>4.346</td>
+                <td>3.578</td>
+                <td>3.417</td>
+                <td>3.411</td>
+                <td>3.613</td>
+            </tr>
+            <tr>
+                <td>LED [MWh]</td>
+                <td>1.507</td>
+                <td>931</td>
+                <td>915</td>
+                <td>916</td>
+                <td>1.032</td>
+            </tr>
+            <tr>
+                <td>LED: birincil enerji [MWh]</td>
+                <td>3.140</td>
+                <td>1.940</td>
+                <td>1.906</td>
+                <td>1.908</td>
+                <td>2.150</td>
+            </tr>
+            <tr>
+                <td>Soğutma [MWh]</td>
+                <td>3.474</td>
+                <td>2.980</td>
+                <td>2.968</td>
+                <td>2.885</td>
+                <td>3.200</td>
+            </tr>
+            <tr>
+                <td>Soğutma: birincil enerji [MWh]</td>
+                <td>7.238</td>
+                <td>6.208</td>
+                <td>6.183</td>
+                <td>6.010</td>
+                <td>6.667</td>
+            </tr>
+            <tr>
+                <td><strong>Toplam enerji [MWh]</strong></td>
+                <td><strong>8.892</strong></td>
+                <td><strong>7.131</strong></td>
+                <td><strong>6.958</strong></td>
+                <td><strong>6.871</strong></td>
+                <td><strong>7.484</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Toplam birincil enerji [MWh]</strong></td>
+                <td><strong>14.723</strong></td>
+                <td><strong>11.726</strong></td>
+                <td><strong>11.506</strong></td>
+                <td><strong>11.330</strong></td>
+                <td><strong>12.430</strong></td>
+            </tr>
+            <tr>
+                <td><strong>Özgül birincil enerji [MWh/m²]</strong></td>
+                <td><strong>2,02</strong></td>
+                <td><strong>2,64</strong></td>
+                <td><strong>2,59</strong></td>
+                <td><strong>2,55</strong></td>
+                <td><strong>2,80</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>5.2 Özgül Enerji Tasarrufu Özeti</h3>
+
+    <ul>
+        <li><strong>Programlama 1:</strong> ADÇ enerji tasarrufu <strong>%24</strong></li>
+        <li><strong>Programlama 2:</strong> ADÇ enerji tasarrufu <strong>%22</strong></li>
+        <li><strong>Programlama 3:</strong> ADÇ enerji tasarrufu <strong>%21</strong></li>
+        <li><strong>Eş zamanlı ekim:</strong> ADÇ enerji tasarrufu <strong>%28</strong></li>
+    </ul>
+
+    <p>Bu enerji tasarrufunun temel nedeni; ADÇ'deki daha fazla sayıda raf nedeniyle daha küçük koşullandırılması gereken hacim ile ADÇ çizelgesinin, daha az LAI dalgalanmasına sahip geleneksel seraya kıyasla ortalama günlük LAI'yi daha geniş bir aralıkta değiştirmesidir. Eş zamanlı ekim stratejisi; aynı anda çevrede bulunan çok sayıda bitki nedeniyle tüm diğer stratejilere kıyasla en yüksek enerji tüketimine sahip olmaktadır.</p>
+
+    <h3>5.3 Sınırlılıklar</h3>
+
+    <p>Bu çalışmanın çeşitli kısıtları mevcuttur. Öncelikle yalnızca tek bir mahsul türü (Lactuca sativa) incelenmiştir. ADÇ sistemlerinin kentsel enerji şebekeleriyle entegrasyonu henüz araştırılmamıştır. Talep-yanıt stratejileri ve enerji depolama çözümlerinin değerlendirilmesi, büyük ölçekli ADÇ uygulamalarının sürdürülebilirliği açısından kritik önem taşımaktadır.</p>
+
+    <hr>
+
+    <h2>6. Sonuç</h2>
+
+    <p>Bu makale; DT ve ADÇ yetiştirme teknolojilerinin genel bir karşılaştırmasını sunmakta ve dikey tarımda enerji tüketimi ile üretim verimliliğine odaklanmaktadır. Bilgimize göre bu çalışma, DT ve ADÇ'nin gerçek enerji tüketimini ölçmeye yönelik hesaplama algoritmaları geliştiren ilk girişimdir.</p>
+
+    <p>ADÇ sistemleri; iklim kontrolü için özgül enerji tüketimini DT sistemine kıyasla <strong>yaklaşık %22</strong> azaltmaktadır. Bu sonuç, kullanılan ekim stratejisinden bağımsızdır. ADÇ, aynı zemin alanında geleneksel düz iç mekân yetiştirmelerine kıyasla ekilebilir alanı <strong>%400'ün üzerinde</strong> artırırken DT için bu oran yalnızca %200'dür.</p>
+
+    <div class="key-finding">
+        <strong>Kilit Bulgular Özeti:</strong>
+        <ul style="margin:8px 0 0; padding-left:20px;">
+            <li>ADÇ özgül enerji tasarrufu: <strong>%21–28</strong> (ekim stratejisinden bağımsız)</li>
+            <li>ADÇ yetiştirme alanı artışı: <strong>+%437</strong> vs. geleneksel düz iç mekân</li>
+            <li>ADÇ üretim kazanımı: ortalama <strong>%108</strong> vs. geleneksel DT</li>
+            <li>10 yıllık yatırım dönüşü: ADÇ <strong>%200 daha yüksek</strong> (Bologna Üniversitesi, 1500 m² senaryo)</li>
+            <li>Referans senaryo: 272 raf, marul (Lactuca sativa), 6 × 21 günlük yetiştirme döngüsü</li>
+        </ul>
+    </div>
+
+    <p>Hesaplama modeli; her mahsulün LAI ve büyüme dinamiklerine ilişkin uygun deneysel veriler sağlandığında diğer mahsul türlerine kolaylıkla genelleştirilebilir. ADÇ sistemleri; artan üretkenlik ve enerji verimliliği potansiyeliyle kentsel tarımın sürdürülebilir entegrasyonuna yönelik gelecek araştırma ve teknolojik gelişim için temel oluşturmaktadır.</p>
+
+    <hr>
+
+    <h2>Kaynaklar (Seçilmiş)</h2>
+    <ol>
+        <li>De Donno, A., Tagliafico, L.A., &amp; Bagnerini, P. (2025). Innovation in Vertical Farming: A Model-Based Energy Assessment and Performance Comparison of Adaptive Versus Standard Systems. <em>Sustainability</em>, 17, 8319. doi: 10.3390/su17188319</li>
+        <li>Bagnerini, P. vd. (2022). Adaptive Vertical Farm for Fresh Food Production in Orbital Stations. <em>IEEE MetroAeroSpace 2022</em>.</li>
+        <li>Graamans, L. vd. (2017). Plant factories; crop transpiration and energy balance. <em>Agricultural Systems</em>, 153, 138–147.</li>
+        <li>Orsini, F. (2022). Sistemi per Vertical Farming: Valutazione Tecnico-Economica dell'Adozione del Sistema Adattivo Germina. Bologna Üniversitesi Teknik Raporu.</li>
+        <li>Blom, T. vd. (2022). The embodied carbon emissions of lettuce production in vertical farming, greenhouse horticulture, and open-field farming. <em>J. Clean. Prod.</em>, 377, 134443.</li>
+        <li>Weidner, T. vd. (2021). Energy optimisation of plant factories and greenhouses for different climatic conditions. <em>Energy Conversion and Management</em>, 243, 114336.</li>
+        <li>Monteith, J.L. (1965). Evaporation and environment. <em>Symp. Soc. Exp. Biol.</em>, 19, 205–234.</li>
+    </ol>
+
+  </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Safran Topluluğu · <a href="/" style="color:#D97706">Araştırmalar</a></p>
+    </div>
+</footer>
+</body>
+</html>
