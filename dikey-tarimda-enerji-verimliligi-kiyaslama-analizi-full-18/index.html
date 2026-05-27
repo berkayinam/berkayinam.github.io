@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dikey Tarımda Enerji Verimliliği Kıyaslama Analizi (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-full { border-color: #D97706; color: #D97706; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.4em; }
+        .post-content blockquote { border-left: 4px solid #D97706; margin: 1.5em 0; padding: 0.5em 1.2em; background: #fffbf0; color: #555; border-radius: 0 6px 6px 0; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-size: 0.88rem; }
+        th { background: #f5f0e8; color: #1a1a2e; font-weight: 700; padding: 8px 12px; text-align: left; border: 1px solid #e0d8c8; }
+        td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        tr:nth-child(even) td { background: #fafaf8; }
+        .formula-box { background: #f8f8ff; border: 1px solid #ddd; border-radius: 6px; padding: 12px 18px; margin: 1.2em 0; font-family: 'Courier New', monospace; font-size: 0.95rem; color: #2d3748; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+  'benchmarking-energy-efficiency-vertical-farming-18':                        {lang:'en', pair:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18', pairFull:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-full-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18':                     {lang:'tr', pair:'benchmarking-energy-efficiency-vertical-farming-18', pairFull:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-full-18'},
+  'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-full-18':                {lang:'tr-full', pair:'benchmarking-energy-efficiency-vertical-farming-18', pairBase:'dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18'},
+};
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a class="site-logo" href="/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 7 7 13a5 5 0 0010 0C17 7 12 2 12 2z" fill="#D97706"/><path d="M12 8v8M9 13l3 3 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Safran Topluluğu
+        </a>
+        <nav class="site-nav">
+            <a href="/">Araştırmalar</a>
+            <a href="/protokol.html">Protokol</a>
+            <a href="/hakkinda.html">Hakkında</a>
+            <a href="https://buymeacoffee.com/berkayinam" class="btn-outline" target="_blank" rel="noopener">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="post-header">
+        <div class="breadcrumb">
+            <a href="/">Araştırmalar</a> / Dikey Tarımda Enerji Verimliliği Kıyaslama Analizi
+        </div>
+        <div class="full-badge">TR Full — Tam Çeviri</div>
+        <h1 class="post-title">Dikey Tarımda Enerji Verimliliği Kıyaslaması: Mevcut Durum ve Beklentiler</h1>
+        <div class="post-actions">
+            <a class="action-btn" href="/dikey-tarimda-enerji-verimliligi-kiyaslama-analizi-18/">TR Özet →</a>
+            <a class="action-btn" href="/benchmarking-energy-efficiency-vertical-farming-18/">EN →</a>
+            <span class="lang-switch-current lang-switch-full">TR Full</span>
+        </div>
+    </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+
+    <p><strong>Yazarlar:</strong> Lorenzo Miserocchi, Alessandro Franco<br>
+    <strong>Kurum:</strong> Enerji, Sistemler, Toprak ve İnşaat Mühendisliği Bölümü (DESTEC), Pisa Üniversitesi, İtalya<br>
+    <strong>Dergi:</strong> Thermal Science and Engineering Progress, Cilt 58 (2025), 103165<br>
+    <strong>DOI:</strong> <a href="https://doi.org/10.1016/j.tsep.2024.103165" target="_blank" rel="noopener" style="color:#D97706">10.1016/j.tsep.2024.103165</a></p>
+
+    <hr>
+
+    <h2>Özet</h2>
+
+    <p>Enerji verimliliği, dikey tarım için kritik ancak zorlu bir temel performans göstergesidir. Temsili bir referans noktasının (benchmark) yokluğu, bugüne kadar geleneksel tarım teknikleriyle karşılaştırmayı engellemiştir. Bu makale, bitki fizyolojisi ile tesis tasarımı ve işletmesi arasındaki etkileşimi inceleyerek dikey tarımda enerji verimliliğinin mevcut durumunu ve gelecekteki beklentilerini ortaya koymayı amaçlamaktadır.</p>
+
+    <p>Enerji kullanımı, öncelikle mahsul verimliliği ve kalitesi için fiziksel ortamın kontrol altında tutulması gerekliliğinden kaynaklanmakta; bu durum özel aydınlatma ve iklim kontrolü ihtiyaçları doğurmaktadır. Yapay aydınlatma teknolojileri fotosentezin biyolojik sınırlarına yaklaşırken, iklim kontrolü bitki fizyolojik aktivitesinden giderek daha fazla etkilenmektedir.</p>
+
+    <p>Dikey tarımda enerji kullanımına odaklanan çalışmaların analizi, marul üretimi için <strong>10–18 kWh kg⁻¹</strong> düzeyinde mevcut özgül enerji tüketimini (ÖET) ortaya koymakta; bu değer <strong>850–1150 kWh m⁻² yıl⁻¹</strong> enerji kullanım yoğunluğuna (EKY) karşılık gelmektedir. Teorik mahsul enerji gereksinimleri ile ekipman verimliliğindeki beklenen gelişmeler ve optimal kontrol stratejileri dikkate alındığında, <strong>3,1–7,4 kWh kg⁻¹</strong> düzeyinde teknik bir enerji referans noktası öngörülmektedir. Enerji verimliliğindeki öngörülen kazanımlara karşın, artan elektrik kullanımıyla ilişkili mevcut ekonomik maliyetler ve çevresel etkiler, dikey tarımın kısa vadeli enerji sürdürülebilirliğine yönelik önemli zorluklara işaret etmektedir.</p>
+
+    <hr>
+
+    <h2>1. Giriş</h2>
+
+    <p>Nüfus artışı ve iklim değişikliğinin derinleştirdiği sınırlı tarım arazisi ve su kıtlığı sorunlarını ele alan sürdürülebilir gıda üretim tekniklerine olan talep giderek artmaktadır. Temel araştırma yaklaşımlarından biri mahsul gen potansiyelinin değiştirilmesi, diğeri ise verimli ortamlarda mahsul veriminin optimize edilmesidir; ikincisi <em>kontrollü ortam tarımı</em> (KOT) olarak adlandırılır.</p>
+
+    <h3>1.1 Kontrollü Ortam Tarımı</h3>
+
+    <p>Kontrollü ortam tarımı, açık alan tarımından sera tarımına ve oradan dikey çiftliğe geçişi hızlandırmaktadır. Seralar, güneş ışığı altında ve genellikle kontrollü sıcaklık ve nem koşullarında ürün yetiştirilen şeffaf malzemeden yapılmış yapılardır. Bitkileri büyümelerini olumsuz etkileyebilecek aşırı koşullardan koruyarak hem yetiştirme sezonunu uzatırlar hem de belirli bir bölgede üretilen ürün çeşitliliğini artırırlar.</p>
+
+    <p>Seralara kıyasla dikey çiftlikler ya da bitki fabrikaları, hassas teknoloji, veri işleme ve akıllı tarım alanındaki gelişmeler aracılığıyla mahsul verimliliğini optimize etmeyi hedeflemektedir. Kompakt, çok katlı yapılardan oluşan bu tesisler; opak, ısı yalıtımlı ve hava geçirmez duvarlarıyla birim alanda daha yüksek verimler sağlamaktadır. Ancak bunun bedeli, güneş ışığının yapay aydınlatmayla ikame edilmesi ve ışık, sıcaklık ile nemin sıkı biçimde kontrol edilmesi zorunluluğudur.</p>
+
+    <p>Dikey tarımın küresel ölçekte yaygınlaşması, tarımın geleceği açısından önemli bir meydan okuma niteliği taşımaktadır. Mevcut üretim yaklaşık %90 marul ve %7 çilekten oluşmakta olup kapalı ortamlarda yetiştirilen ürün çeşitliliğinin artırılması sürdürülebilir sebze-meyve üretimi açısından kritik önem taşımaktadır. Başarı; kısa hasat süresi ve yüksek hasat indeksi gibi ürün özelliklerine, iş modelleri veya planlama-işletme sürecindeki karar alma gibi ekonomik unsurlara ve su, besin, arazi ve enerji kullanım verimliliğini kapsayan kaynak kullanım etkinliğine bağlıdır.</p>
+
+    <h3>1.2 Kaynak Kullanım Verimliliği</h3>
+
+    <p>Açık alandan kontrollü ortam tarımına geçiş, kaynak kullanım verimliliğinde köklü değişimlere yol açmaktadır. Marul üretiminde su ve arazi kullanım verimliliği kontrollü ortam tarımıyla iyileşirken bu kazanımlar artan aydınlatma ve soğutma talebinden kaynaklanan enerji tüketimiyle telafi edilmektedir.</p>
+
+    <p>Mevcut literatürde dikey tarımda enerji kullanım verimliliğinin açık alan tarımına kıyasla ortalama <strong>yirmi kat</strong> azaldığı bildirilmektedir. Enerjinin karbon ayak izinin yaklaşık %90'ını oluşturduğu göz önüne alındığında bu durum ürünlerin çevresel etkisi açısından önemli sonuçlar doğurmaktadır. Karbon ayak izinin açık alanda <strong>0,2 kgCO₂ kg⁻¹</strong>'dan dikey çiftliklerde <strong>20 kgCO₂ kg⁻¹</strong>'a çıktığı tahmin edilmektedir.</p>
+
+    <h3>1.3 Motivasyon ve Çalışmanın Özgünlüğü</h3>
+
+    <p>Kontrollü ortam tarımında enerji verimliliği giderek daha fazla ilgi görmekle birlikte, standartlaştırılmış performans metriklerinin yokluğu yaygın benimsemenin önünde temel bir engel olmaya devam etmektedir. Bu çalışmanın temel özgünlüğü, bitki fizyolojisi ile tesis tasarımı ve işletmesi unsurlarını köprüleyerek mahsul enerji gereksinimlerini aydınlatma ve iklim kontrolü ekipmanlarının özgül enerji taleplerine bağlamasında yatmaktadır.</p>
+
+    <p>Çalışma aşağıdaki gibi yapılandırılmıştır: Bölüm 2, enerji kullanımının temel itici gücü olan fiziksel ortam kontrolünü ele almaktadır. Bölüm 3, aydınlatma ve yapay aydınlatma teknolojilerindeki gelişmeleri, Bölüm 4 ise iklim kontrolünü ve artan bitki fizyolojisi etkisini incelemektedir. Bölüm 5, literatür verilerine ve basit ama sağlam enerji değerlendirmelerine dayalı mevcut ve beklenen enerji referans noktalarını ortaya koymaktadır.</p>
+
+    <hr>
+
+    <h2>2. Fiziksel Ortamın Kontrolü</h2>
+
+    <p>Dikey tarımda ortam kontrolü, bitkinin fotosentez için yeterli CO₂, su ve ışık kaynaklarına sahip olmasını ve büyüme için gerekli biyolojik süreçlerin sıcaklık ile nem açısından optimize edilmiş koşullarda gerçekleşmesini sağlamak amacıyla uygulanır. Kontrol öncelikle ışık, sıcaklık, nem ve CO₂ yönetimini kapsar; bu unsurlar arasında ışık kontrolü en karmaşık olanıdır çünkü kalite, yoğunluk ve süre boyutlarında birlikte ele alınması gerekmektedir.</p>
+
+    <p><strong>Işık kalitesi</strong> ışığın spektral dağılımını ifade eder ve Fotosentetik Aktif Radyasyon (FAR) cinsinden ölçülür; FAR, fotonların fotosentez için kullanılabildiği 400–700 nm (kırmızı ötesi dahil edilirse 400–750 nm) dalga boyu aralığıdır. <strong>Işık yoğunluğu</strong>, Fotosentetik Foton Akısı Yoğunluğu (FFAY) veya Günlük Işık İntegrali (GII) cinsinden ölçülürken <strong>ışık süresi</strong> fotoperiyot olarak tanımlanır.</p>
+
+    <p>Optimal büyüme parametrelerinin belirlenmesi birçok etkileşen faktör nedeniyle karmaşık bir görevdir. Sıcaklık, nem ve diğer parametrelerin kontrolü aydınlatma ve iklim kontrolü için önemli enerji talebi oluşturmaktadır. Bu enerji tüketiminin sayısal olarak ifade edilmesi, mahsul enerji gereksinimleri ile tesis enerji kullanımı arasındaki karmaşık etkileşimin dikkate alınmasını gerektirmektedir.</p>
+
+    <hr>
+
+    <h2>3. Aydınlatma İçin Enerji Kullanımı</h2>
+
+    <p>Aydınlatma, enerjinin bitki biyokütlesine dönüştürülmesi için zorunludur. Mahsulün aydınlatma için enerji gereksinimi, ürüne özgü kimyasal enerji miktarı ve bağlanma verimliliği esas alınarak değerlendirilebilir.</p>
+
+    <p>Denklem (1)'de tanımlandığı üzere, kWh kg⁻¹ cinsinden FAR gereksinimi E<sub>FAR</sub>, biyokütle enerji içeriği E<sub>b</sub> (kWh kg⁻¹), iç süreçlerin FAR dönüşüm verimliliği η<sub>int</sub>, kuru madde içeriği DM ve hasat indeksi HI'nin bir fonksiyonu olarak ifade edilebilir:</p>
+
+    <div class="formula-box">
+        E<sub>FAR</sub> = (E<sub>b</sub> / η<sub>int</sub>) × (DM / HI) &nbsp;&nbsp;&nbsp; (Denklem 1)
+    </div>
+
+    <p>Kuru biyokütle için pratik bir kural olarak enerji içeriği <strong>20 MJ kg⁻¹</strong> kuru madde kabul edilmektedir. FAR dönüşüm verimliliği, fotosentezin düşük verimliliği nedeniyle FAR'ın ancak yaklaşık %10'unun fitoenerjiye dönüştürüldüğü çeşitli süreçlere bağlıdır.</p>
+
+    <h3>3.1 Yapay Aydınlatma Kaynakları Karşılaştırması</h3>
+
+    <p>Aydınlatma enerji kaynakları, mahsul gereksinimlerine az ya da çok uyum sağlayabilmektedir. Güneş ışığı, Yüksek Basınçlı Sodyum (YBS) lambaları ve beyaz LED'in göreceli etki spektrumları karşılaştırıldığında, LED'lerin seçiciliğinin mahsul gereksinimlerine hem güneş ışığından hem de YBS lambalarından daha iyi uyum sağladığı görülmektedir.</p>
+
+    <p>Yapay aydınlatma için hesaba katılması gereken kayıplar şunlardır: FAR dışı radyasyon (yakın kızılötesi), bitkilere ulaştırılamayan enerji ve elektrik dönüşüm verimliliği. Buna göre kWh kg⁻¹ cinsinden aydınlatma enerji tüketimi E<sub>L</sub> şu şekilde ifade edilir:</p>
+
+    <div class="formula-box">
+        E<sub>L</sub> = E<sub>FAR</sub> / η<sub>L</sub> = E<sub>FAR</sub> / (η<sub>el</sub> × η<sub>can</sub> × η<sub>FAR</sub>) &nbsp;&nbsp;&nbsp; (Denklem 2)
+    </div>
+
+    <p>Uygun konfigürasyon ile hem YBS hem de LED kurulumlarında enerjinin yaklaşık <strong>%90'ı</strong> başarıyla bitkilere iletilebilmektedir. Her iki lamba türünde elektrik dönüşümü yaklaşık <strong>%60</strong> düzeyindeyken, YBS lambalar yalnızca yaklaşık üçte birini FAR aralığında yayarken LED'ler <strong>%96'sını</strong> FAR aralığında yaymaktadır.</p>
+
+    <p>Elektrikten FAR'a dönüşümün genel verimi YBS için yaklaşık <strong>%33</strong>, LED için ise <strong>%50</strong> düzeyindedir. Ticari bahçecilik lambalarındaki mevcut üst sınırların biraz üzerinde olan bu değerlere karşın, LED'lerde <strong>%90'a kadar</strong> verimlilik beklenmektedir.</p>
+
+    <hr>
+
+    <h2>4. İklim Kontrolü İçin Enerji Kullanımı</h2>
+
+    <p>İklim kontrolünde kontrollü alanın enerji dengesi çeşitli unsurlardan etkilenmektedir. Seranın anlık enerji dengesi şu şekilde ifade edilebilir:</p>
+
+    <div class="formula-box">
+        Q<sub>CC</sub> = (dE<sub>air</sub>/dt – Q<sub>ışık</sub> – Q<sub>zarf</sub> – Q<sub>havalandırma</sub> – Q<sub>bitki</sub> – Q<sub>UIR</sub>) / η<sub>HVAC</sub> &nbsp;&nbsp;&nbsp; (Denklem 3)
+    </div>
+
+    <p>Dikey tarım, enerji dengesine seralara kıyasla iki köklü değişiklik getirmektedir. Bir yandan opak, ısı yalıtımlı ve hava geçirmez duvarlar Q<sub>zarf</sub>, Q<sub>havalandırma</sub> ve Q<sub>UIR</sub> terimlerini ihmal edilebilir kılmaktadır; öte yandan hava hacminin önemli ölçüde azalması ve değişken güneş ışığının sabit yapay aydınlatmayla ikame edilmesi nedeniyle Q<sub>hava</sub> ve Q<sub>ışık</sub> terimlerinin önemi farklılaşmaktadır.</p>
+
+    <div class="formula-box">
+        Q<sub>CC</sub> = [((1 – η<sub>L</sub>) / η<sub>L</sub>) × E<sub>FAR</sub> + h<sub>ev</sub> × g<sub>e</sub> × (X<sub>C</sub> – X)] / η<sub>HVAC</sub> &nbsp;&nbsp;&nbsp; (Denklem 4)
+    </div>
+
+    <p>Sabit bir sıcaklık varsayıldığında enerji kullanımı yalnızca HVAC sisteminin verimliliğine, aydınlatma için kullanılan elektriğe ve bitki fizyolojik aktivitesine bağlıdır. Bu, seraların aksine dikey çiftliklerde kontrollü alanın enerji talebinin dış ortamdan bağımsız olduğu anlamına gelmektedir.</p>
+
+    <p>Isı pompası teknolojisi açısından değerlendirildiğinde COP, makine tasarımına ve işletme koşullarına büyük ölçüde bağlıdır; bu da anma performansının ideal performanstan sapmasına neden olmaktadır. İklim kontrolü yükleri dikey çiftliklerde dış sıcaklıktan bağımsız hale gelse de HVAC enerji tüketimi üzerinde hâlâ güçlü bir dış etki söz konusudur.</p>
+
+    <hr>
+
+    <h2>5. Dikey Tarım İçin Enerji Referans Noktaları</h2>
+
+    <h3>5.1 Mevcut Referans Noktası</h3>
+
+    <p>Dikey tarımda enerji bilgisine ilişkin literatür sınırlıdır. Özgül Enerji Tüketimi (ÖET) enerjiyi bir üretim ölçüsüyle ilişkilendirerek kWh kg⁻¹ cinsinden ifade ederken, Enerji Kullanım Yoğunluğu (EKY) enerjiyi mekânsal bir ölçüyle ilişkilendirerek kWh m⁻² yıl⁻¹ cinsinden ifade eder.</p>
+
+    <p>Referans noktasının belirlenmesi için enerji kullanımına odaklanan bazı literatür çalışmaları incelenmiştir. Yalnızca hem aydınlatma hem de iklim kontrolünü ele alan ve daha önce belirtilen tüm boyutlara ilişkin bağlamsal bilgiler sunan çalışmalar dahil edilmiştir.</p>
+
+    <p>Toplam ÖET, yaklaşık 5 kWh kg⁻¹'dan 40 kWh kg⁻¹'ın biraz altına kadar geniş bir yelpazede değişmektedir. Şekil 9'da gösterildiği üzere, yıllık verim ÖET ile EKY arasındaki ilişkiyi somutlaştırmaktadır. Bir deneysel çalışma dışında değerlerin büyük çoğunluğu <strong>10–18 kWh kg⁻¹</strong> aralığında yoğunlaşmaktadır. Bu değer, büyük ölçekli ticari bir dikey çiftliğin elde ettiği <strong>9,9 kWh kg⁻¹</strong>'lık enerji performansıyla örtüşmektedir.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ölçek</th>
+                <th>Büyüme Alanı</th>
+                <th>Ortalama ÖET</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Küçük tesis</td><td>&lt;1.000 m²</td><td>34,2 kWh kg⁻¹</td></tr>
+            <tr><td>Orta tesis</td><td>1.000–5.000 m²</td><td>14,9 kWh kg⁻¹</td></tr>
+            <tr><td>Büyük tesis</td><td>&gt;5.000 m²</td><td>8,3 kWh kg⁻¹</td></tr>
+        </tbody>
+    </table>
+
+    <p>Aydınlatma enerji tüketimi, LED etkinliği ve verimliliğine güçlü biçimde bağlıdır; 1,3–3,0 µmol J⁻¹ ve %28–63 arasında değişen değerler söz konusudur. Gelişmiş LED'ler enerji tüketimini <strong>%50'den fazla</strong> azaltabilmektedir.</p>
+
+    <h3>5.2 Teknik Referans Noktası</h3>
+
+    <p>Ekipman verimliliğindeki teknolojik ilerlemeyi ve optimal kontrol stratejilerini kapsayan bir enerji referans noktasının belirlenmesi, bu yenilikçi tarımsal tekniğin potansiyel gelişimini ortaya koymak açısından kritik önem taşımaktadır.</p>
+
+    <p>Denklem (1) ve (3) birleştirilerek aydınlatma referans noktası için basit bir formül elde edilmektedir. Marul için %85 hasat indeksi ve %3,5 kuru madde içeriği ile maksimum dönüşüm verimliliğine ulaşıldığı varsayıldığında, elde edilen aydınlatma enerji gereksinimi <strong>2,3 kWh kg⁻¹</strong>'dır.</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>LED Verimi</th>
+                <th>Bu Çalışma (kWh kg⁻¹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>0,50</td><td>4,7</td></tr>
+            <tr><td>0,60</td><td>3,9</td></tr>
+            <tr><td>0,70</td><td>3,3</td></tr>
+            <tr><td>0,80</td><td>2,9</td></tr>
+            <tr><td>0,87</td><td>2,7</td></tr>
+            <tr><td>0,90</td><td>2,6</td></tr>
+        </tbody>
+    </table>
+
+    <p>HVAC sisteminin genel COP'u 2 ile 6 arasında olduğunda iklim kontrolü için <strong>0,5–2,5 kWh kg⁻¹</strong> düzeyinde bir referans noktası elde edilmektedir. Sonuç olarak toplam enerji referans noktası, LED verimliliği 0,5–0,9 ve ısı pompası COP 2–6 aralığında değiştiğinde <strong>3,2–7,4 kWh kg⁻¹</strong> arasında çıkmaktadır; LED verimliliğinin etkisi çok daha belirleyicidir.</p>
+
+    <p>Bu enerji performansı boşluğunun sayısal boyutu incelendiğinde sabit aydınlatma programlarının uygulanmasının, bitki büyümesinin erken evrelerinde fazladan ışık nedeniyle <strong>%25 ek enerji tüketimine</strong> yol açtığı görülmektedir. LED verimliliğinin 0,5'ten 0,9'a artması halinde aydınlatma enerji tüketiminin <strong>%45'e kadar</strong> azalması öngörülmektedir.</p>
+
+    <hr>
+
+    <h2>6. Sonuç ve Tartışma</h2>
+
+    <h3>6.1 Enerji Performansının Standardizasyonu</h3>
+
+    <p>Bu çalışma, dikey tarımda enerji performans metriklerini standardize etmek için bir temel oluşturmakta ve operatörler ile politika yapıcılara eyleme dönüştürülebilir hedefler sunarken geleneksel tarımsal sistemlerle daha tutarlı karşılaştırmalar yapılmasına olanak tanımaktadır.</p>
+
+    <p>Mevcut enerji referans noktası için modelleme çalışmaları ve mevcut tesisler kullanılmış; teknik enerji referans noktasında ise ekipman verimliliğindeki beklenen gelişmeler ve optimal kontrol stratejileri dikkate alınmıştır. Gerçekçi koşulları yansıtan modelleme çalışmaları ve mevcut tesisler <strong>10–18 kWh kg⁻¹</strong> ÖET ve <strong>850–1150 kWh m⁻² yıl⁻¹</strong> EKY ile temsil edilmektedir. Teknik referans noktası ise <strong>3,1–7,4 kWh kg⁻¹</strong>'dır.</p>
+
+    <h3>6.2 Sürdürülebilirlik İçin Sonuçlar</h3>
+
+    <p>Dikey çiftlikler için enerji referans noktalarının belirlenmesi, geleneksel tarım teknikleriyle karşılaştırma yapılmasına imkân verse de seralarda geniş iklim koşulları yelpazesinden ve ilgili teknoloji paketlerinden kaynaklanan variabilite nedeniyle sera için bir enerji referans noktası belirlemek güçtür. Sera koşullarında marul üretiminin ÖET'i yaklaşık <strong>5,3–33,3 kWh kg⁻¹</strong> arasında değişmekte, ancak ısıtmasız tünellerde sıfır ya da son derece verimli ısıtmalı seralarda yaklaşık <strong>3 kWh kg⁻¹</strong> düzeyine kadar düşebilmektedir.</p>
+
+    <p>Dikey tarımın genel enerji sürdürülebilirliğini tam anlamıyla değerlendirmek için enerji verimliliğinin ötesinde faktörlerin de göz önünde bulundurulması gerekmektedir. Bunlar arasında tedarik zincirlerinin kısaltılması, elektrik kullanımının ekonomik maliyetleri ve çevresel etkileri yer almaktadır. Yenilenebilir enerji kaynaklarının entegrasyonu, fotosentetik ve fotovoltaik verimlilik açısından geleceğe dair çarpıcı sorular gündeme getirmektedir. Arazi kullanımındaki önemli azalma, mevcut alanı fotovoltaik modüller için yetersiz kılmakta; bu durum dikey çiftlik sınırlarının ötesine, yukarı yönlü enerji sistemine doğru genişlemeyi zorunlu kılmaktadır.</p>
+
+    <p>Dikey tarım, enerji verimliliği açısından geleneksel tarım teknikleriyle rekabet edebilecek konuma gelse de potansiyel benimseme düzeyi; enerji kullanımı ile diğer kaynaklar, ekonomik maliyet ve çevresel etki arasındaki hassas dengelerin dikkatli biçimde kurulmasına ve yerel koşullara bağlı olacaktır.</p>
+
+    <hr>
+
+    <h2>Teşekkür</h2>
+
+    <p>Yazarlar, "MetOdi per riDurre gli usi di EneRgiA Termica ed Elettrica in ambito civile e industriale (MODERATE)" araştırma projesi çerçevesinde (PRA 2022_31) Pisa Üniversitesi'nin (UNIPI) mali desteğine minnettarlıklarını bildirmektedir.</p>
+
+    <hr>
+
+    <h2>Kaynaklar (Seçilmiş)</h2>
+    <ol>
+        <li>Boyer, J.S. (1982). Plant productivity and environment. <em>Science</em>, 218, 443–448.</li>
+        <li>Long, S.P. vd. (2015). Meeting the global food demand of the future by engineering crop photosynthesis and yield potential. <em>Cell</em>, 161, 56–66.</li>
+        <li>Benke, K. &amp; Tomkins, B. (2017). Future food-production systems: vertical farming and controlled-environment agriculture. <em>Sustain. Sci., Practice and Policy</em>, 13, 13–26.</li>
+        <li>Kozai, T. (2013). Resource use efficiency of closed plant production system with artificial light. <em>Proc. Jpn. Acad., Ser. B</em>, 89, 447–461.</li>
+        <li>Miserocchi, L. &amp; Franco, A. (2025). Benchmarking energy efficiency in vertical farming: Status and prospects. <em>Thermal Science and Engineering Progress</em>, 58, 103165.</li>
+    </ol>
+
+  </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Safran Topluluğu · <a href="/" style="color:#D97706">Araştırmalar</a></p>
+    </div>
+</footer>
+</body>
+</html>
