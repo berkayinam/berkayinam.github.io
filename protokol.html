@@ -206,7 +206,7 @@ window.LANG_MAP = {
             <a href="index.html">Araştırmalar</a>
             <a href="protokol.html">Protokol</a>
             <a href="hakkinda.html">Hakkında</a>
-            <a href="https://ko-fi.com/safrantoplulugu" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
+            <a href="https://buymeacoffee.com/berkayinam" target="_blank" rel="noopener" class="btn-outline">Destek ol</a>
         </nav>
     </div>
 </header>
@@ -252,6 +252,16 @@ window.LANG_MAP = {
   <a href="#sorun" style="color:#D97706;">12. Sorun Giderme</a> ·
   <a href="#kart" style="color:#D97706;">13. Hızlı Kart</a>
 </div>
+
+
+<div style="background:#fffbeb;border:1px solid #d97706;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:2rem;font-size:0.9rem;line-height:1.75;color:#374151;">
+  <strong style="display:block;margin-bottom:0.5rem;font-size:1rem;">Önsöz</strong>
+  <p style="margin:0 0 0.75rem;">Bu Safran yetiştirme protokolünü "Hakkında" başlığında bahsettiğim gibi hobi amaçlı ve evde deney olarak yapıyorum. Buradaki veriler tamamen makalelerden alınan verilere göre hazırlanmış olup herhangi bir ticari boyut taşımamaktadır.</p>
+  <p style="margin:0 0 0.75rem;">3 seferde hasat almayı deneyeceğim. Bunun için 3 farklı yalıtımlı kutunun her biri alsında dikey sera ortamındaki bir izole sera yı taklit etmek için. Bu süreçte esp32 stm32 gibi kartlar sensörler ve yazılımlar kullanacağım. Bunlar hala geliştirme aşamasında ve bittiğinde yayınlanacak.</p>
+  <p style="margin:0 0 0.75rem;">Amacım sadece Türkiyedeki tarım'ın gelişmesi ve opensource yazılımlar gibi açık kaynaklı bir şekilde hızla doğru bilginin yayılması/arttırılması.</p>
+  <p style="margin:0;">Kendim de burda yazan reçeteyi uygulayıp bir bilimsel makale havasında 6 ay boyunca test edeceğim. Eğer bu yazıyı okuyorsan değerlisin ve merakını kaybetmemen dileğiyle.</p>
+</div>
+
 
 <!-- BÖLÜM 1: SİSTEM -->
 <h2 id="sistem" style="border-bottom:3px solid #D97706;padding-bottom:6px;">1. Sistem Genel Bakışı</h2>
@@ -589,268 +599,6 @@ Küçük soğan (5–10 g)
   <a href="protokol.html#bolum7" style="margin:0 0.5rem;">7. Uyarılar</a> ·
   <a href="protokol.html#ozet" style="margin:0 0.5rem;">Hızlı Kart</a>
 </div>
-
-<div style="background:#fffbeb;border:1px solid #d97706;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:2rem;font-size:0.9rem;line-height:1.75;color:#374151;">
-  <strong style="display:block;margin-bottom:0.5rem;font-size:1rem;">Önsöz</strong>
-  <p style="margin:0 0 0.75rem;">Bu Safran yetiştirme protokolünü "Hakkında" başlığında bahsettiğim gibi hobi amaçlı ve evde deney olarak yapıyorum. Buradaki veriler tamamen makalelerden alınan verilere göre hazırlanmış olup herhangi bir ticari boyut taşımamaktadır.</p>
-  <p style="margin:0 0 0.75rem;">3 seferde hasat almayı deneyeceğim. Bunun için 3 farklı yalıtımlı kutunun her biri alsında dikey sera ortamındaki bir izole sera yı taklit etmek için. Bu süreçte esp32 stm32 gibi kartlar sensörler ve yazılımlar kullanacağım. Bunlar hala geliştirme aşamasında ve bittiğinde yayınlanacak.</p>
-  <p style="margin:0 0 0.75rem;">Amacım sadece Türkiyedeki tarım'ın gelişmesi ve opensource yazılımlar gibi açık kaynaklı bir şekilde hızla doğru bilginin yayılması/arttırılması.</p>
-  <p style="margin:0;">Kendim de burda yazan reçeteyi uygulayıp bir bilimsel makale havasında 6 ay boyunca test edeceğim. Eğer bu yazıyı okuyorsan değerlisin ve merakını kaybetmemen dileğiyle.</p>
-</div>
-
-<h2 id="bolum1">BÖLÜM 1 — SOĞAN SEÇİMİ VE HAZIRLIĞI (Ağustos başı)</h2>
-
-<h3>1.1 Soğan (Korm) Seçim Kriterleri</h3>
-<ul>
-  <li><strong>Üretim için:</strong> ≥10 g taze ağırlık, ≥30 mm çap</li>
-  <li><strong>Çoğaltma için:</strong> 6–10 g (daha küçük soğanlar öncelikle korm üretir, stigma verimi düşer)</li>
-  <li><strong>Elenanlar:</strong> &lt;6 g, görünür çürük veya küf belirtisi olanlar</li>
-  <li>Bir sonraki sezon için yalnızca ≥10 g yavru korm üretim hattına alınır</li>
-</ul>
-
-<h3>1.2 Ekim Öncesi Sterilizasyon</h3>
-<ol>
-  <li>%1–2 hidrojen peroksit (H₂O₂) çözeltisi hazırla</li>
-  <li>Kormları 10–20 dakika beklet</li>
-  <li>Temiz suyla iyice durula, gölgede kurut</li>
-  <li>Alternatif: %1 Revoral fungisit çözeltisinde 20 dakika</li>
-</ol>
-
-<h3>1.3 Dormans Kırma — Soğuk Şok (Ağustos ortası)</h3>
-<ul>
-  <li>Sterilize kormları kuru kağıt torbalarda <strong>25°C'de 10–12 hafta</strong> beklet</li>
-  <li><strong>6°C'de 1 gün (24 saat) soğuk şok</strong> → ardından normal sıcaklığa çıkar</li>
-  <li>Bu adım atlanırsa çiçeklenme başlamaz veya geç kalır</li>
-</ul>
-
-<h3>1.4 100+50+50 Offset Ekim Takvimi</h3>
-<table>
-  <thead><tr><th>Kutu</th><th>Soğan</th><th>Ekim Tarihi</th><th>Hasat</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Kutu A</strong></td><td>100 soğan</td><td>~15 Ağustos</td><td>Ekim–Kasım</td></tr>
-    <tr><td><strong>Kutu B</strong></td><td>50 soğan</td><td>~10 Eylül (+3–4 hafta)</td><td>Kasım</td></tr>
-    <tr><td><strong>Kutu C</strong></td><td>50 soğan</td><td>~5 Ekim (+3–4 hafta)</td><td>Aralık</td></tr>
-  </tbody>
-</table>
-
-<hr/>
-<h2 id="bolum2">BÖLÜM 2 — SUBSTRAT VE KURULUM</h2>
-
-<h3>2.1 Optimal Substrat</h3>
-<blockquote><strong>%15 Kokopit + %15 Koko Çips + %70 Perlit</strong></blockquote>
-<ul>
-  <li>Hem nem tutma (%43 WHC) hem hava sirkülasyonu (%35 gözenek) sağlar</li>
-  <li><strong>Kaçın:</strong> %70 kokopit + %30 perlit → aşırı nem → kök çürümesi, <strong>%44 korm kaybı</strong></li>
-</ul>
-
-<h3>2.2 pH ve EC</h3>
-<table>
-  <thead><tr><th>Parametre</th><th>Değer</th><th>Notlar</th></tr></thead>
-  <tbody>
-    <tr><td>pH</td><td>5.8–6.5</td><td>Fosfik asit (düşür) / KOH (yükselt)</td></tr>
-    <tr><td>EC</td><td>1.4–1.5 dS/m</td><td>Dormans öncesi 1.2'ye indir</td></tr>
-  </tbody>
-</table>
-
-<hr/>
-<h2 id="bolum3">BÖLÜM 3 — ÇEVRE PARAMETRELERİ VE IoT</h2>
-
-<h3>3.1 Sıcaklık — Faza Göre</h3>
-<table>
-  <thead><tr><th>Faz</th><th>Tarih</th><th>Gündüz °C</th><th>Gece °C</th><th>Kritik Not</th></tr></thead>
-  <tbody>
-    <tr><td>Çiçek ontogenezi</td><td>Haz–Ağu</td><td><strong>23–25°C</strong></td><td>18–20°C</td><td>Korm başına 2.5–3 çiçek; 17°C → yalnızca 1</td></tr>
-    <tr><td>Soğuk şok</td><td>Ağu ortası</td><td><strong>6°C (24 saat)</strong></td><td>—</td><td>Bir kez uygula</td></tr>
-    <tr><td>Filizlenme</td><td>Ağu sonu–Eyl</td><td>18–20°C</td><td>15–17°C</td><td>—</td></tr>
-    <tr><td>Çiçeklenme</td><td>Eki–Kasım</td><td><strong>18–20°C</strong></td><td>13–15°C</td><td><strong style="color:red">24°C üzeri → çiçek düşümü!</strong></td></tr>
-    <tr><td>Vejetatif faz</td><td>Kasım–Mar</td><td>15–18°C</td><td>8–12°C</td><td>Korm dolumu</td></tr>
-    <tr><td>Dormans</td><td>May–Ağu</td><td><strong>25°C</strong></td><td>22–25°C</td><td>Sulama YOK</td></tr>
-  </tbody>
-</table>
-
-<h3>3.2 Nem — Faza Göre</h3>
-<table>
-  <thead><tr><th>Faz</th><th>Nem (%)</th><th>Fan AÇ eşiği</th><th>Fan KAPA eşiği</th></tr></thead>
-  <tbody>
-    <tr><td>Çiçeklenme</td><td>%70–80</td><td>&gt;%85</td><td>&lt;%70</td></tr>
-    <tr><td>Vejetatif</td><td>%65–75</td><td>&gt;%80</td><td>&lt;%65</td></tr>
-    <tr><td>Dormans</td><td>%50–60</td><td>&gt;%65</td><td>&lt;%50</td></tr>
-  </tbody>
-</table>
-
-<h3>3.3 LED Işık</h3>
-<table>
-  <thead><tr><th>Parametre</th><th>Değer</th></tr></thead>
-  <tbody>
-    <tr><td>Spektrum</td><td><strong>%75–100 Mavi (450–480 nm)</strong></td></tr>
-    <tr><td>PPFD</td><td>150–200 µmol/m²/s</td></tr>
-    <tr><td>Fotoperiod</td><td><strong>11 saat ışık / 13 saat karanlık</strong></td></tr>
-    <tr><td>Zamanlama</td><td>07:00 AÇ → 18:00 KAPAT</td></tr>
-  </tbody>
-</table>
-<p><em>Mavi ışık korm ve stigma ağırlığını artırır. Kırmızı ışık yaprak büyütür ama korm gelişimini zayıflatır.</em></p>
-
-<hr/>
-<h2 id="bolum4">BÖLÜM 4 — SULAMA VE BESIN TAKVİMİ</h2>
-
-<h3>4.1 Sulama Frekansı</h3>
-<table>
-  <thead><tr><th>Faz</th><th>Frekans</th><th>Miktar</th></tr></thead>
-  <tbody>
-    <tr><td>Ekim → Filizlenme → Çiçeklenme</td><td>Haftada 2 kez</td><td>150 ml/korm</td></tr>
-    <tr><td>Vejetatif (Kasım–Mart)</td><td><strong>Haftada 1 kez</strong></td><td>150 ml/korm</td></tr>
-    <tr><td>Vejetatif (Nisan)</td><td>Haftada 2 kez</td><td>150 ml/korm</td></tr>
-    <tr><td>Vejetatif (Mayıs)</td><td>Haftada 3 kez</td><td>100 ml/korm</td></tr>
-    <tr><td>Dormans</td><td><strong>SULAMA YOK</strong></td><td>—</td></tr>
-  </tbody>
-</table>
-
-<h3>4.2 Besin Konsantrasyonları</h3>
-<table>
-  <thead><tr><th>Besin</th><th>Optimal</th><th>Tehlike Sınırı</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Nitrat (NO₃⁻)</strong></td><td><strong>9800 µM</strong></td><td>&gt;10100 µM → korm %25 düşer</td></tr>
-    <tr><td><strong>Demir (Fe)</strong></td><td><strong>20–25 µM</strong></td><td>30 µM → korm %35 azalır</td></tr>
-    <tr><td>Bor (B)</td><td>18–25 µM</td><td>Etkisi önemsiz</td></tr>
-    <tr><td>pH</td><td>5.8–6.5</td><td>—</td></tr>
-    <tr><td>EC</td><td>1.4–1.5 dS/m</td><td>—</td></tr>
-  </tbody>
-</table>
-
-<hr/>
-<h2 id="bolum5">BÖLÜM 5 — 3 KUTULU ÜRETİM AKIŞI</h2>
-
-<table>
-  <thead><tr><th>Ay</th><th>Kutu A (100)</th><th>Kutu B (50)</th><th>Kutu C (50)</th></tr></thead>
-  <tbody>
-    <tr><td><strong>Ağustos</strong></td><td>Ekim</td><td>—</td><td>—</td></tr>
-    <tr><td><strong>Eylül</strong></td><td>Filizlenme</td><td>Ekim</td><td>—</td></tr>
-    <tr><td><strong>Ekim</strong></td><td><strong>HASAT</strong></td><td>Filizlenme</td><td>Ekim</td></tr>
-    <tr><td><strong>Kasım</strong></td><td>Vejetatif</td><td><strong>HASAT</strong></td><td>Filizlenme</td></tr>
-    <tr><td><strong>Aralık</strong></td><td>Vejetatif</td><td>Vejetatif</td><td><strong>HASAT</strong></td></tr>
-    <tr><td><strong>Oca–Mar</strong></td><td>Korm dolumu</td><td>Korm dolumu</td><td>Korm dolumu</td></tr>
-    <tr><td><strong>Nis–May</strong></td><td>Yaprak sarartma</td><td>Yaprak sarartma</td><td>Çoğaltma gözlemi</td></tr>
-    <tr><td><strong>May–Ağu</strong></td><td>Dormans</td><td>Dormans</td><td>Dormans + korm ayrımı</td></tr>
-  </tbody>
-</table>
-
-<h3>Hasat Protokolü</h3>
-<ol>
-  <li>Çiçekler tam açıldığında <strong>sabah erken</strong> topla</li>
-  <li>Her çiçekten 3 kırmızı stigmayı dikkatlice kopar</li>
-  <li><strong>50–55°C'de 30–60 dakika kuru</strong> (nem %5–15'e inene kadar)</li>
-  <li>Hava geçirmez koyu cam kapta, karanlık, kuru ortamda sakla</li>
-</ol>
-
-<h3>Korm Büyüklüğünü Koruma Stratejisi</h3>
-<ul>
-  <li>Nitrat 9800 µM üstüne çıkma → az ama ağır korm</li>
-  <li>%75–100 mavi LED → apikal dominans → az ama büyük korm</li>
-  <li>Yapraklar tamamen sarıp kurumadan topraktan çıkarma</li>
-  <li>&lt;8 g yavru → bir sonraki sezon yeniden ek; ≥10 g → üretim hattı</li>
-</ul>
-
-<hr/>
-<h2 id="bolum6">BÖLÜM 6 — IoT EŞIK DEĞERLERİ (ESP32)</h2>
-
-<table>
-  <thead><tr><th>Faz</th><th>Fan AÇ (nem)</th><th>Fan KAPA (nem)</th><th>Sıcaklık Alarm</th></tr></thead>
-  <tbody>
-    <tr><td>Çiçeklenme</td><td>&gt;%80</td><td>&lt;%70</td><td>&gt;22°C veya &lt;15°C</td></tr>
-    <tr><td>Vejetatif</td><td>&gt;%75</td><td>&lt;%65</td><td>&gt;20°C veya &lt;12°C</td></tr>
-    <tr><td>Dormans</td><td>&gt;%65</td><td>&lt;%50</td><td>&gt;28°C</td></tr>
-  </tbody>
-</table>
-
-<hr/>
-<h2 id="bolum7">BÖLÜM 7 — KRİTİK UYARILAR</h2>
-
-<table>
-  <thead><tr><th>Hata</th><th>Sonuç</th><th>Doğrusu</th></tr></thead>
-  <tbody>
-    <tr><td>Gündüz &gt;24°C çiçeklenme döneminde</td><td>Çiçek düşümü</td><td>Klima; max 22°C</td></tr>
-    <tr><td>%70+ kokopit substrat</td><td>%44 korm kaybı</td><td>%15+%15+%70 oranı</td></tr>
-    <tr><td>Nitrat &gt;10100 µM</td><td>Korm %25 düşer</td><td>9800 µM'de kal</td></tr>
-    <tr><td>Demir &gt;30 µM</td><td>Korm %35 azalır</td><td>Max 25 µM</td></tr>
-    <tr><td>Günlük sulama</td><td>%44 korm kaybı</td><td>Haftada 2 kez</td></tr>
-    <tr><td>Kırmızı ağırlıklı LED</td><td>Küçük korm, az stigma</td><td>%75+ mavi LED</td></tr>
-    <tr><td>Soğuk şok atlamak</td><td>Zayıf çiçeklenme</td><td>6°C, 24 saat</td></tr>
-    <tr><td>Yüksek nem + dormans</td><td>Korm çürümesi</td><td>%50–60 nem, sulama yok</td></tr>
-  </tbody>
-</table>
-
-<hr/>
-<h2 id="ozet">HIZLI BAŞVURU KARTI</h2>
-
-<pre style="background:#f4f4f5;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem;font-size:0.85rem;line-height:1.8;">SUBSTRAT:    15% kokopit + 15% kokoçips + 70% perlit
-pH:          5.8–6.5
-EC:          1.4–1.5 dS/m
-NİTRAT:      9800 µM  (aşma!)
-DEMİR:       20–25 µM (aşma!)
-SULAMA:      Haftada 2× (150 ml/korm) — dormans hariç
-IŞIK:        %75–100 mavi, 150–200 µmol/m²/s, 11h açık / 13h karanlık
-SICAKLIK:    Çiçeklenme 18–20°C | Vejetatif 15–18°C | Dormans 25°C
-NEM:         Çiçeklenme %70–80 | Vejetatif %65–75 | Dormans %50–60
-SOĞUK ŞOK:   6°C, 24 saat, ekimden 1–2 gün önce
-HASAT:       Çiçek açar açmaz sabah — 50–55°C kuru</pre>
-
-<hr/>
-<h2>REFERANSLAR</h2>
-
-<h3>Bölüm 1 — Soğan seçimi, dormans, offset takvim</h3>
-<ul>
-  <li><a href="i-c-mekanda-safran-uretimi-karlilik-blueprint/index.html">TR-01 — İç Mekanda Safran Üretimi: Karlılık Blueprint</a></li>
-  <li><a href="http://localhost:2368/dormansi-ve-sicaklik-tetikleyici-hava-fenolojisi-ile-safran-5/">TR-05 — Dormansi ve Sıcaklık Tetikleyici: Hava Fenolojisi</a></li>
-  <li><a href="safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8/index.html">TR-08 — Safranın Yaşam Döngüsü: Biyoloji ve Dormansi</a></li>
-</ul>
-
-<h3>Bölüm 2 — Substrat, pH/EC</h3>
-<ul>
-  <li><a href="kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15/index.html">TR-15 — Kokopit Substrat, Nitrat ve Demir: Korm Optimizasyonu</a></li>
-  <li><a href="buyume-ortami-vejetatif-verimlilik-ve-sogan-kalitesi-10/index.html">TR-10 — Büyüme Ortamı, Vejetatif Verimlilik ve Soğan Kalitesi</a></li>
-</ul>
-
-<h3>Bölüm 3 — Çevre parametreleri, IoT, ışık</h3>
-<ul>
-  <li><a href="http://localhost:2368/dormansi-ve-sicaklik-tetikleyici-hava-fenolojisi-ile-safran-5/">TR-05 — Dormansi ve Sıcaklık Tetikleyici: Hava Fenolojisi</a></li>
-  <li><a href="led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11/index.html">TR-11 — LED Işık Spektrumu: Mavi Işığın Safran Fotosentezine Etkisi</a></li>
-  <li><a href="iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2/index.html">TR-02 — IoT Tabanlı Akıllı Aeroponik Sistem</a></li>
-  <li><a href="hidroponik-farmasotik-kalitede-safran-uretim-sureci-12/index.html">TR-12 — Hidroponik Farmasötik Kalitede Safran Üretim Süreci</a></li>
-  <li><a href="hidroponik-ve-aeroponik-sistemler-muhendislik-tasarimi-13/index.html">TR-13 — Hidroponik ve Aeroponik Sistemler: Mühendislik Tasarımı</a></li>
-</ul>
-
-<h3>Bölüm 4 — Sulama ve besin takvimi</h3>
-<ul>
-  <li><a href="kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15/index.html">TR-15 — Kokopit Substrat, Nitrat ve Demir: Korm Optimizasyonu</a></li>
-  <li><a href="hidroponik-besin-dozlama-ph-ve-ec-otomasyonu-sistematik-derleme-3/index.html">TR-03 — Hidroponik Besin Dozlama: pH ve EC Otomasyonu</a></li>
-  <li><a href="nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4/index.html">TR-04 — NFT Hidroponik: IoT Destekli EC ve pH Kontrolü</a></li>
-  <li><a href="safran-hidroponik-dikey-tarim-konsept-ve-tasarim-7/index.html">TR-07 — Safran Hidroponik Dikey Tarım: Konsept ve Tasarım</a></li>
-</ul>
-
-<h3>Bölüm 5 — Üretim akışı, hasat, çoğaltma</h3>
-<ul>
-  <li><a href="safranin-yasam-dongusu-biyoloji-dormansi-ve-ciceklenme-8/index.html">TR-08 — Safranın Yaşam Döngüsü: Biyoloji ve Dormansi</a></li>
-  <li><a href="led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11/index.html">TR-11 — LED Işık Spektrumu: Mavi Işığın Safran Fotosentezine Etkisi</a></li>
-  <li><a href="hidroponik-farmasotik-kalitede-safran-uretim-sureci-12/index.html">TR-12 — Hidroponik Farmasötik Kalitede Safran Üretim Süreci</a></li>
-  <li><a href="aeroponik-safran-yetistiriciligi-verimlilik-analizi-2026-14/index.html">TR-14 — Aeroponik Safran Yetiştiriciliği: Verimlilik Analizi 2026</a></li>
-</ul>
-
-<h3>Bölüm 6 — IoT eşikleri</h3>
-<ul>
-  <li><a href="iot-tabanli-akilli-aeroponik-sistem-ile-safran-yetistiriciligi-2/index.html">TR-02 — IoT Tabanlı Akıllı Aeroponik Sistem</a></li>
-  <li><a href="akilli-hidroponik-safran-hassas-tarim-cercevesi-9/index.html">TR-09 — Akıllı Hidroponik Safran: Hassas Tarım Çerçevesi</a></li>
-  <li><a href="nft-hidroponik-cercevede-iot-destekli-ec-ve-ph-kontrolu-4/index.html">TR-04 — NFT Hidroponik: IoT Destekli EC ve pH Kontrolü</a></li>
-</ul>
-
-<h3>Bölüm 7 — Kritik uyarılar</h3>
-<ul>
-  <li><a href="kokopit-substrat-nitrat-ve-demir-korm-optimizasyonu-15/index.html">TR-15 — Kokopit Substrat, Nitrat ve Demir: Korm Optimizasyonu</a></li>
-  <li><a href="http://localhost:2368/dormansi-ve-sicaklik-tetikleyici-hava-fenolojisi-ile-safran-5/">TR-05 — Dormansi ve Sıcaklık Tetikleyici: Hava Fenolojisi</a></li>
-  <li><a href="led-isik-spektrumu-mavi-isigin-safran-fotosentezine-etkisi-11/index.html">TR-11 — LED Işık Spektrumu: Mavi Işığın Safran Fotosentezine Etkisi</a></li>
-  <li><a href="hidroponik-farmasotik-kalitede-safran-uretim-sureci-12/index.html">TR-12 — Hidroponik Farmasötik Kalitede Safran Üretim Süreci</a></li>
-</ul>
-
-<!--kg-card-end: html-->
 
             </div>
 
