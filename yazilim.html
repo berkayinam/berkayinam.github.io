@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hakkında</title>
+    <title>Yazılım — Safran Topluluğu</title>
     <link rel="canonical" href="hakkinda.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
@@ -182,32 +182,7 @@ window.LANG_MAP = {
 };
     </script>
 </head>
-<body class="page-template page-hakkinda">
-
-<header class="site-header">
-    <div class="container">
-        <a href="index.html" class="site-logo">
-            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
-                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
-                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
-                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
-                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
-            </svg>
-            <span class="logo-text">Safran Topluluğu</span>
-        </a>
-        <nav class="site-nav">
-            <a href="index.html">Araştırmalar</a>
-            <a href="protokol.html">Protokol</a>
-            <a href="hakkinda.html">Hakkında</a>
-            <a href="iletisim.html">İletişim</a>
-            <a href="elektronik.html">Elektronik</a>
-            <a href="yazilim.html">Yazılım</a>
-        </nav>
-    </div>
-</header>
+<body class="page-template page-yazilim">
 
 <main>
     
@@ -215,27 +190,23 @@ window.LANG_MAP = {
 
     <header class="post-header">
         <div class="container">
-            <h1 class="post-title">Hakkında</h1>
+            <h1 class="post-title">Yazılım</h1>
         </div>
     </header>
 
     <div class="post-content-wrap">
         <div class="container">
 
-
             <div class="post-content gh-content">
-                <h2>Bu site neden var?</h2>
-                <p>Safran üzerine araştırma yaparken fark ettim: ciddi bilimsel çalışmalar var, ama neredeyse hepsi İngilizce, ücretli ya da dağınık. Türkçe kaynak bulmak ise çok daha zor. Danışmanlık ücretleriyle bilgi satan, kapalı gruplar, birbirini tekrarlayan blog yazıları… Bunların yerine gerçek araştırma, gerçek verilerle oluşturulmuş açık bir arşiv olmalı diye düşündüm.</p>
-                <p>Safran Topluluğu bunun üzerine kurulu: buradaki her makale özgürce erişilebilir, Türkçe özetleriyle ve tam çevirileriyle. Ne reklam var ne ücretli üyelik ne de bilgiyi kilit arkasına saklamak. Sadece merak eden herkesle paylaşmak.</p>
+                <div style="background:#fffbeb;border:1px solid #d97706;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:2rem;font-size:0.9rem;color:#92400e;">
+                    <strong>Yapım aşamasında</strong> — Bu bölüm yakında aktif olacak.
+                </div>
 
-                <h2>Kim yapıyor?</h2>
-                <p>Berkay İnam. İstanbul'da yaşayan, Cloud Native üzerine çalışan bir mühendisim. Tarım geçmişim yok ama otonom sistemler, sensörler ve verimli üretim konularına takıntılıyım. Evde aeroponik bir deney kurulumu yaptım; ESP32 ve STM32 tabanlı sensörlerle safranı takip ediyorum. Bu site o yolculuğun yan ürünü.</p>
+                <p>Bu sayfada sistemin yazılım ve altyapı katmanı belgelenecek: firmware kodu, veri toplama pipeline'ı, dashboard arayüzü ve otomasyon mantığı.</p>
 
-                <h2>Ne içeriyor?</h2>
-                <p>Şu an 23 bilimsel makale var: hidroponik, aeroponik, LED ışık, besin solüsyonu, enerji verimliliği, dikey tarım ekonomisi ve daha fazlası. Her makale için orijinal İngilizce, kısa Türkçe özet ve tam Türkçe çeviri mevcut. İçerikler CC BY-SA 4.0 lisansıyla paylaşılmaktadır.</p>
+                <p>Hedef: sensörlerden gelen ham veriyi işleyen, anormallikleri tespit eden ve kutu parametrelerini otomatik ayarlayan hafif bir sistem. ESP32 üzerinde MicroPython, veri depolama için InfluxDB veya SQLite, görselleştirme için Grafana ya da sade bir web arayüzü planlanıyor.</p>
 
-                <h2>Nasıl destek olabilirsiniz?</h2>
-                <p>Arkadaşlarınıza, gruplara, sosyal medyaya paylaşabilirsiniz. Yanlış bulduğunuz bir şey varsa bildirin, düzeltelim. Maddi destek etmek isterseniz <a href="https://buymeacoffee.com/berkayinam" target="_blank" rel="noopener">buymeacoffee.com/berkayinam</a> üzerinden kahve ısmarlayabilirsiniz — sunucu maliyeti yok, tamamen gönüllülük.</p>
+                <p style="color:#6b7280;font-size:0.9rem;">Kod bittiğinde GitHub'da yayınlanacak ve bu sayfada bağlantısı paylaşılacak.</p>
             </div>
 
         </div>
@@ -243,6 +214,7 @@ window.LANG_MAP = {
 
 </div>
 
+</main>
 </main>
 
 <footer class="site-footer">
