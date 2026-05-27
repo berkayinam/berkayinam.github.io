@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dikey Tarımın Sınırları ve Potansiyeli: Temel Hesaplamalarla Gerçekçi Bir Analiz (TAM ÇEVİRİ)</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Safran Topluluğu" href="../rss/index.html">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; background: #fff; color: #1a1a2e; line-height: 1.75; }
+        .site-header { border-bottom: 1px solid #eee; padding: 0; }
+        .site-header .container { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 60px; }
+        .site-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; font-weight: 700; font-size: 1rem; }
+        .site-nav { display: flex; gap: 16px; align-items: center; }
+        .site-nav a { text-decoration: none; color: #555; font-size: 0.9rem; }
+        .site-nav a:hover { color: #D97706; }
+        .btn-outline { border: 1px solid #D97706; color: #D97706 !important; border-radius: 4px; padding: 4px 12px; }
+        .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+        .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
+        .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a { color: #888; text-decoration: none; }
+        .breadcrumb a:hover { color: #D97706; }
+        .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
+        h1.post-title { font-size: 1.9rem; font-weight: 800; margin: 0 0 16px; line-height: 1.25; color: #1a1a2e; }
+        .post-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 20px; }
+        .action-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 500; border: 1px solid #ddd; color: #444; text-decoration: none; cursor: pointer; background: #fff; transition: all .15s; }
+        .action-btn:hover { background: #f5f5f5; border-color: #bbb; }
+        .lang-switch-current { display: inline-flex; align-items: center; padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; background: #1a1a2e; color: #fff; border: 1px solid #1a1a2e; }
+        .lang-switch-current.lang-switch-full { background: #D97706; border-color: #D97706; color: #fff; }
+        .post-content { padding: 40px 0 80px; }
+        .post-content h2 { font-size: 1.25rem; font-weight: 700; margin-top: 2em; padding-bottom: 6px; border-bottom: 2px solid #f0f0f0; }
+        .post-content h3 { font-size: 1.05rem; font-weight: 700; margin-top: 1.5em; color: #2d3748; }
+        .post-content p { margin: 0 0 1.2em; }
+        .post-content strong { color: #1a1a2e; }
+        .post-content ul, .post-content ol { padding-left: 1.5em; margin: 0 0 1em; }
+        .post-content li { margin-bottom: 0.5em; }
+        .post-content hr { border: none; border-top: 2px solid #f0f0f0; margin: 2.5em 0; }
+        .tr-full-notice { background: #fff8ed; border: 1px solid #D97706; border-radius: 8px; padding: 14px 18px; margin-bottom: 32px; font-size: 0.9rem; color: #6b4200; }
+        .tr-full-notice strong { color: #D97706; }
+        table { border-collapse: collapse; width: 100%; margin: 1.5em 0; font-size: 0.87rem; }
+        th { background: #f5f0e8; color: #1a1a2e; font-weight: 700; padding: 8px 12px; text-align: left; border: 1px solid #e0d8c8; }
+        td { padding: 7px 12px; border: 1px solid #e8e8e8; vertical-align: top; }
+        tr:nth-child(even) td { background: #fafaf8; }
+        .key-finding { background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 14px 18px; margin: 1.5em 0; font-size: 0.92rem; }
+        .key-finding strong { color: #166534; }
+        .warning-box { background: #fff1f2; border: 1px solid #fca5a5; border-radius: 8px; padding: 14px 18px; margin: 1.5em 0; font-size: 0.92rem; }
+        .warning-box strong { color: #9f1239; }
+        footer { border-top: 1px solid #eee; padding: 32px 0; text-align: center; font-size: 0.85rem; color: #aaa; }
+    </style>
+    <script>
+window.LANG_MAP = {
+  'vertical-farming-limitations-and-potential-back-of-the-envelope-calculations':  {lang:'en', pair:'dikey-tarimin-sinirlari-ve-potansiyeli-temel-hesaplamalarla-gercekci-bir-analiz', pairFull:'dikey-tarimin-sinirlari-ve-potansiyeli-full-17'},
+  'dikey-tarimin-sinirlari-ve-potansiyeli-temel-hesaplamalarla-gercekci-bir-analiz': {lang:'tr', pair:'vertical-farming-limitations-and-potential-back-of-the-envelope-calculations', pairFull:'dikey-tarimin-sinirlari-ve-potansiyeli-full-17'},
+  'dikey-tarimin-sinirlari-ve-potansiyeli-full-17':                                  {lang:'tr-full', pair:'vertical-farming-limitations-and-potential-back-of-the-envelope-calculations', pairBase:'dikey-tarimin-sinirlari-ve-potansiyeli-temel-hesaplamalarla-gercekci-bir-analiz'},
+};
+    </script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container" style="max-width:1200px">
+        <a class="site-logo" href="/">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C12 2 7 7 7 13a5 5 0 0010 0C17 7 12 2 12 2z" fill="#D97706"/><path d="M12 8v8M9 13l3 3 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Safran Topluluğu
+        </a>
+        <nav class="site-nav">
+            <a href="/">Araştırmalar</a>
+            <a href="/protokol.html">Protokol</a>
+            <a href="/hakkinda.html">Hakkında</a>
+            <a href="https://buymeacoffee.com/berkayinam" class="btn-outline" target="_blank" rel="noopener">Destek ol</a>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div class="post-header">
+        <div class="breadcrumb">
+            <a href="/">Araştırmalar</a> / Dikey Tarımın Sınırları ve Potansiyeli
+        </div>
+        <div class="full-badge">TR Full — Tam Çeviri</div>
+        <h1 class="post-title">Dikey Tarımın Sınırları ve Potansiyeli: Temel Hesaplamalarla Ortaya Konan Gerçekler</h1>
+        <div class="post-actions">
+            <a class="action-btn" href="/dikey-tarimin-sinirlari-ve-potansiyeli-temel-hesaplamalarla-gercekci-bir-analiz/">TR Özet →</a>
+            <a class="action-btn" href="/vertical-farming-limitations-and-potential-back-of-the-envelope-calculations/">EN →</a>
+            <span class="lang-switch-current lang-switch-full">TR Full</span>
+        </div>
+    </div>
+</div>
+
+<div class="post-content">
+  <div class="container">
+    <div class="tr-full-notice">
+        <strong>TR Full — Tam Çeviri:</strong> Bu sayfa, orijinal akademik makalenin tüm bölümlerini, tablolarını ve referanslarını içeren eksiksiz Türkçe çevirisidir. Özet versiyon için yukarıdaki <em>TR Özet</em> butonunu kullanın.
+    </div>
+
+    <p><strong>Yazarlar:</strong> Guy Lovat, Faraan Noor, Ron Milo<br>
+    <strong>Kurum:</strong> Bitki ve Çevre Bilimleri Bölümü, Weizmann Bilim Enstitüsü, Rehovot, İsrail<br>
+    <strong>Dergi:</strong> Plant Physiology, 2025<br>
+    <strong>DOI:</strong> 10.1093/plphys/kiaf056 | <strong>PMC:</strong> PMC12225668 | <strong>PMID:</strong> 40037783</p>
+
+    <hr>
+
+    <h2>Özet</h2>
+
+    <p>Dikey tarım, gıda üretiminde kontrollü ortam yaklaşımı olarak giderek daha fazla ilgi görmektedir; ancak geniş ölçekli potansiyeli temel fiziksel sınırlamalar tarafından kısıtlanmaktadır. "Temel hesaplamalar" (back-of-the-envelope calculations) kullanılarak gerçekleştirilen bu perspektif çalışması; dikey tarımın enerji verimliliğini, maliyet yapısını ve çevresel ayak izini değerlendirmektedir.</p>
+
+    <p>Mevcut ticari sistemler, elektrik enerjisinin yalnızca <strong>~%1–2'sini</strong> bitki biyokütlesine dönüştürebilmektedir. LED aydınlatma iyileştirmeleri teorik olarak <strong>~%11'lik</strong> bir maksimuma ulaşabilir; ancak bu oran, iyi yönetilen seralardaki doğal fotosentez verimliliğinin çok gerisinde kalmaktadır. Ekonomik ve çevresel analizler; dikey tarımın en uygun olduğu alanın, geleneksel tarımın kısıtlandığı bağlamlarda yüksek değerli belirli mahsuller olduğuna işaret etmektedir.</p>
+
+    <p><strong>Anahtar Kelimeler:</strong> Dikey tarım, enerji verimliliği, kontrollü ortam tarımı, LED aydınlatma, fotosentez, gıda sistemleri, sürdürülebilirlik</p>
+
+    <hr>
+
+    <h2>1. Dikey Tarımın Vaadi ve Zorluğu</h2>
+
+    <p>Dikey tarım — katmanlar hâlinde yapay aydınlatma altında mahsul yetiştirme — hava koşullarından bağımsız yıl boyu üretim, dramatik biçimde azaltılmış su kullanımı, pestisitten arınmış ortam ve kentsel tüketicilere yakınlık vaat etmektedir. Bu özellikler; sektöre büyük yatırımların akmasına ve yoğun bir ilginin oluşmasına zemin hazırlamıştır.</p>
+
+    <p>Tüm bu vaatlerine karşın dikey çiftlikler, temel bir fiziksel zorlukla yüzleşmek durumundadır: güneş ışığının yerini elektrikle doldurmak hem pahalıdır hem de termodinamik açıdan verimsizdir. Bu perspektif çalışması; dikey tarımın enerji kullanımı, maliyetleri ve çevresel ayak izi için temel ölçütler ortaya koymak ve teknolojinin potansiyelinin en yüksek olduğu alanları belirlemek amacıyla basit, şeffaf sayısal tahminlerden — "temel hesaplamalar"dan — yararlanmaktadır.</p>
+
+    <p>Kapsamlı tekno-ekonomik modelleme yerine (ki bu yaklaşım çoğunlukla varsayımları karmaşıklık içinde gizler) bilinçli olarak basitleştirilmiş hesaplamalar kullanılmakta; bu sayede temel kısıtlar ve fırsatlar açıkça ortaya konulmaktadır. Bu yaklaşım; analizi yeniden üretilebilir kılmakta ve varsayımları görünür hâle getirmektedir.</p>
+
+    <hr>
+
+    <h2>2. Enerji Verimliliği: Mevcut Durum ve Teorik Sınırlar</h2>
+
+    <h3>2.1 Mevcut Enerji-Biyokütle Dönüşüm Verimliliği</h3>
+
+    <p>Dikey çiftliklerin elektrik enerjisini bitki biyokütlesine ne kadar verimli dönüştürdüğünü tahmin etmek için enerji kademesi izlenebilir. 100 birim elektrik enerjisinden başlayarak:</p>
+
+    <ul>
+        <li>LED armatürler elektriği ~<strong>%50</strong> verimlilikle ışığa dönüştürür</li>
+        <li>LED çıktısının ~<strong>%85'i</strong> fotosentetik açıdan aktif radyasyon (FAR) bandına (400–700 nm) düşer</li>
+        <li>Bitkiler, kesilen FAR'ın ~<strong>%90'ını</strong> emer</li>
+        <li>Fotosentezin teorik maksimum kuantum verimliliği ~<strong>%11'dir</strong></li>
+        <li>Hasat indeksi (yapraklı sebzeler için yenilebilir fraksiyon) ~<strong>%50'dir</strong></li>
+    </ul>
+
+    <p>Bu faktörlerin çarpımı: 0,50 × 0,85 × 0,90 × 0,11 × 0,50 = <strong>~%2,1</strong>. Ampirik olarak ölçülen mevcut ticari sistemler %1–2 değerine ulaşmakta olup bu tahminle örtüşmektedir. Ana kayıplar fotosentezin kendisinde yaşanmaktadır; bu bir mühendislik hatası değil, katı bir fiziksel sınırdır.</p>
+
+    <div class="warning-box">
+        <strong>Temel Fiziksel Kısıt:</strong> Mevcut ticari dikey çiftlikler elektriğin yalnızca ~%1–2'sini bitki biyokütlesine dönüştürebilmektedir. Bu kayıpların büyük kısmı fotosentezin kendisinde — mühendislikle aşılamayacak, doğanın koyduğu bir sınırda — gerçekleşmektedir.
+    </div>
+
+    <h3>2.2 Geliştirilmiş LED'lerle Teorik Maksimum</h3>
+
+    <p>Gelecekteki LED iyileştirmeleri termodinamik sınıra yaklaşabilir. %80 verimli LED'lerle: 0,80 × 0,90 × 0,95 × 0,11 × 0,50 = <strong>~%3,8</strong>. İyimser varsayımlarla bile teorik tavan yaklaşık <strong>%11'dir</strong> — fotosentetik kuantum verimlilik sınırı.</p>
+
+    <p>Karşılaştırma için: tamamlayıcı aydınlatma kullanan iyi yönetilen Hollanda seraları <strong>~%8</strong> güneş enerjisi-biyokütle verimliliği elde etmektedir. Güneş ışığı fiilen ücretsizdir; elektrik ise hem para harcar hem de karbon ayak izi bırakır. Bu karşılaştırma, dikey tarımın nişini anlamak açısından temel önem taşımaktadır.</p>
+
+    <hr>
+
+    <h2>3. Maliyet Analizi</h2>
+
+    <h3>3.1 Dominant İşletme Maliyeti Olarak Elektrik</h3>
+
+    <p>%1–2 verimlilikle 1 kg yapraklı sebze üretmek için <strong>~20–40 kWh</strong> elektrik gerekmektedir. Ticari tarifede 0,10 $/kWh ile bu, kilogram başına <strong>2–4 $</strong> elektrik demektir — emtia marulun toptan satış fiyatıyla (~1–3 $/kg) kıyaslanabilir bir maliyet. Otlar gibi yüksek değerli mahsuller için (~10–30 $/kg toptan satış), enerji maliyeti yönetilebilir düzeyde kalmaktadır.</p>
+
+    <p>Bu durum, dikey çiftliklerin neden yüksek değerli, hızlı büyüyen yapraklı mahsullere yoğunlaştığını açıklamaktadır. Buğday ya da pirinç gibi temel ürünler, tarla mahsullerine kıyasla kalori başına kat kat daha fazla enerji gerektirir; bu da mevcut koşullarda büyük ölçekli temel gıda üretimini ekonomik açıdan sürdürülemez kılmaktadır.</p>
+
+    <h3>3.2 Sermaye Maliyetleri</h3>
+
+    <p>Dikey çiftlikler önemli başlangıç sermayesi gerektirmektedir: iklim kontrollü binalar, LED dizileri, hidroponik sistemler ve otomasyon. Yaygın sermaye maliyetleri yetiştirme alanı başına <strong>5–15 milyon $/hektar</strong> düzeyindedir; seralarda 10.000–100.000 $/ha ve tarla tarımında yaklaşık 5.000–50.000 $/ha ile kıyaslandığında bu rakam oldukça yüksektir. Finansal fizibilite; yüksek arazi üretkenliği ve prim mahsul fiyatları gerektirmektedir.</p>
+
+    <table>
+        <caption style="font-weight:700; text-align:left; padding:6px 0; font-size:0.9rem;">Tablo: Tarım sistemleri sermaye maliyeti karşılaştırması</caption>
+        <thead>
+            <tr>
+                <th>Sistem</th>
+                <th>Sermaye Maliyeti ($/ha)</th>
+                <th>Enerji Kaynağı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tarla tarımı</td>
+                <td>~5.000–50.000</td>
+                <td>Güneş ışığı (ücretsiz)</td>
+            </tr>
+            <tr>
+                <td>Sera (tamamlayıcı aydınlatmalı)</td>
+                <td>~10.000–100.000</td>
+                <td>Güneş + kısmi elektrik</td>
+            </tr>
+            <tr>
+                <td>Dikey çiftlik</td>
+                <td>~5.000.000–15.000.000</td>
+                <td>Tam elektrik bağımlılığı</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>4. Çevresel Ayak İzi</h2>
+
+    <h3>4.1 Elektriğin Karbon Ayak İzi</h3>
+
+    <p>Kilogram marul başına 20–40 kWh'de, ABD ortalama şebeke yoğunluğu ~0,4 kg CO₂/kWh kullanıldığında karbon ayak izi <strong>~8–16 kg CO₂/kg</strong>'a ulaşmaktadır. Karşılaştırma için: tarla marulu ~0,5–1 kg CO₂/kg; sera marulu ~1–3 kg CO₂/kg.</p>
+
+    <p>Şebeke elektriğiyle çalışan dikey çiftlikler şu an için önemli ölçüde yüksek karbon ayak izine sahiptir. Yenilenebilir elektrikle (güneş/rüzgârdan 0,02–0,05 kg CO₂/kWh) ayak izi <strong>~0,5–2 kg CO₂/kg'a</strong> düşmektedir; bu da geleneksel üretimle rekabet edebilir bir düzeye karşılık gelmektedir. Elektrik temini karbonsuzlaştırmak, dikey tarımın gerçek iklim faydaları sunması için zorunlu bir ön koşuldur.</p>
+
+    <h3>4.2 Su Kullanımı</h3>
+
+    <p>Dikey çiftlikler, toprak buharlaşması veya yüzey akışı olmaksızın geri dönüşüm yoluyla tarla tarımına kıyasla tipik olarak <strong>%95–99 daha az su</strong> kullanmaktadır. Bu; su kıtlığı yaşanan bölgelerde gerçek bir avantajdır. Ancak çoğu mahsul ve bölge için bağlayıcı kısıt su değil, enerji ve maliyettir.</p>
+
+    <h3>4.3 Arazi Kullanımı</h3>
+
+    <p>Dikey istifleme; seralara kıyasla birim ayak izi başına verimi <strong>10–100 kat</strong> artırmaktadır — bu, arazi kısıtlı kentsel ortamlarda önemli bir avantajdır. Ancak küresel tarım arazisi kıtlığı, çoğu bölgede birincil gıda güvenliği sorunu değildir; "korunan" arazi ise çoğunlukla dikey çiftliklerin kurulduğu konumda yer almamaktadır.</p>
+
+    <hr>
+
+    <h2>5. Verimliliği Artırma Yolları</h2>
+
+    <p>Dikey tarım verimliliğini iyileştirebilecek araştırma yönleri:</p>
+
+    <ul>
+        <li><strong>LED spektral optimizasyonu:</strong> Fotosentez tarafından en verimli kullanılan dalga boylarını hedefleme</li>
+        <li><strong>Daha yüksek fotosentetik verimlilik ve hasat indeksi için bitki mühendisliği</strong></li>
+        <li><strong>Geliştirilmiş CO₂ zenginleştirme:</strong> 1.000–1.500 ppm, fotosentetik verimliliği <strong>%20–40 oranında</strong> artırabilir</li>
+        <li><strong>Termal yönetim:</strong> LED atık ısısının alan ısıtmasında geri kazanımı</li>
+    </ul>
+
+    <p>Tüm bu iyileştirmelerle birlikte bile, ~%11'lik fotosentetik kuantum verimlilik sınırı şebeke elektriğinin önemli bir maliyet unsuru olmayı sürdüreceği anlamına gelmektedir. Dikey çiftlikleri özel yenilenebilir enerjiyle (ör. binanın güneş panelleri) eşleştirmek; maliyetleri ve karbon ayak izini eş zamanlı olarak azaltabilir.</p>
+
+    <hr>
+
+    <h2>6. Dikey Tarımın En Mantıklı Olduğu Alanlar</h2>
+
+    <div class="key-finding">
+        <strong>Dikey tarım için en güçlü gerekçe oluşturan bağlamlar:</strong>
+        <ul style="margin:8px 0 0; padding-left:20px;">
+            <li>Arazi son derece <strong>kıt ve pahalı</strong> (yoğun kentsel alanlar, adalar, kutup bölgeleri)</li>
+            <li>Mahsuller <strong>yüksek değerli ve hava koşullarına duyarlı</strong> (otlar, mikrogreens, özel yapraklı sebzeler)</li>
+            <li>Elektrik <strong>yenilenebilir kaynaklardan</strong> elde ediliyor</li>
+            <li>Geleneksel tedarik zincirleri <strong>uzun veya güvenilmez</strong></li>
+            <li>Su son derece <strong>kıt</strong></li>
+        </ul>
+    </div>
+
+    <p>Öngörülebilir teknolojik gelişmeler çerçevesinde geniş gıda güvenliği için büyük ölçekli emtia mahsulü üretiminin geleneksel tarımla maliyet açısından rekabet edebilmesi olası görünmemektedir.</p>
+
+    <hr>
+
+    <h2>7. Yanıt Bekleyen Sorular</h2>
+
+    <p>Temel açık sorular şunlardır: Fotosentetik verimlilik mevcut sınırların ötesine mühendislik yoluyla taşınabilir mi? Dikey çiftlik sermaye maliyetleri için gerçekçi öğrenme eğrisi nedir? Yapay zekâ ve robotik, işgücü ekonomisini nasıl dönüştürecek? Dikey çiftlikler özel ilaç veya biyoaktif madde pazarlarına kârlı biçimde hizmet edebilir mi? Dışsallıklar (pestisit kullanımından kaçınma, azaltılmış taşımacılık, gıda güvenliği) gerçek maliyet karşılaştırmalarında nasıl değerlendirilmeli?</p>
+
+    <hr>
+
+    <h2>8. Sonuç</h2>
+
+    <p>Temel hesaplamalar; dikey tarımın %1–2 enerji-biyokütle dönüşüm verimliliğinin yetersiz mühendislik değil, fotosentezdeki temel fiziksel kısıtların bir sonucu olduğunu ortaya koymaktadır. Gelecekteki iyileştirmeler verimliliği %5–10'a taşıyabilir; ancak teorik tavan ~%11'dir. Şebeke elektriği maliyetleri yüksek kalmaya devam edecek ve dikey tarım; küresel gıda üretimine genel bir çözüm olarak değil, belirli coğrafi bağlamlarda yüksek değerli niş mahsuller için en uygun konumunu koruyacaktır. Gerçek iklim faydaları için yenilenebilir enerji entegrasyonu zorunludur.</p>
+
+    <hr>
+
+    <h2>Kaynaklar</h2>
+    <ol>
+        <li>Lovat, G., Noor, F., &amp; Milo, R. (2025). Vertical Farming Limitations and Potential Demonstrated by Back-of-the-Envelope Calculations. <em>Plant Physiology</em>. doi: 10.1093/plphys/kiaf056</li>
+        <li>Graamans, L. vd. (2018). Plant factories versus greenhouses: comparison of resource use efficiency. <em>Agricultural Systems</em>, 160, 31–43.</li>
+        <li>Benke, K., &amp; Tomkins, B. (2017). Future food-production systems: vertical farming and controlled-environment agriculture. <em>Sustainability: Science, Practice and Policy</em>, 13, 13–26.</li>
+        <li>Kozai, T. (2022). <em>Plant Factory: An Indoor Vertical Farming System for Efficient Quality Food Production</em>. Academic Press.</li>
+        <li>Zhu, X.-G., Long, S. P., &amp; Ort, D. R. (2010). Improving photosynthetic efficiency for greater yield. <em>Annual Review of Plant Biology</em>, 61, 235–261.</li>
+    </ol>
+
+  </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Safran Topluluğu · <a href="/" style="color:#D97706">Araştırmalar</a></p>
+    </div>
+</footer>
+</body>
+</html>
