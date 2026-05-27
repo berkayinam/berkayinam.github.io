@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adım 1 — İlk Sensör Siparişleri ve Otonom Nem Testi · Safran Topluluğu</title>
+    <meta name="description" content="ESP32 + DHT22 + ATX PSU + 8 Kanal Röle ile ilk otonom nem kontrolü. Bir ESP32 yaktım, bir fan bozuldu, ama sistem çalıştı.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css%3Fv=d39f020386.css">
+</head>
+<body class="post-template">
+
+<header class="site-header">
+    <div class="container">
+        <a href="../index.html" class="site-logo">
+            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span class="logo-text">Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="../iletisim.html">İletişim</a>
+            <a href="../elektronik.html">Elektronik</a>
+            <a href="../yazilim.html">Yazılım</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="5" x2="19" y2="5"/>
+                <line x1="3" y1="11" x2="19" y2="11"/>
+                <line x1="3" y1="17" x2="19" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+<div class="post-layout">
+
+    <header class="post-header">
+        <div class="container">
+            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.75rem;">
+                <a href="../elektronik.html" style="font-size:0.85rem;color:#6b7280;text-decoration:none;">← Elektronik</a>
+                <span style="color:#d1d5db;">·</span>
+                <span style="background:#D97706;color:white;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:0.05em;">ADIM 1</span>
+            </div>
+            <h1 class="post-title">İlk Sensör Siparişleri ve Kutusuz, Soğansız İlk Otonom Nem Testi</h1>
+            <p style="color:#6b7280;font-size:0.9rem;margin-top:0.75rem;">Mayıs 2026 · ESP32 + DHT22 + ATX PSU + Röle</p>
+        </div>
+    </header>
+
+    <div class="post-content-wrap">
+        <div class="container">
+            <div class="post-content gh-content">
+
+                <p>Protokolü yazmak ve makaleleri çevirmek güzeldi ama bir noktada "acaba gerçekten çalışır mı" sorusu teoriden pratiğe geçmeyi zorunlu kıldı. Henüz soğan siparişi vermeden, kutular kurulmadan önce sistemin elektronik tarafını test etmeye karar verdim. Kötü bir şey olsa para kaybı sadece malzeme fiyatı — soğan değil.</p>
+
+                <h2>Neden Bu Malzemeler?</h2>
+
+                <p>Malzeme seçiminin arkasında basit bir mantık var: <strong>evde zaten olanı kullan, gereksiz harcama yapma.</strong></p>
+
+                <p><strong>ATX PSU (400W, eski masa üstü kasadan):</strong> Evde kullanılmayan bir kasa vardı. ATX güç kaynakları aynı anda hem +5V hem +12V verebiliyor — ESP32 ve röle kartı 5V'tan, fanlar 12V'tan beslenecek. Ayrı adaptör almak yerine tek bir PSU ile tüm sistemi beslemek hem daha güvenli hem daha pratik. Üstelik bu yaklaşım production'a yakın: gerçek bir kurulumda da bu tür bir güç kaynağı kullanılacak.</p>
+
+                <p><strong>8 Kanal Röle Kartı:</strong> Sadece 1-2 fan kontrol etmek için 8 kanal fazla görünebilir ama ileride ısıtıcı, solenoid vana, ek fan, pompa gibi elemanlar eklenecek. Şimdiden genişletilebilir bir altyapı kurmak daha mantıklı. Ayrıca röle kullanmak ESP32'yi yük akımından koruyor — mikrodenetleyici pinleri doğrudan fan gibi yüksek akımlı yükleri süremez.</p>
+
+                <p><strong>ESP32 (× 2 adet):</strong> Dahili WiFi var, Arduino IDE ile programlanabiliyor, fiyatı uygun. İki tane almamın sebebi ise birazdan anlaşılacak...</p>
+
+                <p><strong>DHT22 (× 2 adet):</strong> Kapalı kutu ortamında nem ve sıcaklık okumak için yeterli hassasiyet. DHT11'e göre daha geniş ölçüm aralığı ve daha doğru. Kuru dormans kutusu için ideal başlangıç noktası.</p>
+
+                <p><strong>Klemens ve jumper teller:</strong> Breadboard prototip için yeterli ama güç hatlarını klemens üzerinden dağıtmak daha güvenli ve production'a daha yakın. Sarı (+12V), kırmızı (+5V) ve siyah (GND) hatları klemens üzerinden toplandı.</p>
+
+                <h2>Devreyi Nasıl Kurdum</h2>
+
+                <p>ATX PSU'yu aktif hale getirmek için önce 24-pin konektördeki yeşil teli (PS_ON) yanındaki siyah tele (GND) kısa devre ettim — böylece PSU her zaman açık kalıyor. Ardından Molex kablosunu ortadan keserek 4 teli (sarı 12V, kırmızı 5V, 2× siyah GND) 5'li klemense bağladım.</p>
+
+                <p>Klemens güç dağıtım noktası oldu: ESP32'nin Vin pinine 5V, röle kartının VCC'sine 5V, fanın COM hattına 12V. Tüm GND'ler ortak.</p>
+
+                <p>DHT22 doğrudan ESP32'ye bağlandı: VCC → 3.3V, GND → GND, DATA → GPIO4. Röle kartının IN1 pini GPIO26'ya bağlandı. Röle'nin güç tarafında K1 COM'a 12V, NO'ya fan'ın kırmızı teli.</p>
+
+                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.875rem;">
+                    <strong>Devre özeti:</strong>
+                    <pre style="margin:0.75rem 0 0;font-size:0.82rem;line-height:1.8;overflow-x:auto;">PSU 12V → Klemens → Röle COM → Röle NO → Fan (+)
+PSU 5V  → Klemens → ESP32 Vin + Röle VCC
+ESP32 GPIO26 → Röle IN1  (fan kontrolü)
+ESP32 GPIO4  → DHT22 DATA (nem/sıcaklık)
+ESP32 3.3V   → DHT22 VCC</pre>
+                </div>
+
+                <h2>Yazılım</h2>
+
+                <p>Arduino IDE ile basit bir firmware yazdım. Her 3 saniyede bir DHT22'den nem ve sıcaklık okunuyor. Nem %70'i geçince röle tetikleniyor ve fan açılıyor; nem %60'ın altına düşünce fan kapanıyor. Değerler Serial Monitor'dan takip edildi.</p>
+
+                <p>Sonradan ESP32'nin WiFi özelliğini kullanarak basit bir web server kurdum. <code>192.168.1.11</code> adresinden tarayıcıya girince anlık nem ve sıcaklık değerleri görünüyor. Harici bir kütüphane veya platform olmadan, saf ESP32 web server ile çalışıyor.</p>
+
+                <h2>Hatalar ve Kazalar</h2>
+
+                <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;color:#7f1d1d;">
+                    <strong>❌ ESP32 #1 — Vin'e 12V verdim, kart öldü.</strong>
+                    <p style="margin:0.5rem 0 0;">Röle kartının güç hattını bağlarken yanlışlıkla 12V'u ESP32'nin Vin pinine götürdüm. Vin pini maksimum 5V'a dayanıklı; 12V gelince dahili regülatör ve USB çipi (CH340) yandı. Kart bir daha boot etmedi. İkinci ESP32'yi açtım, devam ettim.</p>
+                    <p style="margin:0.5rem 0 0;font-size:0.85rem;color:#991b1b;"><strong>Kural:</strong> ESP32 Vin = maks. 5V. 12V sadece fan, röle güç tarafı gibi izole hatlara.</p>
+                </div>
+
+                <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;color:#7f1d1d;">
+                    <strong>❌ Frisby Fan #1 — Mekanik arıza.</strong>
+                    <p style="margin:0.5rem 0 0;">İki adet eski Frisby 12cm PC fanından biri devre sırasında dönerken takılı kaldı ve bir daha düzgün çalışmadı. Muhtemelen rulman yorgunluğu — eski fanlarda bu normal. İkinci fanla devam ettim.</p>
+                </div>
+
+                <h2>Sonuç</h2>
+
+                <p>Kazalara rağmen sonuç beklenenden iyi çıktı. Sistem şu an otonom çalışıyor: nem belirli eşiği geçince fan otomatik açılıyor, düşünce kapanıyor. Web server üzerinden telefon tarayıcısından anlık değerleri görebiliyorum. Soğan ve kutu olmadan, sırf elektronik bir test olarak bu kadarı gayet tatmin edici bir başlangıç.</p>
+
+                <p>Bir sonraki adımda LED aydınlatma ve STM32 mimarisine geçiş planı var — daha fazla GPIO, daha iyi gerçek zamanlı kontrol.</p>
+
+                <hr style="border:none;border-top:1px solid #e5e7eb;margin:2.5rem 0;">
+
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.875rem;">
+                    <a href="../elektronik.html" style="color:#D97706;text-decoration:none;">← Elektronik ana sayfası</a>
+                    <span style="color:#9ca3af;">Adım 2 henüz yayınlanmadı</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">Safran Topluluğu</span>
+            <span class="footer-sep">—</span>
+            <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

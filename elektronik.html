@@ -232,15 +232,33 @@ window.LANG_MAP = {
         <div class="container">
 
             <div class="post-content gh-content">
-                <div style="background:#fffbeb;border:1px solid #d97706;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:2rem;font-size:0.9rem;color:#92400e;">
-                    <strong>Yapım aşamasında</strong> — Bu bölüm yakında aktif olacak.
+                <p>Buraya zaman zaman adım adım güncellemeler gelecek. 50 bin soğanlık üretime geçene kadar bu süreci adım adım belgeleyeceğim — henüz ilk 100 soğanımı bile sipariş etmeden elektronik denemelere başladım. Her güncellemede bu sistemin en baştan en sona nasıl ilerlediğine, hangi hataları yaptığıma ve neler öğrendiğime tanık olacaksınız.</p>
+
+                <p>Bu sayfada 3-kutulu hidroponik sistemin elektronik altyapısı belgelenecek: devreler, sensör seçimleri, bağlantı diyagramları, hangi malzemeyi neden kullandım ve kaç adımda production ortamına geçebileceğiz onu göreceğiz.</p>
+
+                <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
+
+                <div style="display:flex;flex-direction:column;gap:1rem;">
+
+                    <a href="elektronik-adim-1/index.html" style="display:block;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#D97706'" onmouseout="this.style.borderColor='#e5e7eb'">
+                        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.4rem;">
+                            <span style="background:#D97706;color:white;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:0.05em;">ADIM 1</span>
+                            <span style="font-size:0.8rem;color:#9ca3af;">Tamamlandı</span>
+                        </div>
+                        <div style="font-weight:600;font-size:1rem;color:#1a1a2e;margin-bottom:0.3rem;">İlk Sensör Siparişleri ve Kutusuz, Soğansız İlk Otonom Nem Testi</div>
+                        <div style="font-size:0.875rem;color:#6b7280;">ESP32 + DHT22 + ATX PSU + Röle ile ilk otonom nem kontrolü. Bir ESP32 yaktım, bir fan bozuldu, ama sistem çalıştı.</div>
+                    </a>
+
+                    <div style="display:block;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem 1.5rem;opacity:0.6;cursor:default;">
+                        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.4rem;">
+                            <span style="background:#9ca3af;color:white;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:0.05em;">ADIM 2</span>
+                            <span style="font-size:0.8rem;color:#9ca3af;">Yakında</span>
+                        </div>
+                        <div style="font-weight:600;font-size:1rem;color:#6b7280;margin-bottom:0.3rem;">LED Işıklar ve STM32 Mimarisine Geçiş</div>
+                        <div style="font-size:0.875rem;color:#9ca3af;">Henüz başlamadı.</div>
+                    </div>
+
                 </div>
-
-                <p>Bu sayfada 3-kutulu aeroponik sistemin elektronik altyapısı belgelenecek: devre şemaları, sensör seçimleri, PCB tasarımları ve bağlantı diyagramları.</p>
-
-                <p>Kullanılan donanım: ESP32, STM32, DHT22/SHT31 nem-sıcaklık sensörleri, EC/pH probları, PWM fan sürücüleri, Peltier modülleri. Tüm donanım ve yazılım açık kaynak olarak yayınlanacak.</p>
-
-                <p style="color:#6b7280;font-size:0.9rem;">Geliştirme sürecini takip etmek için zaman zaman bu sayfayı kontrol edin.</p>
             </div>
 
         </div>
