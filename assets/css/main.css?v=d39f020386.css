@@ -770,6 +770,109 @@ a { color: inherit; text-decoration: none; }
   color: white !important;
 }
 
+/* ── AR-GE Dropdown nav ──────────────────────── */
+.nav-arge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-arge-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  padding: 0;
+  line-height: 1;
+  opacity: 0.75;
+  transition: opacity 0.15s;
+}
+
+.nav-arge-btn:hover,
+.nav-arge-btn:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+.nav-arge-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+  min-width: 140px;
+  z-index: 100;
+  padding: 0.4rem 0;
+  flex-direction: column;
+}
+
+.nav-arge:hover .nav-arge-menu,
+.nav-arge-menu.open {
+  display: flex;
+}
+
+.nav-arge-menu a {
+  display: block;
+  padding: 0.55rem 1rem;
+  font-size: 0.875rem;
+  color: var(--foreground) !important;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: background 0.12s, opacity 0.12s;
+}
+
+.nav-arge-menu a:hover {
+  background: hsl(38 100% 97%);
+  color: #92400e !important;
+  opacity: 1;
+}
+
+/* Mobile: dropdown becomes flat links inside the nav */
+@media (max-width: 640px) {
+  .nav-arge {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .nav-arge-btn {
+    font-size: 1rem;
+    opacity: 0.75;
+    padding: 0.15rem 0;
+  }
+  .nav-arge-menu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--border);
+    border-radius: 0;
+    padding: 0.25rem 0 0.25rem 0.75rem;
+    margin-top: 0.25rem;
+    min-width: unset;
+    width: 100%;
+  }
+  .nav-arge-menu.open {
+    display: flex;
+  }
+  .nav-arge-menu a {
+    padding: 0.2rem 0;
+    font-size: 0.95rem;
+  }
+  /* Hide hover expansion on mobile (use click only) */
+  .nav-arge:hover .nav-arge-menu:not(.open) {
+    display: none;
+  }
+}
+
 /* ── Responsive ─────────────────────────────── */
 /* ── Hamburger button (hidden on desktop) ──────── */
 .nav-toggle {
