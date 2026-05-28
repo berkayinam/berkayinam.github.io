@@ -207,14 +207,7 @@ window.LANG_MAP = {
             <a href="protokol.html">Protokol</a>
             <a href="hakkinda.html">Hakkında</a>
             <a href="iletisim.html">İletişim</a>
-            <div class="nav-arge">
-                <button class="nav-arge-btn" aria-expanded="false" aria-haspopup="true">AR-GE <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><polyline points="2,3 5,7 8,3"/></svg></button>
-                <div class="nav-arge-menu" role="menu">
-                    <a href="elektronik.html" role="menuitem">Elektronik</a>
-                    <a href="yazilim.html" role="menuitem">Yazılım</a>
-                    <a href="yapi.html" role="menuitem">Yapı</a>
-                </div>
-            </div>
+            <a href="arge.html">AR-GE</a>
         </nav>
         <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -651,22 +644,6 @@ Küçük soğan (5–10 g)
       btn.setAttribute('aria-expanded', 'false');
     }
   });
-  // AR-GE dropdown
-  var argeBtn = document.querySelector('.nav-arge-btn');
-  var argeMenu = document.querySelector('.nav-arge-menu');
-  if (argeBtn && argeMenu) {
-    argeBtn.addEventListener('click', function(e){
-      e.stopPropagation();
-      var open = argeMenu.classList.toggle('open');
-      argeBtn.setAttribute('aria-expanded', open);
-    });
-    document.addEventListener('click', function(e2){
-      if (!argeBtn.contains(e2.target) && !argeMenu.contains(e2.target)) {
-        argeMenu.classList.remove('open');
-        argeBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
 })();
 </script>
 </body>
