@@ -231,31 +231,37 @@ window.LANG_MAP = {
         <div class="container">
 
             <div class="post-content gh-content">
-                <p>Bir şey sormak, hata bildirmek ya da sadece merhaba demek istiyorsanız aşağıdaki formu kullanabilirsiniz. Her mesajı okuyor, yanıtlamaya çalışıyorum.</p>
+                <div style="max-width:540px;margin:0 auto;">
+                    <p style="color:#6b7280;margin-bottom:2rem;">Bir şey sormak, hata bildirmek ya da sadece merhaba demek istiyorsanız aşağıdaki formu kullanabilirsiniz. Her mesajı okuyor, yanıtlamaya çalışıyorum.</p>
 
-                <form action="https://formspree.io/f/xzdwyakk" method="POST" style="max-width:520px;margin-top:2rem;">
-                    <div style="margin-bottom:1rem;">
-                        <label style="display:block;font-weight:600;margin-bottom:4px;font-size:0.9rem;">İsim</label>
-                        <input type="text" name="name" required
-                            style="width:100%;padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:0.95rem;font-family:inherit;box-sizing:border-box;">
-                    </div>
-                    <div style="margin-bottom:1rem;">
-                        <label style="display:block;font-weight:600;margin-bottom:4px;font-size:0.9rem;">E-posta</label>
-                        <input type="email" name="email" required
-                            style="width:100%;padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:0.95rem;font-family:inherit;box-sizing:border-box;">
-                    </div>
-                    <div style="margin-bottom:1.25rem;">
-                        <label style="display:block;font-weight:600;margin-bottom:4px;font-size:0.9rem;">Mesaj</label>
-                        <textarea name="message" rows="5" required
-                            style="width:100%;padding:8px 12px;border:1px solid #d1d5db;border-radius:6px;font-size:0.95rem;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
-                    </div>
-                    <button type="submit"
-                        style="background:#D97706;color:white;border:none;padding:10px 24px;border-radius:6px;font-size:0.95rem;font-weight:600;cursor:pointer;font-family:inherit;">
-                        Gönder
-                    </button>
-                </form>
+                    <form action="https://formspree.io/f/xzdwyakk" method="POST">
+                        <div style="margin-bottom:1.1rem;">
+                            <label style="display:block;font-weight:600;margin-bottom:5px;font-size:0.875rem;color:#374151;">İsim</label>
+                            <input type="text" name="name" required
+                                style="width:100%;padding:10px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:0.95rem;font-family:inherit;box-sizing:border-box;transition:border-color 0.15s;outline:none;"
+                                onfocus="this.style.borderColor='#D97706'" onblur="this.style.borderColor='#e5e7eb'">
+                        </div>
+                        <div style="margin-bottom:1.1rem;">
+                            <label style="display:block;font-weight:600;margin-bottom:5px;font-size:0.875rem;color:#374151;">E-posta</label>
+                            <input type="email" name="email" required
+                                style="width:100%;padding:10px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:0.95rem;font-family:inherit;box-sizing:border-box;transition:border-color 0.15s;outline:none;"
+                                onfocus="this.style.borderColor='#D97706'" onblur="this.style.borderColor='#e5e7eb'">
+                        </div>
+                        <div style="margin-bottom:1.5rem;">
+                            <label style="display:block;font-weight:600;margin-bottom:5px;font-size:0.875rem;color:#374151;">Mesaj</label>
+                            <textarea name="message" rows="5" required
+                                style="width:100%;padding:10px 14px;border:1.5px solid #e5e7eb;border-radius:8px;font-size:0.95rem;font-family:inherit;resize:vertical;box-sizing:border-box;transition:border-color 0.15s;outline:none;"
+                                onfocus="this.style.borderColor='#D97706'" onblur="this.style.borderColor='#e5e7eb'"></textarea>
+                        </div>
+                        <button type="submit"
+                            style="background:#D97706;color:white;border:none;padding:11px 28px;border-radius:8px;font-size:0.95rem;font-weight:600;cursor:pointer;font-family:inherit;width:100%;transition:background 0.15s;"
+                            onmouseover="this.style.background='#b45309'" onmouseout="this.style.background='#D97706'">
+                            Gönder
+                        </button>
+                    </form>
 
-                <p style="margin-top:2rem;font-size:0.85rem;color:#6b7280;">Doğrudan mail göndermek isterseniz: <a href="mailto:berkay_inam@hotmail.com">berkay_inam@hotmail.com</a></p>
+                    <p style="margin-top:1.75rem;font-size:0.85rem;color:#9ca3af;text-align:center;">veya doğrudan <a href="mailto:berkay_inam@hotmail.com" style="color:#D97706;">berkay_inam@hotmail.com</a></p>
+                </div>
             </div>
 
         </div>
@@ -263,7 +269,6 @@ window.LANG_MAP = {
 
 </div>
 
-</main>
 </main>
 
 <footer class="site-footer">
