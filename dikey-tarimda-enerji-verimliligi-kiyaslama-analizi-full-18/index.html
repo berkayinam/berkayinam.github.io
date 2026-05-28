@@ -19,6 +19,9 @@
         .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
         .post-header { padding: 48px 0 32px; border-bottom: 1px solid #f0f0f0; }
         .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 12px; }
+        .breadcrumb a:first-child { color: #555; font-weight: 500; text-decoration: none; }
+        .breadcrumb a:first-child::before { content: "←  "; }
+        .breadcrumb a:first-child:hover { color: #D97706; }
         .breadcrumb a { color: #888; text-decoration: none; }
         .breadcrumb a:hover { color: #D97706; }
         .full-badge { display: inline-block; background: #D97706; color: white; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 3px; margin-bottom: 12px; text-transform: uppercase; }
