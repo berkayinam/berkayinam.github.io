@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Malzemeler — Safran Topluluğu</title>
+    <meta name="description" content="Safran AR-GE projesinde kullanılan donanım envanteri ve eksik malzeme listesi.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css%3Fv=d39f020386.css">
+    <style>
+        .inv-section {
+            margin-bottom: 2.5rem;
+        }
+        .inv-section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 0 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f3f4f6;
+        }
+        .inv-section-title.missing {
+            border-color: #fde68a;
+        }
+        .inv-group {
+            margin-bottom: 1.5rem;
+        }
+        .inv-group-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #D97706;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 0.6rem;
+        }
+        .inv-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        .inv-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.5;
+        }
+        .inv-list li::before {
+            content: "·";
+            color: #D97706;
+            font-weight: 700;
+            font-size: 1.1rem;
+            line-height: 1.3;
+            flex-shrink: 0;
+        }
+        .inv-list.missing li {
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        .inv-list.missing li .inv-note {
+            font-weight: 400;
+            color: #9ca3af;
+            font-size: 0.82rem;
+        }
+        .inv-badge-urgent {
+            display: inline-block;
+            background: #fef3c7;
+            color: #92400e;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.1rem 0.45rem;
+            border-radius: 4px;
+            margin-left: 0.4rem;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        .inv-note-block {
+            background: #f9fafb;
+            border-left: 3px solid #d1d5db;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.83rem;
+            color: #6b7280;
+            margin-bottom: 0.8rem;
+            font-style: italic;
+        }
+        .inv-divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 2rem 0;
+        }
+        @media (max-width: 640px) {
+            .inv-list li {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body class="page-template page-malzemeler">
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="site-logo">
+            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span class="logo-text">Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="index.html">Araştırmalar</a>
+            <a href="protokol.html">Protokol</a>
+            <a href="hakkinda.html">Hakkında</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="arge.html">AR-GE</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="5" x2="19" y2="5"/>
+                <line x1="3" y1="11" x2="19" y2="11"/>
+                <line x1="3" y1="17" x2="19" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+<div class="post-layout">
+
+    <header class="post-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="arge.html">AR-GE</a></div>
+            <h1 class="post-title">Malzemeler</h1>
+        </div>
+    </header>
+
+    <div class="post-content-wrap">
+        <div class="container">
+            <div class="post-content gh-content">
+
+                <p>Safran AR-GE projesinin donanım envanteri — elimde olanlar ve henüz temin etmem gerekenler. Liste 23 Mayıs 2026 tarihinde güncellendi.</p>
+
+                <hr class="inv-divider">
+
+                <!-- BÖLÜM 1: ELİMDEKİLER -->
+                <div class="inv-section">
+                    <h2 class="inv-section-title">1 — Sahip Olduğum Malzemeler</h2>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Mikrodenetleyici ve Haberleşme</div>
+                        <ul class="inv-list">
+                            <li>STM32F411CEU6 Geliştirme Kartı (Black Pill) — 3 Adet</li>
+                            <li>ESP32 WiFi + Bluetooth Dual-Mode Geliştirme Kartı — 2 Adet <span style="color:#9ca3af;font-size:0.82rem;">(1'ini yaktım)</span></li>
+                            <li>MCP2515 CANBUS-SPI Haberleşme Modülü — 3 Adet</li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Sensörler ve İklimlendirme Röleleri</div>
+                        <ul class="inv-list">
+                            <li>SHT31 Sıcaklık ve Nem Sensörü Modülü - I2C — 2 Adet</li>
+                            <li>SHT30 Nem ve Sıcaklık Sensörü — 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(iade ettim, modül almamışım)</span></li>
+                            <li>DHT22 Arduino Sensör Modül — 2 Adet</li>
+                            <li>5V 8 Kanal Röle Kartı — 1 Adet</li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Güç, Soğutma ve İklimlendirme</div>
+                        <ul class="inv-list">
+                            <li>400 Watt Eski ATX Kasa PSU Güç Kaynağı — 1 Adet</li>
+                            <li>TEC1-12706 Termo Elektrik Peltier Soğutucu 72W — 1 Adet</li>
+                            <li>Alüminyum Soğutucu 4×4cm Altın Renk 143 Kanat Pasif Radyatör — 1 Adet</li>
+                            <li>40×40×7mm 12V 0.1A Fan — 1 Adet</li>
+                            <li>DC216 120×120×25 12Vdc 0.45A Fan — 2 Adet</li>
+                            <li>Eski Kasa Bilgisayar Fanı 12cm — 2 Adet <span style="color:#9ca3af;font-size:0.82rem;">(1'i yandı)</span></li>
+                            <li>1A Büyük Cam Sigorta 30mm — 5 Adet <span style="color:#9ca3af;font-size:0.82rem;">(sigorta yuvası hâlâ eksik)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Lehimleme ve Üretim Ekipmanları</div>
+                        <ul class="inv-list">
+                            <li>Yihua 947-VII Isı Ayarlı Kalem Havya 60W — 1 Adet</li>
+                            <li>Havya Süngeri — 1 Adet</li>
+                            <li>Kurtel 0.75mm Kendinden Pastalı Lehim Teli 5 Metre — 1 Adet</li>
+                            <li>Elektronikçiler için Yan Keski 130mm — 1 Adet</li>
+                            <li>Yıldız Tornavida (klasik boy) — 1 Adet</li>
+                            <li>ANENG DT830D Multimetre — 1 Adet</li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Kablolama ve Prototipleme</div>
+                        <ul class="inv-list">
+                            <li>40 Adet Dişi-Erkek Jumper Kablo 20cm — 1 Set</li>
+                            <li>40 Adet Erkek-Erkek Jumper Kablo 20cm — 1 Set</li>
+                            <li>40'lı Dişi-Dişi Jumper Seti — 1 Set</li>
+                            <li>Tekli Breadboard 830 Nokta — 1 Adet</li>
+                            <li>10×10 Delikli Plaket — 3 Adet</li>
+                            <li>1×40 180° Dişi Header — 5 Adet</li>
+                            <li>1×40 Precision Dişi Header — 1 Adet</li>
+                            <li>1×40 12mm Erkek Header — 1 Adet</li>
+                            <li>5'li Yaylı Klemens 90° — 3 Adet</li>
+                            <li>2'li Yaylı Klemens 90° — 3 Adet</li>
+                            <li>Isı İle Daralan Makaron: 3.2mm (Siyah 1m, Kırmızı 1m) &amp; 6.4mm (Siyah 1m, Kırmızı 1m)</li>
+                            <li>Globe İzole Elektrik Bandı - Siyah — 1 Adet</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <hr class="inv-divider">
+
+                <!-- BÖLÜM 2: EKSİKLER -->
+                <div class="inv-section">
+                    <h2 class="inv-section-title missing">2 — Eksik Malzemeler</h2>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">CAN-BUS / Güç Elektroniği</div>
+                        <div class="inv-note-block">CAN-BUS haberleşmesi için bir USB dönüştürücü de lazım olabilir — henüz emin değilim.</div>
+                        <ul class="inv-list missing">
+                            <li>
+                                AOD4184 MOSFET Modülü — 3 Adet
+                                <span class="inv-badge-urgent">ACİL</span>
+                                <span class="inv-note"> — CAN-BUS için gerekli, nasıl unuttum bilemedim</span>
+                            </li>
+                            <li>
+                                LM2596 (veya XL4015) Ayarlanabilir Voltaj Düşürücü — 3 Adet
+                                <span class="inv-note"> — gerekliliği belirsiz</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Grow Işık Bileşenleri</div>
+                        <div class="inv-note-block">Piyasada hazır bitki LED şeridi bulamadım, kendin yap yoluna gidiyorum.</div>
+                        <ul class="inv-list missing">
+                            <li>660nm Deep Red Power LED — 4 Adet <span class="inv-note">(1W–3W, Emitter kasa)</span></li>
+                            <li>450nm Royal Blue Power LED — 4 Adet <span class="inv-note">(1W–3W, Emitter kasa)</span></li>
+                            <li>4000K veya 6000K Beyaz Power LED — 2 Adet <span class="inv-note">(1W–3W, Emitter kasa)</span></li>
+                            <li>19mm Emitter Yıldız (Star) PCB — 10 Adet</li>
+                            <li>Alüminyum U-Profil — 30cm–1m</li>
+                            <li>Termal Macun ve/veya Termal Bant</li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Opsiyonel</div>
+                        <ul class="inv-list">
+                            <li>Şırınga Flux (Lehim Pastası) — 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(belki lazım olur)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Gübreleme İçin</div>
+                        <p style="color:#9ca3af;font-size:0.875rem;font-style:italic;margin:0;">Liste henüz tamamlanmadı.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">Safran Topluluğu</span>
+            <span class="footer-sep">—</span>
+            <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

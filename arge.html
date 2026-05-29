@@ -31,9 +31,9 @@
         }
         .arge-cards {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
-            max-width: 900px;
+            max-width: 1040px;
             margin: 0 auto;
         }
         .arge-card {
@@ -79,7 +79,12 @@
             color: #6b7280;
             line-height: 1.55;
         }
-        @media (max-width: 640px) {
+        @media (max-width: 700px) {
+            .arge-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
             .arge-cards {
                 grid-template-columns: 1fr;
                 max-width: 400px;
@@ -171,6 +176,19 @@
                 </div>
                 <div class="arge-card-title">Yapı</div>
                 <div class="arge-card-desc">Strafor izolasyon kutuları, alüminyum bant, kontrollü ortam tasarımı.</div>
+            </a>
+
+            <a href="malzemeler.html" class="arge-card">
+                <div class="arge-card-icon">
+                    <!-- Package / inventory icon -->
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <div class="arge-card-title">Malzemeler</div>
+                <div class="arge-card-desc">Elimdeki donanım envanteri ve eksik malzeme listesi.</div>
             </a>
 
         </div>
