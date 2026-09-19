@@ -271,6 +271,22 @@ window.LANG_MAP = {
 </div>
 
 
+<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.25rem 1.5rem;margin-bottom:2rem;font-size:0.875rem;line-height:1.6;">
+  <strong style="display:block;margin-bottom:0.6rem;font-size:1rem;">Uygulama Durumu — 20 Eylül 2026</strong>
+  <table style="margin:0;">
+  <thead><tr><th>Bölüm</th><th>Durum</th><th>Not</th></tr></thead>
+  <tbody>
+  <tr><td>2. Kutu inşaatı</td><td>✅ 1 kutu hazır</td><td>Dış 50×80×60 cm, iç 40×70×50 cm; diğer 2 kutu henüz yok.</td></tr>
+  <tr><td>3. Substrat</td><td>✅ Formül kesin</td><td>%70 perlit + %15 koko yonga + %15 kokopit.</td></tr>
+  <tr><td>4. LED</td><td>✅ Armatür çalışıyor</td><td>Sadece 660 nm + 450 nm; uzun süreli çalışma için soğutma şart.</td></tr>
+  <tr><td>5. Sıcaklık</td><td>🔧 Devam ediyor</td><td>1 Peltier bağlı; 28 °C dış havada kutu 22 °C altına inmedi. Dış hava ile soğutma deneniyor (§5.5).</td></tr>
+  <tr><td>6–7. Nem / Fan</td><td>🔧 Kısmen</td><td>ESP32 nem eşikli fan kontrolü test edildi.</td></tr>
+  <tr><td>8. Beslenme / sulama</td><td>⏳ Başlamadı</td><td>İlk haftalar elle sulanacak.</td></tr>
+  <tr><td>9–10. Ekim ve hasat</td><td>⏳ Başlamadı</td><td>100 soğan (18–21 g) yaz boyunca kuru ve sıcakta bekledi, yani uyku fazı fiilen tamamlandı; sıradaki adım ekim.</td></tr>
+  </tbody>
+  </table>
+</div>
+
 <!-- BÖLÜM 1: SİSTEM -->
 <h2 id="sistem" style="border-bottom:3px solid #D97706;padding-bottom:6px;">1. Sistem Genel Bakışı</h2>
 
@@ -309,6 +325,7 @@ window.LANG_MAP = {
 </tbody>
 </table>
 <p>Dış boyutlar = iç boyut + 10 cm (2 × 5 cm EPS). Her raf arası minimum 20 cm.</p>
+<p><strong>Uygulanan ilk kutu:</strong> 5 adet 5 cm karbonlu EPS levhadan dış 50×80×60 cm, iç 40×70×50 cm; iç yüzey alüminyum bantlı, iç yüksekliği daraltmamak için dışa basan 10 cm etekli kapak. İçine 50×30×20 cm (~30–35 L) ekim teknesi girer ve kenarlarda 5'er cm, ön/arkada 10'ar cm hava sirkülasyon boşluğu kalır.</p>
 
 <h3>2.3 Montaj Adımları</h3>
 <ol>
@@ -397,11 +414,24 @@ window.LANG_MAP = {
 <h3>5.3 Isıtma Sistemi</h3>
 <p><strong>Isıtma matı (seedling heat mat):</strong> 12–25W, dijital termostat ile kontrol. Saksıların altına veya yanına yerleştir; sensörü substratta soğana yakın tut. Isıtma matını doğrudan soğana değdirme — mat üstüne 1 cm perlit serip saksıyı üstüne koy.</p>
 <p><strong>Kullandığım donanım:</strong> Isıtma eşik kontrolü için <strong>W1209 dijital termostatlı röle</strong> — mikrodenetleyiciden bağımsız çalışır ve ayarlanan sıcaklığın altına düşünce ısıtıcıyı devreye alır. Düşük güçlü nokta ısıtması ve donma önleme için <strong>5V PTC ısıtıcı (40 °C)</strong>; PTC kendi kendini sınırladığından aşırı ısınma riski düşüktür.</p>
+<p><strong>Peltier ile ısıtma:</strong> Peltier'in kutupları ters çevrilince iç yüzey ısınır; ters çevirme için iki röleyle kurulan bir polarite (H-köprüsü) devresi gerekir. Isıtmada Peltier elektrikli ısıtıcıdan daha verimlidir; soğuk havalarda ana ısı kaynağı bu olacak.</p>
 
 <h3>5.4 Soğutma — Hasat Kutusu (Hedef 13–17 °C)</h3>
 <p><strong>Buz paketi yöntemi:</strong> 600g × 2 buz paketi kutu içine; 12 saatte bir değiştir.</p>
 <p><strong>Peltier yöntemi:</strong> 12V TEC1-12706 modülü — soğuk taraf kutu içine, sıcak taraf dışa. Heatsink + fan + PWM kontrolcü. Oda sıcaklığı 22–24 °C olan ortamlarda 13–15 °C sürdürülebilir. <strong>[TR-07]</strong></p>
 <p><strong>Kontrol donanımı:</strong> Peltier ve fanların aç/kapa anahtarlaması <strong>5V röle kartları</strong> (1 ve 4 kanal) ile, fan hızının PWM ile kısılması ise <strong>IRF540 MOSFET</strong> ile yapılır; röle ve motor hatlarına ters gerilime karşı <strong>1N4007 diyot</strong> eklenir.</p>
+<p><strong>Sahada gördüklerim:</strong> Peltier'in verimi tamamen sıcak yüzeyin ne kadar iyi soğutulduğuna bağlı. Küçük 4×4 cm kanatçıkla sistem 2 hafta boyunca işe yaramadı. Bakır borulu alüminyum blok takılınca kutu soğumaya başladı, ancak 28 °C dış havada tek Peltier kutuyu 22 °C'nin altına indiremedi. 2. Peltier ve 4 bakır borulu kule tipi soğutucu alındı ama henüz takılmadı; kule soğutucu fansız geldiği için üzerine 12 cm fan eklenmesi gerekiyor.</p>
+
+<h3 id="serbest-sogutma">5.5 Dış Hava ile Soğutma (Serbest Soğutma)</h3>
+<p>Sonbahar ve kış gecelerinde dış hava (≈16 °C ve altı), hasat kutusunun hedefinin (13–17 °C) altına iner. Bu dönemde kutuyu Peltier yerine <strong>dış havayı içeri alarak</strong> soğutmak çok daha az enerji harcar: bir fan birkaç watt çekerken Peltier 50–70 W çeker. Doğada safranın sonbaharda çiçek açmasını sağlayan sıcaklık düşüşü de tam olarak budur.</p>
+<ul>
+<li><strong>Sensörler:</strong> Kutu içi için SHT31 (I2C, kısa kablo); dış hava için DHT22. DHT22'yi güneş ve yağmurdan koru, örneğin ters çevrilmiş plastik kapların içine yerleştir.</li>
+<li><strong>Hava yolu:</strong> Alttan emen bir fan ve üstte karşı tarafta pasif bir çıkış deliği. Fan kapalıyken yalıtımın bozulmaması için çıkış deliği servo ile kapanan bir kapakla (MG90S) kapatılır. Girişe toz, spor ve böceklere karşı ince tül/filtre konur.</li>
+<li><strong>Kontrol kuralı:</strong> İç sıcaklık hedefin üst sınırının üstündeyse ve dış hava içeriden en az 2 °C soğuksa: kapak açılır, fan çalışır, Peltier kapalı kalır. Dış hava yeterince soğuk değilse: kapak kapanır, Peltier soğutur. İç sıcaklık alt sınırın altına düşerse: fan durur, kapak kapanır, gerekirse Peltier ters kutupla ısıtır.</li>
+<li><strong>Histerezis:</strong> Her geçiş için 1–1,5 °C'lik ölü bant bırakılır; aksi halde fan ve Peltier sürekli açılıp kapanır.</li>
+<li><strong>Nem kontrolü:</strong> Dış havanın bağıl nemi %85'in üzerindeyse (yağmur, sis) dış hava alınmaz; hasat kutusu hedefi %60–70'tir.</li>
+</ul>
+<p>Kutu kışın balkonda tutulacaksa gün içinde doğrudan güneş almayan bir yere konmalıdır; strafor kutu güneşte hızla ısınır.</p>
 
 <!-- BÖLÜM 6: NEM -->
 <h2 id="nem" style="border-bottom:3px solid #D97706;padding-bottom:6px;">6. Nem Kontrolü</h2>
