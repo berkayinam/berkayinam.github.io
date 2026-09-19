@@ -149,7 +149,7 @@
         <div class="container">
             <div class="post-content gh-content">
 
-                <p>Safran AR-GE projesinin donanım envanteri — elimde olanlar ve henüz temin etmem gerekenler. Liste 23 Mayıs 2026 tarihinde güncellendi.</p>
+                <p>Safran AR-GE projesinin donanım envanteri — elimde olanlar ve henüz temin etmem gerekenler. Liste 20 Eylül 2026 tarihinde güncellendi (Eylül sürücü/röle, kontrol ve el aleti alımları eklendi; MOSFET ve flux ihtiyaçları karşılandı).</p>
 
                 <hr class="inv-divider">
 
@@ -218,6 +218,75 @@
                             <li>Globe İzole Elektrik Bandı - Siyah — 1 Adet</li>
                         </ul>
                     </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Grow Işık ve Optik (Ağustos)</div>
+                        <div class="inv-note-block">Hazır bitki LED şeridi bulamadığım için kendim armatür yaptım: sadece 660nm Deep Red + 450nm Royal Blue. Beyaz/UV/Far-Red enerji israfı ve gövde uzaması yaptığı için elendi.</div>
+                        <ul class="inv-list">
+                            <li>660nm Deep Red + 450nm Royal Blue Power LED — 21 Adet <span class="inv-note">(1W–3W Yıldız PCB, kırmızı ağırlıklı)</span></li>
+                            <li>LED Dizgi Çubuğu (~60cm, 21 LED monte) — 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(ilk ışık alındı ✓)</span></li>
+                            <li>~350mA Sabit Akım (CC) LED Sürücü — 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(marketdigital'den; 21'li seriyi sürdü, çalışıyor)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Mekanik, Yalıtım ve Sarf (Ağustos)</div>
+                        <ul class="inv-list">
+                            <li>5cm Karbonlu EPS Strafor Levha (100×50cm) — 5 Adet</li>
+                            <li>Strafor Yapıştırıcı + Silikon Tabancası — 1'er Adet</li>
+                            <li>Alüminyum Parlak Bant — 1 Adet <span class="inv-note">(iç yüzey radyant + nem bariyeri)</span></li>
+                            <li>Maket Bıçağı — 1 Adet</li>
+                            <li>50×30×20cm Plastik Ekim Teknesi (~30–35 L) — 1 Adet</li>
+                            <li>1m Tij (Saplama) + Bağlantı Elemanları — Peltier blok montajı için</li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Substrat</div>
+                        <ul class="inv-list">
+                            <li>TR-15 Safran Substrat Harcı 30 L — Perlit Market'ten sipariş edildi <span style="color:#9ca3af;font-size:0.82rem;">(%70 iri perlit + %15 koko yonga + %15 yıkanmış kokopit; Pzt/Salı teslim bekleniyor)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Sürücü, Röle ve Kontrol (Eylül)</div>
+                        <ul class="inv-list">
+                            <li>IRF540 N-Kanal Power MOSFET TO220 100V/33A — 5 Adet <span class="inv-note">— LED şeridi ve fan gibi DC yükleri PWM ile kısılabilir biçimde sürmek için; eksik listesindeki MOSFET ihtiyacını karşıladı.</span></li>
+                            <li>5V 1 Kanal Röle Kartı — 4 Adet <span class="inv-note">— Peltier, ısıtıcı ve pompa gibi yükleri tek tek, birbirinden bağımsız açıp kapatmak için.</span></li>
+                            <li>5V 4 Kanal Röle Kartı — 1 Adet <span class="inv-note">— Bir kutunun birden çok yükünü (LED, fan, nemlendirici, ısıtıcı) tek modülden yönetmek için.</span></li>
+                            <li>W1209 Dijital Termostatlı Röle — 1 Adet <span class="inv-note">— Sıcaklığı eşiğe göre mikrodenetleyiciden bağımsız (yedek) tutup ısıtıcı/soğutucuyu anahtarlamak için.</span></li>
+                            <li>1N4007 Diyot — 10 Adet <span class="inv-note">— Röle ve motor bobinleri kapanırken oluşan ters gerilim sıçramasını (flyback) söndürüp devreyi korumak için.</span></li>
+                            <li>MG90S Servo Motor — 1 Adet <span class="inv-note">— Havalandırma kapağı/damperini otomatik açıp kapatmak için.</span></li>
+                            <li>LDR 5mm — 4 Adet <span class="inv-note">— LED armatürünün gerçekten yandığını ve ortam ışık düzeyini izlemek için.</span></li>
+                            <li>PTC Isıtıcı 5V 40°C — 1 Adet <span class="inv-note">— Kutu içini kontrollü ısıtmak ve soğuk dönemde donmayı önlemek için kendi kendini sınırlayan ısı kaynağı.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Kablolama ve Bağlantı (Eylül)</div>
+                        <ul class="inv-list">
+                            <li>3 Pin 5.08mm Yeşil Klemens — 5 Adet <span class="inv-note">— 12V güç ve röle çıkış hatlarını lehimli karta sökülebilir ve güvenli biçimde bağlamak için.</span></li>
+                            <li>İzoleli Kablo Yüksüğü — Beyaz (50'li) — 1 Paket <span class="inv-note">— Çok telli kablo uçlarını klemense düzgün ve tam temaslı bağlamak için.</span></li>
+                            <li>İzoleli Kablo Yüksüğü — Siyah (50'li) — 1 Paket <span class="inv-note">— Aynı amaç; renkle hat ayrımı (ör. GND/eksi) yapmak için.</span></li>
+                            <li>2.5×150mm Kablo Bağı — Beyaz (100'lü) — 1 Paket <span class="inv-note">— Kutu içi kablo demetlerini toplayıp derli toplu ve güvenli tutmak için.</span></li>
+                            <li>13×23 Delikli Plaket — 1 Adet <span class="inv-note">— Sürücü/röle devresini breadboard'dan kalıcı lehimli karta taşımak için.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Lehimleme ve El Aletleri (Eylül)</div>
+                        <ul class="inv-list">
+                            <li>Sunline 900M-T-I Havya Ucu — 1 Adet <span class="inv-note">— İnce uçlu, hassas noktalarda (küçük bacak/SMD) lehimleme için.</span></li>
+                            <li>Sunline 900M-T-1C Havya Ucu — 1 Adet <span class="inv-note">— Geniş temaslı; kalın güç hattı ve header lehimlerini hızlı ısıtmak için.</span></li>
+                            <li>Lehim Pastası (Şırınga Flux) — 1 Adet <span class="inv-note">— Lehimin akışını artırıp temiz, sağlam bağlantı elde etmek için; eksik listesindeki opsiyonel flux ihtiyacını karşıladı.</span></li>
+                            <li>Havya Dikey Tutucu (Lehim Aleti Standı) — 1 Adet <span class="inv-note">— Sıcak havyayı güvenle dik konumda tutup çalışma masasını korumak için.</span></li>
+                            <li>DZ-01 Mini Düz Tornavida 55mm — 1 Adet <span class="inv-note">— Klemens vidaları gibi küçük bağlantıları sıkmak için.</span></li>
+                            <li>Pense 120mm — 1 Adet <span class="inv-note">— İnce kablo ve küçük parçaların tutulması/bükülmesi için.</span></li>
+                            <li>Pense (genel boy) — 1 Adet <span class="inv-note">— Daha kalın tel ve mekanik montaj işleri için.</span></li>
+                            <li>Maket Bıçağı — 1 Adet (2. adet) <span class="inv-note">— Strafor kesimi ve genel kesme işlerinde yedek/keskin bıçak için.</span></li>
+                            <li>Metre — 1 Adet <span class="inv-note">— Kutu, profil ve hortum ölçülerini almak için.</span></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <hr class="inv-divider">
@@ -228,43 +297,57 @@
 
                     <div class="inv-group">
                         <div class="inv-group-label">CAN-BUS / Güç Elektroniği</div>
-                        <div class="inv-note-block">CAN-BUS haberleşmesi için bir USB dönüştürücü de lazım olabilir — henüz emin değilim.</div>
+                        <div class="inv-note-block">CAN-BUS için USB-CAN dönüştürücü de lazım olabilir; kutular arası bağlama topolojisinden henüz emin değilim.</div>
                         <ul class="inv-list missing">
                             <li>
-                                AOD4184 MOSFET Modülü — 3 Adet
-                                <span class="inv-badge-urgent">ACİL</span>
-                                <span class="inv-note"> — CAN-BUS için gerekli, nasıl unuttum bilemedim</span>
+                                LM2596 Ayarlanabilir Voltaj Düşürücü (Step-Down) — 3 Adet
+                                <span class="inv-note"> — 12V hattından mikrodenetleyicilere kararlı 5V için</span>
                             </li>
                             <li>
-                                LM2596 (veya XL4015) Ayarlanabilir Voltaj Düşürücü — 3 Adet
-                                <span class="inv-note"> — gerekliliği belirsiz</span>
+                                USB-CAN Dönüştürücü — 1 Adet
+                                <span class="inv-note"> — CAN-BUS ağını PC'ye bağlamak için (belirsiz)</span>
                             </li>
                         </ul>
                     </div>
 
                     <div class="inv-group">
-                        <div class="inv-group-label">Grow Işık Bileşenleri</div>
-                        <div class="inv-note-block">Piyasada hazır bitki LED şeridi bulamadım, kendin yap yoluna gidiyorum.</div>
+                        <div class="inv-group-label">LED Soğutma (Armatür yapıldı, soğutma eksik)</div>
+                        <div class="inv-note-block">21 LED'li armatür lehimlendi ama ledleri soğutacak profil ve termal arayüz hâlâ yok — 12 saat çalıştırırsam mevcut haliyle ledler yanabilir.</div>
                         <ul class="inv-list missing">
-                            <li>660nm Deep Red Power LED — 4 Adet <span class="inv-note">(1W–3W, Emitter kasa)</span></li>
-                            <li>450nm Royal Blue Power LED — 4 Adet <span class="inv-note">(1W–3W, Emitter kasa)</span></li>
-                            <li>4000K veya 6000K Beyaz Power LED — 2 Adet <span class="inv-note">(1W–3W, Emitter kasa)</span></li>
-                            <li>19mm Emitter Yıldız (Star) PCB — 10 Adet</li>
-                            <li>Alüminyum U-Profil — 30cm–1m</li>
+                            <li>Alüminyum U-Profil — 60cm–1m <span class="inv-badge-urgent">ACİL</span> <span class="inv-note">(LED çubuklarını soğutmak için)</span></li>
                             <li>Termal Macun ve/veya Termal Bant</li>
                         </ul>
                     </div>
 
                     <div class="inv-group">
-                        <div class="inv-group-label">Opsiyonel</div>
-                        <ul class="inv-list">
-                            <li>Şırınga Flux (Lehim Pastası) — 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(belki lazım olur)</span></li>
+                        <div class="inv-group-label">Damla Sulama İskeleti (Faz A — önce)</div>
+                        <div class="inv-note-block">1 kutuyu otomatik damla sulamak için taban sistem; mevcut ESP32 + 8 kanal röle ile zamanlı çalışır. Detay: <em>damla-sulama-gubreleme-plani.md</em>.</div>
+                        <ul class="inv-list missing">
+                            <li>Kapaklı plastik besin rezervuarı 10–20 L — 1 Adet</li>
+                            <li>12V DC diyafram su pompası (kendinden emişli, ~2–4 L/dk) — 1 Adet</li>
+                            <li>12V NC selenoid valf 1/2" — 3 Adet <span class="inv-note">(kutu başına 1; şimdi 1 kullan, uyku kutusu hariç)</span></li>
+                            <li>PE ana hat hortum 16mm + 4/7mm spagetti damla hortum — 1'er rulo</li>
+                            <li>Sprey bar: 16mm boruya Ø1mm delik açmak için matkap ucu <span class="inv-note">(perlitte sprey bar önerilir; dripper opsiyonel)</span></li>
+                            <li>Hat filtresi (screen/disk) — 1 Adet <span class="inv-note">(emitter tıkanmasını önler)</span></li>
+                            <li>Bağlantı seti: 16mm başlangıç konnektör, T/L ek, delik zımbası, hat sonu kapağı, kelepçe — 1 set</li>
+                            <li>(Opsiyonel) YF-S401 debi sensörü + su seviye şamandırası — 1'er Adet</li>
                         </ul>
                     </div>
 
                     <div class="inv-group">
-                        <div class="inv-group-label">Gübreleme İçin</div>
-                        <p style="color:#9ca3af;font-size:0.875rem;font-style:italic;margin:0;">Liste henüz tamamlanmadı.</p>
+                        <div class="inv-group-label">Otomatik pH Dozlama (Faz B — sonra)</div>
+                        <div class="inv-note-block">Rezervuar pH'ını otomatik sabitleyen modül; taban sistemin üstüne eklenir. pH'ı tutar ama EC'yi tutmaz (tam fertigasyon için EC + nutrient dozlama gerekir).</div>
+                        <ul class="inv-list missing">
+                            <li>pH sensör modülü (PH-4502C) + BNC pH probu — 1 Adet</li>
+                            <li>pH kalibrasyon tamponu (pH 4,0 + 7,0) — 1 set</li>
+                            <li>Peristaltik dozlama pompası 12V — 4 Adet <span class="inv-note">(Gübre A + B + pH-down + yedek/Ca)</span></li>
+                            <li>Konsantre tankı (A/B/pH-down şişe) — 3–4 Adet</li>
+                            <li>pH-down çözeltisi + A/B sıvı gübre <span class="inv-note">(kimyasal, ayrı temin)</span></li>
+                            <li>Su sıcaklık sensörü (DS18B20 su geçirmez) — 1 Adet <span class="inv-note">(ana tank)</span></li>
+                            <li>Sirkülasyon/karıştırma pompası 12V — 1 Adet <span class="inv-note">(tank homojen olsun)</span></li>
+                            <li>ADS1115 16-bit ADC — 1 Adet <span class="inv-note">(pH/EC okumasını ESP32 gürültüsünden kurtarır)</span></li>
+                            <li>EC/TDS sensör modülü — 1 Adet <span class="inv-note">(A+B otomatik dozlaması için gerekli — EC setpoint)</span></li>
+                        </ul>
                     </div>
                 </div>
 

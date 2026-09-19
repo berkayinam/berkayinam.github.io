@@ -395,11 +395,13 @@ window.LANG_MAP = {
 <p>Hasat kutusuna yeni batch girmeden önce soğanları <strong>5–7 gün boyunca 6–8 °C'de</strong> beklet (buzdolabı alt rafı, kuru konumda). Bu vernalizasyon adımı çiçek tomurcuğu açılımını tetikler — zorunlu adımdır. Keşmir verileri: vernalizasyon için 1000–1200 saatlik soğuklama gerekmektedir; ev koşullarında 5–7 günlük buzdolabı uygulaması yeterli çiçeklenme tepkisi oluşturur. <strong>[TR-05]</strong></p>
 
 <h3>5.3 Isıtma Sistemi</h3>
-<p><strong>Isıtma matı (seedling heat mat):</strong> 12–25W, STC-1000 dijital termostat ile kontrol. Saksıların altına veya yanına yerleştir; sensörü substratta soğana yakın tut. Isıtma matını doğrudan soğana değdirme — mat üstüne 1 cm perlit serip saksıyı üstüne koy.</p>
+<p><strong>Isıtma matı (seedling heat mat):</strong> 12–25W, dijital termostat ile kontrol. Saksıların altına veya yanına yerleştir; sensörü substratta soğana yakın tut. Isıtma matını doğrudan soğana değdirme — mat üstüne 1 cm perlit serip saksıyı üstüne koy.</p>
+<p><strong>Kullandığım donanım:</strong> Isıtma eşik kontrolü için <strong>W1209 dijital termostatlı röle</strong> — mikrodenetleyiciden bağımsız çalışır ve ayarlanan sıcaklığın altına düşünce ısıtıcıyı devreye alır. Düşük güçlü nokta ısıtması ve donma önleme için <strong>5V PTC ısıtıcı (40 °C)</strong>; PTC kendi kendini sınırladığından aşırı ısınma riski düşüktür.</p>
 
 <h3>5.4 Soğutma — Hasat Kutusu (Hedef 13–17 °C)</h3>
 <p><strong>Buz paketi yöntemi:</strong> 600g × 2 buz paketi kutu içine; 12 saatte bir değiştir.</p>
 <p><strong>Peltier yöntemi:</strong> 12V TEC1-12706 modülü — soğuk taraf kutu içine, sıcak taraf dışa. Heatsink + fan + PWM kontrolcü. Oda sıcaklığı 22–24 °C olan ortamlarda 13–15 °C sürdürülebilir. <strong>[TR-07]</strong></p>
+<p><strong>Kontrol donanımı:</strong> Peltier ve fanların aç/kapa anahtarlaması <strong>5V röle kartları</strong> (1 ve 4 kanal) ile, fan hızının PWM ile kısılması ise <strong>IRF540 MOSFET</strong> ile yapılır; röle ve motor hatlarına ters gerilime karşı <strong>1N4007 diyot</strong> eklenir.</p>
 
 <!-- BÖLÜM 6: NEM -->
 <h2 id="nem" style="border-bottom:3px solid #D97706;padding-bottom:6px;">6. Nem Kontrolü</h2>
@@ -428,6 +430,7 @@ window.LANG_MAP = {
 <li><strong>Hız:</strong> PWM modülü ile %30–50'ye düşür → sessizlik + yeterli sirkülasyon.</li>
 </ol>
 <p>Çoğaltma kutusunda fan <strong>zorunludur</strong>. Uyku kutusunda yalnızca haftada 10 dakika çalıştır.</p>
+<p><strong>Otomatik havalandırma:</strong> Taze hava girişini/tahliyesini otomatik ayarlamak için hava kapağına <strong>MG90S servo motor</strong> bağlanabilir; nem veya sıcaklık eşiği aşıldığında kapak açılır. Fan ve röle çıkışları lehimli sürücü kartı (13×23 delikli plaket + 5.08mm klemens) üzerinden bağlanır.</p>
 
 <!-- BÖLÜM 8: BESLENME -->
 <h2 id="beslenme" style="border-bottom:3px solid #D97706;padding-bottom:6px;">8. Beslenme ve Sulama</h2>
