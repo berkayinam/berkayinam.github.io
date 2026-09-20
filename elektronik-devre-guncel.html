@@ -75,13 +75,13 @@
 <div class="bilgi"><strong>En önemli kural: tüm GND'ler ortak.</strong> PSU'nun siyah kablosu, GND klemens barası, ESP32 GND, röle kartı GND, sensörlerin GND'si ve bütün yüklerin eksi uçları aynı hatta buluşur. Ortak GND olmazsa röleler ve sensörler doğru çalışmaz.</div>
 
 <h2 id="genel">1. Genel görünüm</h2>
-<figure class="fig"><img src="assets/img/sistem-genel.svg" alt="Sistemin genel görünümü: ATX PSU, ESP32, 8 kanal röle, çiçeklenme ve uyku kutuları, gelecekteki CAN-BUS düğümleri"><figcaption>Sensörler doğrudan ESP32'ye, eyleyiciler (fan, Peltier, LED, ısıtıcı) rölelere bağlı.</figcaption></figure>
+<figure class="fig"><a href="assets/img/sistem-genel.svg" target="_blank" rel="noopener"><img src="assets/img/sistem-genel.svg" alt="Sistemin genel görünümü: ATX PSU, ESP32, 8 kanal röle, çiçeklenme ve uyku kutuları, gelecekteki CAN-BUS düğümleri"></a><figcaption>Büyütmek için görsele dokun. Sensörler doğrudan ESP32'ye, eyleyiciler (fan, Peltier, LED, ısıtıcı) rölelere bağlı.</figcaption></figure>
 
 <h2 id="sema">2. Bağlantı şeması</h2>
-<figure class="fig"><img src="assets/img/devre-semasi.svg" alt="ESP32 pinlerinden röle girişlerine ve rölelerden yüklere bağlantı şeması"><figcaption>Her rölede aynı mantık: bara → COM, NO → yükün artısı, yükün eksisi → GND.</figcaption></figure>
+<figure class="fig"><a href="assets/img/devre-semasi.svg" target="_blank" rel="noopener"><img src="assets/img/devre-semasi.svg" alt="ESP32 pinlerinden röle girişlerine ve rölelerden yüklere bağlantı şeması"></a><figcaption>Her rölede aynı mantık: bara → COM, NO → yükün artısı, yükün eksisi → GND.</figcaption></figure>
 
 <h2 id="pertinaks">3. Pertinaks düzeni ve ESP32 pinleri</h2>
-<figure class="fig"><img src="assets/img/pertinaks-pinler.svg" alt="Pertinaksın üstten görünüşü ve 30 pinli ESP32 DevKit pin bağlantıları"><figcaption>30 pinli ESP32 DevKit V1 düzeni (USB aşağıda). Kendi kartındaki pin yazılarıyla (D26, RX2 vb.) karşılaştır.</figcaption></figure>
+<figure class="fig"><a href="assets/img/pertinaks-pinler.svg" target="_blank" rel="noopener"><img src="assets/img/pertinaks-pinler.svg" alt="Pertinaksın üstten görünüşü ve 30 pinli ESP32 DevKit pin bağlantıları"></a><figcaption>30 pinli ESP32 DevKit V1 düzeni (USB aşağıda). Kendi kartındaki pin yazılarıyla (D26, RX2 vb.) karşılaştır.</figcaption></figure>
 
 <h2 id="pinler">4. Pin tablosu</h2>
 <table class="tbl">
