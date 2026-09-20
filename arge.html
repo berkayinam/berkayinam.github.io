@@ -79,6 +79,42 @@
             color: #6b7280;
             line-height: 1.55;
         }
+        .arge-system {
+            max-width: 1040px;
+            margin: 0 auto 2.5rem;
+            background: #fff;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.75rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+        .arge-system h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 0 0 0.4rem;
+        }
+        .arge-system p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            max-width: 640px;
+            margin: 0 auto 1.25rem;
+            line-height: 1.6;
+        }
+        .arge-system img {
+            width: 100%;
+            max-width: 720px;
+            height: auto;
+        }
+        .arge-system-link {
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #D97706;
+            text-decoration: none;
+        }
+        .arge-system-link:hover { text-decoration: underline; }
         @media (max-width: 700px) {
             .arge-cards {
                 grid-template-columns: repeat(2, 1fr);
@@ -135,6 +171,13 @@
             <h1>AR-GE</h1>
             <p>Safran üretim sisteminin teknik belgeleri — devreden kutuya, koddan kuruluma.</p>
         </div>
+
+        <section class="arge-system">
+            <h2>Mevcut Tüm Sistemim</h2>
+            <p>Şu an tek bir ESP32 iki kutuyu yönetiyor: çiçeklenme kutusunda Peltier, turbo fan ve LED; uyku kutusunda PTC ısıtıcı. Sensörler ESP32'ye, eyleyiciler 8 kanallı röleye bağlı. İleride her kutuya CAN-BUS ile bağlı bir STM32 düğüm gelecek.</p>
+            <a href="elektronik-devre-guncel.html"><img src="assets/img/sistem-genel.svg" alt="Safran AR-GE sisteminin genel görünümü"></a>
+            <br><a class="arge-system-link" href="elektronik-devre-guncel.html">Tüm elektrik devresi ve adım adım kurulum →</a>
+        </section>
 
         <div class="arge-cards">
 

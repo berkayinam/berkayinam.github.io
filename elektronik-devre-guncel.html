@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tüm Elektrik Devresi (Güncel) — Safran Topluluğu</title>
+    <meta name="description" content="Safran AR-GE sisteminin güncel elektrik devresi: ESP32, 8 kanal röle, SHT31, DHT22, Peltier, PTC ve LED bağlantıları adım adım.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css%3Fv=d39f020386.css">
+    <style>
+.fig{margin:1.5rem 0 2rem;text-align:center}
+.fig img{width:100%;max-width:720px;height:auto;border:1px solid #e5e7eb;border-radius:10px;background:#fff}
+.fig figcaption{font-size:0.82rem;color:#6b7280;margin-top:0.5rem}
+.tbl{width:100%;border-collapse:collapse;font-size:0.88rem;margin:1rem 0 2rem}
+.tbl th,.tbl td{border-bottom:1px solid #e5e7eb;padding:0.5rem 0.6rem;text-align:left;vertical-align:top}
+.tbl th{background:#f9fafb;font-weight:600}
+.adim{counter-reset:a;list-style:none;padding:0;margin:1rem 0 2rem}
+.adim li{counter-increment:a;position:relative;padding:0.9rem 1rem 0.9rem 3.2rem;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:0.7rem;background:#fff;font-size:0.93rem;line-height:1.6}
+.adim li::before{content:counter(a);position:absolute;left:1rem;top:0.85rem;width:1.6rem;height:1.6rem;border-radius:50%;background:#D97706;color:#fff;font-weight:700;font-size:0.8rem;display:flex;align-items:center;justify-content:center}
+.adim li strong{display:block;margin-bottom:0.2rem;color:#1a1a2e}
+.uyari{background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:0.9rem 1.1rem;font-size:0.9rem;color:#7f1d1d;margin:1rem 0 1.5rem}
+.bilgi{background:#fff8ed;border:1px solid #D97706;border-radius:8px;padding:0.9rem 1.1rem;font-size:0.9rem;color:#6b4200;margin:1rem 0 1.5rem}
+@media (max-width:640px){.tbl{font-size:0.8rem}.adim li{padding-left:2.9rem}}
+</style>
+</head>
+<body class="page-template page-elektronik-devre">
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="site-logo">
+            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span class="logo-text">Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="index.html">Araştırmalar</a>
+            <a href="protokol.html">Protokol</a>
+            <a href="hakkinda.html">Hakkında</a>
+            <a href="iletisim.html">İletişim</a>
+            <a href="arge.html">AR-GE</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="5" x2="19" y2="5"/>
+                <line x1="3" y1="11" x2="19" y2="11"/>
+                <line x1="3" y1="17" x2="19" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+<div class="post-layout">
+    <header class="post-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="arge.html">AR-GE</a> › <a href="elektronik.html">Elektronik</a></div>
+            <h1 class="post-title">Tüm Elektrik Devresi (Güncel)</h1>
+        </div>
+    </header>
+    <div class="post-content-wrap">
+        <div class="container">
+            <div class="post-content gh-content">
+
+<p>Son güncelleme: <strong>20 Eylül 2026</strong>. Bu sayfa sistemin şu anki elektrik devresinin tamamını anlatıyor. Tek bir ESP32 iki kutuyu birden yönetiyor: <strong>çiçeklenme (hasat) kutusu</strong> ve <strong>uyku (dormansi) kutusu</strong>. Pertinaksta lehimli bir STM32 de var ama şimdilik kullanılmıyor; ileride her kutuya bir STM32 düğüm bağlanacak (en alttaki bölüm).</p>
+
+<div class="bilgi"><strong>En önemli kural: tüm GND'ler ortak.</strong> PSU'nun siyah kablosu, GND klemens barası, ESP32 GND, röle kartı GND, sensörlerin GND'si ve bütün yüklerin eksi uçları aynı hatta buluşur. Ortak GND olmazsa röleler ve sensörler doğru çalışmaz.</div>
+
+<h2 id="genel">1. Genel görünüm</h2>
+<figure class="fig"><img src="assets/img/sistem-genel.svg" alt="Sistemin genel görünümü: ATX PSU, ESP32, 8 kanal röle, çiçeklenme ve uyku kutuları, gelecekteki CAN-BUS düğümleri"><figcaption>Sensörler doğrudan ESP32'ye, eyleyiciler (fan, Peltier, LED, ısıtıcı) rölelere bağlı.</figcaption></figure>
+
+<h2 id="sema">2. Bağlantı şeması</h2>
+<figure class="fig"><img src="assets/img/devre-semasi.svg" alt="ESP32 pinlerinden röle girişlerine ve rölelerden yüklere bağlantı şeması"><figcaption>Her rölede aynı mantık: bara → COM, NO → yükün artısı, yükün eksisi → GND.</figcaption></figure>
+
+<h2 id="pertinaks">3. Pertinaks düzeni ve ESP32 pinleri</h2>
+<figure class="fig"><img src="assets/img/pertinaks-pinler.svg" alt="Pertinaksın üstten görünüşü ve 30 pinli ESP32 DevKit pin bağlantıları"><figcaption>30 pinli ESP32 DevKit V1 düzeni (USB aşağıda). Kendi kartındaki pin yazılarıyla (D26, RX2 vb.) karşılaştır.</figcaption></figure>
+
+<h2 id="pinler">4. Pin tablosu</h2>
+<table class="tbl">
+<thead><tr><th>ESP32 pini</th><th>Nereye</th><th>Görev</th></tr></thead>
+<tbody>
+<tr><td>VIN</td><td>5V barası</td><td>ESP32 besleme (asla 12V değil)</td></tr>
+<tr><td>GND (sol)</td><td>GND barası</td><td>Ortak toprak</td></tr>
+<tr><td>3V3</td><td>3V3 sensör barası</td><td>SHT31 + 2× DHT22 besleme</td></tr>
+<tr><td>GND (sağ)</td><td>GND sensör barası</td><td>Sensör toprakları</td></tr>
+<tr><td>D21</td><td>SHT31 SDA</td><td>Çiçeklenme kutusu iç sıcaklık/nem (I2C)</td></tr>
+<tr><td>D22</td><td>SHT31 SCL</td><td>I2C saat hattı</td></tr>
+<tr><td>D13</td><td>DHT22 #1 DATA</td><td>Dış hava (kutuların dışı)</td></tr>
+<tr><td>D14</td><td>DHT22 #2 DATA</td><td>Uyku kutusu içi</td></tr>
+<tr><td>D26</td><td>Röle IN1</td><td>Turbo giriş fanı (12V)</td></tr>
+<tr><td>D27</td><td>Röle IN2</td><td>Boş (ikinci fan için)</td></tr>
+<tr><td>D25</td><td>Röle IN3</td><td>LED sürücü (220V)</td></tr>
+<tr><td>D32</td><td>Röle IN4</td><td>Peltier (12V, ~6 A)</td></tr>
+<tr><td>D33</td><td>Röle IN5</td><td>Peltier sıcak taraf fanı (12V)</td></tr>
+<tr><td>RX2 (GPIO16)</td><td>Röle IN6</td><td>Uyku kutusu PTC ısıtıcı (5V)</td></tr>
+<tr><td>TX2 (GPIO17)</td><td>Röle IN7</td><td>Uyku kutusu 40 mm fan (12V)</td></tr>
+<tr><td>D4, D5, D18, D19, D23</td><td>—</td><td>İleride CAN-BUS (MCP2515) için boş bırakıldı</td></tr>
+</tbody></table>
+
+<h2 id="baralar">5. Klemens baraları</h2>
+<table class="tbl">
+<thead><tr><th>Bara</th><th>Giriş</th><th>Çıkışlar</th></tr></thead>
+<tbody>
+<tr><td><strong>12V</strong> (5'li yaylı)</td><td>PSU sarı</td><td>IN1, IN5, IN7 röle COM'ları (1 yuva yedek)</td></tr>
+<tr><td><strong>5V</strong> (5'li yaylı)</td><td>PSU kırmızı</td><td>ESP32 VIN, röle kartı VCC, IN6 COM (PTC), Peltier soğuk taraf 5V fanı (+)</td></tr>
+<tr><td><strong>GND</strong> (5'li yaylı + 3'lü vidalı)</td><td>PSU siyah</td><td>ESP32 GND, röle GND, turbo fan (−), Peltier sıcak fan (−), 5V fan (−), PTC (−), uyku fanı (−)</td></tr>
+<tr><td>3V3 sensör (header)</td><td>ESP32 3V3</td><td>SHT31 VIN, DHT22 #1 (+), DHT22 #2 (+)</td></tr>
+<tr><td>GND sensör (header)</td><td>ESP32 GND</td><td>SHT31 GND, DHT22 #1 (−), DHT22 #2 (−)</td></tr>
+</tbody></table>
+<p>Peltier ve LED'in 220V hattı bu baralardan <strong>geçmez</strong>: Peltier çok akım çektiği için PSU'dan ayrı kalın kabloyla beslenir, 220V ise hiçbir şekilde pertinaksa girmez.</p>
+
+<h2 id="adim">6. Adım adım kurulum</h2>
+<div class="uyari">Bütün bağlantıları <strong>enerjisizken</strong> yap: PSU'nun ve LED sürücüsünün fişi prizden çekili olsun.</div>
+<ol class="adim">
+<li><strong>PSU'yu tanı</strong>Sarı = 12V, kırmızı = 5V, siyah = GND. Turuncu (3.3V) ve mor (5VSB) kullanılmaz, uçlarını makaronla yalıt. PSU'nun açılması için yeşil (PS_ON) kablo bir siyah kabloya köprülüdür.</li>
+<li><strong>Baraları besle</strong>Bir sarı kabloyu 12V klemensine, bir kırmızıyı 5V klemensine, bir siyahı GND klemensine bağla; uçlara yüksük tak. Pertinaksın altında her klemensin bacaklarını kalın (0,75–1 mm²) bir telle birleştir; ince lehim köprüleri akım taşımaz. GND'ye 8 bağlantı gerektiği için 5'li klemensin yanına 3'lü vidalı klemens ekle ve aynı hatta birleştir.</li>
+<li><strong>ESP32'ye güç ver</strong>5V barası → ESP32 VIN, GND barası → ESP32 GND. 12V asla VIN'e gitmez (bir ESP32 bu yüzden yandı). Kod yüklerken PSU kapalı olsun, USB'den yükle.</li>
+<li><strong>Röle kartına güç ver</strong>5V barası → röle VCC, GND barası → röle GND. Karttaki JD-VCC jumper'ı yerinde kalsın.</li>
+<li><strong>Röle sinyallerini bağla</strong>Dişi-dişi jumper ile: D26 → IN1, D25 → IN3, D32 → IN4, D33 → IN5, RX2 (GPIO16) → IN6, TX2 (GPIO17) → IN7. IN2 ve IN8 boş kalır. Röleler aktif-LOW çalışır; firmware açılışta hepsini kapalı başlatır.</li>
+<li><strong>Sensör baralarını kur</strong>Pertinaksa iki kısa erkek header şeridi lehimle ve bacaklarını alttan birleştir. Birini ESP32'nin 3V3 pinine, diğerini ESP32'nin ikinci GND pinine bağla. Üç sensör buradan beslenir.</li>
+<li><strong>SHT31'i bağla (çiçeklenme kutusu içi)</strong>VIN → 3V3 barası, GND → GND sensör barası, SCL → D22, SDA → D21. Kablo 50 cm'yi geçmesin; sensörü Peltier'in soğuk bloğundan ve LED'den uzağa koy.</li>
+<li><strong>DHT22'leri bağla</strong>Modülün (+) ucu → 3V3 barası, (−) ucu → GND sensör barası. DATA/OUT: dış sensör → D13, uyku kutusu sensörü → D14. 5V'tan besleme; modüldeki direnç ESP32 pinine 5V verir. Kablo boyu 1 m'ye kadar sorunsuz.</li>
+<li><strong>12V yükleri bağla</strong>12V barası → IN1, IN5 ve IN7'nin COM uçları. NO uçları → turbo fan (+), Peltier sıcak taraf fanı (+), uyku kutusu 40 mm fan (+). Fanların eksi uçları GND barasına.</li>
+<li><strong>Peltier'i ayrı hattan bağla</strong>PSU'dan iki sarı kablo birlikte → IN4 COM; IN4 NO → Peltier kırmızı kablo; Peltier siyah kablo → PSU'dan iki siyah kablo birlikte. Peltier ~6 A çeker, bu yüzden pertinakstan geçmez ve ince kablo kullanılmaz.</li>
+<li><strong>5V yükleri bağla</strong>5V barası → IN6 COM; IN6 NO → PTC (+); PTC (−) → GND barası. Peltier'in soğuk taraf 5V fanı röleye bağlanmaz: (+) doğrudan 5V barasına, (−) GND'ye; sürekli döner ve kutu içindeki havayı karıştırır.</li>
+<li><strong>LED sürücüsünü bağla (220V)</strong>Sürücünün fiş kablosundaki iki damardan birini kes ve iki ucunu IN3'ün COM ve NO vidalarına bağla; diğer damar kesintisiz kalır. Uçlarda yüksük kullan, röle vidalarının üstünü kapat. 220V pertinaksa ve klemens baralarına girmez. Fişin prize takılış yönüne göre kesilen damar nötr olabilir, yani röle kapalıyken bile sürücü girişinde 220V bulunabilir; sürücüye dokunmadan önce fişi çek.</li>
+<li><strong>İlk çalıştırma testi</strong>(a) Enerjisizken multimetrenin bip modunda 5V–GND ve 12V–GND arasında kısa devre olmadığını kontrol et. (b) Yükleri takmadan PSU'yu aç; baralarda 12V ve 5V, sensör barasında 3,3V ölç. (c) Seri monitörde üç sensörün değerlerini gör. (d) Web panelinde her butona bas, rölelerin tık sesini duy. (e) Sonra yükleri tek tek bağlayıp tekrar dene.</li>
+</ol>
+
+<h2 id="mantik">7. Kontrol mantığı (özet)</h2>
+<ul>
+<li><strong>Çiçeklenme kutusu:</strong> hedef 13–17 °C. Dış hava içeriden en az 2 °C soğuksa kutu fanla dış havayla soğutulur, değilse Peltier devreye girer. Peltier en az 2 dakika açık/kapalı kalır; kapandıktan sonra sıcak taraf fanı 60 saniye daha döner. Kutu 10 °C'nin altına inerse Peltier kapanır.</li>
+<li><strong>Nem:</strong> fan nem için yalnızca dışarıdaki hava gerçekten daha kuruysa (çiğ noktası düşükse) ve Peltier çalışmıyorken açılır.</li>
+<li><strong>LED:</strong> internet saatine göre 11 saat açık (varsayılan 20:00–07:00, böylece LED ısısı serin saatlere denk gelir).</li>
+<li><strong>Uyku kutusu:</strong> PTC 25 °C'nin altında açılır, 26,5 °C'de kapanır; 30 °C'yi geçerse veya sensör okunamazsa her durumda kapalı kalır.</li>
+<li><strong>Web panel:</strong> LED, fan ve Peltier için Aç / Kapat / Otomatik butonları; manuel komut 2 saat sonra otomatiğe döner. WiFi koptuğunda da kontrol çalışmaya devam eder.</li>
+</ul>
+
+<h2 id="gelecek">8. Gelecek: CAN-BUS düğüm mimarisi</h2>
+<p>Pertinakstaki STM32'yi bu yüzden lehimledim. 2. hasat zamanı geldiğinde 1. hasat kutusundaki safranları çoğaltma kutusuna alacağım ve sistem üç düğüme bölünecek:</p>
+<ul>
+<li><strong>STM32 #1</strong> → 1. hasat kutusu</li>
+<li><strong>STM32 #2</strong> → 2. hasat kutusu</li>
+<li><strong>STM32 #3</strong> → dormansi kutusu</li>
+</ul>
+<p>STM32'ler slave düğüm olacak: kendi kutusunun sensörlerini okuyup komutları uygulayacak ve verileri CAN-BUS (MCP2515 modülleri, bükümlü CAN_H/CAN_L hattı, iki uçta 120 Ω sonlandırma) üzerinden ESP32'ye gönderecek. ESP32 ise WiFi'yi, web panelini ve bütün sistemin karar mantığını yöneten ana beyin olarak kalacak. Bu yüzden ESP32'de D4, D5, D18, D19 ve D23 pinleri CAN modülü için boş bırakıldı.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">Safran Topluluğu</span>
+            <span class="footer-sep">—</span>
+            <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
