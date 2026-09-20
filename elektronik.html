@@ -3,22 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Elektronik — Safran Topluluğu</title>
-    <link rel="canonical" href="hakkinda.html">
+    <title>Elektronik | Safran Topluluğu</title>
+    <link rel="canonical" href="elektronik.html">
     <meta name="referrer" content="no-referrer-when-downgrade">
     
     <meta property="og:site_name" content="Safran Topluluğu">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Hakkında">
-    <meta property="og:description" content="Safran Topluluğu hakkında — ücretsiz Türkçe kaynak, açık erişim, ticari kaygısız bilgi paylaşımı.">
+    <meta property="og:title" content="Elektronik">
+    <meta property="og:description" content="Safran AR-GE elektronik günlüğü: ESP32, sensörler, röleler, Peltier soğutma ve devre şemaları adım adım.">
     <meta property="og:url" content="http://localhost:2368/hakkinda/">
     <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
     <meta property="article:published_time" content="2026-05-25T18:53:06.000Z">
     <meta property="article:modified_time" content="2026-05-25T18:54:46.000Z">
     <meta property="article:publisher" content="https://www.facebook.com/ghost">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hakkında">
-    <meta name="twitter:description" content="Safran Topluluğu hakkında — ücretsiz Türkçe kaynak, açık erişim, ticari kaygısız bilgi paylaşımı.">
+    <meta name="twitter:title" content="Elektronik">
+    <meta name="twitter:description" content="Safran AR-GE elektronik günlüğü: ESP32, sensörler, röleler, Peltier soğutma ve devre şemaları adım adım.">
     <meta name="twitter:url" content="http://localhost:2368/hakkinda/">
     <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
     <meta name="twitter:label1" content="Written by">
@@ -182,7 +182,7 @@ window.LANG_MAP = {
 };
     </script>
 </head>
-<body class="page-template page-elektronik">
+<body class="page-template page-elektronik sec-arge">
 
 <header class="site-header">
     <div class="container">
@@ -231,7 +231,7 @@ window.LANG_MAP = {
         <div class="container">
 
             <div class="post-content gh-content">
-                <p>Buraya zaman zaman adım adım güncellemeler gelecek. 50 bin soğanlık üretime geçene kadar bu süreci adım adım belgeleyeceğim — henüz ilk 100 soğanımı bile sipariş etmeden elektronik denemelere başladım. Her güncellemede bu sistemin en baştan en sona nasıl ilerlediğine, hangi hataları yaptığıma ve neler öğrendiğime tanık olacaksınız.</p>
+                <p>Buraya zaman zaman adım adım güncellemeler gelecek. 50 bin soğanlık üretime geçene kadar bu süreci adım adım belgeleyeceğim, henüz ilk 100 soğanımı bile sipariş etmeden elektronik denemelere başladım. Her güncellemede bu sistemin en baştan en sona nasıl ilerlediğine, hangi hataları yaptığıma ve neler öğrendiğime tanık olacaksınız.</p>
 
                 <p>Bu sayfada 3-kutulu hidroponik sistemin elektronik altyapısı belgelenecek: devreler, sensör seçimleri, bağlantı diyagramları, hangi malzemeyi neden kullandım ve kaç adımda production ortamına geçebileceğiz onu göreceğiz.</p>
 
@@ -251,11 +251,29 @@ window.LANG_MAP = {
                         <div style="font-size:0.875rem;color:#6b7280;">ESP32 + DHT22 + ATX PSU + Röle ile ilk otonom nem kontrolü. Bir ESP32 yaktım, bir fan bozuldu, ama sistem çalıştı.</div>
                     </a>
 
-                    <div style="display:block;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem 1.5rem;opacity:0.55;cursor:default;">
-                        <div style="font-size:0.75rem;font-weight:600;color:#9ca3af;letter-spacing:0.04em;margin-bottom:0.3rem;">2</div>
-                        <div style="font-weight:600;font-size:1rem;color:#6b7280;margin-bottom:0.35rem;">LED Işıklar ve STM32 Mimarisine Geçiş</div>
-                        <div style="font-size:0.875rem;color:#9ca3af;">Henüz başlamadı.</div>
-                    </div>
+                    <a href="elektronik-adim-2/index.html" style="display:block;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#D97706'" onmouseout="this.style.borderColor='#e5e7eb'">
+                        <div style="font-size:0.75rem;font-weight:600;color:#D97706;letter-spacing:0.04em;margin-bottom:0.3rem;">2</div>
+                        <div style="font-weight:600;font-size:1rem;color:#1a1a2e;margin-bottom:0.35rem;">LED Armatürü, Optik Tasarım ve STM32 Mimarisine Geçiş</div>
+                        <div style="font-size:0.875rem;color:#6b7280;">660nm + 450nm ile kendi grow LED'imi yaptım, 21 LED, ilk ışığı aldım. STM32 Blackpill'e geçtim; soğutucu ve firmware yüklemesi kaldı.</div>
+                    </a>
+
+                    <a href="elektronik-adim-3/index.html" style="display:block;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#D97706'" onmouseout="this.style.borderColor='#e5e7eb'">
+                        <div style="font-size:0.75rem;font-weight:600;color:#D97706;letter-spacing:0.04em;margin-bottom:0.3rem;">3</div>
+                        <div style="font-weight:600;font-size:1rem;color:#1a1a2e;margin-bottom:0.35rem;">Peltier ile Soğutma: 4×4 Kanatçıktan Bakır Borulu Bloğa</div>
+                        <div style="font-size:0.875rem;color:#6b7280;">Küçük kanatçık iki hafta boyunca işe yaramadı, bakır borulu blokla kutu soğudu ama 28 °C odada 22 °C sınırına takıldım. İkinci Peltier şimdilik beklemede.</div>
+                    </a>
+
+                    <a href="elektronik-adim-4/index.html" style="display:block;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#D97706'" onmouseout="this.style.borderColor='#e5e7eb'">
+                        <div style="font-size:0.75rem;font-weight:600;color:#D97706;letter-spacing:0.04em;margin-bottom:0.3rem;">4</div>
+                        <div style="font-weight:600;font-size:1rem;color:#1a1a2e;margin-bottom:0.35rem;">Fanlar, Nem ve Dış Hava ile Soğutma</div>
+                        <div style="font-size:0.875rem;color:#6b7280;">Nem için açılan fanlar Peltier ile yarışıyordu. Çiğ noktası karşılaştırması ve sonbahar gecelerinde dış havayla soğutma mantığı.</div>
+                    </a>
+
+                    <a href="elektronik-adim-5/index.html" style="display:block;background:#fff;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem 1.5rem;text-decoration:none;color:inherit;transition:border-color 0.15s;" onmouseover="this.style.borderColor='#D97706'" onmouseout="this.style.borderColor='#e5e7eb'">
+                        <div style="font-size:0.75rem;font-weight:600;color:#D97706;letter-spacing:0.04em;margin-bottom:0.3rem;">5</div>
+                        <div style="font-weight:600;font-size:1rem;color:#1a1a2e;margin-bottom:0.35rem;">İki Kutu, Tek ESP32: Uyku Kutusu, Röleler ve Web Paneli</div>
+                        <div style="font-size:0.875rem;color:#6b7280;">PTC ısıtıcılı uyku kutusu, 8 kanal röle dağılımı ve Aç, Kapat, Otomatik butonlu yeni web paneli.</div>
+                    </a>
 
                 </div>
             </div>
@@ -271,7 +289,7 @@ window.LANG_MAP = {
     <div class="container">
         <div class="footer-inner">
             <span class="footer-brand">Safran Topluluğu</span>
-            <span class="footer-sep">—</span>
+            <span class="footer-sep">·</span>
             <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
         </div>
     </div>

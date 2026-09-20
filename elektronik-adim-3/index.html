@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Peltier ile Soğutma: 4×4 Kanatçıktan Bakır Borulu Bloğa | Safran Topluluğu</title>
+    <meta name="description" content="Hasat kutusunu Peltier ile soğutma denemeleri: küçük kanatçığın başarısızlığı, bakır borulu blok, 22 °C sınırı ve ikinci Peltier kararı.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css%3Fv=d39f020386.css">
+</head>
+<body class="post-template sec-arge">
+
+<header class="site-header">
+    <div class="container">
+        <a href="../index.html" class="site-logo">
+            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span class="logo-text">Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="../iletisim.html">İletişim</a>
+            <a href="../arge.html">AR-GE</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="5" x2="19" y2="5"/>
+                <line x1="3" y1="11" x2="19" y2="11"/>
+                <line x1="3" y1="17" x2="19" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+<div class="post-layout">
+
+    <header class="post-header">
+        <div class="container">
+            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.75rem;">
+                <a href="../elektronik.html" style="font-size:0.85rem;color:#6b7280;text-decoration:none;">← Elektronik</a>
+                <span style="color:#d1d5db;">·</span>
+                <span style="background:#D97706;color:white;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:0.05em;">ADIM 3</span>
+            </div>
+            <h1 class="post-title">Peltier ile Soğutma: 4×4 Kanatçıktan Bakır Borulu Bloğa</h1>
+            <p style="color:#6b7280;font-size:0.9rem;margin-top:0.75rem;">Ağustos ve Eylül 2026 · TEC1-12706 Peltier · SHT31</p>
+        </div>
+    </header>
+
+    <div class="post-content-wrap">
+        <div class="container">
+            <div class="post-content gh-content">
+
+                <p>Çiçeklenme (hasat) kutusunun protokoldeki hedefi 13–17 °C. Bu sıcaklığa inmek için tek bir <strong>TEC1-12706 (72 W) Peltier</strong> kullandım. Bu yazı ilk soğutma denemelerimi, yaptığım hataları ve şu an geldiğim noktayı anlatıyor.</p>
+
+                <h2>İlk deneme: 4×4 cm kanatçık</h2>
+                <p>Peltier'e ilk olarak küçük, 4×4 cm'lik altın renkli bir alüminyum kanatçık taktım. Yetmedi. Yüzey çok küçüktü ve kutudaki nem kanatçığın üzerinde yoğuşup ince bir su filmi oluşturunca ısı geçişi neredeyse durdu. Yaklaşık iki hafta boyunca kutuyu istediğim sıcaklığa getiremedim.</p>
+                <p>Buradan çıkardığım ders basit: Peltier ancak iki yüzü de iyi soğutulursa çalışır. Bir yüz ısıyı atamazsa diğer yüz de soğumaz. Kanatçığın boyutu Peltier'in gücüyle orantılı olmalı.</p>
+
+                <h2>İkinci deneme: bakır borulu alüminyum blok</h2>
+                <p>Bakır borulu alüminyum bir soğutucu blok bulunca kutu gerçekten soğumaya başladı. Ayrıca Trendyol'dan 10×10×1,8 cm'lik bir alüminyum blok aldım. Soğuk taraftaki bloğun kanatlarını yukarıdan aşağıya doğru, dikey olacak şekilde taktım. Böylece yoğuşan su kanatların üzerinde birikmek yerine aşağı akıp damlıyor.</p>
+                <p>Ama bir sınıra takıldım: dışarısı 28 °C iken tek Peltier kutuyu <strong>22 °C'nin altına indiremedi</strong>. Hedefe hâlâ 5 derece var.</p>
+
+                <h2>Web panelinde gördüğüm tablo</h2>
+                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;line-height:1.7;">Sıcaklık 21,9 °C · Nem %89,8 · Peltier açık · Egzoz ve giriş fanları açık</div>
+                <p>Nemin bu kadar yüksek olmasının iki sebebi var. Birincisi, soğuk blokta yoğuşan su şimdilik kutunun tabanına damlıyor ve orada tekrar buharlaşıyor. İkincisi, o zamanki kodum nem %85'i geçince fanları açıyordu. Fanlar odanın sıcak ve nemli havasını içeri çekiyor, yani Peltier soğuturken fanlar kutuyu hem ısıtıyor hem nemlendiriyordu. Bu çakışmayı nasıl çözdüğümü <a href="../elektronik-adim-4/index.html">Adım 4</a>'te anlattım.</p>
+
+                <h2>Peltier fanları</h2>
+                <p>Sıcak tarafta 12V bir fan var ve röleyle Peltier ile birlikte açılıp kapanıyor. Peltier kapandıktan sonra da 60 saniye dönmeye devam ediyor ki sıcak taraftaki ısı geri akmasın. Soğuk tarafta ise önce 12V bir fan denedim ama kutunun içinde çok güçlü kaldı ve kendisi de ısı üretiyordu. Onun yerine 5V bir fan taktım. Bu fan sürekli dönüyor ve kutu içindeki havayı karıştırıyor.</p>
+
+                <h2>İkinci Peltier: şimdilik beklemede</h2>
+                <p>Tek Peltier yetmeyince ikinci bir Peltier ve internet kafeden çıkma, kule tipi bir soğutucu aldım. Soğutucunun iki yüzeyi var, ortasından dört bakır boru geçiyor ama fanı yok. Tam kutuya ikinci delik açacakken durdum: sonbaharda geceler 16 °C'ye kadar düşüyor. Önce dış havayı kullanarak ne kadar soğutabildiğimi ölçeceğim, ikinci Peltier'i ancak gerekirse takacağım. Takarsam kule soğutucunun üstüne 12 cm'lik bir fan eklemem gerekecek.</p>
+
+                <h2>Öğrendiklerim</h2>
+                <ul>
+                    <li>Peltier'in verimini belirleyen şey soğutucusu. Küçük kanatçık para kaybı.</li>
+                    <li>Nemli ortamda soğuk yüzeyde su yoğuşur. Kanatları dikey tak ve suyun nereye gideceğini baştan planla.</li>
+                    <li>Tek Peltier, 28 °C'lik bir odada 55–60 cm'lik bir strafor kutuyu 13–17 °C'ye indirmeye yetmiyor.</li>
+                    <li>Fanlar ile Peltier aynı anda çalışacaksa ikisinin birbirine karşı çalışmadığından emin ol.</li>
+                </ul>
+
+                <h2>Sıradaki</h2>
+                <p>Dış hava ile soğutma (protokol <a href="../protokol.html#serbest-sogutma">§5.5</a>), soğuk blokta biriken su için bir damlama kabı ve Peltier'i ters kutupla ısıtıcı olarak da kullanabilmek için bir yön değiştirme devresi.</p>
+
+                <hr style="border:none;border-top:1px solid #e5e7eb;margin:2.5rem 0;">
+
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.875rem;gap:1rem;">
+                    <a href="../elektronik-adim-2/index.html" style="color:#D97706;text-decoration:none;">← Adım 2</a>
+                    <a href="../elektronik-adim-4/index.html" style="color:#D97706;text-decoration:none;">Adım 4 →</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">Safran Topluluğu</span>
+            <span class="footer-sep">·</span>
+            <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

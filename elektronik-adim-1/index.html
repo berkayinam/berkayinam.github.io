@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Adım 1 — İlk Sensör Siparişleri ve Otonom Nem Testi · Safran Topluluğu</title>
+    <title>Adım 1: İlk Sensör Siparişleri ve Otonom Nem Testi · Safran Topluluğu</title>
     <meta name="description" content="ESP32 + DHT22 + ATX PSU + 8 Kanal Röle ile ilk otonom nem kontrolü. Bir ESP32 yaktım, bir fan bozuldu, ama sistem çalıştı.">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css%3Fv=d39f020386.css">
 </head>
-<body class="post-template">
+<body class="post-template sec-arge">
 
 <header class="site-header">
     <div class="container">
@@ -62,15 +62,15 @@
         <div class="container">
             <div class="post-content gh-content">
 
-                <p>Protokolü yazmak ve makaleleri çevirmek güzeldi ama bir noktada "acaba gerçekten çalışır mı" sorusu teoriden pratiğe geçmeyi zorunlu kıldı. Henüz soğan siparişi vermeden, kutular kurulmadan önce sistemin elektronik tarafını test etmeye karar verdim. Kötü bir şey olsa para kaybı sadece malzeme fiyatı — soğan değil.</p>
+                <p>Protokolü yazmak ve makaleleri çevirmek güzeldi ama bir noktada "acaba gerçekten çalışır mı" sorusu teoriden pratiğe geçmeyi zorunlu kıldı. Henüz soğan siparişi vermeden, kutular kurulmadan önce sistemin elektronik tarafını test etmeye karar verdim. Kötü bir şey olsa para kaybı sadece malzeme fiyatı, soğan değil.</p>
 
                 <h2>Neden Bu Malzemeler?</h2>
 
                 <p>Malzeme seçiminin arkasında basit bir mantık var: <strong>evde zaten olanı kullan, gereksiz harcama yapma.</strong></p>
 
-                <p><strong>ATX PSU (400W, eski masa üstü kasadan):</strong> Evde kullanılmayan bir kasa vardı. ATX güç kaynakları aynı anda hem +5V hem +12V verebiliyor — ESP32 ve röle kartı 5V'tan, fanlar 12V'tan beslenecek. Ayrı adaptör almak yerine tek bir PSU ile tüm sistemi beslemek hem daha güvenli hem daha pratik. Üstelik bu yaklaşım production'a yakın: gerçek bir kurulumda da bu tür bir güç kaynağı kullanılacak.</p>
+                <p><strong>ATX PSU (400W, eski masa üstü kasadan):</strong> Evde kullanılmayan bir kasa vardı. ATX güç kaynakları aynı anda hem +5V hem +12V verebiliyor: ESP32 ve röle kartı 5V'tan, fanlar 12V'tan beslenecek. Ayrı adaptör almak yerine tek bir PSU ile tüm sistemi beslemek hem daha güvenli hem daha pratik. Üstelik bu yaklaşım production'a yakın: gerçek bir kurulumda da bu tür bir güç kaynağı kullanılacak.</p>
 
-                <p><strong>8 Kanal Röle Kartı:</strong> Sadece 1-2 fan kontrol etmek için 8 kanal fazla görünebilir ama ileride ısıtıcı, solenoid vana, ek fan, pompa gibi elemanlar eklenecek. Şimdiden genişletilebilir bir altyapı kurmak daha mantıklı. Ayrıca röle kullanmak ESP32'yi yük akımından koruyor — mikrodenetleyici pinleri doğrudan fan gibi yüksek akımlı yükleri süremez.</p>
+                <p><strong>8 Kanal Röle Kartı:</strong> Sadece 1-2 fan kontrol etmek için 8 kanal fazla görünebilir ama ileride ısıtıcı, solenoid vana, ek fan, pompa gibi elemanlar eklenecek. Şimdiden genişletilebilir bir altyapı kurmak daha mantıklı. Ayrıca röle kullanmak ESP32'yi yük akımından koruyor: mikrodenetleyici pinleri doğrudan fan gibi yüksek akımlı yükleri süremez.</p>
 
                 <p><strong>ESP32 (× 2 adet):</strong> Dahili WiFi var, Arduino IDE ile programlanabiliyor, fiyatı uygun. İki tane almamın sebebi ise birazdan anlaşılacak...</p>
 
@@ -80,7 +80,7 @@
 
                 <h2>Devreyi Nasıl Kurdum</h2>
 
-                <p>ATX PSU'yu aktif hale getirmek için önce 24-pin konektördeki yeşil teli (PS_ON) yanındaki siyah tele (GND) kısa devre ettim — böylece PSU her zaman açık kalıyor. Ardından Molex kablosunu ortadan keserek 4 teli (sarı 12V, kırmızı 5V, 2× siyah GND) 5'li klemense bağladım.</p>
+                <p>ATX PSU'yu aktif hale getirmek için önce 24-pin konektördeki yeşil teli (PS_ON) yanındaki siyah tele (GND) kısa devre ettim, böylece PSU her zaman açık kalıyor. Ardından Molex kablosunu ortadan keserek 4 teli (sarı 12V, kırmızı 5V, 2× siyah GND) 5'li klemense bağladım.</p>
 
                 <p>Klemens güç dağıtım noktası oldu: ESP32'nin Vin pinine 5V, röle kartının VCC'sine 5V, fanın COM hattına 12V. Tüm GND'ler ortak.</p>
 
@@ -104,27 +104,27 @@ ESP32 3.3V   → DHT22 VCC</pre>
                 <h2>Hatalar ve Kazalar</h2>
 
                 <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;color:#7f1d1d;">
-                    <strong>ESP32 #1 — Vin'e 12V verdim, kart öldü.</strong>
+                    <strong>ESP32 #1: Vin'e 12V verdim, kart öldü.</strong>
                     <p style="margin:0.5rem 0 0;">Röle kartının güç hattını bağlarken yanlışlıkla 12V'u ESP32'nin Vin pinine götürdüm. Vin pini maksimum 5V'a dayanıklı; 12V gelince dahili regülatör ve USB çipi (CH340) yandı. Kart bir daha boot etmedi. İkinci ESP32'yi açtım, devam ettim.</p>
                     <p style="margin:0.5rem 0 0;font-size:0.85rem;color:#991b1b;"><strong>Kural:</strong> ESP32 Vin = maks. 5V. 12V sadece fan, röle güç tarafı gibi izole hatlara.</p>
                 </div>
 
                 <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;color:#7f1d1d;">
-                    <strong>Frisby Fan #1 — Mekanik arıza.</strong>
-                    <p style="margin:0.5rem 0 0;">İki adet eski Frisby 12cm PC fanından biri devre sırasında dönerken takılı kaldı ve bir daha düzgün çalışmadı. Muhtemelen rulman yorgunluğu — eski fanlarda bu normal. İkinci fanla devam ettim.</p>
+                    <strong>Frisby Fan #1: Mekanik arıza.</strong>
+                    <p style="margin:0.5rem 0 0;">İki adet eski Frisby 12cm PC fanından biri devre sırasında dönerken takılı kaldı ve bir daha düzgün çalışmadı. Muhtemelen rulman yorgunluğu, eski fanlarda bu normal. İkinci fanla devam ettim.</p>
                 </div>
 
                 <h2>Sonuç</h2>
 
                 <p>Kazalara rağmen sonuç beklenenden iyi çıktı. Sistem şu an otonom çalışıyor: nem belirli eşiği geçince fan otomatik açılıyor, düşünce kapanıyor. Web server üzerinden telefon tarayıcısından anlık değerleri görebiliyorum. Soğan ve kutu olmadan, sırf elektronik bir test olarak bu kadarı gayet tatmin edici bir başlangıç.</p>
 
-                <p>Bir sonraki adımda LED aydınlatma ve STM32 mimarisine geçiş planı var — daha fazla GPIO, daha iyi gerçek zamanlı kontrol.</p>
+                <p>Bir sonraki adımda LED aydınlatma ve STM32 mimarisine geçiş planı var, daha fazla GPIO, daha iyi gerçek zamanlı kontrol.</p>
 
                 <hr style="border:none;border-top:1px solid #e5e7eb;margin:2.5rem 0;">
 
                 <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.875rem;">
                     <a href="../elektronik.html" style="color:#D97706;text-decoration:none;">← Elektronik ana sayfası</a>
-                    <span style="color:#9ca3af;">Adım 2 henüz yayınlanmadı</span>
+                    <a href="../elektronik-adim-2/index.html" style="color:#D97706;text-decoration:none;">Adım 2 →</a>
                 </div>
 
             </div>
@@ -137,7 +137,7 @@ ESP32 3.3V   → DHT22 VCC</pre>
     <div class="container">
         <div class="footer-inner">
             <span class="footer-brand">Safran Topluluğu</span>
-            <span class="footer-sep">—</span>
+            <span class="footer-sep">·</span>
             <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
         </div>
     </div>

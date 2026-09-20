@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adım 2: LED Armatürü, Optik Tasarım ve STM32 Mimarisine Geçiş · Safran Topluluğu</title>
+    <meta name="description" content="660nm Deep Red + 450nm Royal Blue ile kendi grow LED armatürümü yaptım, 21 LED, ilk ışığı aldım. STM32 Blackpill mimarisine geçtim; soğutucu ve firmware yüklemesi kaldı.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css%3Fv=d39f020386.css">
+</head>
+<body class="post-template sec-arge">
+
+<header class="site-header">
+    <div class="container">
+        <a href="../index.html" class="site-logo">
+            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span class="logo-text">Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="../index.html">Araştırmalar</a>
+            <a href="../protokol.html">Protokol</a>
+            <a href="../hakkinda.html">Hakkında</a>
+            <a href="../iletisim.html">İletişim</a>
+            <a href="../arge.html">AR-GE</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="5" x2="19" y2="5"/>
+                <line x1="3" y1="11" x2="19" y2="11"/>
+                <line x1="3" y1="17" x2="19" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+<div class="post-layout">
+
+    <header class="post-header">
+        <div class="container">
+            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.75rem;">
+                <a href="../elektronik.html" style="font-size:0.85rem;color:#6b7280;text-decoration:none;">← Elektronik</a>
+                <span style="color:#d1d5db;">·</span>
+                <span style="background:#D97706;color:white;font-size:0.7rem;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:0.05em;">ADIM 2</span>
+            </div>
+            <h1 class="post-title">LED Armatürü, Optik Tasarım ve STM32 Mimarisine Geçiş</h1>
+            <p style="color:#6b7280;font-size:0.9rem;margin-top:0.75rem;">Ağustos 2026 · 660nm + 450nm Power LED · STM32F411 Blackpill · SHT31</p>
+        </div>
+    </header>
+
+    <div class="post-content-wrap">
+        <div class="container">
+            <div class="post-content gh-content">
+
+                <p>Adım 1'de ESP32 ile nem-kontrollü fanı çalıştırmıştım. Bu adımda iki büyük işe giriştim: bitkinin ışığını üretecek <strong>kendi grow LED armatürümü</strong> yapmak ve sistemin beynini daha çok GPIO'su ve daha iyi gerçek zamanlı kontrolü olan <strong>STM32 Blackpill</strong>'e taşımak. Sonuç: <strong>armatür çalışıyor: ilk ışığımı aldım.</strong> 21 LED'i ~60 cm'lik tek çubuğa seri dizdim, CC sürücü seriyi rahat sürdü. STM32 tarafında ise donanımı lehimledim ama macOS'tan <strong>koda yükleyemedim</strong> (Windows'tan tekrar deneyeceğim). Bir de armatürün <strong>pasif soğutması</strong> hâlâ eksik.</p>
+
+                <h2>Işık Spektrumu Neden Sadece Kırmızı + Mavi?</h2>
+
+                <p>Grow ışığı seçerken önce beyaz ve UV LED'leri denemeyi düşündüm ama araştırma makaleleri (özellikle mavi ışığın safran fotosentezine etkisini inceleyen çalışma) net bir yön gösterdi. Bitkinin fotosentez ve etken madde (krosin) üretimi için asıl işe yarayan dalga boyları <strong>660 nm (Deep Red)</strong> ve <strong>450 nm (Royal Blue)</strong>. Beyaz LED spektrumun büyük kısmını bitkinin az kullandığı yeşil bölgeye harcıyor; UV ve 730 nm Far-Red ise bu aşamada gövde uzaması ve enerji israfından başka bir şey getirmiyor. Bu yüzden spektrumu bilinçli olarak sadece kırmızı + maviye indirdim.</p>
+
+                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.875rem;">
+                    <strong>Armatür özeti:</strong>
+                    <pre style="margin:0.75rem 0 0;font-size:0.82rem;line-height:1.8;overflow-x:auto;background:transparent;color:#1e293b;">LED sayısı   : 21 adet (1–3W Yıldız PCB, kırmızı ağırlıklı)
+Dalga boyu   : 660nm Deep Red + 450nm Royal Blue
+Taşıyıcı     : ~60cm tek çubuk, seri dizilim
+Sürücü       : ~350mA Sabit Akım (CC), marketdigital, seriyi sürdü 
+LED Vf       : power LED başına ~2.2V (kırmızı); sürücü penceresi yetti
+Optik hedef  : PPFD ~224–270 µmol/m²/s · DLI ~9.7–11.6 mol/m²/gün (12s)
+Mesafe       : LED–soğan tepesi 25–30cm</pre>
+                </div>
+
+                <h2>Neden Sabit Akım (Constant Current) Sürücü?</h2>
+
+                <p>Power LED'ler gerilimle değil <strong>akımla</strong> sürülür. Bir LED'e sabit voltaj verirsen, ısındıkça direnci düşer, daha çok akım çeker, daha çok ısınır: "thermal runaway" denen bu kısır döngü LED'i saniyeler içinde yakar. Sabit akım sürücü ise akımı sabit tutup gerilimi yüke göre kendi ayarlar. Bu yüzden hazır 12V şerit yerine ~350 mA'lik bir CC sürücü aldım. Mantık işe yaradı: sürücü 21 LED'lik seriyi rahatça sürdü.</p>
+
+                <h2>İlk Işık</h2>
+
+                <div style="background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;color:#166534;">
+                    <strong>Armatür yandı: ilk ışığı aldım. </strong>
+                    <p style="margin:0.5rem 0 0;">21 power LED'i ~60 cm'lik tek çubuğa seri bağladım. Kırmızı LED başına ~2,2 V ileri gerilim; toplam seri Vf sürücünün çıkış voltaj penceresine sığdı, dolayısıyla CC sürücü akımı sorunsuz dayattı ve ledler düzgün, kararlı yandı. Başta "voltaj yetmez mi?" diye tereddüt etmiştim ama seçtiğim sürücü bu seriyi sürdü.</p>
+                    <p style="margin:0.5rem 0 0;font-size:0.85rem;color:#15803d;"><strong>Ders:</strong> CC sürücü alırken çıkış voltaj penceresini (V) LED serisinin toplam Vf'ine göre kontrol et: bu sefer denk geldi, ama seri uzarsa sınır burada.</p>
+                </div>
+
+                <h2>Kalan Eksik</h2>
+
+                <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;color:#7f1d1d;">
+                    <strong>Soğutucu profil ve termal macun yok.</strong>
+                    <p style="margin:0.5rem 0 0;">LED dizgilerini alüminyum U-profile monte edip termal macunla ısı köprüsü kurmam gerekiyordu ama profili ve macunu henüz alamadım. Power LED'ler ürettikleri ışığın yanında ciddi ısı da üretir; pasif soğutma olmadan 12 saat çalıştırırsam ledler mevcut haliyle yanabilir. Yani armatür soğutulmadan uzun süreli çalıştırılamaz.</p>
+                </div>
+
+                <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;color:#7f1d1d;">
+                    <strong>Not:</strong> Sürücüyü <em>marketdigital</em>'den aldım (önce planladığım DoraLED değil), ve armatürü 18 değil <strong>21 LED</strong>'e göre kurdum. Bu iki nokta ilk taslak notlarımda yanlıştı.</p>
+                </div>
+
+                <h2>STM32 Blackpill Mimarisine Geçiş</h2>
+
+                <p>ESP32 ilk test için harikaydı ama üç kutuluk sistemde daha çok pin, daha deterministik zamanlama ve CAN-BUS gibi endüstriyel haberleşme istiyorum. Bu yüzden 2. kutunun beynini <strong>STM32F411CEU6 (Blackpill)</strong> olarak kurmaya başladım.</p>
+
+                <p>10×10 cm delikli pertinaks plakete STM32 için erkek/dişi header'ları lehimledim. <strong>SHT31</strong> sıcaklık/nem sensörünü I2C hattı üzerinden bağladım: aeroponik/sisli ortamda DHT22'nin bozulduğunu bildiğim için artık SHT31'e geçiyorum.</p>
+
+                <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.875rem;">
+                    <strong>STM32 + SHT31 bağlantısı:</strong>
+                    <pre style="margin:0.75rem 0 0;font-size:0.82rem;line-height:1.8;overflow-x:auto;background:transparent;color:#1e293b;">SHT31 SCL → PB6   |   SHT31 SDA → PB7
+SHT31 VCC → 3V3   |   SHT31 GND → GND
+Güç       : ATX PSU, yaylı klemens dağıtım</pre>
+                </div>
+
+                <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:1rem 1.5rem;margin:1.5rem 0;font-size:0.9rem;color:#7f1d1d;">
+                    <strong>Karta koda yükleyemedim (macOS).</strong>
+                    <p style="margin:0.5rem 0 0;">Blackpill'e macOS üzerinden firmware yükleyemedim (DFU/sürücü tarafında bir sorun). Bu yüzden SHT31 hattını da henüz test edemedim, donanım hazır, yazılım bekliyor. Bir Windows PC'den STM32CubeProgrammer / DFU ile tekrar deneyeceğim.</p>
+                </div>
+
+                <h2>CAN-BUS: Henüz Kâğıt Üstünde</h2>
+
+                <p>Üç kutuyu birbirine bağlamak için MCP2515 CAN modüllerim var ama kutular arası topolojiyi ve DC yükleri sürmek için gereken MOSFET modüllerini (AOD4184 / IRF520) henüz sipariş edemedim. CAN-BUS tarafı bu adımda planlama aşamasında kaldı; bağlantı şemasını netleştirince ayrı bir adımda anlatacağım.</p>
+
+                <div style="background:#fff8ed;border:1px solid #D97706;border-radius:8px;padding:1rem 1.25rem;margin:1.5rem 0;font-size:0.9rem;line-height:1.7;color:#6b4200;"><strong>Güncelleme (Eylül 2026):</strong> Armatürde şu an 18 LED var. U-profil almadım; onun yerine Bauhaus'tan 30 mm genişliğinde, 2 mm kalınlığında, 60 cm'lik düz alüminyum profil alıp LED'lerin arkasına HY-21 termal macunla taktım.</div>
+
+                <h2>Sonuç</h2>
+
+                <p>Bu adımın kazancı somut: <strong>armatür yandı, ilk ışığı aldım.</strong> Spektrum kararını (sadece 660nm + 450nm) araştırmaya dayandırdım, sabit akım sürücü mantığını doğru kurdum, 21 LED'lik seriyi sürücü rahat sürdü, STM32 + SHT31 donanımını lehimledim. İki açık iş kaldı: <strong>(1)</strong> armatüre U-profil soğutucu + termal macun ekleyip uzun süreli (12 s/gün) çalıştırmayı güvenceye almak; <strong>(2)</strong> STM32 firmware'ini Windows'tan yükleyip SHT31'i okumak. Ders: CC sürücü seçerken çıkış voltaj penceresini LED serisinin toplam Vf'ine göre kontrol et: bu sefer denk geldi.</p>
+
+                <hr style="border:none;border-top:1px solid #e5e7eb;margin:2.5rem 0;">
+
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.875rem;">
+                    <a href="../elektronik-adim-1/index.html" style="color:#D97706;text-decoration:none;">← Adım 1</a>
+                    <a href="../elektronik-adim-3/index.html" style="color:#D97706;text-decoration:none;">Adım 3 →</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">Safran Topluluğu</span>
+            <span class="footer-sep">·</span>
+            <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
