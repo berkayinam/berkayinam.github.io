@@ -139,7 +139,7 @@
 <li><strong>Nem:</strong> fan nem için yalnızca dışarıdaki hava gerçekten daha kuruysa (çiğ noktası düşükse) ve Peltier çalışmıyorken açılır.</li>
 <li><strong>LED:</strong> internet saatine göre 11 saat açık (varsayılan 20:00–07:00, böylece LED ısısı serin saatlere denk gelir).</li>
 <li><strong>Uyku kutusu:</strong> PTC 25 °C'nin altında açılır, 26,5 °C'de kapanır; 30 °C'yi geçerse veya sensör okunamazsa her durumda kapalı kalır.</li>
-<li><strong>Web panel:</strong> LED, fan ve Peltier için Aç / Kapat / Otomatik butonları; manuel komut 2 saat sonra otomatiğe döner. Her 5 dakikada bir ölçümler ve röle durumları ESP32'nin flaş belleğine kayit.csv olarak yazılır; panelde son 48 saatin grafiği görünür ve dosya indirilebilir. Bunun için ek donanım gerekmez. WiFi koptuğunda da kontrol çalışmaya devam eder.</li>
+<li><strong>Web panel:</strong> LED, fan ve Peltier için Aç / Kapat / Otomatik butonları; manuel komut 2 saat sonra otomatiğe döner. Saat başı ve buçukta, o 30 dakikanın ortalama ölçümleri ve rölelerin yüzde kaç açık kaldığı ESP32'nin flaş belleğine kayit.csv olarak yazılır; panelde son 48 saatin grafiği görünür ve dosya indirilebilir. Bunun için ek donanım gerekmez. WiFi koptuğunda da kontrol çalışmaya devam eder.</li>
 </ul>
 
 <h2 id="gelecek">8. Gelecek: CAN-BUS düğüm mimarisi</h2>
