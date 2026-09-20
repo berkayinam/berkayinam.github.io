@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LED Armatür: İki Çubuk, Tek Sürücü | Safran Topluluğu</title>
+    <meta name="description" content="Safran kutusunun LED armatürü: seri dizi mantığı, sabit akım sürücü seçimi, ışık hesabı ve yanmayan çubukta arıza bulma adımları.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css%3Fv=d39f020386.css">
+    <style>
+.fig{margin:1.5rem 0 2rem;text-align:center}
+.fig img{width:100%;max-width:720px;height:auto;border:1px solid #e5e7eb;border-radius:10px;background:#fff}
+.fig figcaption{font-size:0.82rem;color:#6b7280;margin-top:0.5rem}
+.tbl{width:100%;border-collapse:collapse;font-size:0.88rem;margin:1rem 0 2rem}
+.tbl th,.tbl td{border-bottom:1px solid #e5e7eb;padding:0.5rem 0.6rem;text-align:left;vertical-align:top}
+.tbl th{background:#f9fafb;font-weight:600}
+.adim{counter-reset:a;list-style:none;padding:0;margin:1rem 0 2rem}
+.adim li{counter-increment:a;position:relative;padding:0.9rem 1rem 0.9rem 3.2rem;border:1px solid #e5e7eb;border-radius:8px;margin-bottom:0.7rem;background:#fff;font-size:0.93rem;line-height:1.6}
+.adim li::before{content:counter(a);position:absolute;left:1rem;top:0.85rem;width:1.6rem;height:1.6rem;border-radius:50%;background:#D97706;color:#fff;font-weight:700;font-size:0.8rem;display:flex;align-items:center;justify-content:center}
+.adim li strong{display:block;margin-bottom:0.2rem;color:#1a1a2e}
+.uyari{background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:0.9rem 1.1rem;font-size:0.9rem;color:#7f1d1d;margin:1rem 0 1.5rem}
+.bilgi{background:#fff8ed;border:1px solid #D97706;border-radius:8px;padding:0.9rem 1.1rem;font-size:0.9rem;color:#6b4200;margin:1rem 0 1.5rem}
+@media (max-width:640px){.tbl{font-size:0.8rem}.adim li{padding-left:2.9rem}}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin:1rem 0 2rem}
+.gal img{width:100%;border:1px solid #e5e7eb;border-radius:10px}
+.gal figure{margin:0}
+.gal figcaption{font-size:0.8rem;color:#6b7280;margin-top:0.35rem}
+</style>
+</head>
+<body class="page-template page-elektronik-devre sec-arge">
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="site-logo">
+            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span class="logo-text">Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="arastirmalar.html">Araştırmalar</a>
+            <a href="protokol.html">Protokol</a>
+            <a href="arge.html">AR-GE</a>
+        </nav>
+        <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="5" x2="19" y2="5"/>
+                <line x1="3" y1="11" x2="19" y2="11"/>
+                <line x1="3" y1="17" x2="19" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+<div class="post-layout">
+    <header class="post-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="arge.html">AR-GE</a> › <a href="elektronik.html">Elektronik</a></div>
+            <h1 class="post-title">LED Armatür: İki Çubuk, Tek Sürücü</h1>
+        </div>
+    </header>
+    <div class="post-content-wrap">
+        <div class="container">
+            <div class="post-content gh-content">
+
+<p>20 Eylül 2026. Sürgünler toprağın üstüne çıkınca ışığı açma zamanı geldi. Tek çubukla hesapladığım ışık miktarı hedefin altında kaldığı için armatürü ikiye çıkardım. Bu sayfada hem son düzeni hem de bu sırada bir sürücü yakıp nasıl teşhis ettiğimi yazıyorum.</p>
+
+<div class="gal"><figure><a href="assets/img/foto/led-iki-cubuk.jpg" target="_blank" rel="noopener"><img src="assets/img/foto/led-iki-cubuk.jpg" alt="Seri bağlı iki LED çubuğu yanarken" loading="lazy"></a><figcaption>İki çubuk seri bağlı, tek sürücüyle çalışıyor.</figcaption></figure></div>
+
+<h2 id="duzen">Son düzen</h2>
+<table class="tbl">
+<tr><th>Parça</th><th>Değer</th></tr>
+<tr><td>LED</td><td>Powerlux 1 W, 350 mA yıldız PCB. Deep Red 650–670 nm ve Royal Blue 430–450 nm, iki kırmızı bir mavi sırasıyla</td></tr>
+<tr><td>Çubuk</td><td>120 cm alüminyum çubuk ortadan kesildi, iki adet 60 cm çubuk</td></tr>
+<tr><td>LED sayısı</td><td>Çubuk başına 17, toplam 34. Bir yuva boş kaldığı için telle köprülendi</td></tr>
+<tr><td>Sürücü</td><td>Powerlux DJT-BS1925A. Giriş AC 110–256 V, çıkış DC 57–83 V, sabit akım 320 mA</td></tr>
+<tr><td>Dizi gerilimi</td><td>Çubuk başına ölçülen yaklaşık 42 V, ikisi seri yaklaşık 84 V</td></tr>
+<tr><td>Soğutma</td><td>Her çubuğun arkasında 30 × 2 mm düz alüminyum profil, HY-21 termal macunla</td></tr>
+</table>
+
+<h2 id="seri">Neden seri, neden bu sayılar</h2>
+<p>Sabit akım sürücüsü akımı sabit tutar, gerilimi yüke göre kendi ayarlar. Bu yüzden LED'ler seri bağlanır: aynı akım hepsinden geçer ve parlaklık eşit olur. Paralel bağlamak iyi bir fikir değil, çünkü akım kollara eşit bölünmez; gerilimi biraz düşük olan kol akımın çoğunu çeker ve önce o ısınır.</p>
+<p>Seri dizide toplam gerilim, LED'lerin ileri gerilimlerinin toplamıdır. Bende kırmızı yaklaşık 2,1 V, mavi yaklaşık 3,1 V ölçüldü. Sürücünün çıkış aralığı da bu toplamı kapsamalı. Tek çubukta 18 LED yaklaşık 44 V ediyordu, yani sürücünün 57 V'luk alt sınırının altında kalıyordu. Buna rağmen LED'ler düzgün yanıyordu, ama iki çubuğu seri bağlayınca toplam 84 V'a çıktı ve sürücünün 83 V'luk tavanına dayandı. Çalışıyor; sönme ya da titreme görürsem bir LED daha çıkarıp yerini köprüleyeceğim.</p>
+<p>Seri dizinin kritik tarafı şu: <strong>tek bir kopukluk bütün çubuğu söndürür.</strong> Bozuk bir LED'i söküp yerini boş bırakırsanız hiçbir LED yanmaz. Boş yuvanın iki pedini telle köprülemek zinciri kapatır, o konum ışık vermez ama devre çalışır.</p>
+
+<h2 id="isik">Işık hesabı</h2>
+<p>PPFD ölçerim olmadığı için hesapla gidiyorum. 320 mA'de kırmızı LED yaklaşık 0,69 W, mavi 0,99 W elektrik çeker. Ucuz güç LED'lerinde elektrik enerjisinin ışığa dönüşme oranı %30–40 arasındadır. 660 nm'de 1 W ışık 5,5 µmol/s, 440 nm'de 3,7 µmol/s foton verir.</p>
+<p>Bu kabullerle 34 LED yaklaşık <strong>38–51 µmol/s</strong> fotosentetik foton akısı üretir. Kutunun içi alüminyum bantla kaplı olduğu için fotonların %60–75'inin 0,15 m²'lik tekneye düştüğünü varsayarsam teknede ortalama <strong>150–255 µmol m⁻² s⁻¹</strong> eder. 11 saat ışıkta günlük ışık miktarı 6–10 mol m⁻² gün⁻¹ olur. Protokoldeki hedef 224–270 idi; tek çubukla bunun yarısındaydım, iki çubukla alt sınıra geldim.</p>
+<p>Çubuklar tekneye paralel, aralarında yaklaşık 15 cm boşlukla asılacak ve yaprak uçlarının 15 cm üstünde duracak. Yapraklar uzadıkça yükseltilecek.</p>
+
+<h2 id="hata">Bir sürücü yaktım: giriş ile çıkışı karıştırmak</h2>
+<p>Sürücünün iki kahverengi teli giriş, kırmızı ve siyah teli çıkıştır. Ben 220 V'u kırmızı ve siyaha, yani çıkışa verdim. Fişi takar takmaz şalter attı. Sürücünün çıkış katı içeriden kısa devre oldu ve sürücü kullanılamaz hâle geldi. Anlaşılması kolay: fiş çekiliyken çıkış uçları arasında süreklilik kademesi ötüyorsa o sürücü gitmiştir.</p>
+<p>Alınacak ders basit. Etiketi okumadan hiçbir teli bağlamamak, giriş ve çıkış taraflarını bağlamadan önce işaretlemek, 220 V tarafında lehim yerine klemens kullanmak ve bütün ekleri makaronla kapatmak.</p>
+
+<h2 id="tespit">Yanmayan çubukta arıza bulma sırası</h2>
+<p>Bütün testler fiş prizden çekiliyken yapılır. Multimetre diyot kademesi LED'leri, süreklilik kademesi bağlantıları kontrol eder.</p>
+<ol class="adim">
+<li><strong>Sürücü sağlam mı:</strong> Çıkış uçları arasında süreklilik ötüyorsa sürücü bozuktur. Sağlam sürücüde ötme olmaz.</li>
+<li><strong>LED'ler sağlam mı:</strong> Diyot kademesinde her LED'in + ve − pedine dokunun. Kırmızılar hafifçe yanar ve 1500–2600 arası bir değer gösterir. Maviler için multimetrenin test gerilimi çoğu zaman yetmez, bu yüzden "1" görmek tek başına arıza anlamına gelmez; maviyi 3 V'luk düğme pille test etmek daha güvenilir. İki yönde de aynı değeri veren LED bozuktur.</li>
+<li><strong>Ters LED var mı:</strong> Kırmızı probu her zaman kartta + yazan pede koyun. Bu yönde yanmayıp ters yönde yanan LED ters lehimlenmiştir ve tek başına bütün diziyi söndürür.</li>
+<li><strong>Kopuk bağlantı var mı:</strong> Süreklilik kademesinde her LED'in − pedi ile bir sonrakinin + pedi arasında ötme olmalı. Ötmeyen yerde soğuk lehim vardır; gözle sağlam görünür ama iletmez.</li>
+<li><strong>Boş yuva var mı:</strong> Sökülüp yeri boş bırakılmış bir LED zinciri açar. Yerine LED takın ya da iki pedi köprüleyin.</li>
+<li><strong>Kısa devre var mı:</strong> Çubuğun + ve − uçları arasında ötme olmamalı. Ötüyorsa sürücü korumaya girer ve hiç ışık vermez.</li>
+</ol>
+
+<h2 id="seri-baglama">İki çubuğu seri bağlarken</h2>
+<p>Her çubuğun ucunda sonlandırma köprüsü var; bu köprü son LED'in eksisini kartın dönüş hattından başa geri getiriyor, böylece her çubuğun + ve − uçları aynı baştan çıkıyor. İki çubuk arasına <strong>tek bir tel</strong> gider:</p>
+<ul>
+<li>Sürücü + → 1. çubuğun +</li>
+<li>1. çubuğun − → 2. çubuğun + (ara tel)</li>
+<li>2. çubuğun − → sürücü −</li>
+</ul>
+<p>Bende ilk denemede 1. çubuk tam güç yandı, 2. çubuk hiç yanmadı. Sebep şuydu: sürücünün siyah ucu hâlâ 1. çubuğun − ucuna bağlıydı. Akım 1. çubuktan çıkıp doğrudan sürücüye dönüyor, 2. çubuğa hiç uğramıyordu. Seri devrede aynı akım bütün elemanlardan geçmek zorunda olduğu için "biri yanıyor, diğeri yanmıyor" tablosu her zaman böyle bir baypas anlamına gelir. Siyah ucu 2. çubuğun − tarafına almak sorunu çözdü.</p>
+
+<h2 id="sonraki">Sırada</h2>
+<p>Armatür 11 saat, 20:00–07:00 arası yanacak. LED'in kutuya verdiği ısı yaklaşık 26 W; ESP32'nin 30 dakikada bir tuttuğu kayıtla ışık açıkken kutunun kaç derece ısındığını ölçeceğim. Bozuk çıkan LED'lerin yerine yedek sipariş edilecek.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">Safran Topluluğu</span>
+            <span class="footer-sep">·</span>
+            <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
