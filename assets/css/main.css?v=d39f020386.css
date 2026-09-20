@@ -1062,3 +1062,26 @@ html { scroll-behavior: smooth; }
   }
   .post-content th, .post-content td { min-width: 72px; }
 }
+
+/* ===== Ana sayfa (Eylül 2026) ===== */
+.page-hero--compact { padding: 3rem 0 2rem; }
+.hero-stat--link { text-decoration: none; color: inherit; }
+.hero-stat--link:hover .hero-stat-number { color: #D97706; }
+.sec-arastirma .site-nav a[href$="arastirmalar.html"] { color: #D97706; font-weight: 600; }
+.home-section { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
+.home-section:last-child { border-bottom: none; }
+.home-section:first-child { padding-top: 0.5rem; }
+.home-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #D97706; margin-bottom: 0.5rem; }
+.home-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 0.75rem; color: var(--foreground); }
+.home-text { font-size: 0.95rem; line-height: 1.7; color: var(--muted-foreground); margin: 0 0 1rem; }
+.home-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-top: 1.25rem; }
+.home-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: inherit; transition: border-color 0.15s; }
+.home-card:hover { border-color: #D97706; }
+.home-card-title { font-weight: 600; color: var(--foreground); }
+.home-card-desc { font-size: 0.82rem; line-height: 1.5; color: var(--muted-foreground); }
+.home-more { display: inline-block; margin-top: 1rem; color: #D97706; font-weight: 600; text-decoration: none; }
+.home-more:hover { text-decoration: underline; }
+.home-prose { padding: 0; }
+.home-prose h3 { font-size: 1.05rem; margin: 1.5rem 0 0.4rem; }
+.home-prose h3:first-child { margin-top: 0; }
+@media (max-width: 640px) { .home-cards { grid-template-columns: 1fr; } }

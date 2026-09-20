@@ -119,10 +119,8 @@
             <span class="logo-text">Safran Topluluğu</span>
         </a>
         <nav class="site-nav">
-            <a href="index.html">Araştırmalar</a>
+            <a href="arastirmalar.html">Araştırmalar</a>
             <a href="protokol.html">Protokol</a>
-            <a href="hakkinda.html">Hakkında</a>
-            <a href="iletisim.html">İletişim</a>
             <a href="arge.html">AR-GE</a>
         </nav>
         <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
@@ -149,7 +147,7 @@
         <div class="container">
             <div class="post-content gh-content">
 
-                <p>Safran AR-GE projesinin donanım envanteri, elimde olanlar ve henüz temin etmem gerekenler. Liste 20 Eylül 2026 tarihinde güncellendi (Eylül sürücü/röle, kontrol, soğutma ve el aleti alımları eklendi; MOSFET ve flux ihtiyaçları karşılandı).</p>
+                <p>Safran AR-GE projesinin donanım envanteri, elimde olanlar ve henüz temin etmem gerekenler. Liste 20 Eylül 2026 tarihinde güncellendi (Eylül alımları, canlı materyal ve ekimle birlikte gereken ölçüm cihazları eklendi).</p>
 
                 <hr class="inv-divider">
 
@@ -226,7 +224,7 @@
                         <div class="inv-group-label">Grow Işık ve Optik (Ağustos)</div>
                         <div class="inv-note-block">Hazır bitki LED şeridi bulamadığım için kendim armatür yaptım: sadece 660nm Deep Red + 450nm Royal Blue. Beyaz/UV/Far-Red enerji israfı ve gövde uzaması yaptığı için elendi.</div>
                         <ul class="inv-list">
-                            <li>660nm Deep Red + 450nm Royal Blue Power LED: 18 Adet <span class="inv-note">(1W–3W Yıldız PCB, kırmızı ağırlıklı)</span></li>
+                            <li>660nm Deep Red + 450nm Royal Blue Power LED: 18 Adet <span class="inv-note">(12 kırmızı + 6 mavi, 1W–3W yıldız PCB, marketdigital)</span></li>
                             <li>LED Dizgi Çubuğu (~60cm, 18 LED monte): 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(ilk ışık alındı )</span></li>
                             <li>Alüminyum Düz Profil 30×2 mm, 60 cm (Bauhaus): 1 Adet <span class="inv-note">U-profil yerine LED çubuğunun arkasına pasif soğutucu olarak takıldı.</span></li>
                             <li>HY-21 Termal Macun 35 g: 1 Adet <span class="inv-note">LED yıldız PCB'leri ile alüminyum profil arasındaki ısı geçişini artırmak için.</span></li>
@@ -243,6 +241,13 @@
                             <li>Maket Bıçağı: 1 Adet</li>
                             <li>50×30×20cm Plastik Ekim Teknesi (~30–35 L): 1 Adet</li>
                             <li>1m Tij (Saplama) + Bağlantı Elemanları, Peltier blok montajı için</li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Canlı Materyal</div>
+                        <ul class="inv-list">
+                            <li>Safran Kormu (Crocus sativus), 18–21 g: yaklaşık 100 Adet (2 kg) <span class="inv-note">Crocus Farm (Niğde), online. İlk 18'i Eylül 2026'da çiçeklenme kutusuna 3 × 6 düzeninde ekildi; kalanlar uyku kutusunda bekliyor.</span></li>
                         </ul>
                     </div>
 
@@ -291,6 +296,7 @@
                             <li>Pense (genel boy): 1 Adet <span class="inv-note">Daha kalın tel ve mekanik montaj işleri için.</span></li>
                             <li>Maket Bıçağı: 1 Adet (2. adet) <span class="inv-note">Strafor kesimi ve genel kesme işlerinde yedek/keskin bıçak için.</span></li>
                             <li>Metre: 1 Adet <span class="inv-note">Kutu, profil ve hortum ölçülerini almak için.</span></li>
+                            <li>ESD-10 Elektrostatik Cımbız: 1 Adet <span class="inv-note">Küçük elektronik parçaları statik elektrik riski olmadan tutmak için.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -321,6 +327,23 @@
                     </div>
 
                     <div class="inv-group">
+                        <div class="inv-group-label">Ölçüm (öncelikli)</div>
+                        <div class="inv-note-block">Ekim başladığı için ışığı, besin çözeltisinin EC'sini ve pH'ını artık ölçmem gerekiyor.</div>
+                        <ul class="inv-list missing">
+                            <li>PPFD / kuantum ışık sensörü: 1 Adet <span class="inv-note"> LED armatürün soğanlara gerçekte ne kadar ışık verdiğini ölçmek için</span></li>
+                            <li>Analog TDS / EC sensörü: 1 Adet <span class="inv-note"> besin çözeltisinin iletkenliğini (EC 1,4–1,5 dS/m hedefi) ölçmek için</span></li>
+                            <li>Analog pH sensörü (PH-4502C) + BNC pH probu: 1 Adet <span class="inv-note"> sulama suyunun pH'ını 5,8–6,5 aralığında tutmak için</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Sarf</div>
+                        <ul class="inv-list missing">
+                            <li>Maket bıçağı yedek ucu: 1 Paket <span class="inv-note"> strafor kesiminde uç çabuk köreliyor</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
                         <div class="inv-group-label">Damla Sulama İskeleti (Faz A, önce)</div>
                         <div class="inv-note-block">1 kutuyu otomatik damla sulamak için taban sistem; mevcut ESP32 + 8 kanal röle ile zamanlı çalışır. Detay: <em>damla-sulama-gubreleme-plani.md</em>.</div>
                         <ul class="inv-list missing">
@@ -339,7 +362,6 @@
                         <div class="inv-group-label">Otomatik pH Dozlama (Faz B, sonra)</div>
                         <div class="inv-note-block">Rezervuar pH'ını otomatik sabitleyen modül; taban sistemin üstüne eklenir. pH'ı tutar ama EC'yi tutmaz (tam fertigasyon için EC + nutrient dozlama gerekir).</div>
                         <ul class="inv-list missing">
-                            <li>pH sensör modülü (PH-4502C) + BNC pH probu: 1 Adet</li>
                             <li>pH kalibrasyon tamponu (pH 4,0 + 7,0): 1 set</li>
                             <li>Peristaltik dozlama pompası 12V: 4 Adet <span class="inv-note">(Gübre A + B + pH-down + yedek/Ca)</span></li>
                             <li>Konsantre tankı (A/B/pH-down şişe): 3–4 Adet</li>
@@ -347,7 +369,6 @@
                             <li>Su sıcaklık sensörü (DS18B20 su geçirmez): 1 Adet <span class="inv-note">(ana tank)</span></li>
                             <li>Sirkülasyon/karıştırma pompası 12V: 1 Adet <span class="inv-note">(tank homojen olsun)</span></li>
                             <li>ADS1115 16-bit ADC: 1 Adet <span class="inv-note">(pH/EC okumasını ESP32 gürültüsünden kurtarır)</span></li>
-                            <li>EC/TDS sensör modülü: 1 Adet <span class="inv-note">(A+B otomatik dozlaması için gerekli, EC setpoint)</span></li>
                         </ul>
                     </div>
                 </div>
