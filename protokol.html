@@ -275,8 +275,8 @@ window.LANG_MAP = {
   <tr><td>4. LED</td><td><span style="display:inline-block;background:#dcfce7;color:#166534;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;">Tamam</span> Armatür çalışıyor</td><td>20 Eylül'de armatür ikiye çıkarıldı: iki çubuk seri, toplam 34 LED (1 W, 350 mA), Deep Red 650–670 nm + Royal Blue 430–450 nm; arkasında termal macunlu 30×2 mm alüminyum profil. PPFD henüz ölçülmedi; hesapla teknede ortalama 150–255 µmol m⁻² s⁻¹ tahmin ediliyor (<a href="led-armatur.html">hesap</a>).</td></tr>
   <tr><td>5. Sıcaklık</td><td><span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;">Devam ediyor</span></td><td>Çiçeklenme kutusu: 1 Peltier; 28 °C dış havada 22 °C altına inmedi, dış hava ile soğutma deneniyor (§5.5). Uyku kutusu: PTC ısıtıcı ile ≥25 °C. İki kutu tek ESP32 ile yönetiliyor.</td></tr>
   <tr><td>6–7. Nem / Fan</td><td><span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;">Kısmen</span></td><td>ESP32 nem eşikli fan kontrolü test edildi.</td></tr>
-  <tr><td>8. Beslenme / sulama</td><td><span style="display:inline-block;background:#f3f4f6;color:#4b5563;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;">Başlamadı</span></td><td>İlk haftalar elle sulanacak.</td></tr>
-  <tr><td>9–10. Ekim ve hasat</td><td><span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;">Başladı</span></td><td>1. parti: 18 korm (18–21 g, Crocus Farm, Niğde) çiçeklenme kutusuna 3 × 6 düzeninde, 5 cm derinliğe ekildi; kormun altında yaklaşık 8 cm kök payı bırakıldı. Ekim 20 Ağustos'ta yapıldı; ilk kök 13 Eylül, ilk sürgün 18 Eylül, 20 Eylül'de 16/18 kormda sürgün. Kök ve sürgün, kutu sıcaklığı 20–22 °C'ye inince başladı. Sulama haftada bir, tekneye yaklaşık 0,5 L musluk suyu; gübre yok. Ayrıntılar ve fotoğraflar: <a href="gunluk.html">1. parti günlüğü</a>. Kalan kormlardan 60'ı sürmesinler diye uyku kutusunda 25 °C üstünde bekliyor; kabuğunu ve tabanını soyduğum 20 korm ekilmedi.</td></tr>
+  <tr><td>8. Beslenme / sulama</td><td><span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;">Başladı</span></td><td>Ekim 2026'dan itibaren elle: 4 günde bir tekneye yaklaşık 600 mL, litrede 2 mL A + 2 mL B genel besin. EC/pH henüz ölçülmüyor. Ayrıntı: <a href="#beslenme">8.1b</a>.</td></tr>
+  <tr><td>9–10. Ekim ve hasat</td><td><span style="display:inline-block;background:#fef3c7;color:#92400e;font-size:0.75rem;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;">Başladı</span></td><td>1. parti: 18 korm (18–21 g, Crocus Farm, Niğde) çiçeklenme kutusuna 3 × 6 düzeninde, 5 cm derinliğe ekildi; kormun altında yaklaşık 8 cm kök payı bırakıldı. Ekim 20 Ağustos'ta yapıldı; ilk kök 13 Eylül, ilk sürgün 18 Eylül, 20 Eylül'de 16/18 kormda sürgün. Kök ve sürgün, kutu sıcaklığı 20–22 °C'ye inince başladı. Önce haftada bir yalnız su (tekneye yaklaşık 0,5 L); Ekim'den itibaren 4 günde bir yaklaşık 600 mL gübreli su. 17 Ekim: teknedekiler yeşil yaprak açtı, rafa dizilen kormların sürgünü birkaç santimetrede durdu. Ayrıntılar ve fotoğraflar: <a href="gunluk.html">1. parti günlüğü</a>. Kalan kormlardan 60'ı sürmesinler diye uyku kutusunda 25 °C üstünde bekliyor; kabuğunu ve tabanını soyduğum 20 korm ekilmedi.</td></tr>
   </tbody>
   </table>
 </div>
@@ -470,6 +470,20 @@ window.LANG_MAP = {
 </tbody>
 </table>
 <blockquote><strong>Demir uyarısı:</strong> Fe &gt; 25 µM iken hem toplam hem büyük soğancık ağırlığı belirgin azaldı. Hazır gübre etiketindeki Fe değerini kontrol et! <strong>[TR-15]</strong></blockquote>
+
+<h3>8.1b Şu an kullanılan gübre (Ekim 2026)</h3>
+<p>İki parçalı sıvı genel besin: GüneyDoğu Topraksız Tarım, Genel A ve B (500 mL). Firmanın bildirdiği içerik, % ağırlıkça: <strong>A:</strong> N 6 (tamamı nitrat), K₂O 9, CaO 6, Fe 0,02. <strong>B:</strong> N 2 (nitrat), P₂O₅ 5, K₂O 9, MgO 2, B 0,02, Cu 0,02, Mn 0,02, Zn 0,04.</p>
+<table>
+<thead><tr><th>Değer</th><th>Uygulama</th><th>Protokol hedefi</th></tr></thead>
+<tbody>
+<tr><td>Doz</td><td>1 L musluk suyuna 2 mL A + 2 mL B</td><td>-</td></tr>
+<tr><td>Azot (N)</td><td>yaklaşık 160–200 mg/L (yoğunluğa göre)</td><td>9800 µM nitrat ≈ 137 mg/L</td></tr>
+<tr><td>Demir (Fe)</td><td>yaklaşık 7–9 µM</td><td>20–25 µM</td></tr>
+<tr><td>Sulama</td><td>4 günde bir, tekneye yaklaşık 600 mL (18 korm)</td><td>Haftada 2, saksı başına 50–75 mL</td></tr>
+<tr><td>EC / pH</td><td>henüz ölçülmüyor</td><td>1,4–1,5 dS/m · 5,8–6,5</td></tr>
+</tbody>
+</table>
+<p>Hesap, sıvının yoğunluğu bilinmediği için 1,0–1,25 g/mL aralığıyla yapıldı. Azot hedefin biraz üstünde, demir altında. EC ölçülene kadar doz litrede 1,5 + 1,5 mL'ye indirilebilir; tuz birikmesin diye her 3-4 sulamadan birinde yalnız su verilir. Substrata dikilmemiş, rafta duran kormlar sulanmaz.</p>
 
 <h3>8.2 Sulama Takvimi [TR-15]</h3>
 <p><strong>Haftada 2 kez sulama</strong> en yüksek soğancık verimini verdi. Günlük sulama %44 soğan kaybına, haftalık sulama ise %50+ verim düşüşüne yol açtı. <strong>[TR-15]</strong></p>
