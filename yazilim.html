@@ -230,19 +230,25 @@ window.LANG_MAP = {
         <div class="container">
 
             <div class="post-content gh-content">
-                <p>Sistemin yazılım katmanı burada adım adım belgelenecek: firmware kodu, otomasyon mantığı, web arayüzü ve veri takibi. Her adım, devreyi tamamlayan yazılım parçalarını kapsar.</p>
+                <p>Kutuları ESP32 üzerinde çalışan kendi yazdığım kodla yönetiyorum. Bu sayfada yazılımın hangi sürümden hangisine geçtiğini ve şu an hangisinin hazır olduğunu tutuyorum. Kod Arduino IDE ile yazılıyor; telefondan açılan bir web paneli var, ek uygulama gerekmiyor.</p>
 
-                <hr style="border:none;border-top:1px solid #e5e7eb;margin:2rem 0;">
+                <h2>1. İlk sürüm: nem ve fan (Ağustos 2026)</h2>
+                <p>Tek kutu, DHT22 sensörü ve nem eşiğine göre fan açıp kapatan basit bir kod. Web panelde sıcaklık ve nem görünüyordu. Sorunu şuydu: nem yükselince fan sıcak ve nemli oda havasını içeri çekiyor, Peltier'in soğuttuğu kutuyu yeniden ısıtıyordu. Panelin ekran görüntüsü <a href="gunluk.html#sicak">günlükte</a>.</p>
 
-                <div style="display:flex;flex-direction:column;gap:1rem;">
+                <h2>2. İki kutu, tek ESP32 (Eylül 2026)</h2>
+                <p>Çiçeklenme kutusu ile uyku kutusunu birlikte yönetecek daha kapsamlı bir sürüm yazdım: iki Peltier, giriş ve egzoz fanları, uyku kutusunda PTC ısıtıcı, LED zamanlaması, panelden ayarlanabilir hedef sıcaklık, dış hava daha soğuksa fanla soğutma, çiğ noktasına göre nem tahliyesi ve 30 dakikada bir kartın kendi belleğine sıcaklık kaydı. Bu sürüm derlendi ama karta hiç yüklenmedi: Ekim'de hava soğuyunca Peltier'e gerek kalmadı, uyku kutusu da iptal oldu. Devresi <a href="elektronik-devre-guncel.html">Tüm Elektrik Devresi</a> sayfasında duruyor; tam sisteme dönülürse yeniden kullanılacak.</p>
 
-                    <div style="display:block;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:1.25rem 1.5rem;opacity:0.55;cursor:default;">
-                        <div style="font-size:0.75rem;font-weight:600;color:#9ca3af;letter-spacing:0.04em;margin-bottom:0.3rem;">1</div>
-                        <div style="font-weight:600;font-size:1rem;color:#6b7280;margin-bottom:0.35rem;">Arduino IDE ve ESP32'ye İlk Kod Yüklemesi: Otonom Nem ve Fan</div>
-                        <div style="font-size:0.875rem;color:#9ca3af;">DHT22 okuma, eşik tabanlı röle kontrolü ve WiFi web server kurulumu. Henüz yayınlanmadı.</div>
-                    </div>
-
-                </div>
+                <h2>3. Sade sürüm: ışık ve iç fan (Ekim 2026, hazır, henüz yüklenmedi)</h2>
+                <p>Kutu balkona çıkınca soğutma gereksiz kaldı. Şu an ihtiyaç olan yalnız ışığın düzenli yanması, kutu içinde havanın dönmesi ve sıcaklığın ölçülmesi. Bunun için sade bir sürüm yazdım:</p>
+                <ul>
+                    <li><strong>İki röle:</strong> biri LED sürücüsünün 220 V hattını, diğeri kutu içindeki sirkülasyon fanını açıp kapatıyor.</li>
+                    <li><strong>İki sensör:</strong> kutu içinde SHT31, dışarıda DHT22. Biri bağlı değilse panelde boş görünüyor, gerisi çalışmaya devam ediyor.</li>
+                    <li><strong>Web panel:</strong> telefondan ev ağında açılıyor. İç ve dış sıcaklık ve nem, saat, LED ve fan için Otomatik, Aç, Kapat düğmeleri.</li>
+                    <li><strong>Otomatik ışık:</strong> internetten saati alıp 20:00 ile 07:00 arası 11 saat yanıyor. Işığın gece yanması balkonda kutunun gece fazla soğumasını da engelliyor.</li>
+                    <li><strong>Otomatik fan:</strong> her yarım saatin 15 dakikası çalışıyor, nem %85'in üstündeyse sürekli dönüyor.</li>
+                    <li><strong>Elektrik kesilirse</strong> seçilen modlar kayıtlı kalıyor, WiFi koparsa röleler çalışmaya devam ediyor.</li>
+                </ul>
+                <p>Karta yükleyip çalıştığını gördükten sonra panel ekran görüntüsünü ve sıcaklık kaydını buraya ekleyeceğim. Sonraki adımlar: sıcaklık kaydını sade sürüme taşımak, ardından otomatik sulama.</p>
             </div>
 
         </div>
