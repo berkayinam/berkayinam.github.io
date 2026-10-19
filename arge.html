@@ -129,6 +129,9 @@
                 font-size: 1.4rem;
             }
         }
+            .arge-eski { margin: 1.25rem auto 0; max-width: 680px; text-align: left; }
+        .arge-eski summary { cursor: pointer; font-weight: 600; color: #6b7280; font-size: 0.9rem; }
+        .arge-eski img { margin-top: 0.75rem; opacity: 0.85; }
     </style>
 </head>
 <body class="page-template page-arge sec-arge">
@@ -166,9 +169,12 @@
 <div class="arge-hub">
     <div class="container">
         <section class="arge-system">
-            <h2>Mevcut Tüm Sistemim</h2>
-            <p>Aşağıdaki şema Eylül'de kurduğum tam sistemi gösteriyor: tek ESP32, çiçeklenme kutusunda Peltier, fanlar ve LED, uyku kutusunda PTC. Ekim'de hava soğuyunca soğutmaya gerek kalmadı ve uyku kutusu iptal oldu; kutu şu an balkonda ve elektronik bağlı değil. Sıradaki adım sade bir kurulum: ESP32, iki röleyle ışık ve iç fan, içeride SHT31, dışarıda DHT22. İleride her kutuya CAN-BUS ile bağlı bir STM32 düğüm gelecek.</p>
-            <a href="elektronik-devre-guncel.html"><img src="assets/img/sistem-genel.svg" alt="Safran AR-GE sisteminin genel görünümü"></a>
+            <h2>Mevcut Sistemim</h2>
+            <p>Ekim'de hava soğuyunca soğutmaya gerek kalmadı ve uyku kutusu iptal oldu; kutu balkonda, dış havayla soğuyor. Şema bu hafta kurulacak sade sistemi gösteriyor: güç kaynağı, ESP32 ve röle içeride, pencereden geçen kablolarla balkondaki kutuda LED, sirkülasyon fanı ve SHT31, kutunun dışında DHT22. Eylül'de planladığım Peltier'li, iki kutulu tam sistem aşağıda duruyor; ileride her kutuya CAN-BUS ile bağlı bir STM32 düğüm gelecek.</p>
+            <img src="assets/img/sistem-sade.svg" alt="Sade kurulum: içeride güç kaynağı, ESP32 ve röle; balkondaki kutuda LED, fan ve sensörler">
+            <details class="arge-eski"><summary>Eylül planı: tam sistem (kurulmadı)</summary>
+            <a href="elektronik-devre-guncel.html"><img src="assets/img/sistem-genel.svg" alt="Eylül'de planlanan tam sistem: iki kutu, Peltier, PTC ve CAN-BUS"></a>
+            </details>
             <br><a class="arge-system-link" href="elektronik-devre-guncel.html">Tüm elektrik devresi ve adım adım kurulum →</a>
             <br><a class="arge-system-link" href="gunluk.html">1. parti günlüğü: ekimden yaprağa fotoğraflı notlar →</a>
             <br><a class="arge-system-link" href="led-armatur.html">LED armatür: iki çubuk, ışık hesabı ve arıza bulma →</a>

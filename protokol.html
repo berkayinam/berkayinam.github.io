@@ -684,5 +684,17 @@ Küçük soğan (5–10 g)
   });
 })();
 </script>
+<script>
+(function(){
+  var hs=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  if(hs.length<3)return;
+  var nav=document.createElement('nav');nav.className='toc-side';nav.setAttribute('aria-label','İçindekiler');
+  nav.innerHTML='<b>İçindekiler</b>';
+  var links=hs.map(function(h){var a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent.replace(/\s*\[.*?\]\s*/g,'');nav.appendChild(a);return a;});
+  document.body.appendChild(nav);
+  function guncelle(){var y=window.scrollY+120,i=0;hs.forEach(function(h,k){if(h.offsetTop<=y)i=k;});links.forEach(function(a,k){a.classList.toggle('aktif',k===i);});}
+  window.addEventListener('scroll',guncelle,{passive:true});guncelle();
+})();
+</script>
 </body>
 </html>

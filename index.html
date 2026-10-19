@@ -230,50 +230,76 @@ window.LANG_MAP = {
 
 <main>
 
-<div class="page-hero">
+<section class="hero2">
     <div class="container">
-        <div class="hero-eyebrow">Safran Topluluğu</div>
-        <h1 class="hero-title">İç mekânda safran yetiştiriciliği</h1>
-        <p class="hero-desc">
-            Safranı merak eden herkesin buluştuğu, ücretsiz ve açık bir Türkçe kaynak topluluğu.
-            Bilimsel makaleleri Türkçeye taşıyor, evde kurduğum otonom safran kutularını adım adım belgeliyorum; ticari kaygı yok, sadece paylaşım var.
-        </p>
-        <div class="hero-stats">
-            <a class="hero-stat hero-stat--link" href="arastirmalar.html">
-                <span class="hero-stat-number">23</span>
-                <span class="hero-stat-label">makale</span>
-            </a>
-            <div class="hero-stat-sep"></div>
-            <a class="hero-stat hero-stat--link" href="arastirmalar.html">
-                <span class="hero-stat-number">Kaynak Havuzu →</span>
-                <span class="hero-stat-label">araştırma arşivi</span>
-            </a>
-            <div class="hero-stat-sep"></div>
-            <a class="hero-stat hero-stat--link" href="arastirmalar.html">
-                <span class="hero-stat-number">EN · TR · TR Full</span>
-                <span class="hero-stat-label">orijinal + özet + tam çeviri</span>
-            </a>
+        <div class="hero2-grid">
+            <div>
+                <div class="hero2-eyebrow">Safran Topluluğu · açık Ar-Ge günlüğü</div>
+                <h1 class="hero2-title">Evde, topraksız ortamda <em>safran</em> yetiştiriyorum</h1>
+                <p class="hero2-desc">Yalıtımlı kutularda, sensörler ve kendi yazdığım yazılımla safran yetiştirmeyi deniyorum. Bilimsel makaleleri Türkçeye taşıyor, her adımı hatalarıyla birlikte burada paylaşıyorum. Ticari kaygı yok, sadece paylaşım var.</p>
+                <div class="hero2-actions">
+                    <a class="btn2 btn2--primary" href="gunluk.html">Günlüğü oku →</a>
+                    <a class="btn2 btn2--ghost" href="arastirmalar.html">Araştırmalar</a>
+                    <a class="btn2 btn2--ghost" href="protokol.html">Protokol</a>
+                </div>
+                <div class="hero2-stats">
+                    <div class="hero2-stat"><b id="gunSayaci">60</b><span>ekimden bu yana gün</span></div>
+                    <div class="hero2-stat"><b>18</b><span>korm teknede</span></div>
+                    <a class="hero2-stat" href="arastirmalar.html"><b>23</b><span>makale, Türkçe</span></a>
+                </div>
+            </div>
+            <figure class="hero2-photo">
+                <img src="assets/img/foto/tekne-raf-17eki.jpg" alt="Teknede yeşil yapraklı safran sürgünleri, arkada rafta bekleyen kormlar">
+                <figcaption>Teknedeki ilk parti, 17 Ekim 2026</figcaption>
+            </figure>
         </div>
     </div>
-</div>
+</section>
 
 <div class="page-body">
     <div class="container home-sections">
 
         <section class="home-section">
             <div class="home-label">Şu an</div>
-            <h2 class="home-title">İlk partinin yaprakları açtı, kutu balkonda</h2>
-            <p class="home-text">100 safran kormunun ilk 18'i 20 Ağustos'ta 3 × 6 düzeninde çiçeklenme kutusundaki tekneye ekildi. İlk kökler 13 Eylül'de, ilk sürgün 18 Eylül'de çıktı; Ekim ortasında yapraklar açtı ve uzuyor, çiçek henüz yok. Uyku kutusu sıcaklığı tutamadığı için iptal oldu ve kalan kormların hepsi sürdü; bu sezon kaydırmalı parti olmayacak, kalanlar Kasım ortasına kadar dikilecek. Hava serinlediği için kutu 17 Ekim'den beri balkonda, dış havayla soğuyor. Şu an elektronik bağlı değil, ışığı elle açıp kapatıyorum; ışık, fan ve sıcaklık ölçümü için sade bir kontrol yazılımı hazır.</p>
-            <div class="home-cards">
-                <a class="home-card" href="gunluk.html"><span class="home-card-title">1. Parti Günlüğü</span><span class="home-card-desc">Ekimden yaprağa tarihli notlar ve fotoğraflar</span></a>
-                <a class="home-card" href="arge.html"><span class="home-card-title">AR-GE</span><span class="home-card-desc">Sistem şeması, elektronik, yapı ve malzemeler</span></a>
+            <h2 class="home-title">Yapraklar açtı, ilk çiçek bekleniyor</h2>
+            <ol class="timeline">
+                <li><span class="t-date">20 Ağu</span><span class="t-name">Ekim</span></li>
+                <li><span class="t-date">13 Eyl</span><span class="t-name">İlk kök</span></li>
+                <li><span class="t-date">18 Eyl</span><span class="t-name">İlk sürgün</span></li>
+                <li><span class="t-date">17 Eki</span><span class="t-name">Yapraklar, balkon</span></li>
+                <li class="next"><span class="t-date">Bekleniyor</span><span class="t-name">İlk çiçek</span></li>
+            </ol>
+            <div class="status-chips">
+                <span class="chip chip--saffron">Kutu balkonda, dış havayla soğuyor</span>
+                <span class="chip">Işık 22:00–10:00</span>
+                <span class="chip">A ve B gübre, derin sulama</span>
+                <span class="chip chip--crocus">Sensörler bu hafta bağlanıyor</span>
+            </div>
+            <p class="home-text" style="margin-top:1rem;">Uyku kutusu sıcaklığı tutamadığı için iptal oldu ve kalan kormların hepsi sürdü; bu sezon kaydırmalı parti yok, kalanlar Kasım ortasına kadar dikilecek. Ayrıntılar ve fotoğraflar günlükte.</p>
+        </section>
+
+        <section class="home-section">
+            <div class="home-label">Günlükten</div>
+            <h2 class="home-title">Son notlar</h2>
+            <div class="log-cards">
+                <a class="log-card" href="gunluk.html#18ekim"><img src="assets/img/foto/coklu-surgun-17eki.jpg" alt="Tek kormdan çıkan çok sayıda sürgün" loading="lazy"><div class="log-card-body"><span class="log-card-date">18 Ekim</span><span class="log-card-title">Kökler ve teknenin kuru dibi</span><span class="log-card-desc">Yüzey günlerce nemli görünürken dip kupkuruymuş. Derin sulamaya geçtim.</span></div></a>
+                <a class="log-card" href="gunluk.html#17ekim"><img src="assets/img/foto/raf-kormlar-17eki.jpg" alt="Rafta dizili, kısa sürgünlü kormlar" loading="lazy"><div class="log-card-body"><span class="log-card-date">17 Ekim</span><span class="log-card-title">Toprakta olanlar ile rafta olanlar</span><span class="log-card-desc">Aynı ışık altında teknedekiler yaprak açtı, raftakiler birkaç santimde durdu.</span></div></a>
+                <a class="log-card" href="gunluk.html#26eylul"><img src="assets/img/foto/surgun-26eyl.jpg" alt="Substrattan çıkan sürgün yakın çekim" loading="lazy"><div class="log-card-body"><span class="log-card-date">26 Eylül</span><span class="log-card-title">Sürgünler ve donanım</span><span class="log-card-desc">Sürgünler ilerliyor, kutunun elektriğini baştan kurmaya başladım.</span></div></a>
+            </div>
+            <a class="home-more" href="gunluk.html">Tüm günlük →</a>
+        </section>
+
+        <section class="home-section">
+            <div class="home-label">Keşfet</div>
+            <div class="home-cards home-cards--3">
+                <a class="home-card" href="arge.html"><span class="home-card-title">AR-GE</span><span class="home-card-desc">Sistem şeması, elektronik, yazılım, yapı ve malzemeler</span></a>
                 <a class="home-card" href="protokol.html"><span class="home-card-title">Protokol</span><span class="home-card-desc">3 kutulu üretim protokolü ve uygulama durumu</span></a>
-                <a class="home-card" href="elektronik-devre-guncel.html"><span class="home-card-title">Elektrik devresi</span><span class="home-card-desc">Güncel devre ve adım adım kurulum</span></a>
+                <a class="home-card" href="led-armatur.html"><span class="home-card-title">LED armatür</span><span class="home-card-desc">Kendi yaptığım ışık, hesabı ve arıza bulma</span></a>
             </div>
         </section>
 
         <section class="home-section">
-            <div class="home-label">Hedef</div>
+            <div class="home-label home-label--crocus">Hedef</div>
             <h2 class="home-title">Evden 100.000 kormluk otonom üretime</h2>
             <p class="home-text">Ev kutularında sistem kanıtlandıktan sonraki adım, yaklaşık 100 m²'lik kapalı, ofis tipi bir alanda 100.000 kormla üretim denemesi: 25.000'erlik dört parti, kaydırmalı hasat. Buradan elde edilecek gelirle robot kol ve kayan bantla otomatik hasat Ar-Ge'sine, en sonunda da insansız çalışan tam otonom bir seraya geçmek istiyorum. Bütün süreci, hatalarıyla birlikte burada açık olarak paylaşacağım.</p>
         </section>
@@ -293,8 +319,8 @@ window.LANG_MAP = {
                     <p class="post-row-excerpt">DT enerji yönetiminde MÖ ve IoT uygulamalarının derlemesi: pekiştirmeli öğrenme aydınlatma enerjisini %15–25 azaltıyor; LSTM tabanlı HVAC tahmini %20–35 tasarruf sağlıyor; 500 m² pilot çalışmada toplamda %28 enerji azaltımı elde edildi.</p>
                 </div>
                 <div class="post-row-meta">
-                    <span>25 May 2026</span>
-                    <span>3 min read</span>
+                    <span>25 Mayıs 2026</span>
+                    <span>3 dk okuma</span>
                 </div>
             </article><article class="post-row" data-tags="Türkçe Enerji ve Sürdürülebilirlik ">
                 <div class="post-row-main">
@@ -308,8 +334,8 @@ window.LANG_MAP = {
                     <p class="post-row-excerpt">272 raflık sanayi ölçeği DT&#39;nin hesaplamalı modeli: yükseklik ayarlı adaptif raflama, sabit raflara kıyasla kg başına enerjiyi %46,5 ve alan verimliliğini %92 artırıyor. Geri ödeme süresi 3 yılın altında.</p>
                 </div>
                 <div class="post-row-meta">
-                    <span>25 May 2026</span>
-                    <span>2 min read</span>
+                    <span>25 Mayıs 2026</span>
+                    <span>2 dk okuma</span>
                 </div>
             </article><article class="post-row" data-tags="Türkçe Enerji ve Sürdürülebilirlik ">
                 <div class="post-row-main">
@@ -323,8 +349,8 @@ window.LANG_MAP = {
                     <p class="post-row-excerpt">52 çalışmanın PRISMA sistematik derlemesi (2014–2024): LED, akıllı HVAC ve IoT bir arada DT enerjisini %40–60 azaltıyor. Otlar, mikro yeşillikler ve safran gibi yüksek değerli bitkiler için pozitif EYG zaten elde edilebilir.</p>
                 </div>
                 <div class="post-row-meta">
-                    <span>25 May 2026</span>
-                    <span>2 min read</span>
+                    <span>25 Mayıs 2026</span>
+                    <span>2 dk okuma</span>
                 </div>
             </article>
             </div>
@@ -417,6 +443,9 @@ window.LANG_MAP = {
     }
   });
 })();
+</script>
+<script>
+(function(){var e=document.getElementById('gunSayaci');if(!e)return;var d=Math.floor((new Date()-new Date(2026,7,20))/864e5);if(d>0)e.textContent=d;})();
 </script>
 </body>
 </html>
