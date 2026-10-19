@@ -68,7 +68,9 @@
         <div class="container">
             <div class="post-content gh-content">
 
-<p>Son güncelleme: <strong>20 Eylül 2026</strong>. Bu sayfa sistemin şu anki elektrik devresinin tamamını anlatıyor. Tek bir ESP32 iki kutuyu birden yönetiyor: <strong>çiçeklenme (hasat) kutusu</strong> ve <strong>uyku (dormansi) kutusu</strong>. Pertinaksta lehimli bir STM32 de var ama şimdilik kullanılmıyor; ileride her kutuya bir STM32 düğüm bağlanacak (en alttaki bölüm).</p>
+<p><strong>Not (19 Ekim 2026):</strong> Bu devre hiç tam olarak çalıştırılmadı ve yazılımı karta yüklenmedi. Ekim'de hava soğuyunca Peltier'e gerek kalmadı, uyku kutusu da iptal oldu. Şu an kutu balkonda ve elektronik bağlı değil. Yerine sade bir kurulum hazırlanıyor: ESP32, iki röleyle LED ve iç fan, kutu içinde SHT31, dışarıda DHT22, telefondan web panel. Aşağıdaki şema ileride tam sisteme dönüldüğünde kullanılmak üzere duruyor.</p>
+
+<p>Son güncelleme: <strong>20 Eylül 2026</strong>. Bu sayfa Eylül'de planlanan elektrik devresinin tamamını anlatıyor. Tek bir ESP32 iki kutuyu birden yönetiyor: <strong>çiçeklenme (hasat) kutusu</strong> ve <strong>uyku (dormansi) kutusu</strong>. Pertinaksta lehimli bir STM32 de var ama şimdilik kullanılmıyor; ileride her kutuya bir STM32 düğüm bağlanacak (en alttaki bölüm).</p>
 
 <div class="bilgi"><strong>En önemli kural: tüm GND'ler ortak.</strong> PSU'nun siyah kablosu, GND klemens barası, ESP32 GND, röle kartı GND, sensörlerin GND'si ve bütün yüklerin eksi uçları aynı hatta buluşur. Ortak GND olmazsa röleler ve sensörler doğru çalışmaz.</div>
 

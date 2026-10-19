@@ -119,10 +119,8 @@
             <span class="logo-text">Safran Topluluğu</span>
         </a>
         <nav class="site-nav">
-            <a href="index.html">Araştırmalar</a>
+            <a href="arastirmalar.html">Araştırmalar</a>
             <a href="protokol.html">Protokol</a>
-            <a href="hakkinda.html">Hakkında</a>
-            <a href="iletisim.html">İletişim</a>
             <a href="arge.html">AR-GE</a>
         </nav>
         <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
@@ -149,7 +147,7 @@
         <div class="container">
             <div class="post-content gh-content">
 
-                <p>Safran AR-GE projesinin donanım envanteri, elimde olanlar ve henüz temin etmem gerekenler. Liste 20 Eylül 2026 tarihinde güncellendi (Eylül alımları, canlı materyal ve ekimle birlikte gereken ölçüm cihazları eklendi).</p>
+                <p>Safran AR-GE projesinin donanım envanteri, elimde olanlar ve henüz temin etmem gerekenler. Liste 19 Ekim 2026 tarihinde güncellendi (gübre eklendi, LED sürücüsü ve Peltier durumları düzeltildi).</p>
 
                 <hr class="inv-divider">
 
@@ -180,7 +178,7 @@
                         <div class="inv-group-label">Güç, Soğutma ve İklimlendirme</div>
                         <ul class="inv-list">
                             <li>400 Watt Eski ATX Kasa PSU Güç Kaynağı: 1 Adet</li>
-                            <li>TEC1-12706 Termo Elektrik Peltier Soğutucu 72W: 2 Adet <span style="color:#9ca3af;font-size:0.82rem;">(1'i bağlı, 2.si montaj bekliyor)</span> <span class="inv-note">Tek Peltier 28 °C dış havada kutuyu 22 °C'nin altına indiremediği için 2.si alındı.</span></li>
+                            <li>TEC1-12706 Termo Elektrik Peltier Soğutucu 72W: 2 Adet <span style="color:#9ca3af;font-size:0.82rem;">(2.si takılmadı; Ekim'de hava soğuyunca bu sezon gerek kalmadı)</span> <span class="inv-note">Tek Peltier 28 °C dış havada kutuyu 22 °C'nin altına indiremediği için 2.si alındı.</span></li>
                             <li>Bakır Borulu Alüminyum Soğutucu Blok: 1 Adet <span class="inv-note">1. Peltier'in sıcak yüzeyini yeterince soğutup kutunun gerçekten soğumasını sağlamak için.</span></li>
                             <li>Kule Tipi Soğutucu (4 bakır borulu, 2 yüzeyli, fansız, ikinci el): 1 Adet <span class="inv-note">2. Peltier'in sıcak yüzeyinin ısısını atmak için; üzerine 12 cm fan takılması gerekiyor.</span></li>
                             <li>Alüminyum Soğutucu 4×4cm Altın Renk 143 Kanat Pasif Radyatör: 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(Peltier için elendi: küçük kaldı, üzerinde yoğuşan nem ısı transferini kesti)</span> <span class="inv-note">Uyku kutusunda PTC ısıtıcıya takılıp 40 mm fanla sıcak hava üfleyecek.</span></li>
@@ -227,10 +225,10 @@
                         <div class="inv-note-block">Hazır bitki LED şeridi bulamadığım için kendim armatür yaptım: sadece Deep Red (650–670 nm) + Royal Blue (430–450 nm). Beyaz/UV/Far-Red enerji israfı ve gövde uzaması yaptığı için elendi.</div>
                         <ul class="inv-list">
                             <li>Powerlux 1 W 350 mA yıldız PCB Power LED, Deep Red 650–670 nm + Royal Blue 430–450 nm: 40 Adet <span class="inv-note">(25 kırmızı + 15 mavi alındı; iki çubukta toplam 34 LED, sırayla 2 kırmızı 1 mavi dizili, seri bağlı. Bir sürücü ve birkaç LED deneme sırasında bozuldu, yedek kalmadı.)</span></li>
-                            <li>LED Dizgi Çubuğu (~60cm, 18 LED monte): 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(ilk ışık alındı )</span></li>
+                            <li>LED Dizgi Çubuğu: 2 Adet <span class="inv-note">(120 cm'lik çubuk ortadan kesildi; çubuk başına 17 LED, ikisi seri)</span></li>
                             <li>Alüminyum Düz Profil 30×2 mm, 60 cm (Bauhaus): 1 Adet <span class="inv-note">U-profil yerine LED çubuğunun arkasına pasif soğutucu olarak takıldı.</span></li>
                             <li>HY-21 Termal Macun 35 g: 1 Adet <span class="inv-note">LED yıldız PCB'leri ile alüminyum profil arasındaki ısı geçişini artırmak için.</span></li>
-                            <li>~350mA Sabit Akım (CC) LED Sürücü: 1 Adet <span style="color:#9ca3af;font-size:0.82rem;">(marketdigital'den; 21'li seriyi sürdü, çalışıyor)</span></li>
+                            <li>Sabit Akım (CC) LED Sürücü, Powerlux DJT-BS1925A (AC 110–256 V giriş, DC 57–83 V, 320 mA): 2 Adet alındı <span class="inv-note">(marketdigital; biri giriş ve çıkış karıştırılınca yandı, diğeri 34 LED'i sürüyor, yedek yok)</span></li>
                         </ul>
                     </div>
 
@@ -249,7 +247,7 @@
                     <div class="inv-group">
                         <div class="inv-group-label">Canlı Materyal</div>
                         <ul class="inv-list">
-                            <li>Safran Kormu (Crocus sativus), 18–21 g: yaklaşık 100 Adet (2 kg) <span class="inv-note">Crocus Farm (Niğde), online. İlk 18'i Eylül 2026'da çiçeklenme kutusuna 3 × 6 düzeninde ekildi; kalanlar uyku kutusunda bekliyor.</span></li>
+                            <li>Safran Kormu (Crocus sativus), 18–21 g: yaklaşık 100 Adet (2 kg) <span class="inv-note">Crocus Farm (Niğde), online. İlk 18'i 20 Ağustos 2026'da çiçeklenme kutusuna 3 × 6 düzeninde ekildi. Uyku kutusu iptal olunca kalanların hepsi sürdü; Kasım ortasına kadar dikilecek.</span></li>
                         </ul>
                     </div>
 
@@ -259,6 +257,13 @@
                             <li>Kalın Tarım Perliti 2–8 mm: 50 Litre <span class="inv-note">Karışımın %70'lik ana kısmı; drenaj ve kök havalanması için. Elekten geçirip tozunu attım, sadece taneleri kullandım.</span></li>
                             <li>Coco Husk Chips (koko yonga) Blok: 5 kg <span class="inv-note">Karışımın %15'i; iri gözenek ve nem tamponu için.</span></li>
                             <li>Sıkıştırılmış Kokopit Blok: 4–5 kg (65 Litre) <span class="inv-note">Karışımın %15'i; besin ve nem tutan ince kısım için. Üreticiden yıkanmış geliyor: EC &lt; 0,6 mS/cm, pH 5,8–6,8.</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="inv-group">
+                        <div class="inv-group-label">Besin (Ekim 2026)</div>
+                        <ul class="inv-list">
+                            <li>GüneyDoğu Topraksız Tarım Genel A ve B sıvı besin, 500 mL: 1 set (299 TL liste fiyatı, Trendyol) <span class="inv-note">A: N 6 (nitrat), K₂O 9, CaO 6, Fe 0,02 · B: N 2, P₂O₅ 5, K₂O 9, MgO 2, B, Cu, Mn 0,02, Zn 0,04 (% ağırlıkça). Kullanım ve doz: <a href="protokol.html#beslenme">Protokol 8.1b</a>.</span></li>
                         </ul>
                     </div>
 
@@ -273,7 +278,7 @@
                             <li>1N4007 Diyot: 10 Adet <span class="inv-note">Röle ve motor bobinleri kapanırken oluşan ters gerilim sıçramasını (flyback) söndürüp devreyi korumak için.</span></li>
                             <li>MG90S Servo Motor: 1 Adet <span class="inv-note">İleride pH ve EC problarını gübreli su tankına daldırıp çıkarmak için.</span></li>
                             <li>LDR 5mm: 4 Adet <span class="inv-note">LED armatürünün gerçekten yandığını ve ortam ışık düzeyini izlemek için.</span></li>
-                            <li>PTC Isıtıcı 5V 40°C: 1 Adet <span class="inv-note">Uyku (dormansi) kutusunu 25 °C'nin üstünde tutup soğanları uyutmak için.</span></li>
+                            <li>PTC Isıtıcı 5V 40°C: 1 Adet <span class="inv-note">Uyku (dormansi) kutusunu 25 °C'nin üstünde tutmak için alındı; uyku kutusu Ekim 2026'da iptal edildi, şimdilik kullanılmıyor.</span></li>
                         </ul>
                     </div>
 
@@ -349,7 +354,7 @@
 
                     <div class="inv-group">
                         <div class="inv-group-label">Damla Sulama İskeleti (Faz A, önce)</div>
-                        <div class="inv-note-block">1 kutuyu otomatik damla sulamak için taban sistem; mevcut ESP32 + 8 kanal röle ile zamanlı çalışır. Detay: <em>damla-sulama-gubreleme-plani.md</em>.</div>
+                        <div class="inv-note-block">1 kutuyu otomatik damla sulamak için taban sistem; mevcut ESP32 + 8 kanal röle ile zamanlı çalışır. Ayrıntılı plan henüz sitede yayınlanmadı.</div>
                         <ul class="inv-list missing">
                             <li>Kapaklı plastik besin rezervuarı 10–20 L: 1 Adet</li>
                             <li>12V DC diyafram su pompası (kendinden emişli, ~2–4 L/dk): 1 Adet</li>
@@ -369,7 +374,7 @@
                             <li>pH kalibrasyon tamponu (pH 4,0 + 7,0): 1 set</li>
                             <li>Peristaltik dozlama pompası 12V: 4 Adet <span class="inv-note">(Gübre A + B + pH-down + yedek/Ca)</span></li>
                             <li>Konsantre tankı (A/B/pH-down şişe): 3–4 Adet</li>
-                            <li>pH-down çözeltisi + A/B sıvı gübre <span class="inv-note">(kimyasal, ayrı temin)</span></li>
+                            <li>pH-down çözeltisi <span class="inv-note">(kimyasal, ayrı temin; A/B gübre alındı, bkz. Besin)</span></li>
                             <li>Su sıcaklık sensörü (DS18B20 su geçirmez): 1 Adet <span class="inv-note">(ana tank)</span></li>
                             <li>Sirkülasyon/karıştırma pompası 12V: 1 Adet <span class="inv-note">(tank homojen olsun)</span></li>
                             <li>ADS1115 16-bit ADC: 1 Adet <span class="inv-note">(pH/EC okumasını ESP32 gürültüsünden kurtarır)</span></li>
