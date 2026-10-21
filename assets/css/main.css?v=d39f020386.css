@@ -1123,8 +1123,8 @@ html { scroll-behavior: smooth; }
 }
 
 /* Zaman çizelgesi */
-.timeline { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 1.5rem 0 1.25rem; padding: 0; position: relative; }
-.timeline::before { content: ""; position: absolute; top: 9px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--saffron) 0%, var(--saffron) 70%, var(--crocus-border) 70%); }
+.timeline { list-style: none; display: grid; grid-auto-columns: minmax(0, 1fr); grid-auto-flow: column; gap: 0; margin: 1.5rem 0 1.25rem; padding: 0; position: relative; }
+.timeline::before { content: ""; position: absolute; top: 9px; left: 10%; right: 10%; height: 2px; background: linear-gradient(90deg, var(--saffron) 0%, var(--saffron) 78%, var(--crocus-border) 78%); }
 .timeline li { position: relative; text-align: center; padding: 0 0.3rem; margin: 0 !important; }
 .timeline li::before { content: ""; display: block; width: 20px; height: 20px; margin: 0 auto 0.6rem; border-radius: 50%; background: var(--saffron); border: 4px solid var(--background); box-shadow: 0 0 0 2px var(--saffron); position: relative; }
 .timeline li.next::before { background: var(--background); box-shadow: 0 0 0 2px var(--crocus); animation: nabiz 2s ease-in-out infinite; }
@@ -1133,7 +1133,7 @@ html { scroll-behavior: smooth; }
 .timeline li.next .t-date, .timeline li.next .t-name { color: var(--crocus-text); }
 @keyframes nabiz { 50% { box-shadow: 0 0 0 6px hsl(268 55% 52% / 0.25); } }
 @media (max-width: 640px) {
-  .timeline { grid-template-columns: 1fr; gap: 0.9rem; }
+  .timeline { grid-auto-flow: row; grid-template-columns: 1fr; gap: 0.9rem; }
   .timeline::before { top: 10px; bottom: 10px; left: 9px; right: auto; width: 2px; height: auto; background: linear-gradient(180deg, var(--saffron) 0%, var(--saffron) 78%, var(--crocus-border) 78%); }
   .timeline li { text-align: left; padding-left: 2rem; }
   .timeline li::before { position: absolute; left: 0; top: 0; margin: 0; }
