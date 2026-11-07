@@ -230,7 +230,7 @@ window.LANG_MAP = {
         <div class="container">
 
             <div class="post-content gh-content">
-                <p>Kutuları ESP32 üzerinde çalışan kendi yazdığım kodla yönetiyorum. Bu sayfada yazılımın hangi sürümden hangisine geçtiğini ve şu an hangisinin hazır olduğunu tutuyorum. Kod Arduino IDE ile yazılıyor; telefondan açılan bir web paneli var, ek uygulama gerekmiyor.</p>
+                <p>Kutuları ESP32 üzerinde çalışan kendi yazdığım kodla yönetiyorum. Bu sayfada yazılımın hangi sürümden hangisine geçtiğini ve şu an hangisinin çalıştığını tutuyorum. Kod Arduino IDE ile yazılıyor; telefondan açılan bir web paneli var, ek uygulama gerekmiyor.</p>
 
                 <h2>1. İlk sürüm: nem ve fan (Ağustos 2026)</h2>
                 <p>Tek kutu, DHT22 sensörü ve nem eşiğine göre fan açıp kapatan basit bir kod. Web panelde sıcaklık ve nem görünüyordu. Sorunu şuydu: nem yükselince fan sıcak ve nemli oda havasını içeri çekiyor, Peltier'in soğuttuğu kutuyu yeniden ısıtıyordu. Panelin ekran görüntüsü <a href="gunluk.html#sicak">günlükte</a>.</p>
@@ -238,17 +238,18 @@ window.LANG_MAP = {
                 <h2>2. İki kutu, tek ESP32 (Eylül 2026)</h2>
                 <p>Çiçeklenme kutusu ile uyku kutusunu birlikte yönetecek daha kapsamlı bir sürüm yazdım: iki Peltier, giriş ve egzoz fanları, uyku kutusunda PTC ısıtıcı, LED zamanlaması, panelden ayarlanabilir hedef sıcaklık, dış hava daha soğuksa fanla soğutma, çiğ noktasına göre nem tahliyesi ve 30 dakikada bir kartın kendi belleğine sıcaklık kaydı. Bu sürüm derlendi ama karta hiç yüklenmedi: Ekim'de hava soğuyunca Peltier'e gerek kalmadı, uyku kutusu da iptal oldu. Devresi <a href="elektronik-devre-guncel.html">Tüm Elektrik Devresi</a> sayfasında duruyor; tam sisteme dönülürse yeniden kullanılacak.</p>
 
-                <h2>3. Sade sürüm: ışık ve iç fan (Ekim 2026, hazır, henüz yüklenmedi)</h2>
-                <p>Kutu balkona çıkınca soğutma gereksiz kaldı. Şu an ihtiyaç olan yalnız ışığın düzenli yanması, kutu içinde havanın dönmesi ve sıcaklığın ölçülmesi. Bunun için sade bir sürüm yazdım:</p>
+                <h2>3. Sade sürüm: kutuyu şu an yöneten kod (21 Ekim 2026'dan beri çalışıyor)</h2>
+                <p>Kutu balkona çıkınca tam sisteme gerek kalmadı. 21 Ekim'de karta sade bir sürüm yükledim; o günden beri kutuyu bu kod yönetiyor ve sonraki güncellemeleri kablosuz yüklüyorum.</p>
                 <ul>
-                    <li><strong>İki röle:</strong> biri LED sürücüsünün 220 V hattını, diğeri kutu içindeki sirkülasyon fanını açıp kapatıyor.</li>
-                    <li><strong>İki sensör:</strong> kutu içinde SHT31, dışarıda DHT22. Biri bağlı değilse panelde boş görünüyor, gerisi çalışmaya devam ediyor.</li>
-                    <li><strong>Web panel:</strong> telefondan ev ağında açılıyor. İç ve dış sıcaklık ve nem, saat, LED ve fan için Otomatik, Aç, Kapat düğmeleri.</li>
-                    <li><strong>Otomatik ışık:</strong> internetten saati alıp 22:00 ile 10:00 arası 12 saat yanıyor. Işığın gece yanması balkonda kutunun gece fazla soğumasını da engelliyor.</li>
-                    <li><strong>Otomatik fan:</strong> her yarım saatin 15 dakikası çalışıyor, nem %85'in üstündeyse sürekli dönüyor.</li>
-                    <li><strong>Elektrik kesilirse</strong> seçilen modlar kayıtlı kalıyor, WiFi koparsa röleler çalışmaya devam ediyor.</li>
+                    <li><strong>Sensörler:</strong> kutu içinde SHT31, dışarıda DHT22. Panel ikisinden de çiğ noktasını hesaplıyor. Biri okumazsa panelde boş görünüyor, gerisi çalışmaya devam ediyor.</li>
+                    <li><strong>Işık:</strong> röleyle LED sürücüsünün 220 V hattını açıp kapatıyor. Saat internetten alınıyor; açılış ve kapanış saati panelden ayarlanıyor, şu an 22:00-10:00.</li>
+                    <li><strong>Egzoz fanı:</strong> kutu içi panelden girilen eşiğin üstündeyse ve dış hava en az 1 derece daha soğuksa açılıyor; fark 0,3 derecenin altına inene kadar sürüyor, böylece eşikte sık aç-kapa yapmıyor. Kutu içi nem %80'i geçerse ve dış hava daha kuruysa (çiğ noktası en az 1 derece düşükse) nemi atmak için de açılıyor. Kutu 10 derecenin altındaysa hiç açılmıyor.</li>
+                    <li><strong>Peltier:</strong> panelden girilen hedef sıcaklığa göre çalışan kod hazır; soğutucunun kutuya montajı sırada.</li>
+                    <li><strong>Web panel:</strong> telefondan ev ağında açılıyor. Her cihaz için Otomatik, Aç, Kapat; eşik, hedef ve saatler "Ayarlar" altında.</li>
+                    <li><strong>Kayıt:</strong> 15 dakikada bir iç ve dış sıcaklık ve nem ile rölelerin açık kalma yüzdesi kartın kendi belleğine yazılıyor. Panelde son 48 saatin grafiği var, kayıt dosya olarak indirilebiliyor.</li>
+                    <li><strong>Güvenlik:</strong> açılışta ve kablosuz güncelleme sırasında bütün röleler kapanıyor; WiFi koparsa kontrol sürüyor.</li>
                 </ul>
-                <p>Karta yükleyip çalıştığını gördükten sonra panel ekran görüntüsünü ve sıcaklık kaydını buraya ekleyeceğim. Sonraki adımlar: sıcaklık kaydını sade sürüme taşımak, ardından otomatik sulama.</p>
+                <p>Kayıttan öğrendiğim ilk şey: LED açıkken kutu, egzoz sürekli çalışsa bile dış havadan 2-3 derece sıcak kalıyor; LED kapalıyken nem %85-92'ye çıkıyor. İlk günün grafiği <a href="gunluk.html#20ekim">günlükte</a>. Sonraki adımlar: Peltier soğutucuyu takmak, ardından otomatik sulama.</p>
             </div>
 
         </div>
