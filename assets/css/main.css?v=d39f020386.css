@@ -1223,3 +1223,42 @@ html { scroll-behavior: smooth; }
   .site-nav a:hover { color: var(--foreground); }
   .nav-arge-menu a:hover { background: var(--accent-bg); color: var(--accent-text) !important; }
 }
+
+/* ===== Kasım 2026: çok bitkili menü (Protokoller, AR-GE açılır) ===== */
+.site-nav .nav-arge-btn { font-size: 0.9rem; color: #555; opacity: 1; font-weight: 400; }
+.site-nav .nav-arge-btn::after { content: ""; display: inline-block; margin-left: 5px; border: 4px solid transparent; border-top-color: currentColor; border-bottom: 0; vertical-align: middle; opacity: 0.6; }
+.nav-arge-menu::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+.nav-arge-menu { left: 0; right: auto; min-width: 170px; }
+.page-protokol .site-nav .nav-arge-btn[href$="protokoller.html"],
+.page-protokoller .site-nav .nav-arge-btn[href$="protokoller.html"],
+.page-protokol-salep .site-nav .nav-arge-btn[href$="protokoller.html"],
+.sec-arge .site-nav .nav-arge-btn[href$="arge.html"],
+.page-arge-salep .site-nav .nav-arge-btn[href$="arge.html"] { color: #D97706; font-weight: 600; }
+.page-protokol-salep .site-nav .nav-arge-menu a[href$="protokol-salep.html"],
+.page-protokol .site-nav .nav-arge-menu a[href$="/protokol.html"] { color: #D97706 !important; }
+@media (max-width: 640px) {
+  .site-nav .nav-arge-btn { font-size: 1rem; padding: 0.15rem 0; }
+  .site-nav .nav-arge-btn::after { display: none; }
+}
+/* Bitki kartları (protokoller ve AR-GE merkezleri) */
+.bitki-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
+.bitki-kart { display: block; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.4rem; text-decoration: none !important; color: inherit !important; transition: border-color .15s, box-shadow .15s; }
+.bitki-kart:hover { border-color: #D97706; box-shadow: 0 4px 18px rgba(0,0,0,.06); }
+.bitki-kart h3 { margin: .5rem 0 .35rem; font-size: 1.15rem; }
+.bitki-kart p { margin: 0; font-size: .9rem; opacity: .8; line-height: 1.55; }
+.bitki-kart em { font-size: .85rem; opacity: .7; }
+.cip { display: inline-block; font-size: .72rem; font-weight: 600; padding: 2px 9px; border-radius: 10px; white-space: nowrap; }
+.cip-aktif { background: #dcfce7; color: #166534; }
+.cip-arastirma { background: #e0e7ff; color: #3730a3; }
+.cip-plan { background: #f1f5f9; color: #475569; }
+.kaynak-etiket { display: inline-block; font-size: .7rem; font-weight: 700; padding: 0 6px; border-radius: 4px; vertical-align: 1px; }
+.ke-m { background: #dcfce7; color: #166534; }
+.ke-t { background: #fef3c7; color: #92400e; }
+.ke-c { background: #f1f5f9; color: #475569; }
+@media (prefers-color-scheme: dark) {
+  .cip-aktif, .ke-m { background: #14532d; color: #bbf7d0; }
+  .cip-arastirma { background: #312e81; color: #c7d2fe; }
+  .cip-plan, .ke-c { background: #334155; color: #e2e8f0; }
+  .ke-t { background: #78350f; color: #fde68a; }
+  .site-nav .nav-arge-btn { color: var(--muted-foreground); }
+}

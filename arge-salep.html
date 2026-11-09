@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salep AR-GE | Safran Topluluğu</title>
+    <meta name="description" content="Salep (yumrulu karasal orkide) Ar-Ge planı: neden salep, safranla ortak sistem, salebe özel malzemeler, yol haritası ve açık sorular.">
+    <meta property="og:title" content="Salep AR-GE">
+    <meta property="og:description" content="Salep (yumrulu karasal orkide) Ar-Ge planı: neden salep, safranla ortak sistem, salebe özel malzemeler, yol haritası ve açık sorular.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css%3Fv=d39f020386.css">
+</head>
+<body class="page-template page-arge-salep sec-arge-salep">
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="site-logo">
+            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span class="logo-text">Safran Topluluğu</span>
+        </a>
+        <nav class="site-nav">
+            <a href="arastirmalar.html">Araştırmalar</a>
+            <div class="nav-arge"><a class="nav-arge-btn" href="protokoller.html">Protokoller</a><div class="nav-arge-menu"><a href="protokol.html">Safran</a><a href="protokol-salep.html">Salep</a></div></div>
+            <div class="nav-arge"><a class="nav-arge-btn" href="arge.html">AR-GE</a><div class="nav-arge-menu"><a href="arge.html">Safran sistemi</a><a href="arge-salep.html">Salep</a></div></div>
+        </nav>
+        <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="5" x2="19" y2="5"/>
+                <line x1="3" y1="11" x2="19" y2="11"/>
+                <line x1="3" y1="17" x2="19" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+<div class="post-layout">
+    <header class="post-header">
+        <div class="container">
+            <span class="cip cip-arastirma">Araştırma aşaması</span>
+            <h1 class="post-title" style="margin-top:10px;">Salep AR-GE</h1>
+            <p style="color:#666;margin:8px 0 0;font-size:0.95rem;">Safrandan sonraki ikinci bitki: neden, nasıl, hangi malzemeyle ve hangi sırayla.</p>
+        </div>
+    </header>
+    <div class="post-content-wrap">
+        <div class="container">
+            <div class="post-content gh-content">
+
+<p style="font-size:0.85rem;margin:0 0 1rem;">AR-GE / Salep · Diğer bitki: <a href="arge.html">Safran sistemi</a> · Yetiştirme değerleri: <a href="protokol-salep.html">Salep protokolü</a></p>
+
+<h2 id="neden">Neden salep</h2>
+<ul>
+<li><strong>Aynı kutu, aynı mevsim.</strong> Salep de safran gibi kışı yeşil, yazı kuru geçiren bir Akdeniz bitkisi. Kasımda balkondaki kutuda ölçülen 12–15 °C salebin kış aralığına uyuyor; yaz için ayrı bir sıcak kutu gerekmiyor.</li>
+<li><strong>Kapalı ortam verisi yok.</strong> Tarla ve sera denemeleri var, ama yetişkin salebin LED altında, kontrollü kutuda yetiştirildiği bir çalışma bulunamadı. Işık, besin ve topraksız substrat için ilk ölçümler buradan çıkabilir.</li>
+<li><strong>Yasal üretim yeni başlıyor.</strong> Doğadan toplama yasak; ilk tescilli salep çeşitleri (Balyumru, Bolyumru) 2026'da açıklandı. Kontrollü üretim yöntemi, doğadan sökümün yerine geçebilecek bir yol.</li>
+</ul>
+
+<h2 id="ortak">Safranla ortak olanlar</h2>
+<p>Kutu (karbonlu EPS, iç alüminyum bant), ESP32 kontrol kartı, SHT31 ve DHT22 sensörleri, egzoz ve iç sirkülasyon fanı, röle kartı, LED armatür ve 15 dakikalık sıcaklık/nem kaydı aynen kullanılabilir. Ayrıntılar <a href="arge.html">safran sistemi</a> sayfasında ve alt sayfalarında: <a href="elektronik.html">elektronik</a>, <a href="yazilim.html">yazılım</a>, <a href="yapi.html">yapı</a>.</p>
+<p>Yazılımda değişecek tek şey hedef değerler: salep için kış eşiği safrandan birkaç derece düşük olmalı ve don koruması (kutu içi 2 °C altına inmesin) eklenmeli.</p>
+
+<h2 id="malzeme">Salebe özel malzemeler (planlanan, alınmadı)</h2>
+<table>
+<thead><tr><th>Malzeme</th><th>Miktar</th><th>Not</th></tr></thead>
+<tbody>
+<tr><td>Salep yumrusu</td><td>24–30 adet</td><td>Faturalı, tür adı yazılı. İlk aday Ege Tarımsal Araştırma Enstitüsü.</td></tr>
+<tr><td>Pomza 3–5 mm</td><td>~15 L</td><td>K1 karışımı ve dip drenajı</td></tr>
+<tr><td>Pişmiş kil granülü</td><td>~5 L</td><td>Bulunmazsa pomza ile değiştirilir</td></tr>
+<tr><td>Kireçli bahçe toprağı</td><td>~1 L</td><td>K1 karışımının küçük kil payı</td></tr>
+<tr><td>İri perlit, koko yonga, kokopit</td><td>Elde var</td><td>K1'in perlit payı ve K2 (safran karışımı)</td></tr>
+<tr><td>Solucan gübresi</td><td>~2 L</td><td>K1'e hacimce %10</td></tr>
+<tr><td>Kap veya tekne</td><td>2 adet, ≥18 cm derin</td><td>İki substratı ayırmak için</td></tr>
+<tr><td>Hassas tartı (0,01 g)</td><td>1</td><td>Yumruları tek tek tartmak için; safran stigması için de gerekli</td></tr>
+<tr><td>EC/pH kalemi</td><td>1</td><td>Safranla ortak, zaten listede</td></tr>
+<tr><td>Delikli kasa</td><td>1</td><td>Yaz dormansisinde yumru saklama</td></tr>
+</tbody>
+</table>
+
+<h2 id="yol">Yol haritası</h2>
+<table>
+<thead><tr><th>Zaman</th><th>İş</th></tr></thead>
+<tbody>
+<tr><td>Kasım–Aralık 2026</td><td>Literatür taraması (bitti), Ege Tarımsal Araştırma Enstitüsü'ne yumru için yazmak, İstanbul İl Tarım ve Orman Müdürlüğü'ne ev Ar-Ge'si için yazılı danışmak</td></tr>
+<tr><td>Ocak–Ağustos 2027</td><td>Materyal ve malzeme temini, yazılımda salep hedefleri</td></tr>
+<tr><td>Eylül–Ekim 2027</td><td>Dikim: 2 substrat × 12 yumru, her yumru tartılarak</td></tr>
+<tr><td>Kasım 2027–Şubat 2028</td><td>Kış büyümesi, ışık karşılaştırması (yer kalırsa)</td></tr>
+<tr><td>Mart–Haziran 2028</td><td>Çiçek, sök-dik denemesi, hasat, işleme, yumru sayımı</td></tr>
+</tbody>
+</table>
+<p>Materyal bu kış bulunursa yumrular saksıda erken dikilip ilk gözlemler bu sezon yapılabilir.</p>
+
+<h2 id="sorular">Açık sorular (literatürde cevabı olmayanlar)</h2>
+<ol>
+<li>Yetişkin salep LED altında hangi ışık şiddetinde en iri yumruyu yapar?</li>
+<li>Topraksız, perlit ağırlıklı substrat (safran karışımı) salepte çalışır mı?</li>
+<li>Sıvı besinde hangi EC değeri yumru ağırlığını artırır, hangisi kök uçlarını yakar?</li>
+<li>Kutuda gece/gündüz sıcaklık farkı (örneğin 15/10 ve 12/6 °C) yumru verimini nasıl etkiler?</li>
+<li>Yaz depolama sıcaklığı (20, 25, 30 °C) sonbahardaki sürmeyi ve verimi değiştirir mi?</li>
+<li>Sök-dik yöntemi kutuda da bitki başına 2 yumru verir mi?</li>
+</ol>
+
+<h2 id="kaynaklar">Kaynaklar</h2>
+<p>Protokolde kullanılan 34 kaynak ve bulguları <a href="protokol-salep.html#k">salep protokolünün sonunda</a>.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">Safran Topluluğu</span>
+            <span class="footer-sep">·</span>
+            <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  // Close on outside click
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+<script>
+(function(){
+  var hs=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  if(hs.length<3)return;
+  var nav=document.createElement('nav');nav.className='toc-side';nav.setAttribute('aria-label','İçindekiler');
+  nav.innerHTML='<b>İçindekiler</b>';
+  var links=hs.map(function(h){var a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent.replace(/\s*\[.*?\]\s*/g,'');nav.appendChild(a);return a;});
+  document.body.appendChild(nav);
+  function guncelle(){var y=window.scrollY+120,i=0;hs.forEach(function(h,k){if(h.offsetTop<=y)i=k;});links.forEach(function(a,k){a.classList.toggle('aktif',k===i);});}
+  window.addEventListener('scroll',guncelle,{passive:true});guncelle();
+})();
+</script>
+</body>
+</html>
