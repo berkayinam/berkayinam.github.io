@@ -242,6 +242,7 @@ window.LANG_MAP = {
 
 <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.5rem;margin-bottom:2rem;font-size:0.875rem;">
   <strong>İçindekiler:</strong>&nbsp;
+  <a href="#adim2" style="color:#4f46e5;font-weight:600;">Adım 2: Verimli Üretim</a> ·
   <a href="#sistem" style="color:#D97706;">1. Sistem</a> ·
   <a href="#insaat" style="color:#D97706;">2. İnşaat</a> ·
   <a href="#substrat" style="color:#D97706;">3. Substrat</a> ·
@@ -282,6 +283,27 @@ window.LANG_MAP = {
   </tbody>
   </table>
 </div>
+
+<!-- ADIM 2 -->
+<h2 id="adim2" style="border-bottom:3px solid #4f46e5;padding-bottom:6px;">Adım 2: Verimli Üretim (2027 planı)</h2>
+<div style="background:#eef2ff;border:1px solid #6366f1;border-radius:8px;padding:1rem 1.5rem;margin-bottom:1.25rem;font-size:0.92rem;line-height:1.7;">
+<strong>1. adım (2026, tamamlandı):</strong> safrandan hasat almak ve temel yetiştirmeyi öğrenmek. 18 kormla başlayan deneme 136'dan fazla çiçek verdi.<br>
+<strong>2. adım (2027):</strong> verimli yetiştirmek. Amaç safranı yetiştirmek değil, aynı safranı daha az enerjiyle, daha az suyla ve yıl içine yayılmış hasatlarla üretmek. Enerji kutular arasında dönecek, boşa atılmayacak.
+</div>
+<p>2026 sezonunun iki başarısızlığı aynı aylarda yaşandı: Ağustos–Eylül'de çiçeklenme kutusu soğuyamadı ve Peltier ısıyı dışarı attı; Eylül–Ekim'de uyku kutusu ısınamadı ve kormlar erken sürdü. Bir kutu ısıdan kurtulmaya çalışırken diğeri ısı arıyordu. 2. adımın çıkış noktası bu.</p>
+<table>
+<thead><tr><th>Başlık</th><th>Ne denenecek</th><th>Ne ölçülecek</th><th>Ne zaman</th></tr></thead>
+<tbody>
+<tr><td><strong>Kaydırmalı parti</strong></td><td>Kormlar Haziran'da sökülür, en az ~60 gün 23–25 °C'de bekler (çiçek kormun içinde bu sürede oluşur <strong>[TR-05]</strong>). Sonra her 2 haftada bir parti 15–17 °C'ye alınır. İlk parti Ağustos başında serine girerse Eylül'de çiçek açar; son partiler Aralık–Ocak'a kayabilir.</td><td>Parti başına çiçek sayısı, stigma ağırlığı, geç partilerde çiçek kaybı</td><td>Haziran–Aralık 2027</td></tr>
+<tr><td><strong>Isı köprüsü</strong></td><td>Peltier'in soğuk yüzü çiçeklenme kutusunda, sıcak yüzü uyku kutusunda. Biri soğurken diğeri onun atık ısısıyla ısınır, PTC ısıtıcıya gerek kalmaz. Yoğuşan su sulamaya döner. Büyük ölçekte aynı işi bir ısı pompası (klima) yapar: iç ünitesi çiçeklenme odasını soğutur, dış ünitesi uyku odasını ısıtır.</td><td>Kutu başına günlük kWh, hedef sıcaklıkta geçen saat oranı; ayrı Peltier + ayrı ısıtıcıya göre karşılaştırma</td><td>Ağustos–Kasım 2027</td></tr>
+<tr><td><strong>Gündüz güneş, gece LED</strong></td><td>Yaprak döneminde kutunun üstü şeffaf çift katmanlı kapak: gündüz güneş girer, LED kapalı kalır. Gece üstüne strafor örtü kapanır: ısıyı tutar, ışığı dışarı vermez; altında LED yanar, hem ışık hem ısı verir.</td><td>Sabit 12 saat LED'e göre kWh; gece kutu sıcaklığı; Mayıs'ta yavru korm ağırlığı</td><td>Kasım 2026–Mayıs 2027</td></tr>
+<tr><td><strong>Korm: kutu, balkon, tarla</strong></td><td>Aynı partiden kormlar üç yerde büyür: kutuda LED altında, balkonda saksıda doğal ışıkta, Karabük'te bahçede toprakta (~25 korm).</td><td>Ana korm başına yavru korm sayısı ve ağırlığı (Haziran 2027)</td><td>Kasım 2026–Haziran 2027</td></tr>
+<tr><td><strong>Kamera ile çiçek takibi</strong></td><td>ESP32-CAM kutuya bakar, mor renk oranı artınca bildirim gönderir. Görüntüler ileride çiçek tespit modelinin (YOLO) eğitim verisi olur. Bu kış maket çiçekle denenir.</td><td>Çiçek açılışından bildirime geçen süre, kaçırılan çiçek sayısı</td><td>Ekim 2027 hasadı</td></tr>
+<tr><td><strong>Stigma ayırma</strong></td><td>Çiçeği koparmak kolay; zor olan stigmayı ayırmak. Literatürde hava akımı (siklon), vakum ve kamera ile kesme yöntemleri var; stigmayı ayırmak için gereken kuvvet yaklaşık 0,21 N, bıçakla kesmede 7–21 N. Bu kış çizim ve basit hava akımı denemesi.</td><td>Ayrılan stigma oranı, kırılan stigma oranı</td><td>Kış 2026–2027</td></tr>
+<tr><td><strong>Kalite</strong></td><td>Kurutulan stigmalar tartılır, bir numune ISO 3632 analizine gönderilir.</td><td>Çiçek başına mg, E₄₄₀ (renk), E₂₅₇, E₃₃₀</td><td>Kış 2026–2027</td></tr>
+</tbody>
+</table>
+<p style="font-size:0.85rem;opacity:0.8;">Salep bu sistemin ikinci bitkisi: takvimi safranla aynı (yazın kuru dormansi, kışın serin büyüme), aynı kutu ve aynı enerji mantığıyla denenecek. Ayrıntı: <a href="protokol-salep.html">salep protokolü</a>.</p>
 
 <!-- BÖLÜM 1: SİSTEM -->
 <h2 id="sistem" style="border-bottom:3px solid #D97706;padding-bottom:6px;">1. Sistem Genel Bakışı</h2>
@@ -404,8 +426,10 @@ window.LANG_MAP = {
 </tbody>
 </table>
 
-<h3>5.2 Soğuk Şok Tetikleyicisi</h3>
-<p>Hasat kutusuna yeni batch girmeden önce soğanları <strong>5–7 gün boyunca 6–8 °C'de</strong> beklet (buzdolabı alt rafı, kuru konumda). Bu vernalizasyon adımı çiçek tomurcuğu açılımını tetikler: zorunlu adımdır. Keşmir verileri: vernalizasyon için 1000–1200 saatlik soğuklama gerekmektedir; ev koşullarında 5–7 günlük buzdolabı uygulaması yeterli çiçeklenme tepkisi oluşturur. <strong>[TR-05]</strong></p>
+<h3>5.2 Çiçek Oluşumu ve Çiçeklenme Tetikleyicisi (Kasım 2026'da düzeltildi)</h3>
+<p>Çiçek, yaz dormansisinde kormun içinde sıcakta oluşur: Keşmir verisinde çiçek oluşumu yaklaşık <strong>61 gün, ortalama 23 °C</strong> sürüyor. Çiçeklenmeyi başlatan, bundan sonra sıcaklığın <strong>yaklaşık 17 °C'ye düşmesi</strong>. <strong>[TR-05]</strong></p>
+<p>Bu yüzden Haziran'da sökülen korma hemen soğuk vermek çiçek getirmez: çiçek henüz oluşmamıştır. Önce en az ~60 gün 23–25 °C, sonra 15–17 °C.</p>
+<p>Bu sayfanın ilk sürümünde "5–7 gün 6–8 °C soğuk şok zorunlu" yazıyordu. 2026 denemesinde soğuk şok yapılmadı; kormlar yaz boyunca sıcakta bekledi, kutu 20–22 °C'nin altına inince sürdü ve 27 Ekim'de çiçek açtı. Soğuk şok gerekli görünmüyor. Keşmir'deki 1000–1200 saatlik kış soğuğu çiçeklenmeyle değil, kışın korm gelişimiyle ilgili.</p>
 
 <h3>5.3 Isıtma Sistemi</h3>
 <p><strong>Isıtma matı (seedling heat mat):</strong> 12–25W, dijital termostat ile kontrol. Saksıların altına veya yanına yerleştir; sensörü substratta soğana yakın tut. Isıtma matını doğrudan soğana değdirme: mat üstüne 1 cm perlit serip saksıyı üstüne koy.</p>
@@ -506,13 +530,13 @@ window.LANG_MAP = {
 <table>
 <thead><tr><th>Hafta</th><th>Konum</th><th>Sıcaklık</th><th>İşlem</th></tr></thead>
 <tbody>
-<tr><td>0</td><td>Buzdolabı</td><td><strong>6–8 °C</strong></td><td>5–7 gün soğuk şok, vernalizasyon tetikleyici</td></tr>
+<tr><td>0</td><td>Uyku Kutusu</td><td><strong>23–25 °C</strong></td><td>En az ~60 gün: çiçek kormun içinde oluşur</td></tr>
 <tr><td>1–2</td><td>Hasat Kutusu</td><td>15–17 °C</td><td>Tomurcuk sürgün, ilk çiçekler</td></tr>
 <tr><td>3–5</td><td>Hasat Kutusu</td><td>13–15 °C</td><td>Ana çiçeklenme + sabah erken hasat</td></tr>
 <tr><td>6–8</td><td>Hasat Kutusu</td><td>13–15 °C</td><td>Yaprak büyümesi; sulama artır</td></tr>
 <tr><td>9–12</td><td>Uyku Kutusu</td><td>22–26 °C</td><td>Yapraklar sararır → tam dormans, kuru ortam</td></tr>
 <tr><td>13–28+</td><td>Çoğaltma Kutusu</td><td>19–23 °C</td><td>Yavru soğanlar büyür; ≥25 g hedefine ulaşana kadar</td></tr>
-<tr><td>-</td><td>Tekrar soğuk şok</td><td>6–8 °C</td><td>Sonraki döngü başlar</td></tr>
+<tr><td>-</td><td>Uyku Kutusu</td><td>23–25 °C</td><td>Sonraki döngü başlar</td></tr>
 </tbody>
 </table>
 
@@ -576,7 +600,7 @@ window.LANG_MAP = {
 <table>
 <thead><tr><th>Belirti</th><th>Olası Neden</th><th>Çözüm</th></tr></thead>
 <tbody>
-<tr><td>Çiçek yok</td><td>Soğan &lt;10g veya yetersiz soğuk şok</td><td>Soğuk şok 7–10 güne uzat (6 °C); ≥10g soğan kullan</td></tr>
+<tr><td>Çiçek yok</td><td>Soğan &lt;10 g, sıcak dönem kısa (&lt;~60 gün) ya da sıcaklık 17 °C altına inmedi</td><td>≥10 g soğan kullan; sıcakta bekleme süresini uzat; kutuyu 15–17 °C'ye indir</td></tr>
 <tr><td>Az çiçek</td><td>Soğan 10–15 g</td><td>Çoğaltma'da ≥25g büyüt</td></tr>
 <tr><td>Erken sararmış yaprak</td><td>Aşırı sulama</td><td>Haftada 2'ye düşür</td></tr>
 <tr><td>Korm çürümesi</td><td>Uyku kutusunda yüksek nem</td><td>Silika jel ekle; nem %40 altına çek</td></tr>
@@ -612,7 +636,7 @@ Küçük soğan (5–10 g)
      ↓
 [Çoğaltma Kutusu] → 12–20 hafta → ≥ 25 g soğan
      ↓
-[Soğuk Şok: 6–8 °C, 5–7 gün]
+[Uyku: 23–25 °C, ≥60 gün → sonra 15–17 °C]
      ↓
 [Hasat Kutusu] → 6–8 hafta → HASAT (stigma)
      ↓
