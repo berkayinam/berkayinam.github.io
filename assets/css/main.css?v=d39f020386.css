@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap');
 /* ─────────────────────────────────────────────
-   SAFRAN TOPLULUĞU
+   BESTFARMFOR.ME
    Design system: shadcn/ui tokens + Inter
    Accent: warm amber, used only where needed
 ───────────────────────────────────────────── */
@@ -374,8 +375,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .pagination .page-number--active {
-  background: #D97706;
-  border-color: #D97706;
+  background: #E66220;
+  border-color: #E66220;
   color: #fff;
   font-weight: 700;
   cursor: default;
@@ -857,7 +858,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-arge-menu a:hover {
   background: hsl(38 100% 97%);
-  color: #92400e !important;
+  color: #B4461A !important;
   opacity: 1;
 }
 
@@ -1037,14 +1038,14 @@ a { color: inherit; text-decoration: none; }
 /* ===== Eylül 2026 iyileştirmeleri ===== */
 html { scroll-behavior: smooth; }
 [id] { scroll-margin-top: 80px; }
-:focus-visible { outline: 2px solid #D97706; outline-offset: 2px; border-radius: 3px; }
+:focus-visible { outline: 2px solid #E66220; outline-offset: 2px; border-radius: 3px; }
 
 /* Menüde bulunulan bölümü vurgula */
 .page-protokol .site-nav a[href$="protokol.html"],
 .page-hakkinda .site-nav a[href$="hakkinda.html"],
 .page-iletisim .site-nav a[href$="iletisim.html"],
 .sec-arge .site-nav a[href$="arge.html"] {
-  color: #D97706;
+  color: #E66220;
   font-weight: 600;
 }
 
@@ -1066,20 +1067,20 @@ html { scroll-behavior: smooth; }
 /* ===== Ana sayfa (Eylül 2026) ===== */
 .page-hero--compact { padding: 3rem 0 2rem; }
 .hero-stat--link { text-decoration: none; color: inherit; }
-.hero-stat--link:hover .hero-stat-number { color: #D97706; }
-.sec-arastirma .site-nav a[href$="arastirmalar.html"] { color: #D97706; font-weight: 600; }
+.hero-stat--link:hover .hero-stat-number { color: #E66220; }
+.sec-arastirma .site-nav a[href$="arastirmalar.html"] { color: #E66220; font-weight: 600; }
 .home-section { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
 .home-section:last-child { border-bottom: none; }
 .home-section:first-child { padding-top: 0.5rem; }
-.home-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #D97706; margin-bottom: 0.5rem; }
+.home-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #E66220; margin-bottom: 0.5rem; }
 .home-title { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 0.75rem; color: var(--foreground); }
 .home-text { font-size: 0.95rem; line-height: 1.7; color: var(--muted-foreground); margin: 0 0 1rem; }
 .home-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-top: 1.25rem; }
 .home-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 1rem 1.1rem; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: inherit; transition: border-color 0.15s; }
-.home-card:hover { border-color: #D97706; }
+.home-card:hover { border-color: #E66220; }
 .home-card-title { font-weight: 600; color: var(--foreground); }
 .home-card-desc { font-size: 0.82rem; line-height: 1.5; color: var(--muted-foreground); }
-.home-more { display: inline-block; margin-top: 1rem; color: #D97706; font-weight: 600; text-decoration: none; }
+.home-more { display: inline-block; margin-top: 1rem; color: #E66220; font-weight: 600; text-decoration: none; }
 .home-more:hover { text-decoration: underline; }
 .home-prose { padding: 0; }
 .home-prose h3 { font-size: 1.05rem; margin: 1.5rem 0 0.4rem; }
@@ -1088,7 +1089,7 @@ html { scroll-behavior: smooth; }
 
 /* ===== Ekim 2026: ana sayfa yenileme ===== */
 :root {
-  --saffron:        #D97706;
+  --saffron:        #E66220;
   --crocus:         hsl(268 55% 52%);
   --crocus-bg:      hsl(268 80% 97%);
   --crocus-border:  hsl(268 50% 85%);
@@ -1205,14 +1206,14 @@ html { scroll-behavior: smooth; }
   [style*="background:#fff"], [style*="background: #fff"], [style*="background:#ffffff"],
   .arge-system, .arge-card, .adim li { background: var(--card) !important; }
   [style*="background:#f9fafb"], [style*="background:#f8fafc"], [style*="background:#f0f4f8"], [style*="background:#f8f8f8"], [style*="background:#f0fdf4"], .tbl th, .inv-note-block, .post-content th { background: var(--muted) !important; }
-  [style*="background:#fef3c7"], [style*="background:#fff8ed"], [style*="background:#fffbeb"], .bilgi, .inv-badge-urgent { background: var(--accent-bg) !important; color: var(--accent-text) !important; }
+  [style*="background:#FFF1EB"], [style*="background:#fff8ed"], [style*="background:#FFF7F2"], .bilgi, .inv-badge-urgent { background: var(--accent-bg) !important; color: var(--accent-text) !important; }
   [style*="background:#fef2f2"], .uyari { background: hsl(0 35% 14%) !important; color: hsl(0 80% 82%) !important; border-color: hsl(0 40% 32%) !important; }
   [style*="background:#dcfce7"] { background: hsl(140 35% 14%) !important; color: hsl(140 60% 72%) !important; }
   [style*="color:#1a1a2e"], [style*="color:#374151"], [style*="color:#2d3748"], .arge-card-title, .arge-system h2, .arge-hub-intro h1, .adim li strong,
   .inv-list li, .inv-list.missing li, .inv-section-title { color: var(--foreground) !important; }
   [style*="color:#6b7280"], [style*="color:#9ca3af"], [style*="color:#666"], .arge-card-desc, .arge-system p, .arge-hub-intro p,
   .fig figcaption, .gal figcaption, .inv-list.missing li .inv-note { color: var(--muted-foreground) !important; }
-  [style*="color:#92400e"], [style*="color:#6b4200"], .gun { color: var(--accent-text) !important; }
+  [style*="color:#B4461A"], [style*="color:#6b4200"], .gun { color: var(--accent-text) !important; }
   [style*="#e5e7eb"], [style*="#e2e8f0"], [style*="solid #2d3748"], .arge-system, .arge-card, .adim li, .tbl th, .tbl td, .inv-divider, .post-content td, .post-content th { border-color: var(--border) !important; }
   .arge-card-icon { background: var(--accent-bg) !important; }
   .post-content blockquote { background: var(--muted); }
@@ -1233,9 +1234,9 @@ html { scroll-behavior: smooth; }
 .page-protokoller .site-nav .nav-arge-btn[href$="protokoller.html"],
 .page-protokol-salep .site-nav .nav-arge-btn[href$="protokoller.html"],
 .sec-arge .site-nav .nav-arge-btn[href$="arge.html"],
-.page-arge-salep .site-nav .nav-arge-btn[href$="arge.html"] { color: #D97706; font-weight: 600; }
+.page-arge-salep .site-nav .nav-arge-btn[href$="arge.html"] { color: #E66220; font-weight: 600; }
 .page-protokol-salep .site-nav .nav-arge-menu a[href$="protokol-salep.html"],
-.page-protokol .site-nav .nav-arge-menu a[href$="/protokol.html"] { color: #D97706 !important; }
+.page-protokol .site-nav .nav-arge-menu a[href$="/protokol.html"] { color: #E66220 !important; }
 @media (max-width: 640px) {
   .site-nav .nav-arge-btn { font-size: 1rem; padding: 0.15rem 0; }
   .site-nav .nav-arge-btn::after { display: none; }
@@ -1243,7 +1244,7 @@ html { scroll-behavior: smooth; }
 /* Bitki kartları (protokoller ve AR-GE merkezleri) */
 .bitki-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; margin: 1.5rem 0 2rem; }
 .bitki-kart { display: block; border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.4rem; text-decoration: none !important; color: inherit !important; transition: border-color .15s, box-shadow .15s; }
-.bitki-kart:hover { border-color: #D97706; box-shadow: 0 4px 18px rgba(0,0,0,.06); }
+.bitki-kart:hover { border-color: #E66220; box-shadow: 0 4px 18px rgba(0,0,0,.06); }
 .bitki-kart h3 { margin: .5rem 0 .35rem; font-size: 1.15rem; }
 .bitki-kart p { margin: 0; font-size: .9rem; opacity: .8; line-height: 1.55; }
 .bitki-kart em { font-size: .85rem; opacity: .7; }
@@ -1253,7 +1254,7 @@ html { scroll-behavior: smooth; }
 .cip-plan { background: #f1f5f9; color: #475569; }
 .kaynak-etiket { display: inline-block; font-size: .7rem; font-weight: 700; padding: 0 6px; border-radius: 4px; vertical-align: 1px; }
 .ke-m { background: #dcfce7; color: #166534; }
-.ke-t { background: #fef3c7; color: #92400e; }
+.ke-t { background: #FFF1EB; color: #B4461A; }
 .ke-c { background: #f1f5f9; color: #475569; }
 @media (prefers-color-scheme: dark) {
   .cip-aktif, .ke-m { background: #14532d; color: #bbf7d0; }
@@ -1261,4 +1262,58 @@ html { scroll-behavior: smooth; }
   .cip-plan, .ke-c { background: #334155; color: #e2e8f0; }
   .ke-t { background: #78350f; color: #fde68a; }
   .site-nav .nav-arge-btn { color: var(--muted-foreground); }
+}
+
+
+/* ===== Kasım 2026: bestfarmfor.me teması (turuncu + koyu mor, Montserrat) ===== */
+:root {
+  --brand-orange: #E66220;
+  --brand-orange-hover: #F16C24;
+  --brand-orange-bg: #FFF1EB;
+  --brand-purple: #463173;
+  --brand-deep: #2E1B56;
+  --font-display: 'Montserrat', 'Inter', -apple-system, sans-serif;
+  --primary: hsl(259 40% 32%);
+  --violet: hsl(259 40% 32%);
+  --violet-bg: hsl(259 60% 97%);
+  --violet-border: hsl(259 35% 82%);
+  --violet-text: hsl(259 52% 22%);
+  --accent: hsl(20 80% 51%);
+  --accent-bg: hsl(20 100% 96%);
+  --accent-border: hsl(20 80% 85%);
+  --accent-text: hsl(20 75% 35%);
+  --crocus: hsl(259 40% 40%);
+  --crocus-bg: hsl(259 60% 97%);
+  --crocus-border: hsl(259 35% 82%);
+  --crocus-text: hsl(259 52% 26%);
+  --saffron: #E66220;
+}
+h1, h2, h3, .post-title, .hero2-title, .logo-text, .site-nav, .footer-brand, .arge-card-title, .home-label { font-family: var(--font-display); }
+.logo-text { font-weight: 700; letter-spacing: -0.02em; color: var(--brand-deep); }
+.site-nav a:hover, .site-nav .nav-arge-btn:hover { color: var(--brand-orange); }
+.nav-arge-menu a:hover { background: var(--brand-orange-bg); color: var(--brand-orange) !important; }
+.btn2--primary { background: var(--brand-orange); color: #fff; }
+.btn2--primary:hover { background: var(--brand-orange-hover); }
+.post-content a { color: var(--brand-orange); }
+.site-footer { background: var(--brand-deep); border-top: 0; }
+.site-footer .footer-inner { color: rgba(255,255,255,0.7); }
+.site-footer .footer-brand { color: #fff; }
+.site-footer .footer-sep { color: rgba(255,255,255,0.35); }
+.site-footer a { color: #FFB38A; }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --violet: hsl(259 60% 75%);
+    --violet-text: hsl(259 80% 85%);
+    --violet-bg: hsl(259 35% 16%);
+    --violet-border: hsl(259 30% 34%);
+    --crocus: hsl(259 60% 72%);
+    --crocus-bg: hsl(259 35% 16%);
+    --crocus-border: hsl(259 30% 34%);
+    --crocus-text: hsl(259 80% 85%);
+    --accent-text: hsl(20 90% 70%);
+    --brand-orange-bg: hsl(20 40% 16%);
+  }
+  .logo-text { color: #fff; }
+  .post-content a { color: #F58A4F; }
+  .site-footer { background: #1a1230; }
 }
