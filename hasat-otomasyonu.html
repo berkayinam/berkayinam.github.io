@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hasat Otomasyonu | Safran Topluluğu</title>
+    <meta name="description" content="Safran hasadı için ev ölçeğinde otomasyon planı: çiçek anatomisi, sabit kartezyen kol, YOLOv8 ile çiçek tespiti, hava akımı ve renkle stigma ayıklama, takvim ve başarı ölçütleri.">
+    <meta property="og:title" content="Hasat Otomasyonu">
+    <meta property="og:description" content="Safran hasadı için ev ölçeğinde otomasyon planı: çiçek anatomisi, sabit kartezyen kol, YOLOv8 ile çiçek tespiti, hava akımı ve renkle stigma ayıklama, takvim ve başarı ölçütleri.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css%3Fv=d39f020386.css">
+</head>
+<body class="page-template page-hasat sec-arge">
+
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="site-logo">
+            <svg class="logo-mark" viewBox="0 0 50 72" width="20" height="29" aria-hidden="true">
+                <rect x="23" y="62" width="4" height="7" rx="2" fill="#D97706"/>
+                <path d="M25,62 Q14,42 10,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="10" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q25,42 25,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="25" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+                <path d="M25,62 Q36,42 40,10" stroke="#D97706" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="40" cy="7" rx="3.5" ry="4.5" fill="#D97706"/>
+            </svg>
+            <span class="logo-text">BestFarmFor.me</span>
+        </a>
+        <nav class="site-nav">
+            <a href="arastirmalar.html">Araştırmalar</a>
+            <div class="nav-arge"><a class="nav-arge-btn" href="protokoller.html">Protokoller</a><div class="nav-arge-menu"><a href="protokol.html">Safran</a><a href="protokol-salep.html">Salep</a></div></div>
+            <div class="nav-arge"><a class="nav-arge-btn" href="arge.html">AR-GE</a><div class="nav-arge-menu"><a href="arge.html">Safran sistemi</a><a href="hasat-otomasyonu.html">Hasat otomasyonu</a><a href="arge-salep.html">Salep</a></div></div>
+        </nav>
+        <button class="nav-toggle" aria-label="Menüyü aç/kapat" aria-expanded="false">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+                <line x1="3" y1="5" x2="19" y2="5"/>
+                <line x1="3" y1="11" x2="19" y2="11"/>
+                <line x1="3" y1="17" x2="19" y2="17"/>
+            </svg>
+        </button>
+    </div>
+</header>
+
+<main>
+<div class="post-layout">
+    <header class="post-header">
+        <div class="container">
+            <div style="display:inline-block;background:#4f46e5;color:white;font-size:0.7rem;font-weight:700;letter-spacing:0.05em;padding:2px 10px;border-radius:3px;margin-bottom:12px;text-transform:uppercase;">AR-GE · Safran 2. Adım · Kasım 2026</div>
+            <h1 class="post-title">Hasat Otomasyonu: Kamera, Kartezyen Kol ve Ayıklama İstasyonu</h1>
+            <p style="color:#666;margin:8px 0 0;font-size:0.95rem;">Ev ölçeğinde prototip planı: çiçeği bulmak, koparmak, stigmayı ayırmak</p>
+        </div>
+    </header>
+    <div class="post-content-wrap">
+        <div class="container">
+            <div class="post-content gh-content">
+
+<p style="font-size:0.85rem;margin:0 0 1rem;"><a href="arge.html">AR-GE</a> / Hasat otomasyonu · Genel plan: <a href="protokol.html#adim2">Protokol, Adım 2</a></p>
+
+<div style="background:#eef2ff;border:1px solid #6366f1;border-radius:8px;padding:1.1rem 1.4rem;margin-bottom:2rem;font-size:0.9rem;line-height:1.7;">
+<strong>Neden:</strong> 2026 hasadında çiçek koparmanın kolay, stigmayı ayırmanın zor olduğu görüldü. Literatüre göre elle stigma ayırma toplam işçiliğin %55–66'sı. Ayrıca ilk çiçekler ben evde yokken açtı ve hasat edilemedi. Amaç, ~50 m²'lik bir pilotta kurulacak otomasyonun ev ölçeğinde parça parça denenmesi.<br>
+<strong>Durum:</strong> <span class="cip cip-plan">Plan</span> Hiçbir parça henüz yapılmadı.
+</div>
+
+<h2 id="anatomi">1. Safran Çiçeğinin Yapısı</h2>
+<pre style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.2rem;font-size:0.85rem;overflow-x:auto;line-height:1.35;">
+        stigma (3 kırmızı kol)      ürün
+            \ | /
+  taç yaprak \|/ taç yaprak         6 mor taç yaprak
+    başçık    |    başçık           3 sarı başçık (polen burada)
+       \      |      /
+        \_____|_____/
+             ||                     taç tüpü: taç yapraklar aşağıda kaynaşıp boru olur
+             ||  stilus             stigmalar bu ince beyaz-sarı sapın ucunda,
+             ||                     sap borunun içinden kormun yanına iner
+         [  korm  ]
+</pre>
+<ul>
+<li>Stigma taç yaprakla kaynaşık değil; dişi organın (stilus) ucundaki üç kırmızı kol. Stilus, taç tüpünün içinden aşağı iner.</li>
+<li>Çiçeği 45° büküp yukarı çekince taç tüpü kırılır, stilus içinde kalır. Bu adım kolay.</li>
+<li>Zor olan, stigmayı polen keselerinden ve taç yapraklardan temiz ayırmak. Çiçeğin içine vakumla girmek polenleri de çeker.</li>
+</ul>
+
+<h2 id="mimari">2. Mimari: Robot Gezmez, Tepsi Gelir</h2>
+<p>Dikey tarımda çoğu sistem ürünü robota getirir. Bunun sebepleri: kameranın ışığı sabit ve kalibre olur, tek istasyon bütün katlara bakar, ağır ayıklama ünitesi taşınmaz. Tepsi taşıma (ray, bant, asansör) sanayide çözülmüş, standart bir iş.</p>
+<pre style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.2rem;font-size:0.85rem;overflow-x:auto;line-height:1.35;">
+[ Raf, 3-4 kat ]  tepsi çekmece rayıyla dışarı kayar (önce elle)
+        |
+        v
+[ Koparma istasyonu ]  üstte kartezyen kol (X-Y-Z), sabit LED ve kamera
+        |              kamera çiçeği bulur, tutucu 45° büker ve çeker
+        v
+[ Ayıklama istasyonu ] 1) kesme: taç tüpünün üstünden, parçalar serbest kalır
+        |              2) hava akımı: geniş, hafif taç yapraklar uçar
+        |              3) kamera + hava tabancası: sarı başçık dışarı atılır
+        v
+[ Kurutma tepsisi ]    kırmızı stigma
+</pre>
+<p>Ayıklama istasyonu koparma kolundan bağımsız. Tarla üreticisi çiçeği kasayla getirip doğrudan ayıklama istasyonunu kullanabilir.</p>
+
+<h2 id="literatur">3. Literatürde Ne Var</h2>
+<table>
+<thead><tr><th>Konu</th><th>Çalışma</th><th>Bulgu</th></tr></thead>
+<tbody>
+<tr><td>Hava akımıyla ayırma</td><td>Gambella ve Paschino, İtalya (<a href="https://www.researchgate.net/publication/274637961_Mechanical_harvester_and_double_flow_ciclone_separator_Prototypes_to_improve_saffron_spice_productions">siklon ayırıcı</a>)</td><td>Bir siklon tipi 0,69–0,92 m/s hava hızında stigmaların %96'sından fazlasını ayırdı; yanlış tipte %49'a varan kırılma.</td></tr>
+<tr><td>Kopma kuvveti</td><td>Aynı grup</td><td>Stigmayı koparmak için ~0,21 N yetiyor, bıçakla kesmek 7–21 N istiyor.</td></tr>
+<tr><td>Kamera ile kesme</td><td>Gracia ve ark., İspanya (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1537511009001834">Biosystems Eng. 2009</a>)</td><td>Çiçekler tek tek kameranın önünden geçiyor, makine stigmanın konumuna göre kesiyor. 2008'de patentlendi.</td></tr>
+<tr><td>Tutucu ve vakum</td><td>Politecnico di Torino ve Cagliari (<a href="https://iris.polito.it/handle/11583/2961212">kayıt</a>), Politecnico di Milano (<a href="https://www.politesi.polimi.it/handle/10589/149713">tez</a>)</td><td>Tutucu çiçeği koparıyor, vakum içine çekiyor; vakum basıncı ayarlanarak stigma diğer parçalardan ayrılıyor.</td></tr>
+<tr><td>Çiçek tespiti</td><td>Şiraz Üniversitesi, İran (<a href="https://iar.shirazu.ac.ir/article_2376_64053ddf66f652e4b8a40d201146f7dd.pdf?lang=fa">makale</a>); BYU yüksek lisans tezi</td><td>Renk uzayıyla %96–99 doğruluk; derin öğrenmeyle hasada hazır ve olgunlaşmamış çiçeği ayırmada %93 AP.</td></tr>
+<tr><td>Derleme</td><td>Torbat-Heydarieh Üniversitesi, İran (<a href="https://saffron.torbath.ac.ir/article_210541.html?lang=en">makale</a>)</td><td>En iyi sonuç kamera, mekanik sistem ve hava akımının birlikte kullanılmasından geliyor.</td></tr>
+</tbody>
+</table>
+<p>Renkle ayıklamanın sanayideki karşılığı fındık ve pirinç fabrikalarındaki optik ayıklama makineleri: kamera rengi görür, hava darbesi yanlış parçayı dışarı atar.</p>
+
+<h2 id="modul">4. Ev Ölçeğinde Modüller</h2>
+
+<h3>4.1 Tepsi</h3>
+<ul>
+<li>Tepsi boyu kartezyen kolun çalışma alanına göre seçilir; ilk prototipte yaklaşık 30 × 20 cm, 6–8 korm.</li>
+<li>Raf ile istasyon arasında çekmece rayı (teleskopik ray). Başta tepsi elle sürülür; sonra step motor ve GT2 kayış ya da lineer aktüatörle.</li>
+<li>Tepsinin istasyondaki yerini sabitleyen iki pim: kameranın koordinatları her seferinde aynı kalır.</li>
+</ul>
+
+<h3>4.2 Kartezyen kol</h3>
+<ul>
+<li><strong>En ucuz yol:</strong> ikinci el bir 3D yazıcı (Ender 3 tipi). X-Y-Z eksenleri, step motorları, sürücüleri ve çerçevesi hazır; baskı kafası yerine tutucu takılır.</li>
+<li><strong>Kendin yapmak istersen:</strong> 2020 alüminyum profil, 3 adet NEMA 17 step motor, GT2 kayış ve kasnaklar, V-tekerler, bir 3D yazıcı ya da CNC kontrol kartı.</li>
+<li><strong>Yazılım:</strong> kol bir CNC gibi çalışır; kontrol kartında GRBL ya da Marlin. Bilgisayar G-code gönderir ("X120 Y80'e git, Z'yi indir"). Hareket kodunu sıfırdan yazmaya gerek yok.</li>
+<li><strong>Tutucu:</strong> servo ile kapanan iki parmaklı, yumuşak uçlu (silikon) tutucu. Hareket: taç tüpünü dipten kavra, 45° bük (dördüncü eksen olarak küçük bir servo), yukarı çek.</li>
+</ul>
+
+<h3>4.3 Kamera ve çiçek tespiti</h3>
+<ul>
+<li><strong>Bildirim (ilk adım):</strong> ESP32-CAM kutuya bakar, mor piksel oranı artınca Telegram'a mesaj atar. Yapay zekâ gerekmez, renk eşiği yeter.</li>
+<li><strong>Koordinat (ikinci adım):</strong> YOLOv8 modeli çiçeğin görüntüdeki yerini bulur. ESP32 bu modeli çalıştıramaz; model bilgisayarda ya da Raspberry Pi'de çalışır, ESP32-CAM ya da USB kamera görüntüyü gönderir.</li>
+<li><strong>Kalibrasyon:</strong> tepsinin üstüne satranç tahtası deseni konur, görüntüdeki piksel kolun milimetresine çevrilir. Tepsi pimlerle sabitlendiği için kalibrasyon bir kez yapılır.</li>
+</ul>
+
+<h3>4.4 Ayıklama istasyonu</h3>
+<ul>
+<li><strong>Kesme:</strong> çiçek bir yuvaya dik oturur, servo ile çalışan bir makas taç tüpünün hemen üstünden keser; parçalar serbest kalır.</li>
+<li><strong>Hava akımı:</strong> parçalar şeffaf bir borunun içine düşerken yandan fan ya da elektrikli süpürge tersine üfler; taç yapraklar yukarı, stigma aşağı gider. Hava hızı fan hızıyla ayarlanır (literatürde ~0,7–0,9 m/s).</li>
+<li><strong>Renk ayıklama:</strong> borunun altında kamera ya da renk sensörü (TCS34725). Sarı görürse 12 V hava valfi küçük bir hava darbesiyle parçayı yan kaba atar. Burada küçük "solenoid valflerin" hava valfi olması işe yarar; su için uygun değillerdi, hava için tam uygun. Hava kaynağı: akvaryum pompası ya da 12 V mini kompresör.</li>
+</ul>
+
+<h2 id="yazilim">5. Yazılım Akışı</h2>
+<pre style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1.2rem;font-size:0.85rem;overflow-x:auto;line-height:1.35;">
+kamera görüntüsü
+   -> YOLOv8 (bilgisayar / Raspberry Pi): çiçek kutuları + güven skoru
+   -> piksel -> mm dönüşümü (kalibrasyon)
+   -> sıralama: en yakın çiçekten başla, açılmamış tomurcuğu atla
+   -> G-code: git, in, kavra, bük, çek, ayıklama yuvasına bırak
+   -> ayıklama: kes, üfle, renk kontrolü, stigma kabına
+   -> kayıt: saat, çiçek sayısı, ayrılan ve kırılan stigma
+</pre>
+<p>Model eğitimi: telefonla çekilen çiçek fotoğrafları etiketlenir (CVAT, Label Studio ya da Roboflow), Ultralytics YOLOv8n bilgisayarda eğitilir. Sınıflar: tomurcuk, açık çiçek, solmuş çiçek. İlk veri seti 2026 hasadının fotoğraflarından, sonra kameranın otomatik çektiği görüntülerden.</p>
+
+<h2 id="takvim">6. Takvim</h2>
+<table>
+<thead><tr><th>Zaman</th><th>İş</th></tr></thead>
+<tbody>
+<tr><td>Kasım 2026</td><td>Kalan çiçeklerin bol fotoğrafı (farklı açı, ışık, evre). Elle deneme: makasla kes, fanla üfle; kaç stigma ayrıldı, kaçı kırıldı. Çiçek ölçüleri: boy, taç tüpü uzunluğu, stigma uzunluğu.</td></tr>
+<tr><td>Aralık 2026–Şubat 2027</td><td>ESP32-CAM ile renk eşiği ve Telegram bildirimi (maket çiçekle). CAD çizimi. İkinci el 3D yazıcı ya da profil, motor alımı; GRBL kurulumu ve kalibrasyon.</td></tr>
+<tr><td>Mart–Temmuz 2027</td><td>Veri etiketleme, YOLOv8n eğitimi. Tutucu ve ayıklama istasyonunun maket parçalarla denenmesi. Tepsi ve ray.</td></tr>
+<tr><td>Ağustos–Aralık 2027</td><td>Gerçek çiçekle test. Kaydırmalı partiler sayesinde her 2 haftada bir yeni test penceresi var: her partide bir sorun düzeltilir.</td></tr>
+</tbody>
+</table>
+
+<h2 id="olcut">7. Başarı Ölçütleri</h2>
+<table>
+<thead><tr><th>Ölçüt</th><th>İlk hedef</th></tr></thead>
+<tbody>
+<tr><td>Çiçek tespiti (açık çiçek)</td><td>≥ %90 doğru, tomurcuk yanlışlıkla koparılmasın</td></tr>
+<tr><td>Koparma başarısı</td><td>≥ %80 tek denemede</td></tr>
+<tr><td>Ayrılan stigma oranı</td><td>≥ %85</td></tr>
+<tr><td>Kırık stigma</td><td>≤ %10</td></tr>
+<tr><td>Stigma kabındaki yabancı parça (başçık, taç yaprak)</td><td>ISO 3632 çiçek artığı sınırına yakın; ölçülecek</td></tr>
+<tr><td>Çiçek başına süre</td><td>Elle ayırmayla karşılaştırma</td></tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-inner">
+            <span class="footer-brand">BestFarmFor.me</span>
+            <span class="footer-sep">·</span>
+            <span class="footer-note">İçerikler CC BY-SA 4.0 ile paylaşılmaktadır</span>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.site-nav');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  // Close on outside click
+  document.addEventListener('click', function(e){
+    if (!btn.contains(e.target) && !nav.contains(e.target)) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+<script>
+(function(){
+  var hs=[].slice.call(document.querySelectorAll('.post-content h2[id]'));
+  if(hs.length<3)return;
+  var nav=document.createElement('nav');nav.className='toc-side';nav.setAttribute('aria-label','İçindekiler');
+  nav.innerHTML='<b>İçindekiler</b>';
+  var links=hs.map(function(h){var a=document.createElement('a');a.href='#'+h.id;a.textContent=h.textContent.replace(/\s*\[.*?\]\s*/g,'');nav.appendChild(a);return a;});
+  document.body.appendChild(nav);
+  function guncelle(){var y=window.scrollY+120,i=0;hs.forEach(function(h,k){if(h.offsetTop<=y)i=k;});links.forEach(function(a,k){a.classList.toggle('aktif',k===i);});}
+  window.addEventListener('scroll',guncelle,{passive:true});guncelle();
+})();
+</script>
+</body>
+</html>
